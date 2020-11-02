@@ -43,7 +43,20 @@
         Microsoft O?ce, Microsoft Backo?ce, Corel Draw,
 Surfer, Mapinfo, Photoshop, Sublime Text Build, Github
       </p>
-      
+      <h3>LANGUAGES</h3>
+      <hr>
+      <p>
+       English Upper (Intermediate)
+      </p>
+       <p>
+       Polish (Advanced)
+      </p>
+       <p>
+       Russian (Pro?cient)
+      </p>
+       <p>
+       Ukrainian (Native)
+	 
        </p>
       <h3>Contacts</h3>
       <hr>
