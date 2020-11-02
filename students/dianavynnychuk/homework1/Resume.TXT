@@ -26,8 +26,24 @@
       </p>
       Master's degree of Ecology at Ivano-Frankivsk National Technical University of Oil and Gas
        <p/>
-     
-	 
+      <h3>EXPERIENCE</h3>
+      <hr>
+      <p>
+       Assistant Front Desk Manager in "Just and Conti"
+      </p>
+       <p>
+      Administrative assistant intern in "InterKadra"
+      </p>
+       <p>
+      Receptionist in Hotel Tossa Beach
+      </p>
+      <h3>SKILLS</h3>
+      <hr>
+      <p>
+        Microsoft O?ce, Microsoft Backo?ce, Corel Draw,
+Surfer, Mapinfo, Photoshop, Sublime Text Build, Github
+      </p>
+      
        </p>
       <h3>Contacts</h3>
       <hr>
