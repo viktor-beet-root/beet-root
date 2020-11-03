@@ -1,0 +1,21 @@
+Name: Name Surname
+Address: Kyiv, Ukraine
+Age: 21
+Birth Date: 02.07.1999
+Phone: +000000000
+Email: oooooo@oooo.com
+
+Education: 2016 - 2020 - Boris Grinchenko Kyiv University. Translation of English and Polish languages.
+
+
+Work experience: business development representative in art outsourcing company. 
+Responsibilities: find and contact potential clients; analyse news in gaming industry.
+
+Extra info: languages: Ukrainian, Russian, English, Polish, Spanish
+I have driving licence
+I can work in Excel, Git, Github, Trados. I have basic knowledge of HTML, CSS, Python. 
+
+Personal qualities: I am responsible and a fast learner. I can work both in team and on my own. I am friendly and outgoing person. 
+
+Hobbies: traveling, literature, photography, music, cinematography. 
+
