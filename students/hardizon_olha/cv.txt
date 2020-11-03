@@ -1,2 +1,3 @@
 Name: Name Surname
 Address: Kyiv
+Education: Oxford 
