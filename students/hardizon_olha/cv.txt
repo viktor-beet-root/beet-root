@@ -1,3 +1,5 @@
 Name: Name Surname
 Address: Kyiv
 Education: Oxford 
+Experience: artist in Ubisoft
+
