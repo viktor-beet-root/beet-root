@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="230" height="1" viewBox="0 0 230 1">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Separator" class="cls-1" d="M1075,243H845v-1h230v1Z" transform="translate(-845 -242)"/>
+</svg>
