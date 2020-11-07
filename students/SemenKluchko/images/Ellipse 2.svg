@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="439" height="439" viewBox="0 0 439 439">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        opacity: 0.85;
+        filter: url(#filter);
+      }
+    </style>
+    <filter id="filter" x="0" y="0" width="439" height="439" filterUnits="userSpaceOnUse">
+      <feGaussianBlur result="blur" stdDeviation="1.667" in="SourceAlpha"/>
+      <feComposite result="composite"/>
+      <feComposite result="composite-2"/>
+      <feComposite result="composite-3"/>
+      <feFlood result="flood" flood-opacity="0.09"/>
+      <feComposite result="composite-4" operator="in" in2="composite-3"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+      <feBlend result="blend-2" in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <circle class="cls-1" cx="219" cy="219" r="215"/>
+</svg>
