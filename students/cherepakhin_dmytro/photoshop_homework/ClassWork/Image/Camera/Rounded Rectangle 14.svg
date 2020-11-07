@@ -7,7 +7,7 @@
         filter: url(#filter);
       }
     </style>
-    <filter id="filter" x="665.688" y="964" width="101.312" height="127" filterUnits="userSpaceOnUse">
+    <filter x="665.688" y="964" width="101.312" height="127" filterUnits="userSpaceOnUse">
       <feOffset result="offset" dy="5" in="SourceAlpha"/>
       <feGaussianBlur result="blur"/>
       <feFlood result="flood" flood-color="#b1220a" flood-opacity="0.75"/>
