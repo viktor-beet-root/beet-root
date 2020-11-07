@@ -15,5 +15,5 @@
       <feBlend result="blend" in="SourceGraphic"/>
     </filter>
   </defs>
-  <path id="Rounded_Rectangle_14" data-name="Rounded Rectangle 14" class="cls-1" d="M671.3,964h90.068A5.6,5.6,0,0,1,767,969.576V1080.2a5.6,5.6,0,0,1-5.629,5.57H671.3a5.6,5.6,0,0,1-5.629-5.57V969.576A5.6,5.6,0,0,1,671.3,964Zm-21.841-1.613,16.212,25.806,22.7-25" transform="translate(-665.688 -964)"/>
+  <path  data-name="Rounded Rectangle 14" class="cls-1" d="M671.3,964h90.068A5.6,5.6,0,0,1,767,969.576V1080.2a5.6,5.6,0,0,1-5.629,5.57H671.3a5.6,5.6,0,0,1-5.629-5.57V969.576A5.6,5.6,0,0,1,671.3,964Zm-21.841-1.613,16.212,25.806,22.7-25" transform="translate(-665.688 -964)"/>
 </svg>
