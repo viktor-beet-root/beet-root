@@ -3,9 +3,9 @@
 		tspan { white-space:pre }
 		.shp0 { fill: #ffffff } 
 	</style>
-	<g id="Footer">
-		<g id="Social Part">
-			<path id="-e- Separator" class="shp0" d="M230 1L0 1L0 0L230 0L230 1Z" />
+	<g>
+		<g>
+			<path class="shp0" d="M230 1L0 1L0 0L230 0L230 1Z" />
 		</g>
 	</g>
 </svg>

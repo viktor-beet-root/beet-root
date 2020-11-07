@@ -3,8 +3,8 @@
 		tspan { white-space:pre }
 		.shp0 { fill: #ffffff } 
 	</style>
-	<g id="Footer">
-		<g id="Social Part">
+	<g>
+		<g>
 			<path id="-e- Facebook" class="shp0" d="M1.69 14.24L4.64 14.24L4.64 7.18L6.63 7.18L6.88 4.69L4.64 4.69L4.64 3.22C4.64 2.67 5.01 2.54 5.26 2.54L6.85 2.54L6.85 0.12L4.67 0.12C2.25 0.12 1.69 1.92 1.69 3.08L1.69 4.69L0.29 4.69L0.29 7.18L1.69 7.18L1.69 14.24Z" />
 		</g>
 	</g>
