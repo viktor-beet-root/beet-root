@@ -6,7 +6,7 @@
         filter: url(#filter);
       }
     </style>
-    <filter id="filter" x="0" y="0" width="339" height="339" filterUnits="userSpaceOnUse">
+    <filter  x="0" y="0" width="339" height="339" filterUnits="userSpaceOnUse">
       <feOffset result="offset" dy="1" in="SourceAlpha"/>
       <feGaussianBlur result="blur" stdDeviation="1"/>
       <feFlood result="flood" flood-opacity="0.28"/>
@@ -21,5 +21,5 @@
       <feBlend result="blend-2" in="SourceGraphic"/>
     </filter>
   </defs>
-  <rect id="Rounded_Rectangle_15" data-name="Rounded Rectangle 15" class="cls-1" x="2" y="2" width="334" height="334" rx="2" ry="2"/>
+  <rect data-name="Rounded Rectangle 15" class="cls-1" x="2" y="2" width="334" height="334" rx="2" ry="2"/>
 </svg>
