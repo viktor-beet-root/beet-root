@@ -1,0 +1,29 @@
+body{
+    text-align: center;
+}
+ul{
+    list-style-type: none;
+    margin: 0px;
+    padding-left: 0px;
+}
+li{
+    display: inline;
+    border: 3px solid black;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.mainPhotoDiv{
+    margin-top: 20px;
+}
+.middleIcon{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+p{
+    font-size: 20px;
+}
