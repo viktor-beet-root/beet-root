@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Студенты курса</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            line-height: 1.4;
+        }
+        
+        h1 {
+            font-size: 25px;
+            font-weight: bold;
+            text-align: center;
+            margin: 25px 0 15px;
+        }
+        
+        ol {
+            max-width: 300px;
+            margin: 0 auto;
+            border: 1px solid black;
+            counter-reset: list 0;
+        }
+        
+        ol > li {
+            padding-left: 40px;
+            list-style: none;
+            position: relative;
+        }
+        ol > li:not(:last-child) {
+            border-bottom: 1px solid black;
+        }
+
+        ol li:before {
+            counter-increment: list;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 10px;
+        }
+        
+        ol li:nth-child(-n+9):before {
+            content: "0"counter(list) ". "
+        }
+        
+        ol li:before {
+            content: counter(list) ". "
+        }
+        
+        ol > li a {
+            padding: 10px;
+            display: inline-block;
+            width: 100%;
+        }
+        
+        
+        
+    </style>
+</head>
+<body>
+<section>
+    <h1>Студенты курса</h1>
+    <ol>
+        <li><a href="margo_bryksina/index.html">Margo Bryksina</a></li>
+        <li><a href="cherepakhin_dmytro/index.html">Dmytro Cherepakhin</a></li>
+        <li><a href="kolya_korzh/index.html">Kolya Korzh</a></li>
+        <li><a href="#">Diana Vynnychuk</a></li>
+        <li><a href="daikinvitaliy/index.html">Виталий Дякин</a></li>
+        <li><a href="olha_nemensha/index.html">Olha Nemensha</a></li>
+        <li><a href="#">Serhij Zhenzhera</a></li>
+        <li><a href="guntsovIgor/index.html">Igor Guntsov</a></li>
+        <li><a href="#">Alina Zhuravel</a></li>
+        <li><a href="valeriia_bulharu/index.html">Valeriia Bulharu</a></li>
+        <li><a href="vladislav_zadorozhny/index.html">Vlad Zadorozhny</a></li>
+        <li><a href="#">Krat Artem</a></li>
+        <li><a href="alexandra_greenberg/index.html">Alexandra Greenberg</a></li>
+        <li><a href="#">Tanya Lukashenko</a></li>
+        <li><a href="osadets_vitalii/index.html">Vitalii Osadets</a></li>
+        <li><a href="EugeneHryb/index.html">Eugene Hryb</a></li>
+        <li><a href="hardizon_olha/index.html">Olha Hardizon</a></li>
+        <li><a href="andrew_klimenko/index.html">Андрей Клименко</a></li>
+        <li><a href="kirushov_aleksandr/index.html">Kirushov Oleksandr</a></li>
+        <li><a href="SemenKluchko/index.html">Semen Kluchko</a></li>
+    </ol>
+</section>
+</body>
+</html>
