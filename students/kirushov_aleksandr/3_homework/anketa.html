@@ -39,6 +39,152 @@
     <main>
       <section>
         <h1 id="anketa">Анкета</h1>
+        <p>
+          Обо мне, мой друг, ты уже узнал. Давай теперь познакомимся с тобой.
+          Ответь, пожалуйста, на несколько вопросов, что б я смог больше узнать
+          о тебе.
+        </p>
+        <form action="#" method="get">
+          <div>
+            <label>
+              Укажи свое ФИО:
+              <br><input type="text" name="name" size="50" />
+            </label>
+          </div>
+          <div><label>Укажи дату своего рождения:<br><input type="date" name="birthday"></label></div>
+          <div>
+            Пол:
+            <div>
+              <label>
+                <input
+                  type="radio"
+                  name="Sex"
+                  value="Мужской"
+                  checked="checked"
+                />
+                М
+              </label>
+              <label>
+                <input type="radio" name="Sex" value="Женский" />
+                Ж
+              </label>
+            </div>
+          </div>
+          <d>
+            <label for="town">В каком городе ты проживаешь?</label>
+              <br><select name="city" id="town">
+                <option value="Винница">Винница</option>
+                <option value="Днепр">Днепр</option>
+                <option value="Донецк">Донецк</option>
+                <option value="Житомир">Житомир</option>
+                <option value="Запорожье">Запорожье</option>
+                <option value="Ивано-Франковск">Ивано-Франковск</option>
+                <option value="Киев">Киев</option>
+                <option value="Кропивницкий">Кропивницкий</option>
+                <option value="Луганск">Луганск</option>
+                <option value="Луцк">Луцк</option>
+                <option value="Львов">Львов</option>
+                <option value="Львов">Николаев</option>
+                <option value="Одесса">Одесса</option>
+                <option value="Полтава">Полтава</option>
+                <option value="Ровно">Ровно</option>
+                <option value="Симферополь">Симферополь</option>
+                <option value="Сумы">Сумы</option>
+                <option value="Тернополь">Тернополь</option>
+                <option value="Ужгород">Ужгород</option>
+                <option value="Харьков">Харьков</option>
+                <option value="Херсон">Херсон</option>
+                <option value="Хмельницкий">Хмельницкий</option>
+                <option value="Черкассы">Черкассы</option>
+                <option value="Чернигов">Чернигов</option>
+                <option value="Черновцы">Черновцы</option>
+              </select>
+          </div>
+          <div>
+            <label>
+              Какой у тебя рост?
+              <br><input type="text" name="height" size="1" placeholder="cm" maxlength="3" />
+            </label>
+          </div>
+          <div>
+            Какой у тебя цвет волос на голове?
+            <div>
+              <div>
+                <label>
+                  <input
+                    type="radio"
+                    name="color_hair"
+                    value="Русый"
+                    checked="checked"
+                  />Русый
+                </label>
+              </div>
+              <div>
+                <label>
+                  <input type="radio" name="color_hair" value="Шатен" />Шатен
+                </label>
+              </div>
+              <div>
+                <label>
+                  <input type="radio" name="color_hair" value="Блонд" />Блонд
+                </label>
+              </div>
+              <div>
+                <label>
+                  <input type="radio" name="color_hair" value="Рыжий" />Рыжий
+                </label>
+              </div>
+              <div>
+                <label>
+                  <input type="radio" name="color_hair" value="Брюнет" />Брюнет
+                </label>
+              </div>
+              <div>
+                <label>
+                  <input type="radio" name="color_hair" value="Седой" />Седой
+                </label>
+              </div>
+              <label>
+                <input
+                  type="radio"
+                  name="color_hair"
+                  value="Волосы
+                отсутсвуют"
+                />Волосы отсутсвуют
+              </label>
+            </div>
+          </div>
+          <div>
+            Какого цвета у тебя глаза?
+            <div>
+              <div>
+                <label>
+                  <input
+                    type="radio"
+                    name="eye_color"
+                    value="Карие"
+                    checked="checked"
+                  />Карий
+                </label>
+              </div>
+              <div>
+                <label>
+                  <input type="radio" name="eye_color" value="Голубые" />Голубые
+                </label>
+              </div>
+              <div>
+                <label>
+                  <input type="radio" name="eye_color" value="Зеленые" />Зеленые
+                </label>
+              </div>
+            </div>
+            <div>
+                <label>
+                  Твое любимое блюдо:
+                  <br><input type="text" name="dish" size="50"/>
+                </label>
+              </div>
+        </form>
       </section>
     </main>
     <footer>
