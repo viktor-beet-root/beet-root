@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Interview</title>
+</head>
+<body>
+    <main>
+      <h1>Анкета</h1>
+      <form action="#" method="GET" name="Interview">
+        <fieldset>
+          <legend>Общая информация</legend>
+          <div><p><label>Имя: <input type="text" id="name" placeholder="Имя" required></label></p></div>
+          <div><p><label>Фамилия: <input type="text" id="last_name" placeholder="Фамилия" required></label></p></div>
+          <div><p><label for="date">Дата рождения: </label><input type="date" id="date" required></p></div>
+          <div><p><label for="tel">Номер телефона: </label><input type="tel"  id="tel" maxlength="10" required></p></div>
+          <div><p><label for="city">Город проживания: </label><select name="city" id="cіty" required>
+            <option selected >город</option>
+            <option value="Житомир">Житомир</option>
+            <option value="Запорожье">Запорожье</option>
+            <option value="Ивано-Франковск">Ивано-Франковск</option>
+            <option value="Кропивницкий">Кропивницкий</option>
+            <option value="Луганск">Луганск</option>
+            <option value="Луцк">Луцк</option>
+            <option value="Львов">Львов</option>
+            <option value="Николаев">Николаев</option>
+            <option value="Одесса">Одесса</option>
+            <option value="Полтава">Полтава</option>
+            <option value="Ровно">Ровно</option>
+            <option value="Сумы">Сумы</option>
+            <option value="Ужгород">Ужгород</option>
+            <option value="Харьков">Харьков</option>
+            <option value="Херсон">Херсон</option>
+            <option value="Хмельницкий">Хмельницкий</option>
+            <option value="Черкассы">Черкассы</option>
+            <option value="Чернигов">Чернигов</option>
+            <option value="Черновцы">Черновцы</option>
+            <option value="Винница">Винница</option>
+            <option value="Днепр">Днепр</option>
+            <option value="Киев">Киев</option>
+            <option value="Тернополь">Тернополь</option>
+          </select></p></div>
+          <div><p><label>Пол: <label for="gender1">Женский</label><input name="gender" type="radio" id="gender1"><label for="gender2">Мужской</label><input name="gender" type="radio" id="gender2"></label></p></div>
+          <div><p><label for="age">Возраст: </label><input type="number" id="age" max="100" min="1" step="1" required></p></div>
+        </fieldset>
+        <fieldset>
+          <legend>Интересы</legend>
+          <div><p><label>Любимая книга: <input type="text" id="book" placeholder="книга" required></label></p></div>
+          <div><p><label>Любимая музыка: <input type="text" id="music" placeholder="стиль музыки" required></label></p></div>
+          <div><p><label>Любимое занятие: <input type="text" id="hobby" placeholder="хобби" required></label></p></div>
+          <div><p><label for="dream">Твоя мечта: </label><textarea name="dream" id="dream" cols="40" rows="2" maxlength="250" required placeholder="мечта"></textarea></p></div>
+          <div><p><label for="colours">Любимый цвет: </label><select name="colour" id="colours" required>
+            <option value="1" selected>красный</option>
+            <option value="2">оранжевый</option>
+            <option value="3">желтый</option>
+            <option value="4">зеленый</option>
+            <option value="5">голубой</option>
+            <option value="6">синий</option>
+            <option value="7">фиолетовый</option></select></p></div>
+          <div><p><label>Твой девиз: <textarea name="motto" id="motto" cols="40" rows="2" placeholder="девиз" maxlength="100" required></textarea></label></p></div>
+          <div><p><label>Если у тебя домашные животные: <input type="checkbox" id="pet" required></label></p></div>
+        </fieldset>
+        <div><p><label>Безсмисленая кнопка: <input type="image" src="/images/12456.jpg" width="100"></label></p></div>
+        <p><input type="submit" value="Отправить"></p>
+        <p><input type="reset" value="Сбросить"></p>
+      </form>
+    </main>
+</body>
+</html>
