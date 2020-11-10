@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Анкета Kirushov about my self</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: Open Sans;
+        font-size: 20px;
+        width: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="kirushov_about_my_self.html#home" target="_blank">
+              Главная
+            </a>
+          </li>
+          <li>
+            <a href="hobbies.html#hobbies" target="_blank">Увлечения</a>
+          </li>
+          <li><a href="food.html#food" target="_blank">Любимая еда</a></li>
+          <li>
+            <a href="mypets.html#pets" target="_blank">Мои домашние животные</a>
+          </li>
+          <li><a href="#anketa">Анкета</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h1 id="anketa">Анкета</h1>
+        <p>
+          Обо мне, мой друг, ты уже узнал. Давай теперь познакомимся с тобой.
+          Ответь, пожалуйста, на несколько вопросов, что б я смог больше узнать
+          о тебе.
+        </p>
+        <form action="#" method="get">
+          <fieldset name="cont">
+            <legend>Контактная информация</legend>
+          <div>
+            <label>
+              Укажи свое ФИО:
+              <input type="text" name="name" width="auto" required />
+            </label>
+          </div>
+          <div>
+            <label>E-mail: <input type="email" name="email" placeholder="name@example.com" required></label>
+          </div>
+          <div>
+            <label>Моб. номер <br>телефона: <input type="tel" name="tel" placeholder="+380000000000" maxlength="13" required></label>
+          </div>
+        </fieldset>
+        <fieldset name="personal">
+          <legend>Личная информация</legend>
+          <div><label>Укажи дату своего рождения:<br><input type="date" name="birthday"></label></div>
+          <div>
+            Пол:
+            <div>
+              <label>
+                <input
+                  type="radio"
+                  name="Sex"
+                  value="Мужской"
+                  checked="checked"
+                />
+                М
+              </label>
+              <label>
+                <input type="radio" name="Sex" value="Женский" />
+                Ж
+              </label>
+            </div>
+          </div>
+          <d>
+            <label for="town">В каком городе ты проживаешь?</label>
+              <br><select name="city" id="town">
+                <option value="Винница">Винница</option>
+                <option value="Днепр">Днепр</option>
+                <option value="Донецк">Донецк</option>
+                <option value="Житомир">Житомир</option>
+                <option value="Запорожье">Запорожье</option>
+                <option value="Ивано-Франковск">Ивано-Франковск</option>
+                <option value="Киев">Киев</option>
+                <option value="Кропивницкий">Кропивницкий</option>
+                <option value="Луганск">Луганск</option>
+                <option value="Луцк">Луцк</option>
+                <option value="Львов">Львов</option>
+                <option value="Львов">Николаев</option>
+                <option value="Одесса">Одесса</option>
+                <option value="Полтава">Полтава</option>
+                <option value="Ровно">Ровно</option>
+                <option value="Симферополь">Симферополь</option>
+                <option value="Сумы">Сумы</option>
+                <option value="Тернополь">Тернополь</option>
+                <option value="Ужгород">Ужгород</option>
+                <option value="Харьков">Харьков</option>
+                <option value="Херсон">Херсон</option>
+                <option value="Хмельницкий">Хмельницкий</option>
+                <option value="Черкассы">Черкассы</option>
+                <option value="Чернигов">Чернигов</option>
+                <option value="Черновцы">Черновцы</option>
+              </select>
+          </div>
+          <div>
+            <label>
+              Какой у тебя рост?
+              <br><input type="text" name="height" size="1" placeholder="cm" maxlength="3" />
+            </label>
+          </div>
+          <div>
+            Какой у тебя цвет волос на голове?
+            <div>
+              <div>
+                <label>
+                  <input
+                    type="radio"
+                    name="color_hair"
+                    value="Русый"
+                    checked="checked"
+                  />Русый
+                </label>
+              </div>
+              <div>
+                <label>
+                  <input type="radio" name="color_hair" value="Шатен" />Шатен
+                </label>
+              </div>
+              <div>
+                <label>
+                  <input type="radio" name="color_hair" value="Блонд" />Блонд
+                </label>
+              </div>
+              <div>
+                <label>
+                  <input type="radio" name="color_hair" value="Рыжий" />Рыжий
+                </label>
+              </div>
+              <div>
+                <label>
+                  <input type="radio" name="color_hair" value="Брюнет" />Брюнет
+                </label>
+              </div>
+              <div>
+                <label>
+                  <input type="radio" name="color_hair" value="Седой" />Седой
+                </label>
+              </div>
+              <label>
+                <input
+                  type="radio"
+                  name="color_hair"
+                  value="Волосы
+                отсутсвуют"
+                />Волосы отсутсвуют
+              </label>
+            </div>
+          </div>
+          <div>
+            Какого цвета у тебя глаза?
+            <div>
+              <div>
+                <label>
+                  <input
+                    type="radio"
+                    name="eye_color"
+                    value="Карие"
+                    checked="checked"
+                  />Карий
+                </label>
+              </div>
+              <div>
+                <label>
+                  <input type="radio" name="eye_color" value="Голубые" />Голубые
+                </label>
+              </div>
+              <div>
+                <label>
+                  <input type="radio" name="eye_color" value="Зеленые" />Зеленые
+                </label>
+              </div>
+            </div>
+            <div>
+                <label for="dish">Твое любимое блюдо:</label>
+                  <br><input type="text" name="dish" id="dish" size="50"/>
+            </div>
+            <div>
+              Укажи несколько увлечений которыми интересуешься:
+            <div>
+              <div>
+                <label>
+                  <input
+                    type="checkbox"
+                    value="Охота"
+                    checked="checked"
+                  />Охота
+                </label>
+              </div>
+              <div>
+                <label>
+                  <input type="checkbox" value="Танцы" />Танцы
+                </label>
+              </div>
+              <div>
+                <label>
+                  <input type="checkbox" value="Садоводство" />Садоводство
+                </label>
+              </div>
+              <div>
+                <label>
+                  <input type="checkbox" value="Рукоделие" />Рукоделие
+                </label>
+              </div>
+              <div>
+                <label>
+                  <input type="checkbox" value="Кулинария" />Кулинария
+                </label>
+              </div>
+              <div>
+                <label>
+                  <input type="checkbox" value="Игра на музыкальном инструменте" />Игра на музыкальном инструменте
+                </label>
+              </div>
+              <div>
+                <label>
+                  <input type="checkbox" value="Компьютерные игры" />Компьютерные игры
+                </label>
+              </div>
+            </div>
+          </fieldset>
+          <div>
+            <input type="reset"> <input type="image" src="images/send2.svg" name="submit" title="Отправить" width="40px"/>
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <span>
+        <a href="https://www.instagram.com/aleksandrkirushov/" target="_blank">
+          <img src="./images/instagram.svg" alt="instagram" width="50" />
+        </a>
+      </span>
+      <span>
+        <a href="https://www.facebook.com/alex.kirushov" target="_blank">
+          <img src="./images/facebook.svg" alt="facebook" width="50" />
+        </a>
+      </span>
+      <span>
+        <a
+          href="https://youtube.com/channel/UCR60WcIro8R8_-0iwSEgzIQ"
+          target="_blank"
+        >
+          <img src="./images/Youtube.svg" alt="yotube" width="50" />
+        </a>
+      </span>
+    </footer>
+  </body>
+</html>
