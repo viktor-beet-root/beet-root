@@ -13,6 +13,7 @@
       body {
         font-family: Open Sans;
         font-size: 20px;
+        width: auto;
       }
     </style>
   </head>
@@ -45,12 +46,23 @@
           о тебе.
         </p>
         <form action="#" method="get">
+          <fieldset name="cont">
+            <legend>Контактная информация</legend>
           <div>
             <label>
               Укажи свое ФИО:
-              <br><input type="text" name="name" size="50" />
+              <input type="text" name="name" width="auto" required />
             </label>
           </div>
+          <div>
+            <label>E-mail: <input type="email" name="email" placeholder="name@example.com" required></label>
+          </div>
+          <div>
+            <label>Моб. номер <br>телефона: <input type="tel" name="tel" placeholder="+380000000000" maxlength="13" required></label>
+          </div>
+        </fieldset>
+        <fieldset name="personal">
+          <legend>Личная информация</legend>
           <div><label>Укажи дату своего рождения:<br><input type="date" name="birthday"></label></div>
           <div>
             Пол:
@@ -179,11 +191,56 @@
               </div>
             </div>
             <div>
+                <label for="dish">Твое любимое блюдо:</label>
+                  <br><input type="text" name="dish" id="dish" size="50"/>
+            </div>
+            <div>
+              Укажи несколько увлечений которыми интересуешься:
+            <div>
+              <div>
                 <label>
-                  Твое любимое блюдо:
-                  <br><input type="text" name="dish" size="50"/>
+                  <input
+                    type="checkbox"
+                    value="Охота"
+                    checked="checked"
+                  />Охота
                 </label>
               </div>
+              <div>
+                <label>
+                  <input type="checkbox" value="Танцы" />Танцы
+                </label>
+              </div>
+              <div>
+                <label>
+                  <input type="checkbox" value="Садоводство" />Садоводство
+                </label>
+              </div>
+              <div>
+                <label>
+                  <input type="checkbox" value="Рукоделие" />Рукоделие
+                </label>
+              </div>
+              <div>
+                <label>
+                  <input type="checkbox" value="Кулинария" />Кулинария
+                </label>
+              </div>
+              <div>
+                <label>
+                  <input type="checkbox" value="Игра на музыкальном инструменте" />Игра на музыкальном инструменте
+                </label>
+              </div>
+              <div>
+                <label>
+                  <input type="checkbox" value="Компьютерные игры" />Компьютерные игры
+                </label>
+              </div>
+            </div>
+          </fieldset>
+          <div>
+            <input type="reset"> <input type="image" src="images/send2.svg" name="submit" title="Отправить" width="40px"/>
+          </div>
         </form>
       </section>
     </main>
