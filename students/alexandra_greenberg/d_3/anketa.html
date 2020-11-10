@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анкета</title>
+</head>
+
+<body>
+    <li><a href="index.html">Резюме</li></a>
+    <li><a href="blok1.html">Моя сім’я</li></a>
+    <li><a href="blok2.html">Мої улюбленці</li></a>
+    <li><a href="blok3.html">Моя робота</li></a>
+    <h1>Давай знайомитись</h1>
+    <p>Привіт! Мене звати Олександра і я в пошуках нових знайомств, можливо ти пам’ятаєш як у школі заповнював(ла)
+        анкету друзів? Сьогодні такі анкети не актуальні, а ось електронні актуально, тому не гай час і давай вже
+        знаймитись
+    <form>
+        <p>
+            <label>Прізвище</label><br>
+            <input type="text" name="first_name">
+        </p>
+        <p>
+            <label>Ім’я</label><br>
+            <input type="text" name="first_name">
+        </p>
+        <p>
+            <label>По батькові</label><br>
+            <input type="text" name="first_name">
+        </p>
+        <p>
+            <label>Електронна скринька</label><br>
+            <input type="email" name="email">
+        </p>
+        <p> Стать <br>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Жіноча</label><br>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Чоловіча</label><br>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Не хочу говорити</label>
+        </p>
+        <p>
+            <label for="data_nar">Дата народження</label>
+            <input type="date" name="trip-start" value="date">
+        </p>
+        <p> З якого ти міста
+            <select>
+                <option>Моє місто</option>
+                <option>Київ</option>
+                <option>Вінниця</option>
+                <option>Житомир</option>
+                <option>Одеса</option>
+                <option>Миколіїв</option>
+                <option>Львів</option>
+                <option>Харків</option>
+                <option>Чергнігів</option>
+                <option>Тернопіль</option>
+                <option>Біла Церква</option>
+                <option>Дніпро</option>
+                <option>Черкаси</option>
+            </select>
+        </p>
+        <p> Мови які знаю <br>
+            <input type="checkbox">Українська<br>
+            <input type="checkbox">Російська<br>
+            <input type="checkbox">Англійська<br>
+            <input type="checkbox">Іспанська<br>
+            <input type="checkbox">Польська<br>
+            <input type="checkbox">Італійська<br>
+        </p>
+        <p>
+            <label for="data_nar">Завантаж фото улюбленців</label>
+            <input type="file" name="file">
+        </p>
+        <p>
+            <label for="range_nastriy">Твій настрій</label>
+            <input type="range" name="nastriy">
+        </p>
+        <p>
+            <label for="url">Мій інстаграм</label>
+            <input type="url" name="insta">
+        </p>
+        <p>
+            <label for="submit">Надіслати</label>
+            <input type="submit" name="submit">
+        </p>
+    </form>
+    </p>
+</body>
+
+</html>
