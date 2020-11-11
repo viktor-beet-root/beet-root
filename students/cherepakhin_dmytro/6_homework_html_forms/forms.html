@@ -18,17 +18,16 @@
     </header>
     <main>
         <h2>Fill the form!</h2>
-        <form id="f1" action="#" method="GET">
+        <form id="f1" action="#" method="POST">
             <fieldset>
                 <legend>Personal information</legend>
                 <table>
-                    <tr><td><label for="name">First name:</label></td><td><input type="text" name="visitors name" id="name"></td></tr>
-                    <tr><td><label for="surname">Last name:</label></td><td><input type="text" name="surname" id="surname"></td></tr>
+                    <tr><td><label for="name">First name:</label></td><td><input type="text" name="name" placeholder="insert your name" id="name"></td></tr>
+                    <tr><td><label for="surname">Last name:</label></td><td><input type="text" name="surname" placeholder="insert your surname" id="surname"></td></tr>
+                    <tr><td><label for="sex">Sex:</label></td><td>male -<input type="radio" name="sex" id="sex" value="male"> female -<input type="radio" name="sex" value="female"></td></tr>
                     <tr><td><label for="birthday">Birthday:</label></td><td><input type="date" name="birthday" id="birthday"></td></tr>
                     <tr><td><label for="phone">Phone number:</label></td><td><input type="tel" name="phone" id="phone"></td></tr>
                     <tr><td><label for="email">Email:</label></td><td><input type="email" name="email" id="email"></td></tr>
-                    <tr><td><p></p></td></tr>
-                    <tr><td><input type="reset" value="reset"></td><td><input type="image" src="submit.svg" name="submit" id="=submit"></td></tr>
                 </table>
             </fieldset>
             <p></p>
@@ -36,6 +35,7 @@
                 <legend>Address</legend>
                 <label for="country">Country:</label>
                 <select name="country" id="country">
+                    <option>select your country</option>
                     <option value="Albania">Albania</option>
                     <option value="Algeria">Algeria</option>
                     <option value="Andorra">Andorra</option>
@@ -235,7 +235,7 @@
                 </select><p></p>
                 <label for="city">City (for Ukraine only):</label>
                 <select name="city" id="city">
-                    <option value="kharkiv">Kharkiv</option>
+                    <option>select your city</option>
                     <option value="Alchevs'k">Alchevs'k</option>
                     <option value="Alushta">Alushta</option>
                     <option value="Amvrosiyivka">Amvrosiyivka</option>
@@ -636,7 +636,28 @@
                     <option value="Zuhres">Zuhres</option>
                     <option value="Zvenihorodka">Zvenihorodka</option>
                     <option value="Zymohiria">Zymohiria</option>
-                                    </select>
+                </select>
+            </fieldset>
+            <p></p>
+            <fieldset>
+                <legend>About yourself</legend>
+                <label for="hobbies"><br> <ins>Hobbies:</ins>
+                <p>traveling -<input type="checkbox" name="traveling"></p>
+                <p>shoping -<input type="checkbox" name="shoping"></p>
+                <p>reading -<input type="checkbox" name="reading"></p>
+                <p>cooking -<input type="checkbox" name="cooking"></p>
+                <p>painting -<input type="checkbox" name="painting"></p>
+                <p>dancing -<input type="checkbox" name="dancing"></p>
+                <p>singing -<input type="checkbox" name="singing"></p>
+            </label>
+            </fieldset>
+            <p></p>
+            <fieldset>
+                <legend>To send information</legend>
+                <table><tr><td><input type="reset" value="reset"></td><td>
+                    <input type="image" src="submit.svg" value="submit" name="submit">
+                    <!-- <button type="submit"><img src="submit.svg" alt="submit"></button> -->
+                </td></tr></table>
             </fieldset>
         </form>
     </main>
