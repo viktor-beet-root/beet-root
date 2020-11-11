@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"
+        <title>Опросник</title>
+        <link rel="stylesheet" href=style.css">
+    </head>
+    <body>
+        <main>
+            <section>
+                <h1>Самый деликатный опрос на самые сокровенные темы</h1>
+                <form action="#" method="POST">
+                    <fieldset>
+                        <legend>Контактная информация</legend>
+                        <p><label for="fname">Имя (обязательно)</label><input type="text" id="fname" required></p>
+                        <p><label for="lname">Фамилия</label><input type="text" id="lname"></p>
+                        <p><label for="email">E-mail</label><input type="email" id="email"></p>
+                        <p><label for="tel">Контактный телефон</label><input type="tel" id="tel"></p>
+                    </fieldset>
+                    <p><input type="submit" value="Сообщить"></p>
+                </form>
+                <form action="#" method="POST">
+                    <fieldset>
+                        <p><label for="male">Мужчина</label><input type="radio" id="male" name="gender" value="male"></p>
+                        <p><label for="female">Женщина</label><input type="radio" id="female" name="gender" value="female"></p>
+                        <p><label for="transgender">Трансгендер</label><input type="radio" id="transgender" name="gender" value="transgender"></p>
+                        <p><label for="androgyne">Андрогин</label><input type="radio" id="androgyne" name="gender" value="androgyne"></p>
+                        <p><label for="backend">Бэкенд-разработчик</label><input type="radio" id="backend" name="gender" value="backend"></p>
+                        <p><label for="other">Другое</label><input type="radio" id="other" name="gender" value="other"></p>
+                    </fieldset>
+                </form>
+                <form action="#" method="GET">
+                    <select name="cities">
+                        <option>Выбери любимую столицу Украины</option>
+                        <option value="01">Киев (Kyiv)</option>
+                        <option value="02">Харьков (Kharkiv)</option>
+                        <option value="03">Херсон (Kherson)</option>
+                        <option value="04">Хмельницкий (Khmelnytskyi)</option>
+                        <option value="05">Кропивницкий (Kropyvnytskyi)</option>
+                        <option value="06">Черкассы (Cherkasy)</option>
+                        <option value="07">Чернигов (Chernihiv)</option>
+                        <option value="08">Черновцы (Chernivtsi)</option>
+                        <option value="09">Днепр (Dnipro)</option>
+                        <option value="10">Донецк (Donetsk)</option>
+                        <option value="11">Ивано-Франковск (Ivano-Frankivsk)</option>
+                        <option value="12">Луганск (Luhansk)</option>
+                        <option value="13">Луцк (Lutsk)</option>
+                        <option value="14">Львов (Lviv)</option>
+                        <option value="15">Николаев (Mykolaiv)</option>
+                        <option value="16">Одесса (Odessa)</option>
+                        <option value="17">Полтава (Poltava)</option>
+                        <option value="18">Ровно (Rivne)</option>
+                        <option value="19">Сумы (Sumy)</option>
+                        <option value="20">Тернополь (Ternopil)</option>
+                        <option value="21">Ужгород (Uzhhorod)</option>
+                        <option value="22">Винница (Vinnytsia)</option>
+                        <option value="23">Запорожье (Zaporizhzhia)</option>
+                        <option value="24">Житомир (Zhytomyr)</option>
+                        <option value="25">Симферополь (Simferopol)</option>
+                        <option value="26">Севастополь (Sevastopol)</option>
+                        <option value="27">Варшава (Warsaw)</option>
+                        <option value="28">Гданьск (Gdansk)</option>
+                    </select>
+                </form>
+                <div>
+                    <p>Твоё любимое женское имя на букву "В"</p>
+                    <form action="#" method="GET">
+                        <select name="fnameV">
+                            <option value="31">Валерия</option>
+                            <option disabled value="32">Валентина</option>
+                            <option disabled value="33">Варвара</option>
+                            <option disabled value="34">Василиса</option>
+                            <option disabled value="35">Вероника</option>
+                            <option disabled value="36">Виталина</option>
+                            <option disabled value="37">Владислава</option>
+                            <option disabled value="38">Владлена</option>
+                            <option disabled value="39">Вивиана</option>
+                            <option disabled value="40">Виолетта</option>
+                            <option disabled value="41">Виргиния</option>
+                        </select>
+                    </form>
+                </div>
+                <div>
+                    <p>Наскольки близки твои отношения с IT?</p>
+                    <form action="#" method="GET">
+                        <p><label for="ux">UX</label><input type="checkbox" id="ux" name="it" value="ux"></p>
+                        <p><label for="ui">UI Design</label><input type="checkbox" id="ui" name="it" value="ui"></p>
+                        <p><label for="frontend">Front End</label><input type="checkbox" id="frontend" name="it" value="frontend"></p>
+                        <p><label for="backend">Back End</label><input type="checkbox" id="backend" name="it" value="backend"></p>
+                        <p><label for="pl">Языки программирования</label><input type="checkbox" id="pl" name="it" value="pl"></p>
+                        <p><label for="cs">Кибербезопасность</label><input type="checkbox" id="cs" name="it" value="cs"></p>
+                    </form>
+                </div>
+                <form action="#" method="GET" enctype="multipart/form-data">
+                    <legend>Твой девиз</legend>
+                        <p><label for="motto">Девиз</label><input type="text" id="motto"></p>
+                        <p><label for="mottop">Девиз-картинка</label><input type="text" id="mottop"></p>
+                    <p><input type="submit" value="Объявить"></p>
+                </form>
+                <form action="#" method="GET">
+                    <p><label for="goals">Твои главные жизненные цели</label><textarea name="message" id="goals" rows="5" columns="55">5 целей</textarea>            
+                    <p><input type="submit" value="Рассказать"></p>
+                </form>
+            </section>
+        </main>
+    </body>
+</html>
