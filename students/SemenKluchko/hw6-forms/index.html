@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simple registration</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="banner.png" alt="main banner of the page" title="registration" />
+        </nav>
+    </header>
+    <main>
+        <div><form action="#" method="POST" enctype="multipart/form-data">
+            <fieldset>
+                <legend><strong style="color: darkred">PERSONAL INFO</strong></legend>
+                <div><p><label for="name">Name Surname:</label><input type="text" required id="name" placeholder="type here" /></p></div>
+                <div><p><label for="email">Phone number:</label><input type="phnumber" required id="phnumber" placeholder="type here" /></p></div>
+                <div><p><label>Email adress:<input type="email" id="email" placeholder="type here" /></label></p></div>
+                <div><p><label for="date">Date of birth: </label><input type="date" id="date" required></p></div>
+              </fieldset>
+              <br />
+            <fieldset>
+                <legend><strong style="color: darkred">QUESTIONS</strong></legend>
+                <div><p>Gender:</p></div>
+                <div><label for="male">Male</label><input type="radio" id="male" name="gender" /></div>
+                <div><label for="female">Female</label><input type="radio" id="female" name="gender" /></div>
+                <hr />
+                <div><p>Native language:</p></div>
+                <div><label>English<input type="radio" id="male" name="language" /></label></div>
+                <div><label>Ukrainian<input type="radio" id="female" checked name="language" /></label></div>
+                <div><label>Russian<input type="radio" id="male" name="language" /></label></div>
+                <div><label>German<input type="radio" id="female" name="language" /></label></div>
+                <div><p>Do you have any health problems? </p></div>
+                <div><label>Yes<input type="checkbox" name="question" id="que" /></label></div>
+                <div><label>No<input type="checkbox" name="question" id="que" checked/></label></div>
+            </fieldset>
+            <br />
+            <img src="kharkiv-sehir.jpg" width="400px" height="250px" alt="kharkiv photo" />
+            <img src="Kiev_1920_2.jpg" width="600px" height="250px" alt="Kyiv photo"/>
+            <img src="lviv.jpg" width="400px" height="250px" alt="Lviv photo"/>
+            <br />
+            <fieldset>
+                <legend><strong style="color: darkred">COUNTRY</strong></legend>
+                <div><label for="city"><p>Select city:</p></label></div>
+                <div><select name="city" id="city" required>
+                    <option value="Kropivnitsky">Kropivnitsky</option>
+                    <option value="Zhytomir">Zhytomir</option>
+                    <option value="Zaporojie">Zaporojie</option>
+                    <option value="Ivano-Frankovsk">Ivano-Frankovsk</option>
+                    <option value="Lugansk">Lugansk</option>
+                    <option value="Lytsk">Lytsk</option>
+                    <option value="Lviv">Lviv</option>
+                    <option value="Nikolaev">Nikolaev</option>
+                    <option value="Odessa">Odessa</option>
+                    <option value="Poltava">Poltava</option>
+                    <option value="Kyiv" selected>Kyiv</option>
+                    <option value="Rovno">Rovno</option>
+                    <option value="Summy">Summy</option>
+                    <option value="Uzhgorod">Uzhgorod</option>
+                    <option value="Kharkiv">Kharkiv</option>
+                    <option value="Herson">Herson</option>
+                    <option value="Hmelnitsky">Hmelnitsky</option>
+                    <option value="Cherkassy">Cherkassy</option>
+                    <option value="Chernigiv">Chernigiv</option>
+                    <option value="Chernivtsi">Chernivtsi</option>
+                    <option value="Vinnitsa">Vinnitsa</option>
+                    <option value="Ternopil">Ternopil</option>
+                    <option value="Dnipro">Dnipro</option>
+                </select></div>
+                <br />
+                <br />
+                <div><textarea rows="5" cols="13" placeholder="Type about your city"></textarea></div>
+            </fieldset>
+            <br>
+            <div><input type="submit" value="submit"></div>
+            <br />
+            <div><input type="reset" value="reset"></div>
+    </form></div>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
