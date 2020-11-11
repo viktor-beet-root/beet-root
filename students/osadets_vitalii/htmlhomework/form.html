@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <title>Форма</title>
+</head>
+<header>
+  <h1>Навигация</h1>
+  <nav>
+  <ul>
+    <li><a href="index.html">Биография</a></li>
+    <li><a href="myhobbies.html">Увлечения</a></li>
+    <li><a href="favoritecountry.html">Любимая страна</a></li>
+    <li><a href="myfavoritepet.html">Любимое животное</a></li>
+  </ul>
+</nav>
+</header>
+<body>
+  <main>
+    <section>
+      <h2>Анкета для заполнения</h2>
+    </section>
+    <form action="#" method="POST"></form>
+    <form>
+      <fieldset>
+        <legend>Инфорамция о Вас</legend>
+        <div><p><label for="name">Имя </label><input type="text" id="name" required placeholder="Вася"></p></div>
+        <div><p><label for="surname">Фамилия </label><input type="text" id="surname" required placeholder="Пупкин"></p></div>
+        <div><p><label for="email">E-mail</label><input type="email" id="email" required placeholder="beetroot@gmail.com"></p></div>
+        <div><p><label for="number">Номер телефона</label><input type="number" id="number" required maxlength="14" placeholder="+38000000000"></p></div>
+        <div><p><label>Дата рожденния</label><input type="date" name="dateofbirth" id="dateofbirth" maxlength="10" required placeholder="01.01.2000"></p></div>
+        <div><p><label>Возраст</label><input type="number" name="age" id="age" maxlength="3" required ></p></div>
+        <div><p><label>Ваш город</label><select name="city" id="city" required>
+          <option value="" disabled selected>Выберите город</option>
+          <option value="zhitomir">Житомир</option>
+          <option value="zaporoze">Запорожье</option>
+          <option value="ivano-Frankivsk">Ивано-Франковск</option>
+          <option value="kropivnitskiy">Кропивницкий</option>
+          <option value="mykolaiv">Николаев</option>
+          <option value="poltava">Полтава</option>
+          <option value="lugansk">Луганск</option>
+          <option value="lutsk">Луцк</option>
+          <option value="lviv">Львов</option>
+          <option value="cherkassy">Черкассы</option>
+          <option value="chernihiv">Чернигов</option>
+          <option value="chernovci">Черновцы</option>      
+          <option value="odessa">Одесса</option>
+          <option value="rivne">Ровно</option>
+          <option value="sumy">Сумы</option>
+          <option value="uzhgorod">Ужгород</option>
+          <option value="kharkiv">Харьков</option>
+          <option value="kherson">Херсон</option>
+          <option value="khmelnitskyi">Хмельницкий</option>
+          <option value="vinnytsia">Винница</option>
+          <option value="dnipro">Днепр</option>
+          <option value="kyiv">Киев</option>
+          <option value="ternopil">Тернополь</option>
+        </select></p></div>
+        <div><label>Пол
+          <br>м<input type="radio" name="sex" value="man">
+          <p>ж<input type="radio" name="sex" value="woman"></p>
+        </label>
+        </div>
+        <div><label>Любимый цвет(а)</label>
+        <br>Красный <input type="checkbox" name="red" value="red">
+        <br>Черный <input type="checkbox" name="black" value="black">
+        <br>Зеленый <input type="checkbox" name="green" value="green">
+        <br>Желтый <input type="checkbox" name="yellow" value="yellow">
+        <br>Фиолетовый<input type="checkbox" name="purple" value="purple">
+        <br>Оранжевый <input type="checkbox" name="orange" value="orange">
+        <br>Серый <input type="checkbox" name="gray" value="gray"> 
+        <br>Голубой<input type="checkbox" name="blue" value="blue">
+        <br>Нету любимого цвета <input type="checkbox" name="nofavcolor" value="nofavcolor">
+        </div>
+      </fieldset>
+    <div><p><label for="aboutu">Расскажи о себе</label></p><textarea name="aboutyou" id="aboutyou" cols="80" rows="10" placeholder="Рассказ о себе..." required></textarea>
+      <p><input type="submit" value="Отправить"><input type="reset" value="Очистить"></p>
+    </div> 
+  </form>
+  </main> 
+</body>
+</html>
