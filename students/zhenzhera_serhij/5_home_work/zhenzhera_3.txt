@@ -1,41 +1,43 @@
 <!DOCTYPE html>
 <html lang="ua">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"
-    <title>Женжера Сергій</title>
-    <link rel="stylesheet" href=style.css">
-  </head>
-  <body>
-    <header>
-      <nav>
-        <ol>
-        <li><a href="zhenzhera_1.txt" target="blank">Про себе</a>
-        <li><a href="zhenzhera_2.txt" target="blank">Що мене захоплює</a>
-        <li><a href="zhenzhera_3.txt" target="blank">Погляди</a>
-        <li><a href="zhenzhera_4.txt" target="blank">IT</a>
-        </ol>
-      </nav>
-    </header>
-    <main>
-      <section>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"
+        <title>Резюме</title>
+        <link rel="stylesheet" href=style.css">
+    </head>
+    <body>
         <header>
-          <div>
-          <h2 id="zhenzhera_3.txt">Погляди</h2>
-          <img src="94008817_703934870358284_5572490899963760043_n.jpg" alt="Погляди" width="350" />
-          </div>
+            <nav>
+                <ol>
+                <li><a href="zhenzhera_1.txt" target="blank">Про себе</a></li>
+                <li><a href="zhenzhera_2.txt" target="blank">Що мене захоплює</a></li>
+                <li><a href="zhenzhera_3.txt" target="blank">Погляди</a></li>
+                <li><a href="zhenzhera_4.txt" target="blank">IT</a></li>
+                </ol>
+            </nav>
         </header>
-        <p>Я отримав виховання, глибоко орієнтоване на пошук нових горизонтів для людства. Коротко кажучи, наше покоління готувалось летіти в Космос, освоювати інші світи. Сучасний поворот науки і технологій веде у світ віртуальний. Особисто для мене це становить вкрай потужний мотивуючий фактор. Тому конкретно у сфері IT шукаю роботу у великій компанії, яка могла би виконати деякі функції Науково-дослідного інституту. Наприклад, в сенсі проведення експериментів із віртуальністю або із безпосереднім сполученням людського організму та цифрових носіїв чи кіберсистем. В експериментах такого роду готовий прийняти участь безпосередньо. Роботи фрілансером нецікава, навіть якщо фінансово вигідніша для новачка. Шукаю не стільки зарплатню, скільки свою команду, яка реально працює над суспільно та економічно обґрунтованими завданнями (а не займається імітацією чи прихованим шахрайством)</p>
-      </section>
-    <footer>
-      <nav>
-        <ul>
-        <li><a href="https://www.facebook.com/shvjed" target="blank">Facebook</a>
-        <li><a href="https://www.instagram.com/sergeyzhenzhera/?hl=ru" target="blank">Instagram</a>
-        <li><a href="https://www.behance.net/shvjed80f1" target="blank">Behance</a>
-        </ul>
-      </nav>
-    <footer>
-  </body>
+        <main>
+            <section>
+                <h1><strong>Женжера Сергій</strong></h1>
+                <section>
+                    <header>
+                        <h2 id="zhenzhera_3.txt"><em>Погляди</em></h2>
+                        <img src="94008817_703934870358284_5572490899963760043_n.jpg" alt="Погляди" width="350" />
+                    </header>
+                    <p>Я отримав виховання, глибоко орієнтоване на пошук нових горизонтів для людства. Коротко кажучи, наше покоління готувалось летіти в Космос, освоювати інші світи. Сучасний поворот науки і технологій веде у світ віртуальний. Особисто для мене це становить вкрай потужний мотивуючий фактор. Тому конкретно у сфері IT шукаю роботу у великій компанії, яка могла би виконати деякі функції Науково-дослідного інституту. Наприклад, в сенсі проведення експериментів із віртуальністю або із безпосереднім сполученням людського організму та цифрових носіїв чи кіберсистем. В експериментах такого роду готовий прийняти участь безпосередньо. Роботи фрілансером нецікава, навіть якщо фінансово вигідніша для новачка. Шукаю не стільки зарплатню, скільки свою команду, яка реально працює над суспільно та економічно обґрунтованими завданнями (а не займається імітацією чи прихованим шахрайством)</p>
+                </section>
+            </section>
+        </main>
+        <footer>
+            <nav>
+                <ul>
+                <li><a href="https://www.facebook.com/shvjed" src="iconmonstr-facebook-1" target="blank">Facebook</a></li>
+                <li><a href="https://www.instagram.com/sergeyzhenzhera/?hl=ru" src="iconmonstr-instagram-11" target="blank">Instagram</a></li>
+                <li><a href="https://www.behance.net/shvjed80f1" src="iconmonstr-behance-1" target="blank">Behance</a></li>
+                </ul>
+            </nav>
+        </footer>
+    </body>
 </html>

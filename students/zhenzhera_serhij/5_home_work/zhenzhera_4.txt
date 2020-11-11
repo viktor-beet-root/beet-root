@@ -1,41 +1,43 @@
 <!DOCTYPE html>
 <html lang="ua">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"
-    <title>Женжера Сергій</title>
-    <link rel="stylesheet" href=style.css">
-  </head>
-  <body>
-    <header>
-      <nav>
-        <ol>
-        <li><a href="zhenzhera_1.txt" target="blank">Про себе</a>
-        <li><a href="zhenzhera_2.txt" target="blank">Що мене захоплює</a>
-        <li><a href="zhenzhera_3.txt" target="blank">Погляди</a>
-        <li><a href="zhenzhera_4.txt" target="blank">IT</a>
-        </ol>
-      </nav>
-    </header>
-    <main>
-      <section>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"
+        <title>Резюме</title>
+        <link rel="stylesheet" href=style.css">
+    </head>
+    <body>
         <header>
-          <div>
-          <h2 id="zhenzhera_4.txt">IT</h2>
-          <img src="iPad 768 Home.png" alt="IT" width="350" />
-          </div>
+            <nav>
+                <ol>
+                <li><a href="zhenzhera_1.txt" target="blank">Про себе</a></li>
+                <li><a href="zhenzhera_2.txt" target="blank">Що мене захоплює</a></li>
+                <li><a href="zhenzhera_3.txt" target="blank">Погляди</a></li>
+                <li><a href="zhenzhera_4.txt" target="blank">IT</a></li>
+                </ol>
+            </nav>
         </header>
-        <p>У Beetroot Academy закінчив курси UI/UX Design та додатковий модуль з UX. Цікаво поєднати ці знання, маючи підготовку та 16-річний досвід викладача логіки. Тому вивчаю Front End. А у вільну хвилинку перевіряю можливості сучасних turn-based strategy games. З точки зору графічного дизайну вони прогресують, а глибина ігрового процесу часто опиняється на мілині...</p>
-      </section>
-    <footer>
-      <nav>
-        <ul>
-        <li><a href="https://www.facebook.com/shvjed" target="blank">Facebook</a>
-        <li><a href="https://www.instagram.com/sergeyzhenzhera/?hl=ru" target="blank">Instagram</a>
-        <li><a href="https://www.behance.net/shvjed80f1" target="blank">Behance</a>
-        </ul>
-      </nav>
-    <footer>
-  </body>
+        <main>
+            <section>
+                <h1><strong>Женжера Сергій</strong></h1>
+                <section>
+                    <header>
+                        <h2 id="zhenzhera_4.txt"><em>IT</em></h2>
+                        <img src="iPad 768 Home.png" alt="IT" width="350" />
+                    </header>
+                    <p>У Beetroot Academy закінчив курси UI/UX Design та додатковий модуль з UX. Цікаво поєднати ці знання, маючи підготовку та 16-річний досвід викладача логіки. Тому вивчаю Front End. А у вільну хвилинку перевіряю можливості сучасних turn-based strategy games. З точки зору графічного дизайну вони прогресують, а глибина ігрового процесу часто опиняється на мілині...</p>
+                </section>
+            </section>
+        </main>
+        <footer>
+            <nav>
+                <ul>
+                <li><a href="https://www.facebook.com/shvjed" src="iconmonstr-facebook-1" target="blank">Facebook</a></li>
+                <li><a href="https://www.instagram.com/sergeyzhenzhera/?hl=ru" src="iconmonstr-instagram-11" target="blank">Instagram</a></li>
+                <li><a href="https://www.behance.net/shvjed80f1" src="iconmonstr-behance-1" target="blank">Behance</a></li>
+                </ul>
+            </nav>
+        </footer>
+    </body>
 </html>

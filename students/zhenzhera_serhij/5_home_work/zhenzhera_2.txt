@@ -1,41 +1,43 @@
 <!DOCTYPE html>
 <html lang="ua">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"
-    <title>Женжера Сергій</title>
-    <link rel="stylesheet" href=style.css">
-  </head>
-  <body>
-    <header>
-      <nav>
-        <ol>
-        <li><a href="zhenzhera_1.txt" target="blank">Про себе</a>
-        <li><a href="zhenzhera_2.txt" target="blank">Що мене захоплює</a>
-        <li><a href="zhenzhera_3.txt" target="blank">Погляди</a>
-        <li><a href="zhenzhera_4.txt" target="blank">IT</a>
-        </ol>
-      </nav>
-    </header>
-    <main>
-      <section>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"
+        <title>Резюме</title>
+        <link rel="stylesheet" href=style.css">
+    </head>
+    <body>
         <header>
-          <div>
-          <h2 id="zhenzhera_2.txt">Що мене захоплює</h2>
-          <img src="2020.03.06.jpg" alt="Каплиця Святого Гіацинта" width="350" />
-          </div>
+            <nav>
+                <ol>
+                <li><a href="zhenzhera_1.txt" target="blank">Про себе</a></li>
+                <li><a href="zhenzhera_2.txt" target="blank">Що мене захоплює</a></li>
+                <li><a href="zhenzhera_3.txt" target="blank">Погляди</a></li>
+                <li><a href="zhenzhera_4.txt" target="blank">IT</a></li>
+                </ol>
+            </nav>
         </header>
-        <p>Маю філософську, економічну та релігійну освіту. Співаю в католицькому Хорі Каплиці Святого Гіацинта. Приймаю участь у виставах Біблійного театру. Викладаю у Семінарії УГКЦ</p>
-      </section>
-    <footer>
-      <nav>
-        <ul>
-        <li><a href="https://www.facebook.com/shvjed" target="blank">Facebook</a>
-        <li><a href="https://www.instagram.com/sergeyzhenzhera/?hl=ru" target="blank">Instagram</a>
-        <li><a href="https://www.behance.net/shvjed80f1" target="blank">Behance</a>
-        </ul>
-      </nav>
-    <footer>
-  </body>
+        <main>
+            <section>
+                <h1><strong>Женжера Сергій</strong></h1>
+                <section>
+                    <header>
+                        <h2 id="zhenzhera_2.txt"><em>Що мене захоплює</em></h2>
+                        <img src="2020.03.06.jpg" alt="Каплиця Святого Гіацинта" width="350" />
+                    </header>
+                    <p>Маю філософську, економічну та релігійну освіту. Співаю в католицькому Хорі Каплиці Святого Гіацинта. Приймаю участь у виставах Біблійного театру. Викладаю у Семінарії УГКЦ</p>
+                </section>
+            </section>
+        </main>
+        <footer>
+            <nav>
+                <ul>
+                <li><a href="https://www.facebook.com/shvjed" src="iconmonstr-facebook-1" target="blank">Facebook</a></li>
+                <li><a href="https://www.instagram.com/sergeyzhenzhera/?hl=ru" src="iconmonstr-instagram-11" target="blank">Instagram</a></li>
+                <li><a href="https://www.behance.net/shvjed80f1" src="iconmonstr-behance-1" target="blank">Behance</a></li>
+                </ul>
+            </nav>
+        </footer>
+    </body>
 </html>
