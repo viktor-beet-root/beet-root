@@ -12,19 +12,103 @@
 		<form action="#" method="post">
 			<p>Ф.И.О.</p>
 			<div>
-				<input type="text" name="username">
+				<input type="text" name="surname" placeholder="Фамилия" value="">
 			</div><br>
 			<div>
-				<input type="text" name="username">
+				<input type="text" name="name" placeholder="Имя" value="">
 			</div><br>
 			<div>
-				<input type="text" name="username">
+				<input type="text" name="patronymic" placeholder="Отчество" value="">
 			</div><br>
-
-   	</form>
-		
-		
-	</section>
-	
+			<div>
+				<label for="date">Дата рождения: </label>
+				<input type="date" id="date" name="date" value="aa"/>
+			</div>
+			<div>
+				<p>Пол:</p>
+				<p><input type="radio" name="button" value="mm">Мужской</p>
+				<p><input type="radio" name="button" value="gg">Женский</p>
+			</div>
+			<div>
+				<p>Семейное положение</p>
+				<p><input type="radio" name="button1" value="mm" checked>Женат/Замужем</p>
+				<p><input type="radio" name="button1" value="mm">Гражданский брак</p>
+				<p><input type="radio" name="button1" value="mm">Нет</p>
+			</div>
+			<div>
+				<p>Дети:</p>
+				<select name="hildren">
+					<option value="one">один</option>
+					<option value="two">два</option>
+					<option value="three">три</option>
+					<option value="more than three">больше трех</option>
+					<option value="no">нет</option>
+			  </select>
+			</div>
+			<div>
+				<p>Прекрипить фото</p>
+				<input type="file">
+			</div>
+		   <div>
+				<p>Качества подходящие вам:</p>
+				<input type="checkbox" name="xxx1" value="a1">Трудолюбие<br>
+				<input type="checkbox" name="xxx2" value="a2">Окуратность<br>
+				<input type="checkbox" name="xxx3" value="a3">Общительнось<br>
+				<input type="checkbox" name="xxx4" value="a4">Быстро учусь<br>
+				<input type="checkbox" name="xxx5" value="a5">Всегда опаздываю
+			</div>
+			<div>
+				<p>Город проживания:</p>
+				<select name="city">
+					<option value="a1">Киев</option>
+					<option value="a2">Харьков</option>
+					<option value="a3">Одесса</option>
+					<option value="a4">Днепр</option>
+					<option value="l1">Донецк</option>
+					<option value="l2">Запорожье</option>
+					<option value="l3">Львов</option>
+					<option value="l4">Кривой Рог</option>
+					<option value="l5">Николаев</option>
+					<option value="l6">Мариуполь</option>
+					<option value="l7">Луганск</option>
+					<option value="l8">Винница</option>
+					<option value="l9">Макеевка</option>
+					<option value="p1">Севастополь</option>
+					<option value="p2">Симферополь</option>
+					<option value="p3">Херсон</option>
+					<option value="p4">Полтава</option>
+					<option value="p5">Чернигов</option>
+					<option value="p6">Черкассы</option>
+					<option value="p7">Житомир</option>
+					<option value="p8">Сумы</option>
+					<option value="p9">Хмельницкий</option>
+					<option value="k1">Черновцы</option>
+					<option value="k2">Ровно</option>
+					<option value="g5">Кропивницкий</option>
+					<option value="g6">Ивано-Франковск</option>
+					<option value="k6">Кременчуг</option>
+					<option value="f5">Тернополь</option>
+					<option value="lk">Луцк</option>
+					<option value="hj">Белая Церковь</option>
+					<option value="fg">Краматорск</option>
+					<option value="dg">Мелитополь</option>
+					<option value="hh">Ужгород</option>
+					<option value="fg">Бердянск</option>
+					<option value="dh">Каменец-Подольский</option>
+					<option value="gl">Бровары</option>
+				</select>
+			</div>
+			<div>
+				<p>Немного о себе:</p>
+				<textarea name="text"></textarea>
+			</div>
+			<div>
+				<p>Действие</p>
+				<button type="submit">Отправить</button>
+				<button type="reset">Очистить</button>
+			</div>
+		</form>
+		</section>
 </body>
+
 </html>
