@@ -1,1 +1,87 @@
-form
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Анкетка</title>
+</head>
+<body>
+    <form action="#" method="POST" enctype="multipart/form-data">
+      <fieldset>
+       <legend>1. Контактная информация</legend>
+         <div>
+           <p>Имя</p>
+           <input placeholder="введите имя" tabindex="1" name="username" type="text">
+         </div>
+         <div>
+           <p> Пароль</p>
+           <input placeholder="введите пароль" tabindex="2" name="userpass" type="password">
+         </div>
+         <div>
+           <p>Телефон</p>
+            <input placeholder="+380 (XX) XXX XX XX" tabindex="3" name="userphone" type="tel">
+         </div>
+       </fieldset>
+       <br>
+       <fieldset> 
+         <legend>2. Персональная информация</legend>
+           <div>
+              <p>Пол</p>
+             <input tabindex="4" type="radio" name="gender" value="male"/> Мужской
+             <input tabindex="4" type="radio" name="gender" value="female"/> Женский
+             <input tabindex="4" checked type="radio" name="gender" value="nomatter"/> Не указан
+           </div>
+           <br>
+           <div>
+             <p>В каких городах вы бывали?</p>
+             <select name="city" multiple>
+               <option tabindex="5" selected value="any">Любой город</option>
+               <option tabindex="6" value="Kyiv">Киев</option>
+               <option tabindex="7" value="Vinnitsa">Винница</option>
+               <option tabindex="8" value="Dnepr">Днепр</option>
+               <option tabindex="9" value="Zytomyr">Житомир</option>
+               <option tabindex="10" value="Zaporojie">Запорожье</option>
+               <option tabindex="11" value="Ivanofrankovsk">Ивано-Франковск</option>
+               <option tabindex="12" value="Lutsk">Луцк</option>
+               <option tabindex="13" value="Lvivk">Львов</option>
+               <option tabindex="14" value="Mykolaiv">Николаев</option>
+               <option tabindex="15" value="Odesa">Одесса</option>
+               <option tabindex="16" value="Poltava">Полтава</option>
+               <option tabindex="17" value="Rivno">Ровно</option>
+               <option tabindex="18" value="Sumy">Сумы</option>
+               <option tabindex="18" value="Tetnopil">Тернополь</option>
+               <option tabindex="19" value="Kharkiv">Харьков</option>
+               <option tabindex="20" value="Kherson">Херсон</option>
+               <option tabindex="21" value="Khmelnytskiy">Хмельницкий</option>
+               <option tabindex="22" value="Cherkasy">Черкассы</option>
+               <option tabindex="23" value="Chernigiv">Чернигов</option>
+               <option tabindex="24" value="Chernovtsy">Черновцы</option>
+             </select>
+           </div>
+           <br>
+           <div>
+             <p>Как проводите свободное время?</p>
+             <p><input tabindex="25" type="checkbox" name="hobby" value="yes"/>Прогулки</p>
+             <p><input tabindex="26" type="checkbox" name="hobby2" value="yes"/>Общение с друзьями</p>
+             <p><input tabindex="27" type="checkbox" name="hobby3" value="yes"/>Занятие спортом</p>
+             <p><input tabindex="28" type="checkbox" name="hobby4" value="yes"/>Чтение книг</p>
+           </div>
+           <br>
+           <div>
+             <p>Загрузите Ваше фото</p>
+             <input tabindex="29" type="file" name="userphoto">
+           </div>
+            <br>
+           <div>
+             <textarea tabindex="30" name="text" cols="30" rows="5" placeholder="Расскажите немного о себе"></textarea>
+           </div>
+     </fieldset>
+       <br>
+       <div>
+         <button type="submit">Отправить</button>
+         <button type="reset">Сброс</button>
+       </div>
+   </form>
+</body>
+</html>
