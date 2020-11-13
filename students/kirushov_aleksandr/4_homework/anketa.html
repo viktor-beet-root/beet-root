@@ -19,16 +19,16 @@
       <nav>
         <ul>
           <li>
-            <a href="kirushov_about_my_self.html#home" target="_blank">
+            <a href="../3_homework/kirushov_about_my_self.html#home" target="_blank">
               Главная
             </a>
           </li>
           <li>
-            <a href="hobbies.html#hobbies" target="_blank">Увлечения</a>
+            <a href="../3_homework/hobbies.html#hobbies" target="_blank">Увлечения</a>
           </li>
-          <li><a href="food.html#food" target="_blank">Любимая еда</a></li>
+          <li><a href="../3_homework/food.html#food" target="_blank">Любимая еда</a></li>
           <li>
-            <a href="mypets.html#pets" target="_blank">Мои домашние животные</a>
+            <a href="../3_homework/mypets.html#pets" target="_blank">Мои домашние животные</a>
           </li>
           <li><a href="#anketa">Анкета</a></li>
         </ul>
@@ -42,7 +42,7 @@
           Ответь, пожалуйста, на несколько вопросов, что б я смог больше узнать
           о тебе.
         </p>
-        <form action="#" method="get">
+        <form action="#" method="POST">
           <fieldset name="cont">
             <legend>Контактная информация</legend>
             <div>
@@ -70,19 +70,19 @@
               <label>Укажи дату своего рождения:<br /><input type="date" name="birthday" />
               </label>
             </div>
-            <div>
+            <p>
               Пол:
-              <div>
-                <label>
-                  <input type="radio" name="Sex" value="Мужской" />
-                  М
-                </label>
-                <label>
-                  <input type="radio" name="Sex" value="Женский" />
-                  Ж
-                </label>
-              </div>
+            <div>
+              <label>
+                <input type="radio" name="Sex" value="Мужской" />
+                М
+              </label>
+              <label>
+                <input type="radio" name="Sex" value="Женский" />
+                Ж
+              </label>
             </div>
+            </p>
             <div>
               <label for="town">В каком городе ты проживаешь?</label>
               <br /><select name="city" id="town">
@@ -152,9 +152,11 @@
                     <input type="radio" name="color_hair" value="Sedoi" />Седой
                   </label>
                 </div>
-                <label>
-                  <input type="radio" name="color_hair" value="Volosy otsutstvuiut" />Волосы отсутсвуют
-                </label>
+                <div>
+                  <label>
+                    <input type="radio" name="color_hair" value="Volosy otsutstvuiut" />Волосы отсутсвуют
+                  </label>
+                </div>
               </div>
             </div>
             <div>
@@ -223,7 +225,9 @@
           </fieldset>
           <div>
             <input type="reset" />
-            <input type="image" src="images/send2.svg" name="submit" title="Отправить" width="40px" />
+            <button type="submit">
+              <img src="../3_homework/images/send2.svg">Отправить
+            </button>
           </div>
         </form>
       </section>
@@ -231,17 +235,17 @@
     <footer>
       <span>
         <a href="https://www.instagram.com/aleksandrkirushov/" target="_blank">
-          <img src="./images/instagram.svg" alt="instagram" width="50" />
+          <img src="../3_homework/images/instagram.svg" alt="instagram" width="50" />
         </a>
       </span>
       <span>
         <a href="https://www.facebook.com/alex.kirushov" target="_blank">
-          <img src="./images/facebook.svg" alt="facebook" width="50" />
+          <img src="../3_homework/images/facebook.svg" alt="facebook" width="50" />
         </a>
       </span>
       <span>
         <a href="https://youtube.com/channel/UCR60WcIro8R8_-0iwSEgzIQ" target="_blank">
-          <img src="./images/Youtube.svg" alt="yotube" width="50" />
+          <img src="../3_homework/images/Youtube.svg" alt="yotube" width="50" />
         </a>
       </span>
     </footer>
