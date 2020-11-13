@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+</head>
+<body>
+    <section>
+        <h1>Форма для знакомств</h1>
+        <form action="#" method="POST" name="Qustionare">
+            <fieldset>
+                <legend>Ваш пол</legend>
+                <p><label for="man">Мужской</label><input type="radio" name="gender" id="man"></p>
+                <p><label for="woman">Женский</label><input type="radio" name="gender" id="woman"></p>
+            </fieldset>
+            <div>
+                <p><label for="age">Ваш возраст</label></p>
+                    <select name="age" id="age" >                    
+                    <option value="baby">0-10</option> 
+                    <option value="teenagar">10-20</option>  
+                    <option value="old">20+</option>       
+                </select>
+            </div>
+            <div>
+                <p>Любимое животное</p> 
+                <label for="dog">Собака</label><input type="checkbox" name="pet" id="dog">
+                <label for="cat">Кошка</label><input type="checkbox" name="pet" id="cat">  
+            </div>
+            <div>
+                  <br><label>Дата рождения<input type="date" name="date of submitting" id="date"></label>
+             </div>
+            <br><textarea name="wishes" id="description" required cols="30" rows="10" placeholder="особые пожелания"></textarea>
+            <br><input type="image" src="https://html5book.ru/wp-content/uploads/2015/04/webbutton.png" value="submit">
+            <br><input type="reset" value="стересть все">
+        </form>
+    </section>
+</body>
+</html>
