@@ -12,13 +12,16 @@
 		<form action="#" method="post">
 			<p>Ф.И.О.</p>
 			<div>
-				<input type="text" name="surname" placeholder="Фамилия" value="">
+				<input type="text" name="surname" placeholder="Фамилия" id="fdg" value="">
+				<label for="fdg">вписать</label>
 			</div><br>
 			<div>
-				<input type="text" name="name" placeholder="Имя" value="">
+				<input type="text" name="name" placeholder="Имя" id="dfg" value="">
+				<label for="dfg">вписать</label>
 			</div><br>
 			<div>
-				<input type="text" name="patronymic" placeholder="Отчество" value="">
+				<input type="text" name="patronymic" placeholder="Отчество" id="gfd" value="">
+				<label for="gfd">вписать</label>
 			</div><br>
 			<div>
 				<label for="date">Дата рождения: </label>
@@ -26,14 +29,14 @@
 			</div>
 			<div>
 				<p>Пол:</p>
-				<p><input type="radio" name="button" value="mm">Мужской</p>
-				<p><input type="radio" name="button" value="gg">Женский</p>
+				<p><input type="radio" name="floor" value="mm">Мужской</p>
+				<p><input type="radio" name="floor" value="gg">Женский</p>
 			</div>
 			<div>
 				<p>Семейное положение</p>
-				<p><input type="radio" name="button1" value="mm" checked>Женат/Замужем</p>
-				<p><input type="radio" name="button1" value="mm">Гражданский брак</p>
-				<p><input type="radio" name="button1" value="mm">Нет</p>
+			   <p></p><label><input type="radio" name="sp1" value="mm" checked>Женат/Замужем</label></p>
+			   <p><label><input type="radio" name="sp1" value="mm">Гражданский брак</label></p>
+				<label><input type="radio" name="sp1" value="mm">Нет</label>
 			</div>
 			<div>
 				<p>Дети:</p>
@@ -47,15 +50,15 @@
 			</div>
 			<div>
 				<p>Прекрипить фото</p>
-				<input type="file">
+				<label><input type="file" name="foto">Выбрать фото</label>
 			</div>
 		   <div>
 				<p>Качества подходящие вам:</p>
-				<input type="checkbox" name="xxx1" value="a1">Трудолюбие<br>
-				<input type="checkbox" name="xxx2" value="a2">Окуратность<br>
-				<input type="checkbox" name="xxx3" value="a3">Общительнось<br>
-				<input type="checkbox" name="xxx4" value="a4">Быстро учусь<br>
-				<input type="checkbox" name="xxx5" value="a5">Всегда опаздываю
+				<label><input type="checkbox" name="xxx1" value="a1">Окуратность</label><br>
+				<label><input type="checkbox" name="xxx2" value="a2">Трудолюбие</label><br>
+				<label><input type="checkbox" name="xxx3" value="a3">Общительнось</label><br>
+				<label><input type="checkbox" name="xxx4" value="a4">Быстро учусь</label><br>
+				<label><input type="checkbox" name="xxx5" value="a5">Всегда опаздываю</label>
 			</div>
 			<div>
 				<p>Город проживания:</p>
