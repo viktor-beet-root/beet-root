@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul > li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+    width: 900px;
+    margin: 0px auto;
+}
+
+.wrapper .menu ul>li  {
+    display: inline-block;
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid black;
+    box-sizing: border-box;
+    margin: 0px;
+    background-color: grey;
+}
+
+.menu ul li>a {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+}
+.wrapper .menu ul>li:hover {
+    background-color: brown;
+}
+
+
