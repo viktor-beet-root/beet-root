@@ -3,8 +3,18 @@
     padding: 0;
 }
 
+@font-face {
+    font-family: 'Proxima Nova Regular';
+    src: url('ProximaNova-Regular.eot');
+    src: url('ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
+    url('ProximaNova-Regular.woff') format('woff'),
+    url('ProximaNova-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+
 body {
-    font-family: "ProximaNova", sans-serif;
+    font-family: "Proxima Nova Regular", sans-serif;
     font-size: 14px;
     line-height: 1.2em;
 }
@@ -23,7 +33,7 @@ h2 {
 }
 
 .container {
-    margin: 1%;
+    margin: 10px;
     padding: 0 2.2em 0 2.2em;
     display: inline-block;
     width: 220px;
