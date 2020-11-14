@@ -1,15 +1,14 @@
 *{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    margin: 0px;
-    padding: 0px;
+
+    margin: 0;
+    padding: 0;
 }
 
 body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
     border: #ffffff solid 20px;
     background-color: #3B3F45;
-    padding-top: 0px;
-    margin: 0px;
     position: relative;
     min-width: 100vh;
     min-height: 92.5vh;
@@ -20,7 +19,6 @@ body{
 }
 
 header{
-    margin-top: 0px;
     background-color: #4A4F56 ;
     text-align: center;
     color: #EB7E7F;
@@ -47,14 +45,16 @@ form{
     margin-right: auto;
     margin-top: 15px;
     margin-bottom: 15px;
+
 }
 
-label>.box{
+.box{
     padding: 5px;
     background-color: #88839E;
     color: #ffffff;
+    position: line;
 }
-label:nth-child(2n)>.box{
+.box:nth-child(2n){
     background-color:#7A7593;
 }
 
@@ -64,40 +64,27 @@ label:nth-child(2n)>.box{
     border-bottom: 3px;
     border-style: solid;
     border-color: #ffffff;
-    border-left: 0px;
-    border-right: 0px;
+    border-left: 0;
+    border-right: 0;
     transition: all .1s ease-in;
 }
 
-input:checked + spam {
+input:checked + span {
     text-decoration: line-through;
+    color: #acabb4;
 }
-
-label>.box:active{
+label{
+    display: block;
+}
+.box:active{
     background-color:  #EB7E7F;
 }
-#one ~ spam::after{
-    content: " ( for the next lessons about CSS )";
-    font-size: 8px;
-    color: #ffffff;
+small{
+    font-size: 10px;
 }
-#two ~ spam::after{
-    content: " ( for more CSS manipulations )";
-    font-size: 8px;
-    color: #ffffff;
+small::before{
+    content: " ( ";
 }
-#three ~ spam::after{
-    content: " ( because they are awesome )";
-    font-size: 8px;
-    color: #ffffff;
-}
-#four ~ spam::after{
-    content: " ( hm... they alvays disappear )";
-    font-size: 8px;
-    color: #ffffff;
-}
-#six ~ spam::after{
-    content: " ( for my friends )";
-    font-size: 8px;
-    color: #ffffff;
+small::after{
+    content: " ) ";
 }

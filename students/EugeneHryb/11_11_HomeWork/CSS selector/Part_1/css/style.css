@@ -10,18 +10,21 @@
     font-style: normal;
     font-weight: normal;
 }
-
-
 *{
+    margin: 0;
+    padding: 0;
+}
+
+body{
     font-family: "ProximaNova";
     font-size: 14px;
 }
 
 .content_lv1 {
-    margin: 1px auto;
+    margin: 0 auto;
     background-color: #ffffff;
-    margin-left: auto 0px;
-    margin-right: auto 0px;
+    margin-left: auto 0;
+    margin-right: auto 0;
     text-align: center;
 }
 
@@ -34,7 +37,6 @@
 }
 
 .content_lv2 h2{
-    font-family: "ProximaNova";
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -42,12 +44,10 @@
     color: #9d9d9d;
 }
 .cirсle{
-    border-style: solid;
-    position: relative;
-    margin: 0px auto;
-    border-color:  #2a69a6;
-    border-width: 2px;
+    border: 2px solid #2a69a6 ;
     border-radius: 50%;
+    position: relative;
+    margin: 0 auto;
     height: 60px;
     width: 60px;
     background-color: #2a69a6;
