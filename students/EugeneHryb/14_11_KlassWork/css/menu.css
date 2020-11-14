@@ -1,14 +1,14 @@
 .menu{
     text-align: center;
-    padding: 0px;
-    margin: 0px;
-    font-size: 0px;
+    padding: 0;
+    margin: 0;
+    font-size: 0;
 }
 
 .menu>li{
     display: inline-block;
     background-color: grey;
-    border: solid 1px rgb(127, 24, 187);
+    border: 1px solid rgb(127, 24, 187);
     border-left: none;
     list-style-type: none;
     padding: 10px;
@@ -16,7 +16,7 @@
     margin: 0;
 }
 .menu>li:first-child{
-    border-left: solid 1px rgb(127, 24, 187);
+    border-left: 1px solid rgb(127, 24, 187);
 }
 .menu>li>a{
     display: block;
