@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding-left: 0;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+}
+form{
+    margin-left: 20%;
+}
+input{
+    font-family: inherit;
+    font-size: inherit;
+    padding: 10px;
+}
+.for-label-group{
+    margin-bottom: 15px;
+    position: relative;
+}
+..for-label-group label{
+    position: absolute;
+    top: 10px;
+    left: 15px;
+}
+.for-label-group input:focus ~ label{
+    color: red;
+}
+
+h2{
+    margin-left: 20%;
+}
+.for-label-group input::-webkit-input-placeholder {
+    color: transparent;
+}
+.for-label-group input::-moz-placeholder {
+    color: transparent;
+}
+.for-label-group input:-ms-input-placeholder {
+    color: transparent;
+}
+.for-label-group input::-ms-input-placeholder {
+    color: transparent;
+}
+.for-label-group input::placeholder {
+    color: transparent;
+}
+.for-label-group input:not(~:placeholder-shown)~label{
+    top: -15px;
+    font-size: 15px;
+    background-color: white;
+}
+for-label-group input[required] ~ label::after{
+    content: '*';
+    color: red;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+.students-list{
+    list-style-type: none;
+    border: 1px solid black;
+}
+.students-list > li{
+    padding: 15px;
+    border: 1px solid black;
+}
+.students-list > li:not(:last-child){
+
+}
