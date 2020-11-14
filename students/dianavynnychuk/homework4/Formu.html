@@ -10,20 +10,23 @@
     <form ation="#" method="POST">
         <fieldset>
             <legend>Основна інфориація</legend>
-            <label for="your name">Твоє імя:<em>*</em><input type="text" id="your name" placeholder="імя" required></label>
+            <label for="yourName">Твоє імя:<em>*</em><input type="text" name="yourname" id="yourName" placeholder="імя" required></label>
             <br>
             <br>
-            <label for="your surname">Фамілія:<em>*</em><input type="text" id="your surname" placeholder="фамілія"required></label>
+            <label for="yourSurname">Фамілія:<em>*</em><input type="text" name="yoursurname" id="yourSurname" placeholder="фамілія"  required></label>
             <br>
             <br>
-            <label for="age">Вік:<input type="number" id="age"></label>
+            <label for="age">Вік:<input type="number" name="yourage" id="age"></label>
             <br>
             <br>
+            <label for="sex">Стать:</label> 
+            <div id="sex">
             <input type="radio" name="sex" value="Male">Ч
             <input type="radio" name="sex" value="Famale">Ж
+            </div>
             <br>
             <br>
-            <label for="birthday">День народження:<input type="date" id="birthday"></label>
+            <label for="birthday">День народження:<input type="date" name="yourbirthday" id="birthday"></label>
         </fieldset>
         <br>
         <fieldset>
@@ -58,13 +61,13 @@
             </select>
             <br>
             <br>
-            <label for="Email">E-mail:<input type="email" id="Email"></label>
-            <label for="Number">Номер телефону:<input type="tel" id="Number" ></label>
+            <label for="email">E-mail:<input type="email" name="mail" id="email"></label>
+            <label for="number">Номер телефону:<input type="tel" name="telephone" id="number" ></label>
         </fieldset>
         <br>
         <fieldset>
             <legend>Цікаві факти</legend>
-        <label for="Color">Улюблений кoлір:<input type="color" id="Color"></label> 
+        <label for="color">Улюблений кoлір:<input type="color" name="favorite" id="color"></label> 
         <br>
         <br>
         <label for="language">Якими мовами валодієте?</label> 
@@ -84,7 +87,7 @@
         </fieldset>
         <br>
         <div>
-            <label>Додаткова інфориація:<textarea name="msssage"></textarea></label>
+            <label>Додаткова інфориація:<textarea name="massage"></textarea></label>
             <br>
             <br>
             <label for="information">Згода на використання моїх даних:<input type="checkbox" name="information" id="information"></label>
