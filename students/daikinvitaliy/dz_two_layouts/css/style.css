@@ -1,0 +1,9 @@
+*{transition: all .1s ease-in;}
+body{
+	font-family: \'Trebuchet MS\', Trebuchet, Arial, sans-serif;
+}
+div{
+	block-size:1240px;
+	color: rgb(235 126, 127);
+}
+	
