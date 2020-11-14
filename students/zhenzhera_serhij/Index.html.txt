@@ -1,23 +1,21 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"
-    <title>Оглавление</title>
-    <link rel="stylesheet" href=style.css">
-  </head>
-  <body>
-    <header>
-      <nav>
-        <ul>
-        <li><a href="5_class_work_text #g1">Глава 1</a></li>
-        <li><a href="5_class_work_text #g2">Глава 2</a></li>
-        <li><a href="5_class_work_text #g3">Глава 3</a></li>
-        <li><a href="5_class_work_text #g4">Глава 4</a></li>
-        <li><a href="5_class_work_text #g5">Глава 5</a></li>
-        </ul>
-      </nav>
-    </header>
-  </body>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"
+        <title>Оглавление</title>
+        <link rel="stylesheet" href=style.css">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                <li><a href="5_class_work"></a></li>
+                <li><a href="5_home_work"></a></li>
+                <li><a href="6_home_work"></a></li>
+                </ul>
+          </nav>
+        </header>
+    </body>
 </html>
