@@ -1,16 +1,14 @@
-*{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
-}
 body{
     background-color: #990909;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
 }
 header{
     text-align: center;
 }
 .home_nav{
     background-color: black;
-    padding: 0px;
+    padding: 0;
 }
 .home_nav figure {
     display: inline-block;
@@ -18,7 +16,7 @@ header{
     margin-top: 10px;
     margin-left: 20px;
     margin-right: 20px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 .home_nav img{
     height: 100px;
@@ -39,11 +37,11 @@ main{
 .left_nav{
     background-color: #7D0909;
     width: 250px;
-    height: 100%;
+    height: 90%;
     margin-bottom: 10px;
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
 }
 .content{
     color: white;
@@ -56,13 +54,13 @@ main{
     width: 200px;
     /*height: 100%;*/
     position: absolute;
-    top: 0px;
-    right: 0px;
+    top: 0;
+    right: 0;
 }
 .title h4{
     background-color: #BDBDBD;
     text-align: center;
-    margin-top: 0px;
+    margin-top: 0;
 }
 .title_text{
     margin-left: 10px;
@@ -82,14 +80,14 @@ footer{
     background-color: #E95B11;
     color: white;
     text-align: center;
-    padding: 0px;
+    padding: 0;
     }
 footer p{
     margin: 2px;
 }
 .left_nav li{
     list-style-type: none;
-    padding: 0px;
+    padding: 0;
     margin-top: 20px;
 }
 .left_nav ul{
