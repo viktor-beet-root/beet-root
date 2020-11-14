@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Interview</title>
-  <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <main>
@@ -13,12 +12,12 @@
         <form action="#" method="POST" name="Interview">
         <fieldset>
           <legend>Общая информация</legend>
-          <div class="form-label-group"><label>Имя: <input type="text" id="name" placeholder="Имя" required></label></div>
-          <div><label>Фамилия: <input type="text" id="last_name" placeholder="Фамилия" required></label></div>
-          <div><label for="date">Дата рождения: </label><input type="date" id="date" required></div>
-          <div><label for="tel">Номер телефона: </label><input type="tel"  id="tel" maxlength="10" required></div>
-          <div><label for="city">Город проживания: </label><select name="city" id="cіty" required>
-            <option selected>город</option>
+          <div class="form-label-group"><label>Имя: <input type="text" id="first" name="first" placeholder="Имя" required></label></div>
+          <div><label>Фамилия: <input type="text" id="last_name" name="last_name" placeholder="Фамилия" required></label></div>
+          <div><label for="date">Дата рождения: </label><input type="date" name="date" id="date" required></div>
+          <div><label for="email">Електронная почта: </label><input type="email" name="email" id="email" required></div>
+          <div><label for="tel">Номер телефона: </label><input type="tel"  id="tel" name="tel" maxlength="10" required></div>
+          <div><label>Город проживания: <select name="city" id="cіty">
             <option value="Zhytomyr">Житомир</option>
             <option value="Zaporizhzhia">Запорожье</option>
             <option value="Ivano-Frankivsk">Ивано-Франковск</option>
@@ -42,17 +41,19 @@
             <option value="Dnipro">Днепр</option>
             <option value="Kyiv">Киев</option>
             <option value="Ternopil">Тернополь</option>
-          </select></div>
-          <div><label>Пол: <label for="gender1">Женский</label><input name="gender" type="radio" id="gender1"><label for="gender2">Мужской</label><input name="gender" type="radio" id="gender2"></label></div>
-          <div><label for="age">Возраст: </label><input type="number" id="age" max="100" min="1" step="1" required></div>
+          </select></label></div>
+          <div><label>Пол:</label><label for="gender1">Женский</label><input name="gender" type="radio" id="gender1">
+                            <label for="gender2">Мужской</label><input name="gender" type="radio" id="gender2">
+          </div>
+          <div><label for="age">Возраст: </label><input type="number" name="age" id="age" max="100" min="1" step="1" required></div>
         </fieldset>
         <fieldset>
           <legend>Интересы</legend>
-          <div><label>Любимая книга: <input type="text" id="book" placeholder="книга" required></label></div>
-          <div><label>Любимая музыка: <input type="text" id="music" placeholder="стиль музыки" required></label></div>
-          <div><label>Любимое занятие: <input type="text" id="hobby" placeholder="хобби" required></label></div>
+          <div><label>Любимая книга: <input type="text" name="book" id="book" placeholder="книга" required></label></div>
+          <div><label>Любимая музыка: <input type="text" id="music" name="music" placeholder="стиль музыки" required></label></div>
+          <div><label>Любимое занятие: <input type="text" id="hobby" name="hobby" placeholder="хобби" required></label></div>
           <div><label for="dream">Твоя мечта: </label><textarea name="dream" id="dream" cols="40" rows="2" maxlength="250" required placeholder="мечта"></textarea></div>
-          <div><label for="colours">Любимый цвет: </label><select name="colour" id="colours" required>
+          <div><label for="colours">Любимый цвет: </label><select name="colour" id="colours">
             <option value="1" selected>красный</option>
             <option value="2">оранжевый</option>
             <option value="3">желтый</option>
@@ -61,11 +62,11 @@
             <option value="6">синий</option>
             <option value="7">фиолетовый</option></select></div>
           <div class="form-label-group"><label>Твой девиз: <textarea name="motto" id="motto" cols="40" rows="2" placeholder="девиз" maxlength="100" required></textarea></label></div>
-          <div><label>Если у тебя домашные животные: <input type="checkbox" value="a1" id="pet" required></label></div>
+          <div><label>Если у тебя домашные животные: <input type="checkbox" name="pets" value="a1" id="pet" required></label></div>
         </fieldset>
-        <div><label>Безсмисленая кнопка: <input type="image" src="images/12456.jpg" width="100"></label></div>
-        <p><input type="submit" value="Отправить"></p>
-        <p><input type="reset" value="Сбросить"></p>
+        <div><label>Безсмисленая кнопка: <input type="image" name="image" src="images/12456.jpg" alt="cofe" width="100"></label></div>
+        <p><input type="submit" name="submit" value="Отправить"></p>
+        <p><input type="reset" name="reset" value="Сбросить"></p>
       </form>
     </main>
 </body>
