@@ -1,21 +1,22 @@
 *{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
+    margin: 0px;
+    padding: 0px;
 }
 
 body{
-    border-style: solid;
-    border-width: 20px;
-    border-color: #ffffff;
+    border: #ffffff solid 20px;
     background-color: #3B3F45;
     padding-top: 0px;
     margin: 0px;
-    position: absolute;
-    left:0;
+    position: relative;
+    min-width: 100vh;
+    min-height: 92.5vh;
+    /*left:0;
     right:0;
     top:0;
-    bottom:0;
-    
+    bottom:0;*/
 }
 
 header{
@@ -74,4 +75,29 @@ input:checked + spam {
 
 label>.box:active{
     background-color:  #EB7E7F;
+}
+#one ~ spam::after{
+    content: " ( for the next lessons about CSS )";
+    font-size: 8px;
+    color: #ffffff;
+}
+#two ~ spam::after{
+    content: " ( for more CSS manipulations )";
+    font-size: 8px;
+    color: #ffffff;
+}
+#three ~ spam::after{
+    content: " ( because they are awesome )";
+    font-size: 8px;
+    color: #ffffff;
+}
+#four ~ spam::after{
+    content: " ( hm... they alvays disappear )";
+    font-size: 8px;
+    color: #ffffff;
+}
+#six ~ spam::after{
+    content: " ( for my friends )";
+    font-size: 8px;
+    color: #ffffff;
 }

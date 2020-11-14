@@ -1,5 +1,19 @@
+@font-face{
+    font-family: "ProximaNova";
+    src:url(../font/ProximaNova-Bold.ttf);
+    font-style: normal;
+    font-weight: bold;
+}
+@font-face{
+    font-family: "ProximaNova";
+    src: url(../font/ProximaNova-Regular.ttf);
+    font-style: normal;
+    font-weight: normal;
+}
+
+
 *{
-    font-family: "ProximaNova_L";
+    font-family: "ProximaNova";
     font-size: 14px;
 }
 
@@ -20,7 +34,8 @@
 }
 
 .content_lv2 h2{
-    font-family: "ProximaNova_R";
+    font-family: "ProximaNova";
+    font-weight: bold;
     text-transform: uppercase;
 }
 .content_lv2 p {
@@ -56,18 +71,4 @@ svg {
 }
 .cirсle:hover .shp0 {
     fill: #2a69a6;
-}
-
-@font-face{
-    font-family: "ProximaNova_L";
-    src: url(../font/ProximaNova-Light.ttf);
-    font-style: normal;
-    font-weight: normal;
-}
-
-@font-face{
-    font-family: "ProximaNova_R";
-    src: url(../font/ProximaNova-Bold.ttf);
-    font-style: normal;
-    font-weight: normal;
 }
