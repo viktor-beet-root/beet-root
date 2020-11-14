@@ -64,7 +64,7 @@ li{
     color: white;
     font-size: 16px;
 }
-.sp1 ~ span{
+.sp1 + span{
     color: #cdcbd2;
     font-size: 12px;
 }
@@ -90,7 +90,6 @@ input:checked ~ span {
     background-color: #f38507;
 }
 
-.chebox li:focus ~ input:checked{
-    text-decoration: line-through;
-    color:  #cdcbd2;
+label{
+    display:block;
 }
