@@ -1,0 +1,26 @@
+.menu{
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+    font-size: 0px;
+}
+
+.menu>li{
+    display: inline-block;
+    background-color: grey;
+    border: solid 1px rgb(127, 24, 187);
+    border-left: none;
+    list-style-type: none;
+    padding: 10px;
+    width: 150px;
+    margin: 0;
+}
+.menu>li:first-child{
+    border-left: solid 1px rgb(127, 24, 187);
+}
+.menu>li>a{
+    display: block;
+    text-decoration: none;
+    color: green;
+    font-size: 14px;
+}
