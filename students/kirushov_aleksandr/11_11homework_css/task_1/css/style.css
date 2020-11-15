@@ -53,10 +53,6 @@ h1{
     fill: #ffffff;
 }
 
-.logo:hover{
-    fill: #2a69a6;
-}
-
 .round{
     display: flex;
     align-items: center;
