@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    transition: all .1s ease-in;
+}
+body{
+    background-color: #2b81ac;
+}
+@font-face{
+    font-family: 'LucidaSansUnicode';
+    src: url("/fonts/LucidaSansUnicode.ttf");
+}
+@font-face{
+    font-family: 'LucidaGrande';
+    src: url("/fonts/LucidaGrande.ttf");
+}
+.weather-forecast{
+    max-width: 1468px;
+    font-family:'Lucida Sans Unicode';
+    color: white;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding-left: 241px;
+    padding-top: 85px;
+    font-size: 19px;
+}
+h2{
+    word-spacing: -1px;
+    letter-spacing: 1px;
+    display: inline;
+}
+ul{
+    list-style-type: none;
+    width: 100%;
+    max-width: 985px;
+    font-size: 0px;
+}
+li{
+    border: 6px solid white;
+    display: inline-block;
+    border-right: 0px;
+    text-align: center;
+    box-sizing: border-box;
+    padding-bottom: 69px;
+    font-size: 25px;
+}
+/*Пытался выровнять надписи и картинки, но когда меня padding чтоб пониже надпись сделать, сама li расстягивалась вниз.*/
+li:nth-last-child(1){
+    border-right: 6px solid white;
+}
+.half-of-ul-li{
+    width: 492.5px;
+}
+.quater-of-ul-li{
+    width: 246.75px;
+}
+.for-city{
+    padding-right: 4px;
+}
+.for-tempirature-and-images{
+    padding-right: 78px;
+    vertical-align: middle;
+}
+.cities-weather-1 li{
+    border-bottom: 0px;
+}
+.quater-of-ul-li{
+    max-width: 246.25px;
+    box-sizing: border-box;
+}
+.cities-weather-2 li{
+    border-bottom: 0px;
+}
+.cities-weather-3 li{
+    border-bottom: 0px;
+}
+.full-of-ul-li{
+    width: 985px;
+}
+.footer-phraze{
+    font-size: 20px;
+}
+.cities-weather-1 .half-of-ul-li:nth-child(1){
+    background-color: #2b81ac;
+    opacity: 0.5;
+}
+.cities-weather-1 .quater-of-ul-li:nth-child(2){
+    background-color: #33cccc;
+    opacity: 0.5;
+}
+.cities-weather-1 .quater-of-ul-li:nth-child(3){
+    background-color: #996699;
+    opacity: 0.5;
+}
+.cities-weather-2 .quater-of-ul-li:nth-child(1){
+    background-color: #c24747;
+    opacity: 0.5;
+}
+.cities-weather-2 .quater-of-ul-li:nth-child(2){
+    background-color: #e2674a;
+    opacity: 0.5;
+}
+.cities-weather-2 .quater-of-ul-li:nth-child(3){
+    background-color: #ffcc66;
+    opacity: 0.5;
+}
+.cities-weather-2 .quater-of-ul-li:nth-child(4){
+    background-color: #99cc99;
+    opacity: 0.5;
+}
+.cities-weather-3 .quater-of-ul-li:nth-child(1){
+    background-color: #669999;
+    opacity: 0.5;
+}
+.cities-weather-3 .half-of-ul-li:nth-child(2){
+    background-color: #cc6699;
+    opacity: 0.5;
+}
+.cities-weather-3 .quater-of-ul-li:nth-child(3){
+    background-color: #339966;
+    opacity: 0.5;
+}
+.cities-weather-4 .full-of-ul-li:nth-child(1){
+    background-color: #666699;
+    opacity: 0.5;
+}
+.cities-weather-1 .quater-of-ul-li:hover{
+    opacity: 1;
+}
+.cities-weather-1 .half-of-ul-li:hover{
+    opacity: 1;
+}
+.cities-weather-2 .quater-of-ul-li:hover{
+    opacity: 1;
+}
+.cities-weather-3 .quater-of-ul-li:hover{
+    opacity: 1;
+}
+.cities-weather-3 .half-of-ul-li:hover{
+    opacity: 1;
+}
+.cities-weather-4 .full-of-ul-li:hover{
+    opacity: 1;
+}
