@@ -1,16 +1,16 @@
 body{
     text-align: center;
 }
-.middleIcon{
+.middle-icon{
     margin-left: 50px;
     margin-right: 50px;
 }
-.navUl{
+.nav-ul{
     list-style-type: none;
     margin: 0px;
     padding-left: 0px;
 }
-.navLi{
+.nav-li{
     display: inline;
     border: 3px solid black;
     font-size: 20px;
