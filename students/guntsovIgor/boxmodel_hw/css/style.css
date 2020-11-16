@@ -107,6 +107,10 @@ svg {
      margin-bottom: 55px;
  }
 
+ .active path {
+    fill:#1b1b1b; 
+ }
+
 .active:hover path{
     fill:white; 
 }
