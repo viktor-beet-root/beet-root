@@ -1,11 +1,15 @@
 @font-face {
     font-family: 'proxima-nova-regular';
     src: url('../fonts/proxima-nova-regular.ttf');
+    font-style: normal;
+    font-weight: normal;
 }
 
 @font-face {
     font-family: 'proxima-nova-light';
     src: url('../fonts/proxima-nova-light.ttf');
+    font-style: normal;
+    font-weight: normal;
 }
 
 *{
