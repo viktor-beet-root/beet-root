@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    transition: all .1s ease-in;
+}
+
+body{
+    font-family: 'PT Sans', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    text-align: center;
+}
+
+.wrapper{
+    padding: 133px 170px 0;
+}
+
+.text1{
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    text-transform:uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 30px;
+    letter-spacing: 4.8px;
+    color: #898f99;
+    margin-left: 24px;
+    margin-bottom: 18px;
+}
+
+h1{
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    text-transform:uppercase;
+    font-size: 48px;
+    letter-spacing: 4.8px;
+    line-height: 48px;
+    color: #0ec8cb;
+    margin-bottom: 30px;
+}
+
+h1~p{
+    text-transform:uppercase;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 1.1px;
+    color: #999999;
+    margin-bottom: 99px;
+}
+
+.box-wrapper{
+    font-size: 0;
+    max-width: 940px;
+    margin-left: 35px;
+}
+
+li{
+    height: 420px;
+    max-width: 25%;
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: 14px;
+    border: 1px solid #f1f1f1;
+    padding: 55px 30px 0;
+    background-color: #f7f7f7;
+    vertical-align: middle;
+}
+
+li:not(:first-child){
+    border-left: none;
+}
+
+.box-wrapper svg{
+    width: 64px;
+    height: 66px;
+    margin-bottom: 45px;
+    fill: #1b1b1b;
+}
+
+.box-wrapper .h3{
+    text-transform:uppercase;
+    font-family: Montserrat;
+    font-size: 21px;
+    font-weight: 600;
+    margin-bottom: 23px;
+    color: #1b1b1b;
+}
+
+.box-wrapper p{
+    color: #777777;
+    line-height: 22px;
+    font-weight: 400;
+    max-width: 174px;
+}
+
+.web{
+    text-transform:uppercase;
+    font-family: Montserrat;
+    font-size: 21px;
+    font-weight: 600;
+    margin: -13px;
+    margin-bottom: 22px;
+    color: #1b1b1b;
+}
+
+li:hover{
+    background-color: #0ec8cb;
+}
+
+.box-wrapper li:hover svg{
+    fill: white;
+}
+
+li:hover p{
+    color: white;
+}
+
+.box-wrapper li:hover h3{
+    color: white;
+}
