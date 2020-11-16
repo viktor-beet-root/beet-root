@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Анкета для знайомств</title>
+</head>
+
+<body>
+    <h1>Анкета</h1>
+    <form id="main" action="form.html" method="GET">
+        <div>
+            <label for="search">Search</label>
+            <br><input id="search" required type="text" name="SEARCH" value="" placeholder="insert text" />
+        </div>
+
+        <p>Выберите цвет</p>
+        <br><label>RED<input type="radio" checked name="color" value="red"></label>
+        <label>BLACK<input type="radio" name="color" valur="black"></label>
+        <br><textarea name="message" placeholder="innn"></textarea>
+        <br><select name="group" multiple>
+            <option>Виберіть назву міста</option>
+            <option value="1">1G</option>
+            <option value="2">2G</option>
+            <option selected value="333">3G</option>
+        </select>
+        <input type="radio">
+        <button type="submit">SUbmit</button>
+        <br><input type="reset" value="submit" />
+    </form>
+    <input form="main" type="tel" name="teleph">
+    <input form="main" type="submit" name="SUBMIT" value="submit">
+
+
+
+</body>
+
+</html>
