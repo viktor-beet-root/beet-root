@@ -11,23 +11,125 @@
 <body>
 
     <h1>Анкета</h1>
-    <form id="main" action="form.html" method="GET">
-        <h3>Особиста інформація</h3>
-        <ol>
-            <li>Введіть ваше ім'я<input required type="text" value="" placeholder="введіть ім'я кирилицею" />
-            </li>
-            <li>Введіть ваше прізвище <input required type="text" value="" placeholder="введіть прізвище кирилицею" />
-            </li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ol>
+    <form id="main" action="form1.html" method="GET">
+        <fieldset>
+            <legend>
+                <h2>Контактна інформація</h2>
+            </legend>
+            <div>
+                <p><label for="name">Ім'я та прізвище<em>*</em></label><input required type="text" id="name"></p>
+                <p><label for="email">E-mail адреса<em>*</em></label><input required type="email" id="email"></p>
+                <p><label for="tel">Номер телефону<em>*</em></label><input required type="tel"></p>
+                <p><label for="date">Дата народження</label><input type="date"></p>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>
+                <h2>Фізичні дані</h2>
+            </legend>
+            <div>
+                <ol>
+                    <li>
+                        <p>Укажіть, будь ласка,колір очей:</p>
+                    </li>
+                    <label>Не вибрано<input type="radio" checked name="eye" value="no"></label>
+                    <br><label>карі<input type="radio" name="eye" value="brown"></label>
+                    <br><label>зелені<input type="radio" name="eye" value="green"></label>
+                    <br><label>блакитні<input type="radio" name="eye" value="blue"></label>
+                    <br><label>сірі<input type="radio" name="eye" value="grey"></label>
+                    <li>
+                        <p>Укажіть, будь ласка,колір волосся:</p>
+                    </li>
+                    <label>Не вибрано<input type="radio" checked name="hair" value="not"></label>
+                    <br><label>блонд<input type="radio" name="hair" value="blond"></label>
+                    <br><label>брюнет<input type="radio" name="hair" value="brownh"></label>
+                    <br><label>русий<input type="radio" name="hair" value="fair"></label>
+                    <br><label>рижий<input type="radio" name="hair" value="ginger"></label>
+                    <br><label>інший<input type="radio" name="hair" value="other"></label>
+                    <li>
+                        <p>Укажіть, будь ласка,ваш зріст:</p>
+                        <br><select name="height">
+                            <option selected value="0">Не вибрано</option>
+                            <option value="1">менше 155см</option>
+                            <option value="2">155-165см</option>
+                            <option value="3">165-175см</option>
+                            <option value="4">вище за 175см</option>
+                        </select>
+                    </li>
+                    <li>
+                        <p>Укажіть, будь ласка,ваш вагу:</p>
+                        <br><input type="number" min="1" max="200" name="weight" value="" placeholder="вкажіть в кг" />
+                    </li>
+                </ol>
+            </div>
+
+        </fieldset>
+        <fieldset>
+            <legend>
+
+                <h2>Вподобання та хоббі</h2>
+            </legend>
+            <ol>
+                <li value="5">
+                    <p>Оберіть улюблений колір(може бути декілька):</p>
+                </li>
+                <label>Не можу визначитись<input type="checkbox" checked name="favcolor" value="dontknow"></label>
+                <br><label>червоний<input type="checkbox" name="favcolor" value="red"></label>
+                <br><label>чорний<input type="checkbox" name="favcolor" value="black"></label>
+                <br><label>білий<input type="checkbox" name="favcolor" value="white"></label>
+                <br><label>зелений<input type="checkbox" name="favcolor" value="green"></label>
+                <br><label>жовтий<input type="checkbox" name="favcolor" value="yellow"></label>
+                <br><label>помаранчовий<input type="checkbox" name="favcolor" value="orange"></label>
+                <br><label>фіолетовий<input type="checkbox" name="favcolor" value="violet"></label>
+                <br><label>синій<input type="checkbox" name="favcolor" value="blue"></label>
+                <br><label>рожевий<input type="checkbox" name="favcolor" value="pink"></label>
+                <br><label>коричневий<input type="checkbox" name="favcolor" value="brown"></label>
+                <br><label>бордовий<input type="checkbox" name="favcolor" value="burgundy"></label>
+                <br><label>блакитний<input type="checkbox" name="favcolor" value="lightblue"></label>
+                <br><label>салатовий<input type="checkbox" name="favcolor" value="lightgreen"></label>
+                <br><label>сірий<input type="checkbox" name="favcolor" value="grey"></label>
+                <li>
+                    <p>Оберіть улюблений музичні жанри(може бути декілька):</p>
+                </li>
+                <label>Не можу визначитись<input type="checkbox" checked name="favmusic" value="noidea"></label>
+                <br><label>класика<input type="checkbox" name="favmusic" value="class"></label>
+                <br><label>рок<input type="checkbox" name="favmusic" value="rock"></label>
+                <br><label>поп<input type="checkbox" name="favmusic" value="pop"></label>
+                <br><label>реп<input type="checkbox" name="favmusic" value="rap"></label>
+                <br><label>я меломан<input type="checkbox" name="favmusic" value="all"></label>
+                <li>
+                    <p>Чи вживаєте ви алкоголь</p>
+                </li>
+                <br><label>так<input type="radio" name="alco" value="Y"></label>
+                <br><label>ні<input type="radio" name="alco" value="N"></label>
+                <br><label>на свята<input type="radio" name="alco" value="sometimes"></label>
+                <li>
+                    <p>Як відноситесь до куріння</p>
+                </li>
+                <br><label>позитивно<input type="radio" name="alco" value="pos"></label>
+                <br><label>нейтрально<input type="radio" name="alco" value="neutral"></label>
+                <br><label>негативно<input type="radio" name="alco" value="neg"></label>
+                <li>
+                    <p>Чим полюбляєте займатись у вільний час</p>
+                    <br><textarea name="message" placeholder="розкажіть про своє хоббі"></textarea>
+                </li>
+                <li>
+                    <p>Назвіть декілька улюблених книг</p>
+                    <br><textarea name="message" placeholder=""></textarea>
+                </li>
+                <li>
+                    <p>Чого ви очікуєте від знайомства</p>
+                    <br><textarea name="message" placeholder="на що сподіваєтесь?"></textarea>
+                </li>
+                <li>
+                    <p>Напишіть пару слів про те, що вас надихає у житті</p>
+                    <br><textarea name="message" placeholder="що вас мотивує"></textarea>
+                </li>
+            </ol>
+        </fieldset>
     </form>
+    <input form="main" type="submit" name="SUBMIT" value="submit">
+
 </body>
 
 </html>
