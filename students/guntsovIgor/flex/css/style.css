@@ -1,0 +1,66 @@
+*{
+  margin:0;
+  padding: 0;
+}
+@font-face {
+    font-family: miso; /* Имя шрифта */
+    src: url(../fonts/miso-bold.ttf); /* Путь к файлу со шрифтом */
+   }
+.container {
+  width:1200px;
+  background: #fdde7e;
+  font-family: miso , Arial, sans-serif;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.price{
+  color:#02995b;
+  margin-bottom: 25px;
+  font-size: 70px;
+  font-weight: 700;
+}
+
+.menu-item {
+  padding-top: 42px;
+  text-align: center;
+  width:360px;
+
+  background-color: white;
+  border-radius: 5px;
+}
+
+.menu-item img {
+  width: 135px;
+  height: 135px;
+  margin-bottom: 35px;
+}
+
+.name {
+  font-size: 56px;
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+
+.description {
+    margin-bottom: 35px;
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.menu-item:nth-child(2) .price{
+    margin-bottom: 45px;
+}
+
+.menu-item:nth-child(2) .name{
+    margin-bottom: 35px;
+}
+
+.menu-item:nth-child(2) .description{
+    margin-bottom: 55px;
+}
