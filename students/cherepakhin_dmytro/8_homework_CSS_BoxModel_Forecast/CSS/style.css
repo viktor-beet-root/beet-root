@@ -4,49 +4,102 @@
 }
 
 body{
-    font-family: sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: white;
 }
 
 main{
     max-width: 1468px;
-    min-width: 900px;
+    min-width: 850px;
     border: 25px solid #2b81ac;
-    padding: 30px;
+    padding-top: 24px;
     box-sizing: border-box;
     background-color:#3399cc;
 }
 
 div{
     box-sizing: border-box;
+    max-width: 984px;
     margin: 0 auto;
+    padding-bottom: 135px;
 }
 
 h1{
-    font-size: 32px;
+    font-size: 30px;
     font-weight: bold;
+    padding-bottom: 28px;
 }
 
-div > ul{
+h1 i{
+    font-size: 30px;
+}
+
+ul{
     font-size: 0;
     max-width: 984px;
     box-sizing: border-box;
     border-top: 5px solid white;
     border-left: 5px solid white;
-    font-size: 0;
+    text-align: center;
+    background-color: white;
+}
+
+li:nth-child(1){
+    background-color: #3399cc;
+}
+
+li:nth-child(2){
+    background-color: #33cccc;
+}
+
+li:nth-child(3){
+    background-color: #996699;
+}
+
+li:nth-child(4){
+    background-color: #c24747;
+}
+
+li:nth-child(5){
+    background-color: #e2674a;
+}
+
+li:nth-child(6){
+    background-color: #ffcc66;
+}
+
+li:nth-child(7){
+    background-color: #99cc99;
+}
+
+li:nth-child(8){
+    background-color: #669999;
+}
+
+li:nth-child(9){
+    background-color: #cc6699;
+}
+
+li:nth-child(10){
+    background-color: #339966;
+}
+
+li:nth-child(11){
+    background-color: #666699;
 }
 
 li {
     display: inline-block;
     list-style-type: none;
-    font-size: 26px;
+    font-size: 27px;
     font-weight: normal;
     box-sizing: border-box;
     width: 25%;
-    padding: 30px;
+    padding: 22px 0 22px;
     margin: 0 auto;
     border-right: 5px solid white;
     border-bottom: 5px solid white;
+    line-height: 1.9;
 }
 
 li.wide{
@@ -55,4 +108,24 @@ li.wide{
 
 li.extrawide{
     width: 100%;
+}
+
+p{
+    font-size: 22px;
+    font-weight: normal;
+    margin-top: 28px;
+}
+
+ul:hover li:not(:hover){
+opacity: 0.5;
+transition: all .3s ease-in;
+}
+
+i{
+    font-size: 38px;
+    vertical-align: middle;
+}
+
+span{
+    vertical-align: middle;
 }
