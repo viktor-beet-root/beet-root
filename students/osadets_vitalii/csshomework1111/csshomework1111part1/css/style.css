@@ -4,7 +4,7 @@
 }
 @font-face {
   font-family: "ProximaNova";
-  src: url("/fonts/proximaNova.otf");
+  src: url("../fonts/proximaNova.ttf");
 }
 body {
   font-family: "ProximaNova";
