@@ -1,0 +1,85 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: "Miso";  
+    src: url("../font/miso.otf");
+    font-style: normal; 
+    font-weight: normal;
+    }
+
+
+body {
+    margin: auto;
+    background-color: #FDDE7E;
+    width: 1200px;
+    font-family: 'Lato', sans-serif;
+}
+
+section {
+    margin-top: 68px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+section div {
+    width: 30%;
+    margin-right: 16px;
+    margin-left: 16px;
+    background-color: white;
+    align-self: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+}
+
+section div:nth-child(2) {
+    align-self: stretch;
+    height: 500px;
+}
+
+div .price {
+    margin-top: 30px;
+    font-family: "Miso"; 
+    color: #02995b;
+    font-size: 70px;
+    text-align: center;
+    letter-spacing: 1.75px;
+    padding-bottom: 12px;
+}
+
+div:nth-child(2) .price {
+    padding-bottom: 43px;
+}
+
+.cofe {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.type_coffe {
+padding-top: 38px;
+padding-bottom: 20px;
+font-family: "Miso";
+color: #333333;
+text-align: center;
+font-size: 56px;
+font-weight: 400;
+}
+
+div:nth-child(2) h3{
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+p {
+color: #333333;
+font-size: 20px;
+letter-spacing: 0.5px;
+text-align: center;
+padding-bottom: 34px;
+}
