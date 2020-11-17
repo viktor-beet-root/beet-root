@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Lato', sans-serif;
+    background-color: #fdde7e;
+}
+@font-face{
+    font-family: "miso-bold" ;
+    src: url("fonts/miso-bold.ttf");
+}
+.coffe-shop{
+    padding-top: 200px;
+}
+.coffe-all-types{
+    background-color: black;
+    width: 1200px;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#fdde7e;
+    flex-direction: row;
+    margin: 0 auto;
+}
+.coffe-all-types div{
+    width: 360px;
+    padding-top: 46px;
+    background-color: white;
+    text-align: center;
+    margin-right: 30px;
+    position: relative;
+}
+.coffe-all-types div h2{
+    font-family: "miso-bold";
+    font-weight: bold;
+    font-size: 70px;
+    line-height: 24px;
+    color: #02995b;
+}
+.coffe-all-types div h3{
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 56px;
+    line-height: 24px;
+    padding-top: 291px;
+}
+.coffe-all-types .bronze-coffe h3{
+    padding-top: 291px;
+}
+.coffe-all-types .gold-coffe h3{
+    padding-top: 330px;
+}
+.coffe-all-types .silver-coffe h3{
+    padding-top: 291px;
+}
+
+.coffe-all-types div p{
+    font-size: 20px;
+    line-height: 26px;
+    padding-top: 35px;
+}
+.coffe-all-types .bronze-coffe{
+    padding-bottom: 37px;
+}
+.coffe-all-types .gold-coffe{
+    padding-bottom: 66px;
+}
+.coffe-all-types .silver-coffe{
+    padding-bottom: 37px;
+}
+
+.bronze-coffe::before{
+    content: "";
+    display: block;
+    width: 135px;
+    height: 134px;
+    background-image: url(png/bronze-coffe.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 120px;
+    top: 175px;
+}
+.gold-coffe::before{
+    content: "";
+    display: block;
+    width: 135px;
+    height: 134px;
+    background-image: url(png/gold-coffe.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 120px;
+    top: 205px;
+}
+.silver-coffe::before{
+    content: "";
+    display: block;
+    width: 135px;
+    height: 134px;
+    background-image: url(png/silver-coffe.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 120px;
+    top: 175px;
+}
