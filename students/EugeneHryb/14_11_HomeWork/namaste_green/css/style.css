@@ -5,7 +5,7 @@
 }
 
 body{
-    font-family: 'Montserrat', 'PT Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     line-height: 1.57;
 }
@@ -24,7 +24,6 @@ body{
     letter-spacing: 0.208em;
     text-transform: uppercase;
     color: #898f99;
-    font-family: 'Montserrat';
     font-weight: bold;
     font-style: normal;
 }
@@ -35,7 +34,6 @@ body{
     font-size: 48px;
     text-transform: uppercase;
     color: #0ec8cb;
-    font-family: 'Montserrat';
     font-weight: normal;
     font-style: normal;
 }
@@ -62,7 +60,6 @@ body{
     box-sizing: border-box;
     border:1px solid #ececec ;
     background-color: #f7f7f7;
-    fill: black;
 }
 .box:not(:first-child){
     border-left: none;
@@ -70,6 +67,7 @@ body{
 .box svg{
     margin: 56px auto 0;
     height: 66px;
+    fill: black;
 }
 .box h2{
     vertical-align: middle;
@@ -77,7 +75,6 @@ body{
     margin: 34px auto 19px;
     font-size: 21px;
     text-transform: uppercase;
-    font-family: 'Montserrat';
     font-weight: normal;
     font-style: normal;
 }
@@ -92,8 +89,10 @@ body{
     width: 242px;
     color: white;
     background-color: #0ec8cb;
-    fill: white;
 }
 .box:hover p{
     color: white;
+}
+.box:hover svg{
+    fill: white;
 }

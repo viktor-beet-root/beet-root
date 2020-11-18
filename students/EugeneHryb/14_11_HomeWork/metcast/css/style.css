@@ -17,7 +17,7 @@
     transition: all .1s ease-in;
 }
 body{
-    font-family: "LucidaSansUnicode" "LucidaGrande" sans-serif;
+    font-family: "LucidaSansUnicode" ,"LucidaGrande", sans-serif;
     font-size: 18px;
     background-color: #2B81AC;
     color: white;
@@ -33,7 +33,6 @@ body{
     background-color: #3399CC ;
     padding: 20px;
     max-width: 720px;
-    font-family: "LucidaSansUnicode";
 }
 .metcast>h1{
     font-size: 20px;
