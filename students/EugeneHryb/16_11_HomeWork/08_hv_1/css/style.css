@@ -1,0 +1,77 @@
+@font-face{
+    font-family: 'Miso';
+    src: url(../font/miso.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'Miso';
+    src: url(../font/miso-bold.otf);
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'Miso';
+    src: url(../font/miso-light.otf);
+    font-weight: lighter;
+    font-style: normal;
+}
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Miso';
+    font-weight: lighter;
+    font-style: normal;
+    font-size: 26px;
+    background-color: #fdde7e;
+}
+.wrapper{
+    padding-top: 50px;
+}
+.price_list{
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+}
+.price_list li{
+    text-align: center;
+    height: 441px;
+    min-width: 360px;
+    background-color: white;
+    padding-top: 28px;
+    margin: 0 15px;
+    box-sizing: border-box;
+    border: 1px solid #d3b969;
+    border-radius: 4px;
+}
+.price_list li:nth-child(2){
+    height: 500px;
+    padding-top: 36px;
+}
+li h2{
+    font-size: 70px;
+    color: #02995b;
+}
+li h3{
+    font-size: 56px;
+    font-weight: normal;
+    padding-bottom: 17px;
+}
+
+li p{
+    letter-spacing: 1px;
+    line-height: 26px;
+}
+.price_list li>img{
+    padding-top: 13px;
+    padding-bottom: 17px;
+    padding-left: 11px;
+}
+.price_list li:nth-child(2)>img{
+    padding-top: 31px;
+    padding-bottom: 32px;
+}
