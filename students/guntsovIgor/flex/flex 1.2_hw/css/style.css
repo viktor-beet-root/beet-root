@@ -1,0 +1,195 @@
+*{
+  margin:0;
+  padding: 0;
+}
+@font-face {
+    font-family: HansKendrick; /* Имя шрифта */
+    src: url(../fonts/HansKendrick.otf); /* Путь к файлу со шрифтом */
+   }
+.container {
+  width:1600px;
+  background-color: #e2e7ec;
+  font-family: HansKendrick , Arial, sans-serif;
+  line-height: 1.5;
+  padding-bottom: 100px
+}
+
+.menu {
+  display: flex;
+  padding-top:90px;
+  flex-wrap: wrap;
+  padding-left: 240px;
+  padding-right: 240px;
+  justify-content: flex-start;
+  margin-bottom: 79px;
+}
+
+.menu-item {
+  text-align: left;
+  width:360px;
+  background-color: white;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  height:540px;
+}
+
+.car img {
+  position: relative;
+  width:740px;
+  height: 540px;
+}
+
+.car h2 {
+  position: absolute;
+  top:531px;
+  left:283px;
+  color:white;
+  font-weight: 400;
+  font-size:30px;
+  text-transform: uppercase;
+  line-height: 36px;
+}
+
+h2.name {
+  text-transform: uppercase;
+  letter-spacing: 0.55px;
+  font-size: 22px;
+  font-family: Hanskendrick, Arial, sans-serif;;
+  font-weight: 700;
+  padding-left:27px;
+  font-style: normal;
+}
+
+.menu-item img{
+  margin-bottom: 60px;
+}
+
+.inspiration img {
+  margin-bottom: 25px;
+}
+
+.gradient {
+	display: inline-block;
+	position: relative;
+	line-height: 0;
+}
+
+.gradient::after {
+	content: "";
+	display: block;
+	width: 740px;
+	height: 540px;
+	position: absolute;
+  top: 0;
+	left: 0;
+	background: transparent;
+	background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+	opacity: 0.8;
+}
+
+.date {
+  text-transform: uppercase;
+  font-size: 13px;
+  color: #818181;
+  font-weight: 500;
+  margin-left: 25px;
+  margin-bottom: 25px;
+}
+
+.discount img {
+  margin-bottom: 25px;
+}
+
+.guide img {
+  margin-bottom: 25px;
+}
+
+.menu-item:first-child {
+  width:740px;
+}
+
+.menu-item:last-child {
+  margin-right: 0;
+}
+
+.menu-item:nth-child(2){
+  margin-right: 0;
+}
+
+.menu-item .name {
+  margin-bottom: 40px;
+}
+
+img.comment {
+margin-left: 27px;
+}
+/* .circle {
+ background-color: rgba(0,0,0,0);
+ border:5px solid rgba(0,183,229,0.9);
+ opacity:.9;
+ border-right:5px solid rgba(0,0,0,0);
+ border-left:5px solid rgba(0,0,0,0);
+ border-radius:50px;
+ box-shadow: 0 0 35px #2187e7;
+ width:50px;
+ height:50px;
+ margin:0 auto;
+ -moz-animation:spinPulse 1s infinite ease-in-out;
+ -webkit-animation:spinPulse 1s infinite linear;
+}
+.circle1 {
+ background-color: rgba(0,0,0,0);
+ border:5px solid rgba(0,183,229,0.9);
+ opacity:.9;
+ border-left:5px solid rgba(0,0,0,0);
+ border-right:5px solid rgba(0,0,0,0);
+ border-radius:50px;
+ box-shadow: 0 0 15px #2187e7;
+ width:30px;
+ height:30px;
+ margin:0 auto;
+ position:relative;
+ top:-50px;
+ -moz-animation:spinoffPulse 1s infinite linear;
+ -webkit-animation:spinoffPulse 1s infinite linear;
+}
+@-moz-keyframes spinPulse {
+ 0% { -moz-transform:rotate(160deg); opacity:0; box-shadow:0 0 1px #2187e7;}
+ 50% { -moz-transform:rotate(145deg); opacity:1; }
+ 100% { -moz-transform:rotate(-320deg); opacity:0; }
+}
+@-moz-keyframes spinoffPulse {
+ 0% { -moz-transform:rotate(0deg); }
+ 100% { -moz-transform:rotate(360deg);  }
+}
+@-webkit-keyframes spinPulse {
+ 0% { -webkit-transform:rotate(160deg); opacity:0; box-shadow:0 0 1px #2187e7; }
+ 50% { -webkit-transform:rotate(145deg); opacity:1;}
+ 100% { -webkit-transform:rotate(-320deg); opacity:0; }
+}
+@-webkit-keyframes spinoffPulse {
+ 0% { -webkit-transform:rotate(0deg); }
+ 100% { -webkit-transform:rotate(360deg); }
+} */
+
+.loading {
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 400;
+  color: #99a5b0;
+  margin:0 auto;
+  width:208px;
+  letter-spacing: 0.33px;
+  }
+
+.loading p::before{
+  content:'';
+  position: absolute;
+  background:  url('../img/loading-sign.png') ;
+  height: 28px;
+  width:30px;
+  left:-15px;
+  top:-3px;
+}
