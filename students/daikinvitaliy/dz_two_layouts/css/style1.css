@@ -1,0 +1,22 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{font-family: ProximaNova;
+	font-size: 14px;
+}
+main{
+	width: 1550px;
+	background-color: #ffffff;
+	padding: 0 225px 0;
+	box-sizing: border-box;
+}
+section{
+	width: 320px;
+	display: inline-block;
+	box-sizing: border-box;
+	vertical-align: top;
+	text-align: center;
+	padding-left: 32px;
+	padding-right: 32px;
+}

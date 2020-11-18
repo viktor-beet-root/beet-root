@@ -1,0 +1,25 @@
+<svg id="_12_Col_Grid" data-name="12 Col Grid" xmlns="http://www.w3.org/2000/svg" width="1100" height="289" viewBox="0 0 1100 289">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: red;
+        fill-rule: evenodd;
+        opacity: 0.1;
+      }
+    </style>
+  </defs>
+  <path id="Rectangle" class="cls-1" d="M1185-659h60V3216.02h-60V-659Z" transform="translate(-225)"/>
+  <path id="Rectangle_copy_2" data-name="Rectangle copy 2" class="cls-1" d="M1265-659h60V3216.02h-60V-659Z" transform="translate(-225)"/>
+  <path id="Rectangle-2" data-name="Rectangle" class="cls-1" d="M1105-659h60V3216.02h-60V-659Z" transform="translate(-225)"/>
+  <path id="Rectangle-3" data-name="Rectangle" class="cls-1" d="M1025-659h60V3216.02h-60V-659Z" transform="translate(-225)"/>
+  <path id="Rectangle-4" data-name="Rectangle" class="cls-1" d="M945-659h60V3216.02H945V-659Z" transform="translate(-225)"/>
+  <path id="Rectangle-5" data-name="Rectangle" class="cls-1" d="M865-659h60V3216.02H865V-659Z" transform="translate(-225)"/>
+  <path id="Rectangle-6" data-name="Rectangle" class="cls-1" d="M785-659h60V3216.02H785V-659Z" transform="translate(-225)"/>
+  <path id="Rectangle-7" data-name="Rectangle" class="cls-1" d="M705-659h60V3216.02H705V-659Z" transform="translate(-225)"/>
+  <path id="Rectangle-8" data-name="Rectangle" class="cls-1" d="M625-659h60V3216.02H625V-659Z" transform="translate(-225)"/>
+  <path id="Rectangle-9" data-name="Rectangle" class="cls-1" d="M545-659h60V3216.02H545V-659Z" transform="translate(-225)"/>
+  <path id="Rectangle-10" data-name="Rectangle" class="cls-1" d="M465-659h60V3216.02H465V-659Z" transform="translate(-225)"/>
+  <path id="Rectangle-11" data-name="Rectangle" class="cls-1" d="M385-659h60V3216.02H385V-659Z" transform="translate(-225)"/>
+  <path id="Rectangle-12" data-name="Rectangle" class="cls-1" d="M305-659h60V3216.02H305V-659Z" transform="translate(-225)"/>
+  <path id="Rectangle_copy" data-name="Rectangle copy" class="cls-1" d="M225-659h60V3216.02H225V-659Z" transform="translate(-225)"/>
+</svg>
