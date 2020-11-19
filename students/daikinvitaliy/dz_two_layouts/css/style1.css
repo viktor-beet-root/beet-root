@@ -1,22 +1,69 @@
+@font-face{
+	font-family: "ProximaNova";
+	src:url(../font/ProximaNova-Bold.ttf);
+	font-style: normal;
+	font-weight: bold;
+}
+@font-face{
+	font-family: "ProximaNova";
+	src: url(../font/ProximaNova-Regular.ttf);
+	font-style: normal;
+	font-weight: normal;
+}
 *{
 	margin: 0;
 	padding: 0;
 }
-body{font-family: ProximaNova;
+body {
+	font-family: "ProximaNova";
 	font-size: 14px;
 }
-main{
-	width: 1550px;
+.obolochka{
+	margin: 0 auto;
 	background-color: #ffffff;
-	padding: 0 225px 0;
-	box-sizing: border-box;
-}
-section{
-	width: 320px;
-	display: inline-block;
-	box-sizing: border-box;
-	vertical-align: top;
+	margin-left: auto ;
+	margin-right: auto ;
 	text-align: center;
-	padding-left: 32px;
-	padding-right: 32px;
+}
+section {
+	display: inline-block;
+    margin-left: 50px;
+    margin-right: 50px;
+    width: 220px;
+    height: 168px;
+}
+section h3 {
+	font-weight: bold;
+	text-transform: uppercase;
+}
+section p {
+	color: #9d9d9d;
+}
+.blok {
+	border: 2px solid #2a69a6 ;
+	border-radius: 50%;
+	position: relative;
+	margin: 0 auto;
+	height: 60px;
+	width: 60px;
+	background-color: #2a69a6;
+}
+svg {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+.riss {
+	margin: 10px auto;
+	white-space:pre;
+	fill: #ffffff;
+} 
+.blok:hover{
+	background-color: #ffffff;
+}
+.blok:hover .riss {
+	fill: #2a69a6;
 }
