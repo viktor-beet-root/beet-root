@@ -1,0 +1,117 @@
+@font-face {
+    font-family: miso;
+    src: url('../fonts/miso.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: miso;
+    src: url('../fonts/miso-bold.otf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato-Light.ttf');
+    font-weight: 'light';
+    font-style: normal;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+main{
+    box-sizing: border-box;
+    background-color: #fdde7e;
+    width: 1200px; 
+    height: 600px;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section{
+    box-sizing: border-box;
+    width: 360px;
+    height: 440px;
+    background-color:white;
+    border-radius: 4px;
+    text-align: center;
+    padding-top: 32px;
+    position: relative;
+    box-shadow: 0 1px 2px 1px #cab265;
+}
+
+section.gold{
+    height: 500px;
+    padding-top: 42px;
+}
+
+p{
+    font-family: miso;
+    font-size: 70px;
+    font-weight: bold;
+    color: #02995b;
+    padding-bottom: 15px;
+    line-height: 1;
+}
+
+.gold p{
+    padding-bottom: 40px;
+}
+
+div{
+    padding-bottom: 13px;
+}
+
+.gold div{
+    padding-bottom: 20px;
+}
+
+.cup {
+    position: absolute; 
+    top: 175px;
+    left: 120px;
+}
+
+.bean{
+    position: absolute; 
+    top: 190px;
+    left: 160px
+}
+
+.gold .cup {
+    position: absolute; 
+    top: 205px;
+    left: 120px;
+}
+
+.gold .bean{
+    position: absolute; 
+    top: 220px;
+    left: 160px
+}
+
+h1{
+    margin-top: 98px;
+    font-family: miso;
+    font-weight: normal;
+    font-size: 54px;
+    color: #333333;
+    padding-bottom: 15px;
+}
+
+span{
+    font-family: 'Lato';;
+    font-weight: 'light';
+    font-size: 20px;
+    color:#4e4e4e;
+    line-height: 1.4;
+    letter-spacing: 1px;
+}
