@@ -1,0 +1,114 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+@font-face{
+    font-family: 'Miso';
+    src: url(fonts/miso-bold.ttf);
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'Miso';
+    src: url(fonts/miso-regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'LatoLight';
+    src: url(fonts/Lato-Light.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #fdde7e;
+    font-family: 'Miso', 'MisoBold', sans-serif;
+    font-size: 26px;
+    color: #333333;
+}
+
+
+.wrap-coffee {
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    box-sizing: border-box;
+
+}
+
+.wrap-coffee li {
+    min-width: 360px;
+    text-align: center;
+    margin: 0px 15px;
+    background-color: #ffff;
+    border-radius: 4px;
+    box-shadow: 0px 2px 2px 0px #cab265;
+    
+}
+
+.wrap-coffee h2 {
+    color: #02995b;
+    font-size: 70px;
+    line-height: 1.57;
+}
+
+.wrap-coffee h3 {
+    color: #333333;
+    font-size: 56px;
+    font-weight: normal;
+   
+}
+
+.wrap-coffee p {
+    font-family: 'LatoLight';
+    color: #4e4e4e;
+    font-size: 20px;
+    font-weight: lighter;
+    padding-bottom: 38px;
+    line-height: 1.4;
+    letter-spacing: 1px;
+}
+.gold h2 {
+    padding-bottom: 25px;
+}
+
+.gold h3 {
+    padding-top: 10px;
+}
+
+.gold p {
+    padding-top: 10px;
+}
+
+div {
+    height:100px;
+    position: relative;
+    margin-top: 15px;
+
+}
+
+.bean {
+    position: absolute;
+    top: 79px;
+    right: 164px;
+}
+
+
+.smoke {
+    position: absolute;
+    top: 12px;
+    right: 154px;
+}
+
+.cup {
+    position: absolute;
+    top: 66px;
+    right: 105px;
+
+}
