@@ -1,20 +1,23 @@
 @font-face {
     font-family: miso;
-    src: url('../fonts/miso.otf');
+    src: url('../fonts/Miso.woff2')format("woff2"),
+        url('../fonts/Miso.woff')format("woff");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: miso;
-    src: url('../fonts/miso-bold.otf');
+    src: url('../fonts/Miso-Bold.woff2')format("woff2"),
+    url('../fonts/Miso-Bold.woff')format("woff");
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Lato';
-    src: url('../fonts/Lato-Light.ttf');
+    src: url('../fonts/Lato-Light.woff2')format("woff2"),
+    url('../fonts/Lato-Light.woff')format("woff");
     font-weight: 'light';
     font-style: normal;
 }
@@ -23,7 +26,6 @@
     padding: 0;
     margin: 0;
 }
-
 
 main{
     box-sizing: border-box;
@@ -44,13 +46,12 @@ section{
     border-radius: 4px;
     text-align: center;
     padding-top: 32px;
-    position: relative;
     box-shadow: 0 1px 2px 1px #cab265;
 }
 
 section.gold{
     height: 500px;
-    padding-top: 42px;
+    padding-top: 40px;
 }
 
 p{
@@ -67,44 +68,21 @@ p{
 }
 
 div{
-    padding-bottom: 13px;
-}
-
-.gold div{
-    padding-bottom: 20px;
-}
-
-.cup {
-    position: absolute; 
-    top: 175px;
-    left: 120px;
-}
-
-.bean{
-    position: absolute; 
-    top: 190px;
-    left: 160px
-}
-
-.gold .cup {
-    position: absolute; 
-    top: 205px;
-    left: 120px;
-}
-
-.gold .bean{
-    position: absolute; 
-    top: 220px;
-    left: 160px
+    box-sizing: border-box;
+    margin-left: 15px;
 }
 
 h1{
-    margin-top: 98px;
+    margin-top: 23px;
     font-family: miso;
     font-weight: normal;
     font-size: 54px;
     color: #333333;
-    padding-bottom: 15px;
+    padding-bottom: 17px;
+}
+
+.gold h1{
+    margin-top: 30px;
 }
 
 span{
