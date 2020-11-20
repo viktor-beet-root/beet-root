@@ -1,12 +1,14 @@
 @font-face{
 	font-family: "ProximaNova";
-	src:url(../font/ProximaNova-Bold.ttf);
+	src:url(../font/fontProximaNova-Bold.woff2) format(woff2),
+	   url(../font/fontProximaNova-Bold.woff) format(woff);
 	font-style: normal;
 	font-weight: bold;
 }
 @font-face{
 	font-family: "ProximaNova";
-	src: url(../font/ProximaNova-Regular.ttf);
+	src: url(../font/ProximaNova-Regular.woff2) format(woff2),
+	    url(../font/ProximaNova-Regular.woff) format(woff);
 	font-style: normal;
 	font-weight: normal;
 }
@@ -19,7 +21,7 @@ body {
 	font-size: 14px;
 }
 .obolochka{
-	margin: 0 auto;
+	margin: auto;
 	background-color: #ffffff;
 	margin-left: auto ;
 	margin-right: auto ;
