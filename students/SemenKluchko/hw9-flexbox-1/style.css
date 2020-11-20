@@ -5,20 +5,23 @@
 
 @font-face{
     font-family: 'Miso';
-    src: url(fonts/miso-bold.ttf);
+    src: url(fonts/miso-bold.woff),
+         url(fonts/miso-bold.woff2);
     font-weight: bold;
     font-style: normal;
 }
 @font-face{
     font-family: 'Miso';
-    src: url(fonts/miso-regular.ttf);
+    src: url(fonts/miso-regular.woff),
+        url(fonts/miso-regular.woff2);
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face{
     font-family: 'LatoLight';
-    src: url(fonts/Lato-Light.ttf);
+    src: url(fonts/Lato-Light.woff),
+        url(fonts/Lato-Light.woff2);
     font-weight: normal;
     font-style: normal;
 }
@@ -62,6 +65,7 @@ body {
     color: #333333;
     font-size: 56px;
     font-weight: normal;
+    padding-top: 10px;
    
 }
 
@@ -75,11 +79,11 @@ body {
     letter-spacing: 1px;
 }
 .gold h2 {
-    padding-bottom: 25px;
+    padding-bottom: 15px;
 }
 
 .gold h3 {
-    padding-top: 10px;
+    padding-top: 20px;
 }
 
 .gold p {
@@ -87,28 +91,7 @@ body {
 }
 
 div {
-    height:100px;
-    position: relative;
-    margin-top: 15px;
-
-}
-
-.bean {
-    position: absolute;
-    top: 79px;
-    right: 164px;
-}
-
-
-.smoke {
-    position: absolute;
-    top: 12px;
-    right: 154px;
-}
-
-.cup {
-    position: absolute;
-    top: 66px;
-    right: 105px;
-
+    height: 100px;
+    margin-top: 30px;
+    margin-left: 15px;
 }
