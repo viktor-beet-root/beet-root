@@ -62,8 +62,22 @@ body{
     margin-bottom: 20px;
 }
 
-h2{
-    font-size: 56px;
+img{
+    width: 135px;
+    height: 134px;
+    margin-top: -38px;
 }
 
+img + p{
+    font-size: 56px;
+    margin-top: -25px;
 
+}
+
+p + p{
+    font-family: Lato;
+    color: #333333;
+    font-weight: 300;
+    font-size: 20px;
+    margin-top: -12px;
+}
