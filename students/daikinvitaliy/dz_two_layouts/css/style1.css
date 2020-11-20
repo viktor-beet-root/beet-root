@@ -21,10 +21,10 @@ body {
 	font-size: 14px;
 }
 .obolochka{
-	margin: auto;
+	margin: 0 auto;
 	background-color: #ffffff;
-	margin-left: auto ;
-	margin-right: auto ;
+	margin-left: auto;
+	margin-right: auto;
 	text-align: center;
 }
 section {
