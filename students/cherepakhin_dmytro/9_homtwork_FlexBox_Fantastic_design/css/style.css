@@ -1,0 +1,87 @@
+@font-face{
+    font-family: Raleway;
+    src: url('../fonts/Raleway-Regular.ttf');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: Raleway;
+    src: url('../fonts/Raleway-Bold.ttf');
+    font-weight: 600;
+    font-style: normal;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    box-sizing: border-box;
+    width: 1600px;
+    background-color: #e2e7ec;
+    padding: 80px 230px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: Raleway;
+    text-transform: uppercase;
+}
+
+main > div{
+    box-sizing: border-box;
+    width: calc(33.3% - 20px);
+    height: 540px;
+    margin: 10px;
+    background-image: url(../img/background_face.png);
+}
+
+div.fantastic{
+    width: calc(66.7% - 20px);
+    color: white;
+    background-image: none;
+    position: relative;
+}
+
+div.fantastic div{
+    position: absolute;
+}
+
+p{
+    margin: 11px 26px 0px;
+    font-weight: 500;
+    font-size: 13.5px;
+    line-height: 3.2;
+    color: #98968f;
+}
+
+div.fantastic p{
+    margin: 391px 44px 0;
+}
+
+h1{
+    font-size: 23px;
+    font-weight: 600;
+    margin-left: 26px;
+    line-height: 1.3;
+}
+
+div.fantastic h1{
+    font-size: 32px;
+    margin-left: 42px;
+    line-height: 1.15;
+    font-weight: 600;
+
+}
+
+p.loading {
+    margin: 0 auto;
+    padding-top: 64px;
+    font-weight: 600;
+    color: #acb7c0;
+    padding-bottom: 20px;
+    display: inline-flex;
+    align-items: center;
+}
+
+
