@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .main {
+            width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            font-size: 0;
+        }
+
+        .main>div {
+            font-size: 16px;
+            width: 50%;
+            display: inline-block;
+            padding: 15px;
+        }
+
+        .menu {
+            list-style-type: none;
+            padding: 0;
+            font-size: 0;
+            max-width: 1200px;
+            margin: 0 auto;
+            border: 1px solid black;
+        }
+
+        .menu>li {
+            font-size: 16px;
+            display: inline-block;
+            width: 25%;
+            background-color: lightgray;
+        }
+
+        .menu>li:hover {
+            background-color: gray;
+        }
+
+        .menu>li:not(:last-child) {
+            border-right: 1px solid black;
+        }
+
+        .menu>li a {
+            display: block;
+            padding: 15px 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus debitis quidem, officia dolorem
+            consequatur
+            necessitatibus molestias eveniet perferendis quasi corrupti eius totam eos atque voluptate animi blanditiis
+            pariatur. Illum, repudiandae.
+        </div>
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus debitis quidem, officia dolorem
+            consequatur
+            necessitatibus molestias eveniet perferendis quasi corrupti eius totam eos atque voluptate animi blanditiis
+            pariatur. Illum, repudiandae.
+        </div>
+    </div>
+    <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Item 1</a></li>
+        <li><a href="#">Item 2</a></li>
+        <li><a href="#">Item 3</a></li>
+    </ul>
+</body>
+
+</html>

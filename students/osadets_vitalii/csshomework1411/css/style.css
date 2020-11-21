@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-size: 22px;
+}
+.wrapper {
+  width: 940px;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+.header-container {
+  margin: 0 auto;
+  padding-top: 143px;
+  width: 530px;
+  text-align: center;
+  margin-bottom: 110px;
+}
+.header-container > span {
+  width: 127px;
+  color: #898f99;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+  letter-spacing: 4.8px;
+}
+
+.header-name {
+  width: 532px;
+  color: #0ec8cb;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 30px;
+  text-transform: uppercase;
+  letter-spacing: 4.8px;
+  margin: 0 auto;
+  margin-top: 35px;
+}
+
+.header-description {
+  width: 503px;
+  color: #999999;
+  font-family: "PT Sans";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  font-style: normal;
+  margin: 0 auto;
+  margin-top: 45px;
+}
+
+.body-container li {
+  margin-top: 80px;
+  display: inline-block;
+  text-align: center;
+  list-style-type: none;
+  font-size: 14px;
+  width: 235px;
+  box-sizing: border-box;
+  border: 1px solid #ececec;
+  vertical-align: top;
+  background-color: #f7f7f7;
+  margin-bottom: 250px;
+}
+
+.service-name {
+  color: #1b1b1b;
+  font-size: 21px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 30px;
+}
+
+.text-about-service {
+  width: 175px;
+  color: #777777;
+  font-family: "PT Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  margin: 0 auto;
+}
+
+li:hover {
+  background-color: #0ec8cb;
+}
+ul {
+  font-size: 0;
+}
+
+svg {
+  width: 65px;
+  height: 65px;
+  margin-bottom: 95px;
+  margin-top: 55px;
+}
+.eachblock:hover path {
+  fill: white;
+}
+.body-container li:hover .service-name {
+  color: white;
+}
+
+.body-container li:hover .text-about-service {
+  color: white;
+}
