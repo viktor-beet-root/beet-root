@@ -1,0 +1,97 @@
+*{
+  margin:0;
+  padding: 0;
+}
+
+@font-face {
+  font-family:"Miso";
+  src:url("../fonts/miso-bold.woff2") format("woff2"),
+      url("../fonts/miso-bold.woff") format("woff");
+  font-weight: bold;
+  font-style:normal;
+  }
+
+@font-face {
+  font-family:"Miso";
+  src:url("../fonts/miso-regular.woff2") format("woff2"),
+      url("../fonts/miso-regular.woff") format("woff");
+  font-weight:normal;
+  font-style:normal;
+ }
+
+.container {
+  margin:0 auto;
+  width:1200px;
+  background: #fdde7e;
+  font-family: 'Lato',Arial, sans-serif;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.price{
+  color:#02995b;
+  margin-bottom: 38px;
+  font-size: 70px;
+  font-family:"Miso";
+  letter-spacing: normal;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.menu-item {
+  padding-top: 55px;
+  text-align: center;
+  width: calc((100% - 120px)/3);
+  background-color: white;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.menu-item img {
+  margin-left: 18px;
+  width: 135px;
+  height: 134px;
+  margin-bottom: 37px;
+}
+
+.name {
+  font-size: 56px;
+  font-weight: 400;
+  margin-bottom: 35px;
+  font-family:"Miso";
+  line-height: 24px;
+}
+
+.description {
+  margin-bottom: 35px;
+  font-size: 22px;
+  font-weight: 300;
+  font-family:"Lato";
+}
+
+.menu-item:nth-child(2) {
+  padding-top: 53px;
+}
+
+.menu-item:nth-child(2) .price{
+  margin-bottom: 60px;
+  padding-top: 12px
+}
+
+.menu-item:nth-child(2) .name{
+  margin-bottom: 35px;
+}
+
+.menu-item:nth-child(2) img{
+  margin-bottom: 49px;
+}
+
+.menu-item:nth-child(2) .description{
+  margin-bottom: 55px;
+}
