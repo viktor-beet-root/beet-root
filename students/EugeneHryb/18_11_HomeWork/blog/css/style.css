@@ -142,3 +142,6 @@ button:hover{
 button:active{
     background-color: #b40615;
 }
+button:focus{
+    outline: none;
+}
