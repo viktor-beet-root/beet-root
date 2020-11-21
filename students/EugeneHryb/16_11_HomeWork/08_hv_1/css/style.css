@@ -1,18 +1,21 @@
 @font-face{
     font-family: 'Miso';
-    src: url(../font/miso.otf);
+    src: url(../font/miso.woff2) format("woff2"),
+    url(../font/miso.woff) format("woff");
     font-weight: normal;
     font-style: normal;
 }
 @font-face{
     font-family: 'Miso';
-    src: url(../font/miso-bold.otf);
+    src: url(../font/miso-bold.woff2) format("woff2") ,
+    url(../font/miso-bold.woff) format("woff");
     font-weight: bold;
     font-style: normal;
 }
 @font-face{
     font-family: 'Miso';
-    src: url(../font/miso-light.otf);
+    src: url(../font/miso-light.woff2) format("woff2"),
+    url(../font/miso-light.woff) format("woff");
     font-weight: lighter;
     font-style: normal;
 }
