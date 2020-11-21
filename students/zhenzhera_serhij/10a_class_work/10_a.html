@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" <title>Class_Work_10_Position</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .left,
+        .top,
+        .right,
+        .bottom,
+        .center {
+            position: fixed;
+        }
+
+        .top,
+        .bottom {
+            transform: translateX(-50%);
+        }
+
+        .left,
+        .right {
+            transform: translateY(-50%);
+        }
+
+        .left,
+        .right,
+        .center {
+            top: 50%;
+        }
+
+        .top,
+        .bottom,
+        .center {
+            left: 50%;
+        }
+
+        .left {
+            left: 0%;
+        }
+
+        .top {
+            top: 0%;
+        }
+
+        .right {
+            right: 0%;
+        }
+
+        .bottom {
+            bottom: 0%;
+        }
+
+        .center {
+            transform: translate(-50%, -50%);
+        }
+
+        h1 {
+            font-size: 70px;
+            color: green;
+        }
+
+        h2 {
+            font-size: 50px;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center">
+        <h1>Full_Stack_Developer</h1>
+    </div>
+    <div class="left">
+        <h2>UX</h2>
+    </div>
+    <div class="top">
+        <h2>UI</h2>
+    </div>
+    <div class="right">
+        <h2>Front-End</h2>
+    </div>
+    <div class="bottom">
+        <h2>Back-End</h2>
+    </div>
+</body>
+
+</html>

@@ -5,15 +5,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge"
         <title>Оглавление</title>
-        <link rel="stylesheet" href=style.css">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <header>
             <nav>
                 <ul>
-                <li><a href="5_class_work"></a></li>
-                <li><a href="5_home_work"></a></li>
-                <li><a href="6_home_work"></a></li>
+                <li><a href="5_class_work/"></a></li>
+                <li><a href="5_home_work/"></a></li>
+                <li><a href="6_home_work"/></a></li>
+                <li><a href="7_2a_home_work"/></a></li>
+                <li><a href="10a_class_work"/></a></li>
                 </ul>
           </nav>
         </header>
