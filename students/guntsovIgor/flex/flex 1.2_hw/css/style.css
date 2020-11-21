@@ -3,11 +3,11 @@
   padding: 0;
 }
 @font-face {
-    font-family: 'HansKendrick';
-    src: url(../fonts/HansKendrick.woff2) format("woff2");
-    src: url(../fonts/HansKendrick.woff) format("woff");
-    font-weight: normal;
-    font-style:normal;
+  font-family: 'HansKendrick';
+  src: url(../fonts/HansKendrick.woff2) format("woff2"),
+       url(../fonts/HansKendrick.woff) format("woff");
+  font-weight: normal;
+  font-style:normal;
    }
 
 .container {
@@ -19,11 +19,11 @@
 }
 
 .menu {
+  width:1120px;
   display: flex;
   padding-top:92px;
   flex-wrap: wrap;
-  padding-left: 240px;
-  padding-right: 240px;
+  margin:0 auto;
   justify-content: flex-start;
   margin-bottom: 62px;
 }
@@ -61,7 +61,7 @@ h2.name {
   text-transform: uppercase;
   letter-spacing: 0.55px;
   font-size: 22px;
-  font-family: 'Hanskendrick', Arial, sans-serif;;
+  font-family: 'Hanskendrick', Arial, sans-serif;
   font-weight: 700;
   padding-left:27px;
   font-style: normal;
