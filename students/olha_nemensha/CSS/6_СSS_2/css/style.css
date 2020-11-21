@@ -6,7 +6,8 @@ transition: all .1s ease-in;
 
 @font-face {
     font-family: "Trebuchet MS", Trebuchet, Arial, sans-serif;  
-    src: url("/fonts/9412.ttf");
+    src: url("../fonts/Trebuchet\ MS.woff2") format('woff2'),
+         url("../fonts/Trebuchet\ MS.woff") format('woff'),
     font-style: normal; 
     font-weight: normal;
     }  

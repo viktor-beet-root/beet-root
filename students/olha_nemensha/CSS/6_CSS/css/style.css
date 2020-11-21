@@ -1,55 +1,46 @@
-@font-face {
-    font-family: "Proxima Nova";  
-    src: url("/fonts/10355.otf");
-    font-style: normal; 
-    font-weight: normal;
-    }
-
-body {
-    font-family:"Proxima Nova";
-    font-size: 14px;
-    margin: 0; 
+* {
+    margin: 0;
     padding: 0;
-    }
-
-main {
-    display: flex;
-    flex-direction: row;
-    height: 288px;
-    width: 1500px;
-    background: white;
-    margin: 0 226px;
 }
 
+@font-face {
+    font-family: 'proxima_novaregular';
+    src: url(../fonts/proximaNova.woff2) format('woff2'),
+         url(../fonts/proximaNova.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'proxima_novalight';
+    src: url(../fonts/proximaNovaLight.woff2) format('woff2'),
+         url(../fonts/proximaNovaLight.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'proxima_novaregular';
+    font-size: 14px;
+    width: 1500px;
+    margin: auto;
+    }
+
 .border {
-    width: 1100px;
-    height: 288px;
+    margin: auto;
+    margin-top: 56px;
     display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    color: black;
-    background: repeating-linear-gradient(
-    to right,
-    #FFE5E5 ,
-    #FFE5E5 60px,
-    #FFFFFF 20px,
-    #FFFFFF 80px
-    );
+    max-width: 860px;
 }
 
 section {
-    margin: auto;
-    margin-top: 54px;
-}
-
-.b1 {
-    margin-left: 119px;
-    margin-top: 54px;
-    box-sizing: border-box;
+    width: 33.3%;
+    margin-right: 30px;
+    margin-left: 30px;
 }
 
 .circle {
+    background: #1275B9;
     border: 2px solid #1F7DBD;
     border-radius: 50%;
     height: 63px;
@@ -65,94 +56,33 @@ section {
     margin: auto;
 }
 
-.logo {
-    fill: #1275b9;
-    fill-rule: evenodd;
+svg {
+    fill: #fff;
 }
 
-.logo:hover {
+.circle:hover svg {
     fill:#2a69a6;
 }
 
 .circle:hover {
     background-color: white;
-    }
-
-.circle1:hover {
-    background-color: white;
-}
-
-.circle2:hover {
-    background-color: white;
-}
-
-.circle1 {
-    background: #1275B9;
-    border: 2px solid #1275B9;
-    border-radius: 50%;
-    height: 63px;
-    width: 63px;
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    opacity: 0.7;
-    margin-bottom: 10px;
-}
-
-.logo1 {
-        fill: #fff;
-        fill-rule: evenodd;
-}
-
-.logo1:hover {
-    fill:#2a69a6;
-}
-
-.circle1 svg {
-    margin: auto;
-}
-
-.circle2 {
-    background: #1275B9;
-    border: 2px solid #1275B9;
-    border-radius: 50%;
-    height: 63px;
-    width: 64px;
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    opacity: 0.7;
-    margin-bottom: 10px;
-    
-}
-
-.circle2 svg {
-    margin: auto; 
-}
-
-.circle2:hover {
-    fill:#2a69a6;
 }
 
 h2{
-    font-family:"Proxima Nova";
-    font-size: 14px;
     color: #000000;
-    text-transform: uppercase;
-    text-align: center;
-    margin-bottom: 10px;
-    letter-spacing: 0.35px;
+    font-size: 14px;
     line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.35px;
+    padding-bottom: 10px;
 }
 
 p { 
-    width: 220px;
-    color: #9d9d9d;
-    text-align: center;
-    letter-spacing: 0.25px;
-    line-height: 20px;
-}
-
-.b3 {
-    margin-right: 130px;
+color: #9d9d9d;
+font-size: 14px;
+font-weight: lighter;
+line-height: 20px;
+text-align: center;
+letter-spacing: 0.35px;
 }
