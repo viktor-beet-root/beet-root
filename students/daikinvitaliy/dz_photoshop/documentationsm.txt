@@ -1,6 +1,0 @@
-WE ARE SOCIAL    OpenSans Regular 20px fffff
- © 2014 - Kasper All Right Reserved  Open Sans Semibold 15px fffff
- Ширина макета 1920 высота 420
- Цвет смарт-обекта 12 Col GRID #f9d4e4
- Цвет смарт-обекта PICTURE  #121116
- 
