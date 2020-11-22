@@ -1,7 +1,15 @@
 @font-face {
-    font-family: "LucidaSansUnicode", "LucidaGrande";
-    src: url(font/LucidaSansUnicode.ttf),
-         url(font/LucidaGrande.ttf);
+    font-family: "Lucida Sans Unicode";
+    src: url(lucidasansunicode-webfont.woff2) format("woff2"),
+         url(lucidasansunicode-webfont.woff) format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Lucida Grande";
+    src: url(lucidagrande-webfont.woff2) format("woff2"),
+         url(lucidagrande-webfont.woff) format("woff");
     font-weight: normal;
     font-style: normal;
 }
@@ -13,7 +21,7 @@
 
 
 body {
-    font-family: "LucidaSansUnicode", "LucidaGrande", sans-serif;
+    font-family: "Lucida Sans Unicode", Arial, Helvetica, sans-serif;
     font-size: 18px;
     color: #ffff;
 }
@@ -38,6 +46,7 @@ body {
 
 .city-wrap p {
     padding-top: 20px;
+    font-family: "Lucida Grande", Arial, Helvetica, sans-serif;
     font-weight: normal;
 }
 
@@ -57,7 +66,7 @@ body {
     text-align: center;
     padding: 25px 25px;
     line-height: 1.2;
-    opacity: .5;
+    
 }
 
 .city-wrap span {
@@ -77,9 +86,14 @@ body {
     font-size: 30px;
 }
 
+.city-wrap ul:hover li {
+    opacity: .5;
+    transition: all 5.s linear;
+}
+
 .city-wrap ul li:hover{
     opacity: 1;
-    transition: all .3s ease-in;
+    transition: all .5s linear;
 }
 .city-wrap ul li:nth-child(1){
     background-color: #3399CC;
