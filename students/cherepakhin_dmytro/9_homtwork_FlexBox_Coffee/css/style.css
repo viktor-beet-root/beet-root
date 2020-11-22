@@ -8,16 +8,16 @@
 
 @font-face {
     font-family: miso;
-    src: url('../fonts/Miso-Bold.woff2')format("woff2"),
-    url('../fonts/Miso-Bold.woff')format("woff");
+    src: url('../fonts/Miso-Bold.woff2') format("woff2"),
+    url('../fonts/Miso-Bold.woff') format("woff");
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Lato';
-    src: url('../fonts/Lato-Light.woff2')format("woff2"),
-    url('../fonts/Lato-Light.woff')format("woff");
+    src: url('../fonts/Lato-Light.woff2') format("woff2"),
+    url('../fonts/Lato-Light.woff') format("woff");
     font-weight: 'light';
     font-style: normal;
 }
