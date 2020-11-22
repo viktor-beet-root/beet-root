@@ -1,0 +1,103 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: "PT Sans", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	text-align: center;
+}
+.shell {
+	padding: 133px 170px 100px;
+	display: inline-block;
+}
+.text1 {
+	font-family: "Montserrat", Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 12px;
+	line-height: 30px;
+	letter-spacing: 4.8px;
+	color: #898f99;
+	margin-left: 24px;
+	margin-bottom: 18px;
+}
+
+h1 {
+	font-family: "Montserrat", Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	font-size: 48px;
+	letter-spacing: 4.8px;
+	line-height: 48px;
+	color: #0ec8cb;
+	margin-bottom: 30px;
+}
+
+h1 ~ p {
+	text-transform: uppercase;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 30px;
+	letter-spacing: 1.1px;
+	color: #999999;
+	margin-bottom: 99px;
+}
+
+.almaz {
+	font-size: 0;
+	max-width: 940px;
+	margin: 0px auto;
+}
+li {
+	height: 420px;
+	max-width: 25%;
+	box-sizing: border-box;
+	display: inline-block;
+	font-size: 14px;
+	border: 1px solid #f1f1f1;
+	padding: 55px 22px 0;
+	background-color: #f7f7f7;
+	vertical-align: middle;
+}
+svg {
+	width: 64px;
+	height: 66px;
+	margin-bottom: 45px;
+	fill: #1b1b1b;
+}
+.almaz .blok {
+	text-transform: uppercase;
+	font-family: Montserrat;
+	font-size: 21px;
+	font-weight: 600;
+	margin-bottom: 23px;
+	color: #1b1b1b;
+}
+.almaz p {
+	color: #777777;
+	line-height: 22px;
+	font-weight: 400;
+}
+.diamond {
+	text-transform: uppercase;
+	font-family: Montserrat;
+	font-size: 21px;
+	font-weight: 600;
+	margin: -13px;
+	margin-bottom: 21px;
+	color: #1b1b1b;
+}
+li:hover {
+	background-color: #0ec8cb;
+}
+.almaz li:hover svg {
+	fill: white;
+}
+
+li:hover p {
+	color: white;
+}
+
+.almaz li:hover h3 {
+	color: white;
+}
