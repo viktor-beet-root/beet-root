@@ -21,16 +21,9 @@
 main {
     width: 1550px;
     background-color: #ffffff;
-    padding: 0 225px 0;
+    padding: 56px 295px 0;
     box-sizing: border-box;
 }
-
-.background{
-    padding: 56px 70px 61px;
-    background-image: url('../img/12_Col_Grid.svg');
-    box-sizing: border-box;    
-}
-
 
 section{
     width: 320px;
