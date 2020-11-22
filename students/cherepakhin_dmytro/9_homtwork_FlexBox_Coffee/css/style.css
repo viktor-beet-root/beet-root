@@ -1,7 +1,7 @@
 @font-face {
     font-family: miso;
-    src: url('../fonts/Miso.woff2')format("woff2"),
-        url('../fonts/Miso.woff')format("woff");
+    src: url('../fonts/Miso.woff2') format("woff2"),
+        url('../fonts/Miso.woff') format("woff");
     font-weight: normal;
     font-style: normal;
 }
@@ -86,7 +86,7 @@ h1{
 }
 
 span{
-    font-family: 'Lato';;
+    font-family: 'Lato';
     font-weight: 'light';
     font-size: 20px;
     color:#4e4e4e;
