@@ -37,7 +37,8 @@ h1 {
     margin: 20px 0 30px;
 }
 
-.hook {
+.quote::before {
+    content: '“';
     line-height: 40px;
     font-size: 60px;
     margin-right: 20px;
