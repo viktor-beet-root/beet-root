@@ -1,0 +1,135 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: "Raleway Heavy";
+    src: url('fonts/raleway.regular-webfont.woff2') format('woff2'),
+         url('fonts/raleway.regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+    background-color: #b07cf7;
+    font-size: 17px;
+    font-weight: 400;
+    color: #ffff;
+}
+
+.wrap {
+    max-width: 1200px;
+    padding-top: 100px;
+    padding-bottom: 120px;
+    margin: 0 auto;
+}
+
+.heading {
+    max-width: 570px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.heading h1 {
+    font-size: 90px;
+    font-weight: bold;
+}
+
+.heading p {
+    padding-top: 30px;
+    font-weight: lighter;
+}
+
+.container {
+    padding: 47px 0 50px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    list-style: none;
+}
+
+.container li {
+    padding: 0 15px;
+    position: relative;
+    width: 100%;
+}
+
+.images {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.493);
+}
+
+.container .images:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 40%);
+  }
+
+ .date {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    transform: translateX(15px);
+    background-color: rgba(19, 21, 22, 0.5);
+    min-width: 60px;
+    min-height: 60px;
+    text-align: center;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.date h2 {
+    font-size: 32px;
+    line-height: 1;
+}
+
+.date span {
+    font-family: "Raleway Heavy";
+    font-size: 21px;
+    text-transform: uppercase;
+}
+
+.text-box {
+    max-width: 328px;
+    position: absolute;
+    bottom: 40px;
+    left: 15px;
+    transform: translateX(15px);
+    z-index: 10;
+}
+
+.text-box h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.text-box p {
+    padding-top: 25px;
+    font-size: 13px;
+    font-weight: lighter; 
+}
+
+button {
+    display: block;
+    width: 200px;
+    height: 50px;
+    margin: 0 auto;
+    background-color: #f72b3b;
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: lighter;
+    text-transform: uppercase;
+    color: #ffff;
+    border: none;
+    outline: none;
+    box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.493);
+}
