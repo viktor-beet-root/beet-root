@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-Ua-Compatible" content="ie=edge">
+	<title>Опрос</title>
+</head>
+<body>
+	<section>
+		<h3>Личные данные</h3>
+		<form action="#" method="post">
+			<p>Ф.И.О.</p>
+			<div>
+				<input type="text" name="surname" placeholder="Фамилия" id="lastname" value="">
+				<label for="lastname">вписать</label>
+			</div><br>
+			<div>
+				<input type="text" name="name" placeholder="Имя" id="name" value="">
+				<label for="name">вписать</label>
+			</div><br>
+			<div>
+				<input type="text" name="patronymic" placeholder="Отчество" id="patronymic" value="">
+				<label for="patronymic">вписать</label>
+			</div><br>
+			<div>
+				<label for="date">Дата рождения: </label>
+				<input type="date" id="date" name="date"/>
+			</div>
+			<div>
+				<p>Пол:</p>
+				<label><p><input type="radio" name="floor" value="mm"></p>Мужской</label>
+				<label><p><input type="radio" name="floor" value="gg"></p>Женский</label>
+			</div>
+			<div>
+				<p>Семейное положение</p>
+			   <label><input type="radio" name="sp1" value="mm" checked>Женат/Замужем</label>
+				<label><input type="radio" name="sp1" value="mm">Нет</label>
+			</div>
+			<div>
+				<p>Дети:</p>
+				<label><select name="hildren">
+					<option value="one">один</option>
+					<option value="two">два</option>
+					<option value="three">три</option>
+					<label></label><option value="more than three">больше трех</option>
+					<option value="no">нет</option>
+			  </select>Выбрать</label>
+			</div>
+			<div>
+				<p>Прекрипить фото</p>
+				<label><input type="file" name="foto">Выбрать фото</label>
+			</div>
+		   <div>
+				<p>Качества подходящие вам:</p>
+				<label><input type="checkbox" name="Neatness" value="a1">Окуратность</label><br>
+				<label><input type="checkbox" name="Hard work" value="a2">Трудолюбие</label><br>
+				<label><input type="checkbox" name="Communicative" value="a3">Communicative</label><br>
+				<label><input type="checkbox" name="I'm a fast learner" value="a4">Быстро учусь</label><br>
+				<label><input type="checkbox" name="I'm always late" value="a5">Всегда опаздываю</label>
+			</div>
+			<div>
+				<p>Город проживания:</p>
+				<label><select name="city">
+					<option value=Kiev">Киев</option>
+					<option value="Kharkiv">Харьков</option>
+					<option value="Odessa">Одесса</option>
+					<option value="Dnieper">Днепр</option>
+					<option value="Donetsk">Донецк</option>
+					<option value="Zaporizhzhia">Запорожье</option>
+					<option value="Lviv">Львов</option>
+					<option value="Krivoy Rog">Кривой Рог</option>
+					<option value="Nikolaev">Николаев</option>
+					<option value="Mariupol">Мариуполь</option>
+					<option value="Luhansk">Луганск</option>
+					<option value="Vinnytsia">Винница</option>
+					<option value="Makeevka">Макеевка</option>
+					<option value="Sevastopol">Севастополь</option>
+					<option value="Simferopol">Симферополь</option>
+					<option value="Kherson">Херсон</option>
+					<option value="Poltava">Полтава</option>
+					<option value="Chernihiv">Чернигов</option>
+					<option value="Cherkasy">Черкассы</option>
+					<option value="Zhytomyr">Житомир</option>
+					<option value="Sumy">Сумы</option>
+					<option value="Khmelnitsky">Хмельницкий</option>
+					<option value="Chernivtsi">Черновцы</option>
+					<option value="Smooth">Ровно</option>
+					<option value="Kropyvnytskyi">Кропивницкий</option>
+					<option value="Ivano-Frankivsk">Ивано-Франковск</option>
+					<option value="Kremenchuk">Кременчуг</option>
+					<option value="Ternopil">Тернополь</option>
+					<option value="Lutsk">Луцк</option>
+					<option value="White church">Белая Церковь</option>
+					<option value="Kramatorsk">Краматорск</option>
+					<option value="Melitopol">Мелитополь</option>
+					<option value="> Uzhhorod">Ужгород</option>
+					<option value="Berdyansk">Бердянск</option>
+					<option value="Kamyanets-Podilsky">Каменец-Подольский</option>
+					<option value="Brovary">Бровары</option>
+				</select></label>
+			</div>
+			<div>
+				<p>Немного о себе:</p>
+				<textarea name="text"></textarea>
+			</div>
+			<div>
+				<p><button type="submit">Отправить</button>
+					<button type="reset"><img src="images/reset.jfif" alt="reset"  width="30">сброс</button></p>
+			</div>
+		</form>
+		</section>
+</body>
+		
+</html>
+

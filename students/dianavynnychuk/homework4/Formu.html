@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>htmlform</title>
+</head>
+<body>
+    <form ation="#" method="POST">
+        <fieldset>
+            <legend>Основна інфориація</legend>
+            <label for="yourName">Твоє імя:<em>*</em><input type="text" name="yourname" id="yourName" placeholder="імя" required></label>
+            <br>
+            <br>
+            <label for="yourSurname">Фамілія:<em>*</em><input type="text" name="yoursurname" id="yourSurname" placeholder="фамілія"  required></label>
+            <br>
+            <br>
+            <label for="age">Вік:<input type="number" name="yourage" id="age"></label>
+            <br>
+            <br>
+            <label for="sex">Стать:</label>
+            <div id="sex">
+            <label for="man">Ч<input type="radio" name="sex" id="man" value="Male"></label>
+            <label for="women">Ж <input type="radio" name="sex" id="women" value="Famale"></label>
+            </div>
+            <br>
+            <br>
+            <label for="birthday">День народження:<input type="date" name="yourbirthday" id="birthday"></label>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Контактна інформація</legend>
+            <label for="city">Місто</label>
+            <select name="city" id="city">
+                <option selected disabled>Виберіть місто</option>
+                <option value="vinica">Вінниця</option>
+                <option value="dnepr">Дніпро </option>
+                <option value="doneck">Донецьк</option>
+                <option value="zhytomyr">Житомир</option>
+                <option value="zaporizia">Запоріжжя</option>
+                <option value="ivano_frankivsk">Івано-Франківськ</option>
+                <option value="kyiv">Київ</option>
+                <option value="kirovograd">Кіровоград</option>
+                <option value="lugansk">Луганськ </option>
+                <option value="lutsk">Луцьк</option>
+                <option value="lviv">Львів</option>
+                <option value="Mikolaiv">Миколаїв</option>
+                <option value="odesa">Одесa</option>
+                <option value="poltava">Полтава</option>
+                <option value="rivne">Рівне</option>
+                <option value="sumy">Суми</option>
+                <option value="ternopil">Тернопіль</option>
+                <option value="uzgorod">Ужгород</option>
+                <option value="charkiv">Харків </option>
+                <option value="cherson">Херсон</option>
+                <option value="chmelnick">Хмельницьк</option>
+                <option value="cherkasi">Черкаси</option>
+                <option value="chernigiv">Чернигів</option>
+                <option value="chernivci">Чернівці</option>
+            </select>
+            <br>
+            <br>
+            <label for="email">E-mail:<input type="email" name="mail" id="email"></label>
+            <label for="number">Номер телефону:<input type="tel" name="telephone" id="number" ></label>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Цікаві факти</legend>
+        <label for="color">Улюблений кoлір:<input type="color" name="favorite" id="color"></label> 
+        <br>
+        <br>
+        <label for="language">Якими мовами валодієте?</label> 
+        <div id="language">
+           <input type="checkbox" name="option2" value="a2">Російська
+           <input type="checkbox" name="option3" value="a3">Англійська 
+           <input type="checkbox" name="option4" value="a4">Німецька
+           <input type="checkbox" name="option5" value="a5">Польська
+        </div>
+        <br>
+        <br>
+        <label for="animals">Чи маєте домашніх тварин?</label> 
+        <div id="animals">
+            <input type="radio" name="true" value="Yes">Так
+            <input type="radio" name="fals" value="No">Ні
+        </div>
+        </fieldset>
+        <br>
+        <div>
+            <label>Додаткова інфориація:<textarea name="massage"></textarea></label>
+            <br>
+            <br>
+            <label for="information">Згода на використання моїх даних:<input type="checkbox" name="information" id="information"></label>
+            <input type="submit" value="Вислати">  
+        </div>
+    </form>
+</body>
+</html>

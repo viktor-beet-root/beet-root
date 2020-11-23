@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Proxima Nova Regular';
+    src: url('ProximaNova-Regular.eot');
+    src: url('ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
+    url('ProximaNova-Regular.woff') format('woff'),
+    url('ProximaNova-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+body {
+    font-family: "Proxima Nova Regular", sans-serif;
+    font-size: 14px;
+    line-height: 1.2em;
+}
+
+h2 {
+    font-size: 13px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.wrapper {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+
+}
+
+.container {
+    margin: 10px;
+    padding: 0 2.2em 0 2.2em;
+    display: inline-block;
+    width: 220px;
+   
+}
+
+.container h2,
+.container p {
+    padding-top: 15px
+}
+
+.container p {
+    font-weight: lighter;
+    color: #9d9d9d;
+}
+
+.radius {
+    border: 1px solid #2a69a6;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    margin: 0 auto;
+    position: relative;
+    background-color: #2a69a6;
+}
+
+svg {
+    fill: #ffffff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.radius:hover {
+    background-color: #ffffff;
+}
+
+.radius:hover svg {
+    fill: #2a69a6;
+}
