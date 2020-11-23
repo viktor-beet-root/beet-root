@@ -1,0 +1,58 @@
+
+body{
+    font-family: 'Lato', sans-serif, Arial, Helvetica;
+    font-size: 18px;
+    line-height: 1.888889;
+    font-weight: 300;
+}
+button:active, button:focus {
+    outline: none;
+    border-width: 4px;
+}
+.article__wrap{
+    padding: 130px 0 20px 0;
+}
+.article{
+    box-shadow: 0 4px 68px rgba(0, 0, 0, 0.1);
+    padding-bottom: 100px;
+}
+.article h1 + p::first-letter{
+    font-size: 110px;
+    font-family: "Playfair Display";
+    font-weight: 400;
+    vertical-align: top;
+    line-height: 89px;
+    float: left;
+    padding-right: 30px;
+}
+.article h1 {
+    font-family: "Playfair Display";
+    font-size: 42px;
+    font-weight: 400;
+    padding-top: 88px;
+    padding-bottom: 5px;
+}
+.article p{
+    padding-bottom: 34px;
+}
+.article blockquote{
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 400;
+}
+.article blockquote::before{
+    content: '“';
+    font-style: italic;
+    font-size: 60px;
+    padding-right: 28px;
+}
+.btn{
+    width: 264px;
+    height: 68px;
+    border: 2px solid #eaa258;
+    background-color: inherit;
+    color: #eaa258;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+}
