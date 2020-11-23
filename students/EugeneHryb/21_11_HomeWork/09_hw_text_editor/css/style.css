@@ -33,11 +33,12 @@ body{
     width: 876px;
     height: 187px;
     background-color: #181818;
-    box-shadow: -4px -4px 59px rgba(0, 0, 0, 0.16);
+    box-shadow: -4px -4px 59px rgba(0, 0, 0, .16);
     position: absolute;
     right: 0;
     top: 47px;
     padding: 30px 0 0 64px;
+    z-index: 10;
 }
 .article_title label{
     font-family: "Proxima Nova";
@@ -66,12 +67,13 @@ body{
     height: 76px;
     box-sizing: border-box;
     background-color: #fbc02d;
-    box-shadow: -4px -4px 59px rgba(0, 0, 0, 0.16);
+    box-shadow: -4px -4px 59px rgba(0, 0, 0, .16);
     position: absolute;
     right: 0;
     top: 234px;
     display: flex;
     padding-left: 31px;
+    z-index: 10;
 }
 button:active, button:focus, button {
     outline: none;
@@ -105,6 +107,16 @@ button:active, button:focus, button {
 .article{
     background-color: white;
     padding: 195px 130px 0 122px;
+    position: relative;
+}
+.article::before{
+    content: '';
+    height: 100%;
+    border-left: 4px groove #e8eced;
+    position: absolute;
+    top: 0;
+    left: 67px;
+    opacity: .5;
 }
 .article>.author{
     font-family: "Proxima Nova";
@@ -134,7 +146,7 @@ button:active, button:focus, button {
 }
 .article p{
     padding-bottom: 21px;
-    letter-spacing: -0.2px;
+    letter-spacing: -.2px;
     text-align: justify ;
 }
 em{
