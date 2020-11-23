@@ -1,118 +1,111 @@
- @font-face{
-     font-family: "Hans Kendrick";
-     src: url(../fonts/hans.ttf);
-     font-style: normal;
-     font-weight: normal;
- }
+@font-face{
+    font-family: "Hans Kendrick";
+    src: url("../fonts/hans.woff2") format("woff2"),
+    url("../fonts/hans.woff") format("woff");
+    font-style: normal;
+    font-weight: normal;
+}
 *{
-    padding: 0;
-    margin: 0;
+   padding: 0;
+   margin: 0;
 }
 
 body{
-    max-width: 1150px; 
-    font-family: "Hans Kendrick", Helvetica, sans-serif;
-    font-size: 22px;
-    background-color: #e2e7ec;
-    text-transform: uppercase;  
-    
+   max-width: 1150px; 
+   font-family: "Hans Kendrick", Helvetica, sans-serif;
+   font-size: 22px;
+   background-color: #e2e7ec;
+   text-transform: uppercase;  
+
 }
 .wrapper {
-    max-width: 1150px;
-    min-width: 1150px;
-    margin-top: 91px;
-    margin-left: 240px;
-    margin-right: 240px;
-    margin-bottom: 409px;
-    display: flex;
-    flex-wrap: wrap;
-    border: 1px solid transparent;   
+   position: relative;
+   max-width: 1150px;
+   min-width: 1150px;
+   margin-top: 91px;
+   margin-left: 240px;
+   margin-right: 240px;
+   margin-bottom: 409px;
+   display: flex;
+   flex-wrap: wrap;
+   border: 1px solid transparent;   
 }
 
-   .wrapper div:first-child article>div:first-child::before{
-       content: '';
-       background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
-       position: absolute;
-       display: block;
-       width: 44%;
-       height: 54.8%;
-   }
+  .wrapper div:first-child article>div:first-child::before{
+    content: '';
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+    position: absolute;
+    display: block;
+    width: 44%;
+    height: 54.8%;
+  }
 
 
 .items{
-    background-color: white;
-    min-height: 540px;
-    margin: 10px;
-    width: 360px;
-    text-align: center;
-    background-image: url(../images/guy.png);
-    background-repeat: no-repeat;
-    background-position: 28px 460px;
+   background-color: white;
+   min-height: 540px;
+   margin: 10px;
+   width: 360px;
+   text-align: center;
+   background-image: url(../images/guy.png);
+   background-repeat: no-repeat;
+   background-position: 28px 460px
+   
 }
 
 .items p {
-    color: #818181;
-    font-size: 13px; 
-    font-weight: 500;
-    line-height: 30px;
-    letter-spacing: 0.33px;
-    margin-bottom: 12px;
-    text-align: left;
-    margin-left: 28px;
-    margin-top: 18px;
+   color: #818181;
+   font-size: 13px; 
+   font-weight: 500;
+   line-height: 30px;
+   letter-spacing: 0.33px;
+   margin-bottom: 12px;
+   text-align: left;
+   margin-left: 28px;
+   margin-top: 18px;
 }
 .items h2{
-    font-family: "Hans Kendrick - Heavy";
-    color: #1d1d1d;
-    font-size: 22px;
-    font-weight: 400;
-    line-height: 30px;
-    text-align: left;
-    letter-spacing: 0.55px;
-    margin-left: 27px;  
+   font-family: "Hans Kendrick";
+   color: #1d1d1d;
+   font-size: 22px;
+   font-weight: 400;
+   line-height: 30px;
+   text-align: left;
+   letter-spacing: 0.55px;
+   margin-left: 27px;  
 }
 
 .items:first-child{
-    max-height: 540px;
-    width: 740px;
-}
-     
-.items .text>p{
-    position: absolute;
-    top: 467px;
-    left: 258px;
-    opacity: 0.5;
-    color: #ffffff;
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 30px;
-    letter-spacing: 0.33px;
-    text-align: left;
+   max-height: 540px;
+   width: 740px;
 }
 
-.items .text>h2{
-    position: absolute;
-    top: 531px;
-    left: 259px;
-    color: #ffffff;
-    font-size: 30px;
-    font-weight: 400;
-    line-height: 36px;
-    letter-spacing: 0.75px;
-    text-align: left;
+.text {
+   position: absolute;
+   top: 385px;
+   padding-left: 10px;    
+  
 }
+.text p{
+   color: #ffffff;
+   font-size: 13px;
+   padding-bottom: 14px;
+
+}
+
+.text h2 {
+   color: #ffffff;
+   font-size: 30px;
+   letter-spacing: 1px;
+   line-height: 38px;
+}
+
+
 
 .loader {
-    text-align: center;
-    font-size: 13px;
-    color: #99a5b0;
-    margin: 0 auto;
-    vertical-align: middle;  
+   text-align: center;
+   font-size: 13px;
+   color: #99a5b0;
+   margin: 0 auto;
+   vertical-align: middle;  
 }
-    
-  
-  
- /* @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }*/
