@@ -1,0 +1,56 @@
+body {
+    font-family: 'Lato', Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.container {
+    box-shadow: 0 4px 68px rgba(0, 0, 0, 0.1);
+    margin:130px 100px;
+}
+
+h1 {
+    font-family: "Playfair Display", Helvetica, sans-serif;
+    font-size: 42px;
+    padding-top: 105px;
+    margin-bottom: 23px;
+}
+
+.description {
+    line-height: 34px;
+    color: #171717;
+    letter-spacing: 0.95px;
+    opacity:0.7;
+}
+
+.capital_letter::first-letter {
+    font-family: "Playfair Display", Helvetica, sans-serif;
+    font-size: 110px;
+    float:left;
+    line-height: 90px;
+    margin-right: 30px;
+}
+
+.quote {
+    font-size: 24px;
+    font-style: italic;
+    margin: 20px 0 30px;
+}
+
+.hook {
+    line-height: 40px;
+    font-size: 60px;
+    margin-right: 20px;
+}
+
+button.discover {
+    text-align: center;
+    letter-spacing: 3.6px;
+    font-weight: 700;
+    color: #eaa258;
+    padding:15px 70px;
+    border: 2px solid #eaa258;
+    line-height: 34px;
+    margin-bottom: 100px;
+    background-color: white;
+}
