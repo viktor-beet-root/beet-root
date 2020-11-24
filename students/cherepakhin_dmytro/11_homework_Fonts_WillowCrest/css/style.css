@@ -1,0 +1,115 @@
+@font-face{
+    font-family: PlayfairDisplay;
+    src: url('../fonts/PlayfairDisplay-Regular.woff2') format('woff2'),
+    url('../fonts/PlayfairDisplay-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: Lato;
+    src: url('../fonts/Lato-Bold.woff2') format('woff2'),
+    url('../fonts/Lato-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: Lato;
+    src: url('../fonts/Lato-Light.woff2') format('woff2'),
+    url('../fonts/Lato-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+.page{
+    margin: 0;
+    padding: 0;
+}
+
+.conteiner{
+    margin: 0;
+    max-width: 1600px;
+    padding: 130px 0;
+    background-color: white;
+}
+
+.willow-article{
+    width: 1400px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: block;
+    padding: 121px;
+    background-color: #ffffff;
+    text-align: left;
+    box-shadow: 0 0 50px 20px #f2f2f2;
+}
+
+.willow-article__text{
+    padding-bottom: 12px;
+}
+
+.willow-article__author-header{
+    margin: 7px 2px 0;
+    font-family: PlayfairDisplay, 'Times New Roman', Times, serif;
+    font-weight: normal;
+    font-size: 42px;
+}
+
+.willow-article__text-first-letter{
+    width: 98px;
+    float: left;
+    font-family: PlayfairDisplay, 'Times New Roman', Times, serif;
+    font-weight: normal;
+    font-size: 110px;
+}
+
+.willow-article__text-first-letter-p{
+    margin: 0;
+    vertical-align: top;
+    line-height: .8;
+}
+
+.willow-article__text-p{
+    margin-top: 18px;
+    font-family: Lato, sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    color: #a2a2a2;
+    letter-spacing: .95px;
+    line-height: 1.9;
+}
+
+.willow-article__text-quotation{
+    font-family: Lato, sans-serif;
+    font-weight: 300;
+    font-style: oblique;
+    font-size: 24px;
+    color: #a2a2a2;
+    letter-spacing: 1.3px;
+}
+
+.willow-article__text-quotation_big{
+    margin: 0;
+    font-family: Lato, sans-serif;
+    font-weight: 300;
+    font-style: oblique;
+    font-size: 68px;
+    color: #7a7a7a;
+    letter-spacing: 20px;
+    line-height: .5;
+}
+
+.willow-article__text-button{
+    box-sizing: border-box;
+    display: block;
+    border: 2px solid #eaa258;
+    color: #eaa258;
+    font-family: Lato, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    width: 264px;
+    padding: 21px;
+    text-align: center;
+    letter-spacing: 3.5px;
+}
