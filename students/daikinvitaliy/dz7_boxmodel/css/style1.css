@@ -1,0 +1,91 @@
+* {
+	padding: 0;
+	margin: 0;
+	border: none;
+	transition: all 0.1s ease-in;
+	/*list-style: none;*/
+}
+body {
+	font-family: “Lucida Sans Unicode”, “Lucida Grande”, sans-serif;
+	font-size: 18px;
+	color: #ffffff;
+	background-color: #2b81ac;
+	line-height: 1.6;
+}
+.osnova {
+	background-color: #3399cc;
+	height: calc(100vh - 40px);
+	margin: 20px;
+}
+.weather {
+	margin: 0 auto;
+	background-color: #3399cc;
+	padding: 20px;
+	max-width: 720px;
+}
+.weather > ul {
+	font-size: 0;
+	background-color: white;
+	width: 100%;
+	padding: 2px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.city {
+	font-size: 18px;
+	display: inline-block;
+	text-align: center;
+	box-sizing: border-box;
+	border: 2px solid white;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	opacity: 0.6;
+}
+.city:hover {
+	opacity: 1;
+}
+.city i {
+	font-size: 30px;
+}
+.city span {
+	opacity: 0.6;
+}
+.city:nth-child(1) {
+	background-color: #3399cc;
+	width: 50%;
+}
+.city:nth-child(2) {
+	background-color: #33cccc;
+}
+.city:nth-child(3) {
+	background-color: #996699;
+}
+.city:nth-child(4) {
+	background-color: #c24747;
+}
+.city:nth-child(5) {
+	background-color: #e2674a;
+}
+.city:nth-child(6) {
+	background-color: #ffcc66;
+}
+.city:nth-child(7) {
+	background-color: #99cc99;
+}
+.city:nth-child(8) {
+	background-color: #669999;
+}
+.city:nth-child(n + 2) {
+	width: 25%;
+}
+.city:nth-child(9) {
+	background-color: #cc6699;
+	width: 50%;
+}
+.city:nth-child(10) {
+	background-color: #339966;
+}
+.city:nth-child(11) {
+	background-color: #666699;
+	width: 100%;
+}
