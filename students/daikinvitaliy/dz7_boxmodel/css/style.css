@@ -8,7 +8,6 @@ body {
 	text-align: center;
 }
 .shell {
-	padding: 133px 170px 100px;
 	display: inline-block;
 }
 .text1 {
@@ -49,7 +48,6 @@ h1 ~ p {
 	margin: 0px auto;
 }
 li {
-	height: 420px;
 	max-width: 25%;
 	box-sizing: border-box;
 	display: inline-block;
