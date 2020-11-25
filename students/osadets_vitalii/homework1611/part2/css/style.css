@@ -5,13 +5,13 @@
     font-style: normal;
     font-weight: normal;
 }
+
 *{
    padding: 0;
    margin: 0;
 }
 
 body{
-   max-width: 1150px; 
    font-family: "Hans Kendrick", Helvetica, sans-serif;
    font-size: 22px;
    background-color: #e2e7ec;
@@ -19,13 +19,10 @@ body{
 
 }
 .wrapper {
+   margin: 0 auto;
    position: relative;
    max-width: 1150px;
-   min-width: 1150px;
-   margin-top: 91px;
-   margin-left: 240px;
-   margin-right: 240px;
-   margin-bottom: 409px;
+   padding: 91px, 240px, 409px, 240px;
    display: flex;
    flex-wrap: wrap;
    border: 1px solid transparent;   
@@ -47,10 +44,9 @@ body{
    margin: 10px;
    width: 360px;
    text-align: center;
-   background-image: url(../images/guy.png);
+   background-image: url("../images/guy.png");
    background-repeat: no-repeat;
-   background-position: 28px 460px
-   
+   background-position: 28px 460px 
 }
 
 .items p {
@@ -64,6 +60,7 @@ body{
    margin-left: 28px;
    margin-top: 18px;
 }
+
 .items h2{
    font-family: "Hans Kendrick";
    color: #1d1d1d;
@@ -84,23 +81,20 @@ body{
    position: absolute;
    top: 385px;
    padding-left: 10px;    
-  
 }
+
 .text p{
    color: #ffffff;
    font-size: 13px;
    padding-bottom: 14px;
-
 }
 
 .text h2 {
    color: #ffffff;
-   font-size: 30px;
+   font-size: 23px;
    letter-spacing: 1px;
    line-height: 38px;
 }
-
-
 
 .loader {
    text-align: center;
