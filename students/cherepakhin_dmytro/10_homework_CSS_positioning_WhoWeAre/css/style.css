@@ -10,11 +10,11 @@
     font-family: Lato;
     src: url(../fonts/Lato-Light.woff2) format('woff2'),
     url(../fonts/Lato-Light.woff) format('woff');
-    font-weight: 300;
+    font-weight: light;
     font-style: normal;
 }
 
-.area{
+body{
     box-sizing: border-box;
     max-width: 1600px;
     min-width: 1200px;
@@ -121,7 +121,7 @@ h2{
 
 p{
     font-size: 14px;
-    font-weight: 300;
+    font-weight: light;
 
 }
 
