@@ -17,7 +17,7 @@ main{
     background-color:#3399cc;
 }
 
-div{
+div.area{
     box-sizing: border-box;
     max-width: 984px;
     margin: 0 auto;
@@ -117,8 +117,8 @@ p{
 }
 
 ul:hover li:not(:hover){
-opacity: 0.5;
-transition: all .3s ease-in;
+    opacity: 0.5;
+    transition: all .3s ease-in;
 }
 
 i{
