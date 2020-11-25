@@ -25,79 +25,71 @@
 .page{
     margin: 0;
     padding: 0;
+    font-family: Lato, sans-serif;
 }
 
 .conteiner{
     margin: 0;
     max-width: 1600px;
-    padding: 130px 0;
+    padding: 130px 100px;
     background-color: white;
 }
 
 .willow-article{
     width: 1400px;
-    margin: 0 auto;
     box-sizing: border-box;
     display: block;
-    padding: 121px;
+    padding: 128px 121px 121px;
     background-color: #ffffff;
     text-align: left;
     box-shadow: 0 0 50px 20px #f2f2f2;
 }
 
-.willow-article__text{
-    padding-bottom: 12px;
-}
-
 .willow-article__author-header{
-    margin: 7px 2px 0;
+    margin: 0;
+    padding-left: 2px;
+    padding-bottom: 18px;
     font-family: PlayfairDisplay, 'Times New Roman', Times, serif;
+    color: #171717;
     font-weight: normal;
     font-size: 42px;
 }
 
-.willow-article__text-first-letter{
-    width: 98px;
-    float: left;
-    font-family: PlayfairDisplay, 'Times New Roman', Times, serif;
-    font-weight: normal;
-    font-size: 110px;
-}
-
-.willow-article__text-first-letter-p{
-    margin: 0;
-    vertical-align: top;
-    line-height: .8;
-}
-
 .willow-article__text-p{
-    margin-top: 18px;
+    margin: 0;
     font-family: Lato, sans-serif;
     font-weight: 300;
     font-size: 18px;
-    color: #a2a2a2;
+    color: #7a7a7a;
     letter-spacing: .95px;
     line-height: 1.9;
+    padding-bottom: 5px;
+}
+
+.willow-article__text-p::first-letter{
+    font-size: 110px;
+    float: left;
+    font-family: PlayfairDisplay, 'Times New Roman', Times, serif;
+    color: #171717;
+    font-weight: normal;
+    line-height: .8;
+    margin: 0 29px 0 -1px;
 }
 
 .willow-article__text-quotation{
-    font-family: Lato, sans-serif;
+    margin: 0;
     font-weight: 300;
     font-style: oblique;
     font-size: 24px;
-    color: #a2a2a2;
+    color: #7a7a7a;
     letter-spacing: 1.3px;
+    padding-bottom: 31px;
 }
 
-.willow-article__text-quotation_big{
-    margin: 0;
-    font-family: Lato, sans-serif;
-    font-weight: 300;
-    font-style: oblique;
-    font-size: 68px;
-    color: #7a7a7a;
-    letter-spacing: 20px;
-    line-height: .5;
+.willow-article__text-quotation::before{
+    content: open-quote;
+    font-size: 60px;
+    margin: 0 22px 0 0;
 }
 
 .willow-article__text-button{
@@ -105,7 +97,6 @@
     display: block;
     border: 2px solid #eaa258;
     color: #eaa258;
-    font-family: Lato, sans-serif;
     font-weight: bold;
     font-size: 18px;
     width: 264px;
