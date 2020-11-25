@@ -70,6 +70,7 @@ img{
 
 .date{
     position: absolute;
+    color: #ffffff;
     top: 30px;
     left: 30px;
     width: 60px;
@@ -80,21 +81,12 @@ img{
     text-align: center;
     font-size: 21px;
     font-weight: 900;
-    z-index: 1;
 }
 
-span{
-    z-index: 1;
-    color: #ffffff;
-}
 
 .number{
     font-size: 29px;
     font-weight: 700;
-}
-
-.month{
-    margin-top: -0px;
 }
 
 div~p{
@@ -131,4 +123,8 @@ button{
     height: 55px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     border: transparent;
+}
+
+button:hover{
+    background-color: #5eb8e2;
 }
