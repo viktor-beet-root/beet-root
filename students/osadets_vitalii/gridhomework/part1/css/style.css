@@ -1,13 +1,11 @@
 body {
     font-family: "Lato", Arial, Helvetica, sans-serif;
     color: #171717;
-    opacity: 0.7;
     font-size: 18px;
     font-weight: 300;
-    letter-spacing: -0.09px;
-    line-height: 34px;
-    
+    line-height: 34px;  
 }
+
 .chapter {
     font-family: "Playfair Display";
     color: #171717;
@@ -24,9 +22,9 @@ body {
 }
 .container{
     box-shadow: 0 4px 68px rgba(0, 0, 0, 0.1);
-    border: 1px solid transparent;
-    
+    border: 1px solid transparent; 
 }
+
 .main-content-letter::first-letter{
     font-family: "Playfair Display", Arial, Helvetica, sans-serif;
     color: #171717;
@@ -37,11 +35,13 @@ body {
     float: left;
     line-height: 90px;
 }
+
 .main-content,
 .main-content-letter{
     padding-bottom: 30px;
     text-align: left;
 }
+
 .main-quote span{
     font-size: 60px;
     font-style: italic;
@@ -71,6 +71,7 @@ body {
     color: white;
     background-color: #ee9943;
 }
+
 .discover-btn:checked{
     background-color: #438dee;;
 }
