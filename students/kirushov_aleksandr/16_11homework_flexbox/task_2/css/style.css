@@ -23,7 +23,7 @@ body{
 .wrapper{
     margin: 90px auto 310px;
     padding: 0 10px;
-    width: 1120px;
+    width: 100%;
     max-width: 1120px;
 }
 
@@ -73,7 +73,7 @@ img{
     padding-right: 215px;
 }
 
-p{
+div>p{
     color: #818181;
     margin-top: 28px;
     margin-left: 28px;

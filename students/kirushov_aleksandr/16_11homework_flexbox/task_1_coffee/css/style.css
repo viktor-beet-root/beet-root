@@ -21,14 +21,13 @@ body{
 .container{
     display: flex;
     width: 1200px;
-    height: 600px;
     background-color: #fdde7e;
-    margin: auto;
+    margin: 0 auto;
     justify-content: space-around;
-    padding: 0 15px;
+    padding: 50px 15px;
 }
 
-.container div{
+.container>div{
     display: block;
     background-color: white;
     align-self: center;
