@@ -23,28 +23,40 @@
 }
 
 .page{
-padding: 0;
-margin: 0;
-font-family: Raleway, sans-serif;
+    padding: 0;
+    margin: 0;
+    font-family: Raleway, Arial, Helvetica, sans-serif;
 }
 
 .section-top{
+    display: block;
     max-width: 1500px;
     background-image: url(../img/strawberry.png);
+    padding-top: 40px;
+}
+
+.section-top_header-center{
+    padding-left: 40px;
 }
 
 .header{
-    height: 67px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-left: 192px;
-    padding-right: 151px;
-    padding-top: 38px;
+    max-width: 1157px;
+
+}
+
+.section-top_header{
+    margin: 0 auto;
 }
 
 .logo{
-    align-self: flex-end;
+    width: 97px;
+}
+
+.header__logo{
+    margin-top: 23px;
 }
 
 .menu{
@@ -59,24 +71,18 @@ font-family: Raleway, sans-serif;
 }
 
 .menu__item{
-    margin: 18px;
+    display: block;
+    margin: 19px;
+    padding-top: 5px;
+    border-top: solid 3px transparent;
 }
 
 .menu__item_link{
-    display: block;
     text-decoration: none;
 }
 
-.menu__item_rectangle{
-    width: 50px;
-    height: 3px;
-    background: transparent;
-    margin: 0 auto 6px;
-}
-
-.menu__item:hover .menu__item_rectangle,
-.menu__item:active .menu__item_rectangle{
-    background: #ff6033;
+.menu__item:hover {
+    border-top-color: #ff6033;
     transition: .5S;
 }
 
@@ -85,7 +91,8 @@ font-family: Raleway, sans-serif;
 }
 
 .section-top__content{
-    padding-left: 161px;
+    margin: 0 auto;
+    max-width: 1180px;
     padding-top: 225px;
 }
 
@@ -122,20 +129,26 @@ font-family: Raleway, sans-serif;
 }
 
 .section-top__mouse{
-    padding-left: 576px;
+    margin: 0 auto;
+    width: 24px;
     padding-bottom: 64px;
 }
 
 .section-bottom{
+    display: block;
     max-width: 1500px;
     background-image: url(../img/raspberry.png);
+    text-align: right;
 }
 
 .section-bottom__info{
-    padding-left: 835px;
+    display: inline-block;
+    margin-left: auto;
+    width: 665px;
     padding-top: 180px;
     color: white;
     margin: 0;
+    text-align: start;
 }
 
 .section-bottom__info_header{
@@ -150,12 +163,14 @@ font-family: Raleway, sans-serif;
     width: 505px;
     font-weight: 300;
     font-size: 17px;
-    line-height: 1.6;
+    line-height: 2;
+    padding:22px 0 230px;
 }
 
-.section-bottom__info_text2{
+.section-bottom__info_text_formated{
     margin-top: -6px;
-    padding-bottom: 230px;
+    line-height: 1.6;
+    
 }
 
 
