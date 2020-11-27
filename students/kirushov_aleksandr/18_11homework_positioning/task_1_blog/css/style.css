@@ -18,11 +18,11 @@ margin: 100px auto 120px;
     color: #ffffff;
 }
 
-h1{
+.containet-text h1:first-child{
     font-size: 90px;
 }
 
-h1+p{
+.containet-text p:last-child{
     font-size: 17px;
     line-height: 1.47;
     margin-top: 23px;
@@ -57,7 +57,7 @@ h1+p{
     height: 310px;
     background: rgb(2,0,36);
     background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 100%, rgba(0,212,255,1) 100%);
-    opacity: 0.15;
+    opacity: 0.2;
 }
 
 .blog-items:hover {
@@ -70,40 +70,49 @@ img{
 
 .date{
     position: absolute;
-    color: #ffffff;
     top: 30px;
     left: 30px;
     width: 60px;
     height: 60px;
     border-radius: 5px;
-    background-color: #262626;
-    opacity: 0.5;
+    background-color: rgba(38, 38, 38, 0.5);
     text-align: center;
     font-size: 21px;
     font-weight: 900;
+    align-items: center;
 }
 
+.date>span{
+    position: absolute;
+    color: white;
+    z-index: 20;
+    transform: translateX(-50%);
+}
+
+.date span:last-child{
+    top: 30px;
+}
 
 .number{
     font-size: 29px;
     font-weight: 700;
 }
 
-div~p{
+.date~p{
     position: absolute;
     top: 205px;
     left: 20px;
     z-index: 1;
 }
 
-div+p{
+.date+p{
     color: #ffffff;
     font-size: 20px;
     line-height: 25px;
     font-weight: 700;
 }
 
-p+p{
+.blog-items p:last-child{
     top: 272px;
     color: #ffffff;
     font-size: 13px;
