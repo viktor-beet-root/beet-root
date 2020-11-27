@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #b07cf7;
+    font-family:'Raleway', Arial, Helvetica, sans-serif;
+    font-weight: 300;
+}
+
+.wrapper{
+margin: 100px auto 120px;
+}
+
+.containet-text{
+    text-align: center;
+    color: #ffffff;
+}
+
+.containet-text h1:first-child{
+    font-size: 90px;
+}
+
+.containet-text p:last-child{
+    font-size: 17px;
+    line-height: 1.47;
+    margin-top: 23px;
+}
+
+.container-blog,
+.blog-items{
+    box-sizing: border-box;
+}
+
+.container-blog{
+    list-style-type: none;
+    display:flex;
+    margin: 47px auto 0;
+    max-width: 800px;
+    justify-content: center;
+}
+
+.blog-items{
+    margin: 0 15px;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transform-style: preserve-3d;
+}
+
+.blog-items:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 370px;
+    height: 310px;
+    background: rgb(2,0,36);
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 100%, rgba(0,212,255,1) 100%);
+    opacity: 0.2;
+}
+
+.blog-items:hover {
+    transform: skew(-10deg);
+}
+
+img{
+    display: block;
+}
+
+.date{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    background-color: rgba(38, 38, 38, 0.5);
+    text-align: center;
+    font-size: 21px;
+    font-weight: 900;
+    align-items: center;
+}
+
+.date>span{
+    position: absolute;
+    color: white;
+    z-index: 20;
+    transform: translateX(-50%);
+}
+
+.date span:last-child{
+    top: 30px;
+}
+
+.number{
+    font-size: 29px;
+    font-weight: 700;
+}
+
+.date~p{
+    position: absolute;
+    top: 205px;
+    left: 20px;
+    z-index: 1;
+}
+
+.date+p{
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: 700;
+}
+
+.blog-items p:last-child{
+    top: 272px;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+button{
+    display: block;
+    font-family: inherit;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 300;
+    margin: 50px auto 0;
+    background-color: #f72b3b;
+    width: 200px;
+    height: 55px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    border: transparent;
+}
+
+button:hover{
+    background-color: #5eb8e2;
+}
