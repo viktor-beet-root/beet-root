@@ -9,14 +9,15 @@
 .page{
     margin: 0;
     padding: 0;
+    background-image: url(../img/main_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .container {
     display: block;
     box-sizing: border-box;
+    margin: 0 auto;
     width: 800px;
-    background-image: url(../img/main_bg.jpg);
-    background-size: cover;
-    background-position: center;
     padding-top: 109px;
     padding-bottom: 98px;
     padding-left: 63px;
@@ -35,7 +36,7 @@
     font-family: MuseoSansRounded, Arial, Helvetica, sans-serif;
     font-weight: 100;
     color: #e1e1e1;
-    padding: 24px 0 21px 21px;
+    padding: 24px 0 16px 21px;
 }
 
 .card__header{
@@ -50,7 +51,6 @@
 
 .card__content{
     display: flex;
-    flex-direction: row;
 }
 
 .card__content_photo{
@@ -63,6 +63,7 @@
     width: 255px;
     letter-spacing: .5px;
     line-height: 1.1;
+    box-sizing: border-box;
 }
 
 .card__content_info_header{
@@ -78,12 +79,11 @@
 }
 
 .raiting{
-    overflow: hidden;
     width: 65px;
     height: 13px;
 }
 
-.raiting input[type="radio"] {
+.rating__input {
     display: none;
 }
 
@@ -96,15 +96,14 @@
     cursor: pointer;
 }
 
-.raiting .rating__label:hover, 
-.raiting .rating__label:hover ~ .label_rating, 
-.raiting input[type="radio"]:checked ~ .rating__label {
+.rating__label:hover, 
+.rating__label:hover ~ .rating__label, 
+.rating__input:checked ~ .rating__label {
     background: url(../img/star_gold.png);
 }
 
 .selection{
     display: flex;
-    flex-direction: row;
     padding-top: 26px;
     padding-bottom: 28px;
 }
@@ -129,28 +128,32 @@
     border: none;
     text-align: center;
     text-align-last: center;
+    cursor: pointer;
 }
 
-.order button{
+.order__button{
     width: 184px;
     height: 40px;
     background-color:#2a3545;
     color: #b4b6b8;
     font-size: 14px;
     border-style: solid;
+    cursor: pointer;
 }
 
 .footter__color{
-    padding-top: 36px;
+    padding-top: 37px;
     padding-left: 155px;
-    
 }
 
-.footter__color input{
+.footter__color_input{
     display: none;
 }
 
-.footter__color label {
+.label_color_blue,
+.label_color_white,
+.label_color_red,
+.label_color_light-blue {
     display: inline-block;
     vertical-align: middle;
 	cursor: pointer;
@@ -161,55 +164,46 @@
     position: relative;
 }
 
-.footter__color input:not(:checked) + .label_color_blue span
-{
-    background-color: #1f273f;
+.footter__color_input-behaviour{
     position: absolute;
     top: -5%;
     left: -5%;
     width: 10px;
     height: 10px;
+    border-radius: 5px;
+}
+
+.footter__color_input:not(:checked) + .label_color_blue .footter__color_input-behaviour{
+    background-color: #1f273f;    
     border-radius: 7px;
     border: 1px solid white;
 }
 
 .label_color_white span{
-    background-color: white;
-    position: absolute;
-    top: -5%;
-    left: -5%;
-    width: 10px;
-    height: 10px;
-    border-radius: 5px;
+    background-color: white;    
 }
 
 .label_color_red span{
-    background-color: red;
-    position: absolute;
-    top: -5%;
-    left: -5%;
-    width: 10px;
-    height: 10px;
-    border-radius: 5px;
+    background-color: red;    
 }
 
 .label_color_light-blue span{
-    background-color: #29e3ea;
-    position: absolute;
-    top: -5%;
-    left: -5%;
-    width: 10px;
-    height: 10px;
-    border-radius: 5px;
+    background-color: #29e3ea;    
 }
 
-.footter__color input:checked + label {
+.footter__color_input:checked + .label_color_blue,
+.footter__color_input:checked + .label_color_white,
+.footter__color_input:checked + .label_color_red,
+.footter__color_input:checked + .label_color_light-blue {
 	padding: 7px 7px;
     border-radius: 9px;
     border: 2px solid white;
 }
 
-.footter__color input:checked + label span {
+.footter__color_input:checked + .label_color_blue .footter__color_input-behaviour,
+.footter__color_input:checked + .label_color_white .footter__color_input-behaviour,
+.footter__color_input:checked + .label_color_red .footter__color_input-behaviour,
+.footter__color_input:checked + .label_color_light-blue .footter__color_input-behaviour {
 	width: 16px;
     height: 16px;
     border-radius: 8px;
