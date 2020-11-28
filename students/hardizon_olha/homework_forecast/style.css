@@ -1,0 +1,17 @@
+.cities {
+    list-style: none;
+    font-family: sans-serif;
+    text-align: center;
+    padding: 10px;
+    background: #ccc;
+    font-size: 0;
+}
+
+.cities li{
+    font-size: 14px;
+    text-align: center;
+    list-style-type: none;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 235px;
+    border: 1px solid #ececec;
