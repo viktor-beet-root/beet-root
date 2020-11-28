@@ -53,7 +53,7 @@ input::placeholder {
     color: white;
 }
 
-.block_black {
+.block {
     z-index: 100;
     position: absolute;
     left: 324px;
@@ -68,7 +68,7 @@ input::placeholder {
     box-sizing: border-box;
     position: absolute;
     top: 64px;
-    margin-left: 60px;
+    padding-left: 60px;
     font-family: 'Playfair Display';
     color: white;
     font-size: 48px;
@@ -80,7 +80,7 @@ input::placeholder {
     border-right: none;
 }
 
-.conteiner-icon {
+.conteiner {
     top: 237px;
     left: 387px;
     position: absolute;
@@ -96,8 +96,8 @@ padding-right: 25px;
 }
 
 .title {
-    margin-left: 63px;
-    margin-top: 42px;
+    padding-left: 63px;
+    padding-top: 42px;
     color: #767676;
     font-family: "Proxima Nova";
     font-size: 15px;
@@ -111,12 +111,12 @@ padding-right: 25px;
     left: 66px;
     position: absolute;
     width: 2px;
-    height: 773px;
+    height: 759px;
     background-color: #e8eced;
 }
 
-.text__autor {
-    margin-left: 125px;
+.autor {
+    padding-left: 125px;
     color: #b4b4b4;
     font-family: "Proxima Nova";
     font-size: 20px;
@@ -125,9 +125,9 @@ padding-right: 25px;
     letter-spacing: 6.72px;
 }
 
-.text__main-title {
-    margin-left: 127px;
-    margin-top: 35px;
+.maintitle {
+    padding-left: 127px;
+    padding-top: 35px;
     color: #2a2a2a;
     font-family: 'Futura PT Heavy';
     font-size: 78px;
@@ -137,8 +137,8 @@ padding-right: 25px;
     letter-spacing: 5.28px;
 }
 
-.text__title-after {
-    margin-left: 123px;
+.titletext {
+    padding-left: 123px;
     color: #8f8f8f;
     font-size: 30px;
     font-style: italic;
@@ -147,9 +147,8 @@ padding-right: 25px;
     padding-bottom: 25px;
 }
 
-.text__part {
-    margin-left: 124px;
-    margin-right: 130px;
+.part {
+    padding:0 124px;
     color: #000000;
     font-size: 27px;
     line-height: 40.38px;
