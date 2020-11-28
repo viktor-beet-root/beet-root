@@ -147,7 +147,12 @@
 }
 
 .footter__color_input{
-    display: none;
+    /* display: none; */
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: ellipse(0 0 0 0);
+    position: absolute;
 }
 
 .label_color_blue,
@@ -156,8 +161,8 @@
 .label_color_light-blue {
     display: inline-block;
     vertical-align: middle;
-	cursor: pointer;
-	padding: 5px 5px;
+    cursor: pointer;
+    padding: 5px 5px;
     border-radius: 5px;
     background-color: transparent;
     margin: 2px;
@@ -195,7 +200,7 @@
 .footter__color_input:checked + .label_color_white,
 .footter__color_input:checked + .label_color_red,
 .footter__color_input:checked + .label_color_light-blue {
-	padding: 7px 7px;
+    padding: 7px 7px;
     border-radius: 9px;
     border: 2px solid white;
 }
@@ -204,7 +209,7 @@
 .footter__color_input:checked + .label_color_white .footter__color_input-behaviour,
 .footter__color_input:checked + .label_color_red .footter__color_input-behaviour,
 .footter__color_input:checked + .label_color_light-blue .footter__color_input-behaviour {
-	width: 16px;
+    width: 16px;
     height: 16px;
     border-radius: 8px;
 }
