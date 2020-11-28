@@ -1,0 +1,45 @@
+@mixin hidden {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    clip: rect(0 0 0 0);
+}
+
+@mixin positionCenter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+@mixin bgCover($img) {
+    background-image: url($img);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+@mixin positionBg($img) {
+    @include positionCenter;
+    @include bgCover($img);
+}
+
+@mixin fontFace($fontFamily, $fontPath, $fontWeight: normal, $fontStyle: normal) {
+    @font-face {
+        font-family: $fontFamily;
+        font-style: $fontStyle;
+        font-weight: $fontWeight;
+        src: url('#{$fontPath}.woff2') format('woff2'),
+        url('#{$fontPath}.woff') format('woff');
+    }
+}
+
+@mixin grid($count: 12) {
+    @for $i from 1 through $count {
+        .col-#{$i} {
+            width: 100% / 12 * $i;
+        }
+    }
+}

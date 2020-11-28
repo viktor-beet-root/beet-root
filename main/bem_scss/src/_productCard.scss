@@ -1,0 +1,88 @@
+.product-crad {
+    background-color: $productCardBg;
+    display: flex;
+    position: relative;
+
+    &__slider {
+        flex-grow: 1;
+        width: calc(100% - 248px);
+        @include bgCover('../image/slider-bg.jpg');
+    }
+
+    &__info {
+        width: 248px;
+        padding: 43px 32px 43px 35px;
+        box-sizing: border-box;
+    }
+
+    &__slider-list {
+        padding-top: 60px;
+        margin-bottom: 10px;
+    }
+
+    &__slider-img {
+        margin: 0 auto;
+        display: block;
+    }
+
+
+    &__slider-dost-list {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        justify-content: center;
+    }
+
+    &__close-btn {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+    }
+
+    &__promotion {
+        padding: 5px;
+        display: inline-block;
+        margin: 0;
+        color: $textColorWhite;
+        text-transform: uppercase;
+        line-height: 1.2;
+
+        &_bg-orange {
+            background-color: $promotionColor;
+        }
+    }
+
+    &__title {
+        font-size: 24;
+        margin: 0 0 15px 0;
+        text-transform: uppercase;
+        font-weight: normal;
+
+        &_color-blue {
+            color: $secondaryTextColor;
+        }
+    }
+
+    &__model-name {
+        font-family: $secondaryMainFont;
+        font-size: 12px;
+        margin: 0 15px 0 0;
+    }
+
+    &__raiting-wrapper {
+        display: flex;
+    }
+
+    &__raiting {
+        margin-top: 2px;
+    }
+
+    &__size {
+        margin-bottom: 20px;
+    }
+
+    &__button {
+        margin-bottom: 10px;
+    }
+}

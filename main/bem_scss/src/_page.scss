@@ -1,0 +1,42 @@
+@include grid;
+
+.page {
+    font-family: $mainFont;
+    font-size: $defaultFontSize;
+    line-height: 1.4;
+    font-weight: 300;
+    padding: 0;
+    margin: 0;
+    @include bgCover('../image/bg.jpg');
+}
+
+.close-btn {
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: relative;
+
+    &::before,
+    &::after {
+        content: '';
+        display: block;
+        width: 1px;
+        height: 16px;
+        background-color: $closeMenuLineColor;
+        position: absolute;
+        top: 2px;
+        left: 10px;
+    }
+
+    &::before {
+        transform: rotate(45deg);
+    }
+
+    &::after {
+        transform: rotate(-45deg);
+    }
+
+    &:hover {
+        box-shadow: $defaultBoxShadow;
+    }
+}
