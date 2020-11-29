@@ -84,7 +84,11 @@
 }
 
 .rating__input {
-    display: none;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: ellipse(0 0 0 0);
+    position: absolute;
 }
 
 .rating__label {
