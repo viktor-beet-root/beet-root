@@ -3,14 +3,14 @@
 }
 
 body {
-    max-width: 1600px;
-}
-
-.container {
     font-family: 'Lato', Arial, Helvetica, sans-serif;
     font-weight: 300;
     font-size: 18px;
     line-height: 2;
+}
+
+.container {
+    margin: 130px 100px 130px;
     color: #a2a2a2;
     box-shadow: 0 4px 68px rgba(0, 0, 0, 0.1);
 }
