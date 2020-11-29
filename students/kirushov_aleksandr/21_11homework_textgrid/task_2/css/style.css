@@ -1,0 +1,162 @@
+@font-face {
+  font-family: 'Futura PT Heavy';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/futura-pt-heavy.woff2') format('woff2'),
+       url('../fonts/FuturaPT-Heavy.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Georgia-Regular-font.woff2') format('woff2'),
+       url('../fonts/Georgia-Regular-font.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Georgia';
+  font-style: italic;
+  font-weight: 400;
+  src: url('../fonts/georgia-italic.woff2') format('woff2'),
+       url('../fonts/Georgia-Italic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'ProximaNova';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/ProximaNova-Regular.woff2') format('woff2'),
+       url('../fonts/ProximaNova-Regular.woff') format('woff');
+}
+
+body{
+    font-family: 'Georgia', Arial, Helvetica, sans-serif;
+    font-size: 27px;
+    color: #000000;
+    font-style: normal;
+    line-height: 40.38px;
+    background-color: #464f54;
+    height: 100vh;
+}
+
+.container{
+    max-width: 1060px;
+    background-color: white;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.22);
+    margin-top: 150px;
+    padding: 0px;
+    box-sizing: border-box;
+    height: calc(100% + 50px);
+}
+
+.searching{
+    box-sizing: border-box;
+    width: 876px;
+    height: 187px;
+    box-shadow: -4px -4px 59px rgba(0, 0, 0, 0.16);
+    background-color: #181818;
+    position: absolute;
+    top: 47px;
+    right: 0;
+    padding-left: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.searching label{
+    font-family: 'ProximaNova', Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #767676;
+    letter-spacing: 4.8px;
+    line-height: 20px;
+}
+
+.searching input{
+    background-color: inherit;
+    outline: none;
+    border: none;
+    border-bottom: 3px solid #2f2f2f;
+    height: 60px;
+    position: relative;
+}
+
+.searching input, input::-webkit-input-placeholder{
+    font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
+    color: #fefefe;
+    font-size: 48px;
+}
+
+.font-control ul{
+    list-style-type: none;
+    background-color: #f6bc2c;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 234px;
+    right: 0;
+    width: 742px;
+    height: 76px;
+    border: 1px solid transparent;
+    padding-left: 42px;
+    box-shadow: -4px -4px 59px rgba(0, 0, 0, 0.16);
+}
+
+.font-control li{
+    padding: 15px;
+}
+
+.main{
+    margin: 0 auto;
+    padding: 202px 25px 0;
+    max-width: 886px;
+    position: relative;
+}
+
+.main::before{
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    border-left: 2px solid #e8eced;
+    top: 0;
+    left: -24px;
+}
+
+.main p:first-child{
+    font-family: "Proxima Nova", Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: #b4b4b4;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 6.72px;
+    margin-bottom: 47px;
+}
+
+.main h1{
+    font-family: 'Futura PT Heavy', Arial, Helvetica, sans-serif;
+    font-size: 78px;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 1;
+    letter-spacing: 5.28px;
+    color: #2a2a2a;
+}
+
+.main h1+p{
+    color: #8f8f8f;
+    font-size: 30px;
+    font-style: italic;
+    margin-bottom: 55px;
+}
+
+.main p+p{
+    margin-bottom: 40px;
+}
+
+.main p>span{
+    font-style: italic;
+}
