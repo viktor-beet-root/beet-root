@@ -44,7 +44,6 @@
     flex-direction: row;
     justify-content: space-between;
     max-width: 1157px;
-
 }
 
 .section-top_header{
@@ -79,6 +78,7 @@
 
 .menu__item_link{
     text-decoration: none;
+    color: #262626;
 }
 
 .menu__item:hover {
@@ -170,7 +170,6 @@
 .section-bottom__info_text_formated{
     margin-top: -6px;
     line-height: 1.6;
-    
 }
 
 
