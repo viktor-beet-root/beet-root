@@ -1,0 +1,88 @@
+@font-face {
+    font-family: miso;
+    src: url('./fonts/Miso.woff2') format("woff2"),
+        url('./fonts/miso.woff') format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: miso;
+    src: url('./fonts/Miso-Bold.woff2') format("woff2"),
+    url('./fonts/miso-bold.woff') format("woff");
+    font-weight: bold;
+    font-style: normal;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Miso';
+    font-weight: normal;
+    font-style: normal;
+    min-height: 100vh;
+    font-size: 26px;
+    background-color: #fdde7e;
+}
+
+.section{
+    padding-top: 50px;
+}
+
+.offers{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+
+}
+
+.offers li{
+    text-align: center;
+    min-width: 360px;
+    background-color: white;
+    padding-top: 28px;
+    margin: 0 15px;
+    border: 1px solid #d3b969;
+    border-radius: 4px;
+}
+
+.offers li:nth-child(2){
+    padding-top: 36px;
+}
+
+li h2{
+    font-size: 70px;
+    color: #02995b;
+    line-height: 1.57;
+    font-weight: bold;
+}
+
+li h3{
+    font-size: 56px;
+    font-weight: normal;
+    padding-bottom: 17px;
+    padding-top: 10px;
+}
+
+li p{
+    letter-spacing: 1px;
+    line-height: 1.4;
+    letter-spacing: 1px;
+    padding-bottom: 38px;
+}
+
+.offers li>img{
+    padding-top: 17px;
+    padding-bottom: 17px;
+    padding-left: 11px;
+}
+
+.offers li:nth-child(2)>img{
+    padding-top: 31px;
+    padding-bottom: 32px;
+}
