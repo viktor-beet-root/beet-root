@@ -33,7 +33,7 @@
     padding-bottom: 103px;
 }
 
-.Shopping-list__header{
+.shopping-list__header{
     background-color: #4a4f56;
     color: #eb7e7f;
     padding-top: 20px;
@@ -48,7 +48,7 @@
     padding: 4px;
 }
 
-.Shopping-list__header_text{
+.shopping-list__header_text{
     text-align: center;
     font-weight: normal;
     font-size: 24px;
@@ -109,8 +109,7 @@
     height: 1px;
     position: absolute;
     overflow: hidden;
-    clip-path: ellipse(0 0 0 0 );
-    left: 100px;
+    clip: rect(0 0 0 0 );
 }
 
 .castom-checkbox{
