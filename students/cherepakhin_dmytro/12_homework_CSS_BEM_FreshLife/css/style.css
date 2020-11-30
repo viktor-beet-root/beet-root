@@ -28,45 +28,45 @@
     font-family: Raleway, Arial, Helvetica, sans-serif;
 }
 
-.section-top{
+.wrapper{
     display: block;
+    margin: 0 auto;
     max-width: 1500px;
-    background-image: url(../img/strawberry.png);
-    padding-top: 40px;
-}
-
-.section-top_header-center{
-    padding-left: 40px;
+    position: relative;
 }
 
 .header{
+    position: absolute;
+    left: 50%;
+    transform: translate(calc(-50% + 20px), 40px);
     display: flex;
-    flex-direction: row;
+    align-items: flex-end;
     justify-content: space-between;
-    max-width: 1157px;
-}
-
-.section-top_header{
-    margin: 0 auto;
+    width: 77%;
 }
 
 .logo{
     width: 97px;
 }
 
-.header__logo{
-    margin-top: 23px;
-}
-
 .menu{
     max-width: 585px;
-    font-family: Raleway, sans-serif;
+    font-family: Raleway, Arial, Helvetica, sans-serif;
     font-weight: 700;
     font-size: 16px;
     color: #262626;
     text-transform: uppercase;
-    display: flex;
     justify-content: space-around;
+}
+
+.header__menu{
+    margin-right: 6px;
+}
+
+.menu__items{
+    padding: 0;
+    margin: 0;
+    display: flex;
 }
 
 .menu__item{
@@ -88,6 +88,13 @@
 
 .menu__item_link:visited{
     color: #262626;
+}
+
+.section-top{
+    display: block;
+    max-width: 1500px;
+    background-image: url(../img/strawberry.png);
+    padding-top: 105px;
 }
 
 .section-top__content{
@@ -171,5 +178,3 @@
     margin-top: -6px;
     line-height: 1.6;
 }
-
-
