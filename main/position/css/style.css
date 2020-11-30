@@ -1,0 +1,102 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    background-image: url(../images/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    font-size: 14px;
+    line-height: normal;
+}
+
+strong {
+    font-weight: bold;
+}
+
+.position-wrapper {
+    position: relative;
+}
+
+.position-wrapper blockquote {
+    position: absolute;
+    width: 235px;
+    padding: 20px 20px 20px 36px;
+    color: white;
+    opacity: .5;
+    transition: opacity .5s ease-in-out;
+}
+
+.position-wrapper blockquote:hover {
+    opacity: 1;
+    z-index: 10;
+}
+
+blockquote.green {
+    background-color: #578718;
+}
+
+blockquote.blue {
+    background-color: #146fb1;
+}
+
+.position-wrapper blockquote::after {
+    content: '';
+    display: block;
+    border: 15px solid transparent;
+    border-left: 15px solid transparent;
+    border-top: 15px solid transparent;
+    position: absolute;
+    bottom: -30px;
+    left: 36px;
+}
+
+.position-wrapper blockquote p:first-child::before,
+.position-wrapper blockquote>p:first-child::after {
+    content: '\02EE';
+    display: inline;
+}
+
+.position-wrapper blockquote>p:first-child {
+    margin-bottom: 15px;
+}
+
+.position-wrapper blockquote>p.author::before {
+    content: '— ';
+    display: inline;
+}
+
+.position-wrapper blockquote p:first-child::before {
+    font-size: 75px;
+    line-height: 1;
+    position: absolute;
+    left: 11px;
+    top: 15px;
+}
+
+.position-wrapper blockquote strong::after {
+    content: ' |'
+}
+
+.position-wrapper blockquote.green::after {
+    border-left-color: #578718;
+    border-top-color: #578718;
+}
+
+.position-wrapper blockquote.blue::after {
+    border-left-color: #146fb1;
+    border-top-color: #146fb1;
+}
+
+
+.position-wrapper blockquote:nth-child(1) {
+    left: 150px;
+    top: 200px;
+}
+
+.position-wrapper blockquote:nth-child(2) {
+    left: 350px;
+    top: 100px;
+}

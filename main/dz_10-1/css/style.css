@@ -1,0 +1,285 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* tipografy */
+body {
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 300;
+    background-color: #b07cf7;
+    color: white;
+}
+
+strong {
+    font-weight: 600;
+}
+
+h1,
+h2 {
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 90px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* grid */
+
+.container {
+    padding: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.row {
+    margin: 0 -15px;
+    display: flex;
+}
+
+[class^="col-"] {
+    width: 100%;
+}
+
+[class^="col-"],
+.col {
+    padding: 15px;
+}
+
+.col-12 {
+    max-width: 100%;
+    flex-basis: 100%;
+}
+
+.col-11 {
+    max-width: 91.6666667%;
+    flex-basis: 91.6666667%;
+}
+
+.col-10 {
+    max-width: 83.333333%;
+    flex-basis: 83.333333%;
+}
+
+.col-9 {
+    max-width: 75%;
+    flex-basis: 75%;
+}
+
+.col-8 {
+    max-width: 66.6666667%;
+    flex-basis: 66.6666667%;
+}
+
+.col-7 {
+    max-width: 58.333333%;
+    flex-basis: 58.333333%;
+}
+
+.col-6 {
+    max-width: 50%;
+    flex-basis: 50%;
+}
+
+.col-5 {
+    max-width: 41.666667%;
+    flex-basis: 41.666667%;
+}
+
+.col-4 {
+    max-width: 33.333333%;
+    flex-basis: 33.333333%;
+}
+
+.col-3 {
+    max-width: 25%;
+    flex-basis: 25%;
+}
+
+.col-2 {
+    max-width: 16.666667%;
+    flex-basis: 16.666667%;
+}
+
+.col-1 {
+    max-width: 8.333333%;
+    flex-basis: 8.333333%;
+}
+
+.col {
+    flex-grow: 1;
+    width: 100%;
+    flex-basis: 0;
+}
+
+.col-auto {
+    flex-basis: auto;
+    width: auto;
+}
+
+.offset-12 {
+    margin-left: 100%;
+}
+
+.offset-11 {
+    margin-left: 91.6666667%;
+}
+
+.offset-10 {
+    margin-left: 83.333333%;
+}
+
+.offset-9 {
+    margin-left: 75%;
+}
+
+.offset-8 {
+    margin-left: 66.6666667%;
+}
+
+.offset-7 {
+    margin-left: 58.333333%;
+}
+
+.offset-6 {
+    margin-left: 50%;
+}
+
+.offset-5 {
+    margin-left: 41.666667%;
+}
+
+.offset-4 {
+    margin-left: 33.333333%;
+}
+
+.offset-3 {
+    margin-left: 25%;
+}
+
+.offset-2 {
+    margin-left: 16.666667%;
+}
+
+.offset-1 {
+    margin-left: 8.333333%;
+}
+
+
+h1+p {
+    font-size: 17px;
+    text-align: center;
+}
+
+.blog-list {
+    padding: 50px 0;
+}
+
+.blog-article>div {
+    position: relative;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, .5);
+    transition: box-shadow .5s ease-in-out;
+}
+
+.blog-article:hover>div {
+    box-shadow: 0 4px 11px 1px rgba(0, 0, 0, .75);
+}
+
+.blog-article>div::before {
+    content: '';
+    display: block;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    z-index: 0;
+    transition: all .5s ease-in-out;
+}
+
+.blog-article:hover>div::before {
+    height: 100%;
+}
+
+.blog-article img {
+    display: block;
+}
+
+.blog-article .article-date {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    background-color: rgba(38, 38, 38, .5);
+    top: 15px;
+    left: 15px;
+    font-size: 32px;
+    line-height: .7;
+    text-align: center;
+    padding-top: 6px;
+    transition: background-color .5s ease-in-out;
+}
+
+.blog-article:hover .article-date {
+    background-color: rgba(38, 38, 38, .9);
+}
+
+.blog-article .article-date>span {
+    font-size: 21px;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.blog-article .article-title {
+    padding: 45px 20px 20px 20px;
+    position: absolute;
+    bottom: 0;
+}
+
+.blog-article .article-title a {
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+
+.blog-article .article-title>* {
+    position: relative;
+    z-index: 1;
+}
+
+.blog-article .article-title>p::after {
+    content: ' - 'attr(data-time);
+    display: inline;
+}
+
+.btn {
+    padding: 10px;
+    height: 55xp;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .5);
+    border: none;
+    background-color: #f72b3b;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    font-weight: 300;
+    font-family: inherit;
+    min-width: 200px;
+}
+
+.more {
+    text-align: center;
+}

@@ -1,0 +1,74 @@
+@font-face{
+    font-family: "ProximaNova";
+    src:url(../font/ProximaNova-Bold.ttf);
+    font-style: normal;
+    font-weight: bold;
+}
+@font-face{
+    font-family: "ProximaNova";
+    src: url(../font/ProximaNova-Regular.ttf);
+    font-style: normal;
+    font-weight: normal;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "ProximaNova";
+    font-size: 14px;
+}
+
+.content_lv1 {
+    margin: 0 auto;
+    background-color: #ffffff;
+    margin-left: auto 0;
+    margin-right: auto 0;
+    text-align: center;
+}
+
+.content_lv2{
+    display: inline-block;
+    margin-left: 50px;
+    margin-right: 50px;
+    width: 220px;
+    height: 168px;
+}
+
+.content_lv2 h2{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.content_lv2 p {
+    color: #9d9d9d;
+}
+.cirсle{
+    border: 2px solid #2a69a6 ;
+    border-radius: 50%;
+    position: relative;
+    margin: 0 auto;
+    height: 60px;
+    width: 60px;
+    background-color: #2a69a6;
+}
+
+svg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.shp0 {
+    margin: 10px auto;
+    white-space:pre;
+    fill: #ffffff;
+}
+.cirсle:hover{
+    background-color: #ffffff;
+}
+.cirсle:hover .shp0 {
+    fill: #2a69a6;
+}

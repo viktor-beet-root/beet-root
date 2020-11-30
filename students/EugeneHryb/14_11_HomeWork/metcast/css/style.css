@@ -1,0 +1,105 @@
+@font-face{
+    font-family: "LucidaSansUnicode";
+    src: url(../font/LucidaSansUnicode.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: "LucidaGrande";
+    src: url(../font/LucidaGrande.ttf);
+    font-family: normal;
+    font-style: normal;
+}
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    transition: all .1s ease-in;
+}
+body{
+    font-family: "LucidaSansUnicode" ,"LucidaGrande", sans-serif;
+    font-size: 18px;
+    background-color: #2B81AC;
+    color: white;
+    line-height: 1.6;
+}
+.wrappedMetcast{
+    background-color: #3399CC ;
+    height: calc(100vh - 40px) ;
+    margin: 20px;
+}
+.metcast{
+    margin: 0 auto;
+    background-color: #3399CC ;
+    padding: 20px;
+    max-width: 720px;
+}
+.metcast>h1{
+    font-size: 20px;
+}
+.metcast>ul{
+    font-size: 0;
+    background-color: white;
+    width: 100%;
+    padding: 2px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.cityWeather{
+    font-size: 18px;
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box;
+    border: 2px solid white;
+    opacity: 0.6;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.cityWeather:hover{
+    opacity: 1;
+}
+.cityWeather i{
+    font-size: 30px;
+}
+.cityWeather span{
+    opacity: 0.6;
+}
+.cityWeather:nth-child(1){
+    background-color: #3399CC;
+    width: 50%;
+}
+.cityWeather:nth-child(2){
+    background-color:#33CCCC;
+}
+.cityWeather:nth-child(3){
+    background-color:#996699;
+}
+.cityWeather:nth-child(4){
+    background-color: #C24747;
+}
+.cityWeather:nth-child(5){
+    background-color: #E2674A;
+}
+.cityWeather:nth-child(6){
+    background-color: #FFCC66;
+}
+.cityWeather:nth-child(7){
+    background-color: #99CC99;
+}
+.cityWeather:nth-child(8){
+    background-color:#669999;
+}
+.cityWeather:nth-child(n+2){
+    width: 25%;
+}
+.cityWeather:nth-child(9){
+    background-color: #CC6699;
+    width: 50%;
+}
+.cityWeather:nth-child(10){
+    background-color: #339966;
+}
+.cityWeather:nth-child(11){
+    background-color: #666699;
+    width: 100%;
+}
