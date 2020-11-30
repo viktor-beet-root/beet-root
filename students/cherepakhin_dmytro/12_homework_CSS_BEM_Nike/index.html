@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="page">
+    <div class="container">
+        <div class="conteiner__card card">
+            <div class="card__header">
+                <div class="card__logo logo">
+                    <img src="./img/logo.png" alt="Nike">
+                </div> 
+            </div> 
+            <div class="card__content">
+                <div class="card__content_photo">
+                    <img src="./img/Nike-SB-Stefan-Janoski-Max.png" alt="Nike-SB-Stefan-Janoski-Max">
+                </div>
+                <div class="card__content_info">
+                    <h2 class="card__content_info_header">
+                        Nike SB Stefan Janoski Max
+                    </h2>
+                    <p class="card__content_info_definition">
+                        Unisex Skateboarding Shoe
+                    </p>
+                    <div class="card__content_info_raiting raiting">
+                        <input class="rating__input" name="rating" value="5" id="rating_5" type="radio" />
+                        <label for="rating_5" class="rating__label"></label>
+                        
+                        <input class="rating__input" name="rating" value="4" id="rating_4" type="radio" />
+                        <label for="rating_4" class="rating__label"></label>
+                        
+                        <input class="rating__input" name="rating" value="3" id="rating_3" type="radio" checked/>
+                        <label for="rating_3" class="rating__label"></label>
+                        
+                        <input class="rating__input" name="rating" value="2" id="rating_2" type="radio" />
+                        <label for="rating_2" class="rating__label"></label>
+                        
+                        <input class="rating__input" name="rating" value="1" id="rating_1" type="radio" />
+                        <label for="rating_1" class="rating__label"></label>
+                    </div>
+                    <div class="card__content_info_selection selection">
+                        <div class="selection__size">
+                            <label for="size"></label>
+                            <select class="selection__size_select" name="size" id="size">
+                                <option value="0" selected>Size</option>
+                                <option value="41">41</option>
+                                <option value="42">42</option>
+                                <option value="43">43</option>
+                                <option value="44">44</option>
+                                <option value="45">45</option>
+                            </select>
+                        </div>
+                        <div class="selection__qty">
+                            <label for="qty"></label>
+                            <select class="selection__qty_select" name="qty" id="qty">
+                                <option value="0" selected>Qty</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="card__content_info_order order">
+                        <button class="order__button button" type="submit">Add to cart</button>
+                    </div>
+                </div>
+            </div> 
+            <div class="footter">
+                <div class="footter__color">
+                    <input class="footter__color_input" name="color" value="blue" id="blue" type="radio" checked />
+                    <label for="blue" class="label_color_blue">
+                        <span class="footter__color_input-behaviour"></span>
+                    </label>
+                    <input class="footter__color_input" name="color" value="white" id="white" type="radio"/>
+                    <label for="white" class="label_color_white">
+                        <span class="footter__color_input-behaviour"></span>
+                    </label>
+                    <input class="footter__color_input" name="color" value="red" id="red" type="radio" />
+                    <label for="red" class="label_color_red">
+                        <span class="footter__color_input-behaviour"></span>
+                    </label>
+                    <input class="footter__color_input" name="color" value="light-blue" id="light-blue" type="radio" />
+                    <label for="light-blue" class="label_color_light-blue">
+                        <span class="footter__color_input-behaviour"></span>
+                    </label>
+                </div>
+            </div>         
+        </div>
+    </div>
+</body>
+</html>
