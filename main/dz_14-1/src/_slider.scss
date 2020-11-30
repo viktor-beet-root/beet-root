@@ -1,0 +1,115 @@
+$paddingImageWrapp: 75px 73px 65px;
+
+.slider {
+    &__item {
+        display: flex;
+    }
+
+    &__right {
+        border-right: 1px solid $mainColor;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: $paddingImageWrapp;
+    }
+
+    &__img-wrapper {
+        padding: 14px;
+        border: 1px solid $mainColor;
+        position: relative;
+
+        &::after,
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            background-color: $white;
+        }
+
+        &::before {
+            width: 218px;
+            top: -1px;
+            bottom: -1px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &::after {
+            height: 218px;
+            left: -1px;
+            right: -1px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    &__img {
+        border: 1px solid $mainColor;
+        display: block;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__left {
+        padding: $paddingImageWrapp;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    &__full-name {
+        font-family: $secondaryFonts;
+        font-size: 36px;
+        color: $secondaryTextColor;
+        font-weight: 900;
+        text-align: center;
+        margin-bottom: 42px;
+        position: relative;
+
+        &::after {
+            @include elem;
+            width: 100px;
+            height: 1px;
+            bottom: -20px;
+            background-color: $mainColor;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__position {
+        text-align: center;
+        font-size: 24px;
+        color: $secondaryTextColor;
+        margin-bottom: 22px;
+    }
+
+    &__description {
+        margin: 25px 0 48px;
+        text-align: center;
+        position: relative;
+
+        &::after,
+        &::before {
+            @include elem;
+            background-color: $mainColor;
+            bottom: -20px;
+
+            height: 4px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &::before {
+            width: 50px;
+        }
+
+        &::after {
+            $border: 5px solid $white;
+            width: 20px;
+            border-left: $border;
+            border-right: $border;
+        }
+    }
+}

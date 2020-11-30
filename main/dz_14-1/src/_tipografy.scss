@@ -1,0 +1,11 @@
+* {
+    @include reset;
+}
+
+.title {
+    font-size: 60px;
+    font-family: $secondaryFonts;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+}
