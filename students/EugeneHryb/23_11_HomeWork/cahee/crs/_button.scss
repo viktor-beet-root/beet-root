@@ -1,0 +1,27 @@
+.button{
+    height: 55px;
+    width: 200px;
+    border-color: transparent;
+    box-shadow: 0 0 10px  10px ;
+    transition: transform .3s ease;
+    &:hover{
+        transform: scale(1.02);
+    }
+    &:active{
+        transform: scale(0.97);
+    }
+    &:active, &:focus{
+        outline: none;
+    }
+    &__text{
+        font-family: $defaultFont;
+        font-size: 20px;
+        font-weight: 300;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    &_orange{
+        background-color: $colorButtomOrange;
+        color: $colorButtomOrangeText;
+    }
+}

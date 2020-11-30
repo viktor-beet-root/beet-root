@@ -1,0 +1,51 @@
+.miniArticle{
+    font-family: $defaultFont;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 1.588235;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    &__title-heavy{
+        padding: 0;
+        font-family: $defaultFont;
+        font-weight: 900;
+        font-size: 60px;
+        margin: 0 0 5px 0;
+    }
+    &__title-bold{
+        padding: 0;
+        font-family: $defaultFont;
+        font-weight: 700;
+        font-size: 90px;
+        margin: 0 0 5px 0;
+    }
+    &__text{
+        margin: 0 0 31px 0;
+    }
+    &__img{
+        flex-grow: 1;
+    }
+    &_color-black{
+        color: $colorTextBlack;
+    }
+    &_color-white{
+        color: $colorTextWhite;
+    }
+    &_high{
+        min-height: 770px;
+    }
+    &_high-flex{
+        padding-top: 15px;
+    }
+    &_small{
+        max-width: 370px;
+    }
+    &_normal{
+        max-width: 500px;
+    }
+    &_right{
+        justify-content: flex-end;
+    }
+}

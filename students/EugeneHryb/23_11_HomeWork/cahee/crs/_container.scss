@@ -1,0 +1,16 @@
+.container{
+    max-width: 1500px;
+    box-sizing: border-box;
+    padding: 22px 160px 71px 160px;
+    &_centr{
+        margin: 0 auto;
+    }
+    &_bg-img1{
+        background-image: url('../img/1.png');
+        background-repeat: none;
+        background-size: cover;
+    }
+    &_bg-blue{
+        background-color: $colorBgBlue;
+    }
+}
