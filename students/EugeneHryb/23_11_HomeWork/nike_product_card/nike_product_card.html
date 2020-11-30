@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Nike Product Card</title>
+</head>
+<body>
+    <div class="container container_centr">
+        <form action="#" method="POST" class="product-card container_centr-item">
+            <div class="product-card__logo">
+                <img src="./img/logo.png" alt="" class="product-card__logo-img">
+            </div>
+            <div class="product-card__wrap-product">
+                <div class="product-card__slider">
+                    <div class="product-card__slider-img">
+                        <img src="./img/Nike-SB-Stefan-Janoski-Max.png" alt="Nike">
+                    </div>
+                    <div class="product-card__slider-dots">
+                        <input id="blac" type="radio" name="color" value="blac" checked class="product-card__slider-dot">
+                        <label for="blac" class="product-card_dot-blac"></label>
+                        <input id="white" type="radio" name="color" value="white" class="product-card__slider-dot">
+                        <label for="white" class="product-card_dot-white"></label>
+                        <input id="red" type="radio" name="color" value="red" class="product-card__slider-dot ">
+                        <label for="red" class="product-card_dot-red"></label>
+                        <input id="blue" type="radio" name="color" value="blue" class="product-card__slider-dot">
+                        <label for="blue" class="product-card_dot-blue"></label>
+                    </div>
+                </div>
+                <div class="product-card__info">
+                    <h2 class="product-card__title">Nike SB Stefan Janoski Max</h2>
+                    <p class="product-card__description">Unisex Skateboarding Shoe (Men's Sizing)</p>
+                    <ul class="rating">
+                        <li class="rating__star rating_activ">
+                            <a href="#" class="rating__link">
+                                <img src="./img/star.svg" alt="star" class="rating__img">
+                            </a>
+                        </li>
+                        <li class="rating__star rating_activ">
+                            <a href="#" class="rating__link">
+                                <img src="./img/star.svg" alt="star" class="rating__img">
+                            </a>
+                        </li>
+                        <li class="rating__star rating_activ">
+                            <a href="#" class="rating__link">
+                                <img src="./img/star.svg" alt="star" class="rating__img">
+                            </a>
+                        </li>
+                        <li class="rating__star">
+                            <a href="#" class="rating__link">
+                                <img src="./img/star.svg" alt="star" class="rating__img">
+                            </a>
+                        </li>
+                        <li class="rating__star">
+                            <a href="#" class="rating__link">
+                                <img src="./img/star.svg" alt="star" class="rating__img">
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="product-card__wrap-data-list">
+                        <div class="data-list">
+                            <select id="size" class="data-list__data">
+                                <option disabled selected>Size</option>
+                                <option value="39">39</option>
+                                <option value="42">42</option>
+                                <option value="45">45</option>
+                            </select>
+                        </div>
+                        <div class="data-list">
+                            <select id="qty" class="data-list__data">
+                                <option disabled selected>Qty</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="button">
+                        <span class="button__text">Add to cart</span>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
