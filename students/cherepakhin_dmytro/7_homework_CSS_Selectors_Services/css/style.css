@@ -14,25 +14,33 @@
 
 *{
     margin: 0;
-    padding: 0%;
+    padding: 0;
     font-size: 0;
 }
 
 main {
-    width: 1550px;
+    margin: 0 auto;
+    max-width: 1550px;
+    min-width: 960px;
     background-color: #ffffff;
-    padding: 56px 295px 0;
-    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    padding-top: 56px;
+}
+
+.background{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
 }
 
 section{
     width: 320px;
-    display: inline-block;
     box-sizing: border-box;
-    vertical-align: top;
     text-align: center;
     padding-left: 32px;
     padding-right: 32px;
+    flex-shrink: 0;
 }
 
 h1{
