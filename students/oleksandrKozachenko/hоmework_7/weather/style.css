@@ -1,0 +1,133 @@
+ @font-face {
+  src: url(font/lusida.ttf);
+  font-family: 'Lucida Grande', sans-serif;
+ }
+ 
+ 
+ /* RESET*/
+
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+  }
+
+  html, body {
+    height: 100%; 
+  }
+
+  body {
+    background-color: #3399cc;
+    border: 20px solid #2b81ac;
+    font-family: 'Lucida Grande', sans-serif;
+    color:#fff;
+  }
+
+  header {
+    padding: 30px 0;
+    font-size: 28px;
+    font-weight: 500;
+  }
+
+  footer {
+    padding-top: 30px;
+    font-size: 20px;
+  }
+
+  .container {
+    max-width:850px;
+    margin: 0 auto;
+  }
+
+  li {
+    list-style:none;
+    cursor: pointer;
+  }
+  
+  ul {
+      background-color: #fff;
+      font-size: 0;
+      border: 3px solid #fff;
+  }
+
+  .city {
+    display:inline-block;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    height: 140px;
+    padding-top: 35px;
+    border: 3px solid #fff;
+  }
+  
+  .temp {
+    opacity: 0.7;
+    line-height: 40px;
+  }
+
+  .wi {
+    font-size: 30px;
+  }
+
+  .lisbon {
+    background-color: #3399cc;
+    width:50%;
+  }
+  
+  .paris {
+    background-color: #33cccc;
+    width:25%;
+  }
+  
+  .belgrade {
+    background-color: #996699;
+    width:25%;
+  }
+  
+  .moscow {
+    background-color: #c24747;
+    width:25%;
+  }
+  
+  .tell-aviv {
+     background-color: #e2674a;
+     width:25%;
+  }
+
+  .cair {
+    background-color: #ffcc66;
+    width:25%;
+ }
+
+ .new-york {
+  background-color: #99cc99;
+  width:25%;
+}
+
+.new-delhi {
+  background-color: #669999;
+  width:25%;
+}
+
+.san-francisco {
+  background-color: #cc6699;
+  width:50%;
+}
+
+.tokio {
+  background-color: #339966;
+  width:25%;
+}
+
+.sydney {
+  background-color: #666699;
+  width:100%;
+}
+
+.city-list:hover .city {
+  opacity: 0.7;
+}
+
+.city-list:hover .city:hover {
+  opacity: 1;
+}
