@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Nike</title>
+</head>
+
+<body class="page">
+    <div class="container">
+        <div class="container__product-card">
+            <div class="logo">
+                <a href="#" class="logo__link">
+                    <img class="logo__img" src="images/logo.png" alt="Nike">
+                </a>
+            </div>
+            <form action="#" class="product-card__info">
+                <div class="product-card__first-block">
+                    <div class="product-card__item">
+                        <img class="product-card__item-img" src="images/shoe.png" alt="Stefan Janoski Max">
+                    </div>
+                    <div class="color-list">
+                        <input class="color-list__black-color" name="color" value="blue" id="black" type="radio" />
+                        <label for="blue" class="color_black">
+                            <span></span>
+                        </label>
+                        <input class="color-list__white-color" name="color" value="white" id="white" type="radio" />
+                        <label for="white" class="color_white">
+                            <span></span>
+                        </label>
+                        <input class="color-list__red-color" name="color" value="red" id="red" type="radio" />
+                        <label for="red" class="color_red">
+                            <span></span>
+                        </label>
+                        <input class="color-list__blue-color" name="color" value="blue" id="blue" type="radio" />
+                        <label for="blue" class="color_blue">
+                            <span></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="product-card__second-block">
+                    <div class="product-card__model">
+                        <h2 class="product-card__model-name">Nike SB Stefan
+                            Janoski Max</h2>
+                        <p class="product-card__text">Unisex Skateboarding Shoe</p>
+                    </div>
+                    <ul class="product-card__raiting">
+                        <li class="product-card__raiting-item product-card__raiting-item_active"></li>
+                        <li class="product-card__raiting-item product-card__raiting-item_active"></li>
+                        <li class="product-card__raiting-item product-card__raiting-item_active"></li>
+                        <li class="product-card__raiting-item"></li>
+                        <li class="product-card__raiting-item"></li>
+                    </ul>
+                    <div class="product-card__size-quantity">
+                        <div class="product-card__size">
+                            <label class="product-card__size-list">Size</label>
+                            <select name="size" id="product-card__size-item" required>
+                                <option value="" disabled selected></option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div>
+                        <div class="product-card__quantity">
+                            <label class="product-card__quantity-list">Qty</label>
+                            <select name="quantity" id="product-card_quantity-item" required>
+                                <option value="" disabled selected></option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="button-submit">
+                        <button class="button-submit__add-to-cart" type="submit">Add to cart</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
