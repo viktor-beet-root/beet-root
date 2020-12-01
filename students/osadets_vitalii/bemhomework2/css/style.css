@@ -16,14 +16,17 @@
 /* This is container for body and fonts*/
 
 .container {
-    margin: 140px auto;
     max-width: 800px;
-    background-image: url("/images/bg.jpg");
+    background-image: url("images/bg.jpg");
     background-repeat: no-repeat;
     display: block;
     box-sizing: border-box;
     padding: 80px 51px 40px 53px;
     position: relative;
+}
+
+.container_center {
+    margin: 140px auto;
 }
 
 /*  This is container for main part of product card*/
@@ -98,12 +101,9 @@
 .color-list__blue-color[type='radio']:checked:after {
     width: 12px;
     height: 12px;
-    border-radius: 15px;
-    position: relative;
     background-color: #1f273f;
     content: '';
     top: -2px;
-    display: inline-block;
     border: 2px solid white;
 }
 
@@ -121,7 +121,7 @@
 /* Set position of second block.*/
 
 .product-card__second-block {
-    width: 2000px;
+    width: 200px;
 }
 
 /* Set fonts of title and text under title*/
@@ -153,22 +153,21 @@
     width: 62px;
     margin-bottom: 20px;
 }
+
 .product-card__raiting-item {
     width: 12px;
     height: 12px;
     background-image: url("/images/star.png");
     margin-right: 2px;
 }
+
 .product-card__raiting-item:last-child {
     margin-right: 0;
 }
+
 .product-card__raiting-item_active {
     background-image: url("/images/star-active.png");
 }
-
-
-
-
 
 .product-card__size-quantity{
     display: flex;
