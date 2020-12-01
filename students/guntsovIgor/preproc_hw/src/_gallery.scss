@@ -1,0 +1,54 @@
+.gallery {
+    background-color: $galleryColor;
+    padding: 0 0 120px 0;
+    margin: 0;
+
+    &__container_center {
+    @include containerCenter;
+    margin-bottom: 50px;
+    padding-top: 100px;
+  }
+
+    &__title {
+    font-family: $defaultFont, $fallbackFont;
+    font-size: 90px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+    &__text {
+    text-align: center;
+    max-width: 570px;
+    margin: 0 auto 50px;
+  }
+}
+
+.col-4 {
+    display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+}
+
+@media (max-width: 1200px) {
+    
+  .col-4 {
+      flex-direction: row;
+      justify-content: space-around;
+  }
+}
+
+.info__link {
+   text-decoration: none;
+   text-transform: uppercase;
+   font-size: 20px;
+   padding: 15px 25px;
+   color: #ffffff;
+   display: inline-block;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+   text-align: center;
+
+    &_color-blue {
+    background-color: $airForceBlue;
+  }
+}

@@ -1,0 +1,23 @@
+@mixin fontFace($fontFamily, $fontStyle, $fontWeight) {
+
+  @font-face {
+    font-family: $fontFamily;
+    font-style: $fontStyle;
+    font-weight: $fontWeight;
+    src: url('../fonts/raleway-v18-latin-300.woff2') format('woff2'),
+         url('../fonts/raleway-v18-latin-300.woff') format('woff');
+  }
+}
+
+@mixin positionCenter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom:0;
+}
+
+@mixin containerCenter {
+  max-width: 1200px;
+  margin: 0 auto;
+}
