@@ -64,7 +64,7 @@ margin: 100px auto 120px;
     transform: skew(-10deg);
 }
 
-img{
+.blog-items>img{
     display: block;
 }
 
@@ -98,29 +98,29 @@ img{
     font-weight: 700;
 }
 
-.date~p{
+.blog-heading{
     position: absolute;
     top: 205px;
     left: 20px;
     z-index: 1;
 }
 
-.date+p{
+.blog-heading>h3{
     color: #ffffff;
     font-size: 20px;
     line-height: 25px;
     font-weight: 700;
 }
 
-.blog-items p:last-child{
-    top: 272px;
+.blog-heading>p{
+margin-top: 17px;
     color: #ffffff;
     font-size: 13px;
     font-weight: 300;
     opacity: 0.9;
 }
 
-button{
+.button{
     display: block;
     font-family: inherit;
     color: #ffffff;
@@ -134,6 +134,6 @@ button{
     border: transparent;
 }
 
-button:hover{
+.button:hover{
     background-color: #5eb8e2;
 }

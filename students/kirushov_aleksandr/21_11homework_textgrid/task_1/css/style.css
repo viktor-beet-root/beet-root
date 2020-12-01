@@ -7,7 +7,7 @@ body{
 .wrapper{
     margin-top: 130px;
     margin-bottom: 130px;
-    padding: 110px 30px 110px 0;
+    padding: 110px 15px;
     box-shadow: 0 4px 68px rgba(0, 0, 0, 0.1);
     border: 1px solid transparent;
 }

@@ -13,21 +13,24 @@ body{
     padding: 0 217px;
 }
 
-h3{
+.container{
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+.container>h3{
     color: white;
     letter-spacing: 1.5px;
     margin-top: 38px;
-    margin-left: 130px;
 }
 
 .box-wrapper{
-    max-width: 700px;
     font-size: 0;
     margin: 30px auto 10px;
     background-color: white;
 }
 
-li{
+.box-wrapper li{
     list-style-type: none;
     font-size: 18px;
     width: 25%;
@@ -37,7 +40,6 @@ li{
     text-align: center;
     color: white;
     padding: 25px 0;
-    opacity: 0.7;
 }
 
 .box-wrapper li:nth-child(1){
@@ -99,11 +101,15 @@ li:not(:first-child){
     border-bottom: none;
 }
 
-li:hover{
+.box-wrapper:hover li{
+    opacity: 0.5;
+}
+
+.box-wrapper li:hover{
     opacity: 1;
 }
 
-li :nth-child(n+2){
+.box-wrapper li :nth-child(n+2){
     opacity: 0.7;
 }
 
@@ -112,5 +118,4 @@ li :nth-child(n+2){
     font-weight: 600;
     letter-spacing: 0.02em;
     margin-top: 30px;
-    margin-left: 130px;
 }

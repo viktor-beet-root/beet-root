@@ -25,7 +25,7 @@ body{
     margin-bottom: 18px;
 }
 
-h1{
+.text1+h1{
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     text-transform:uppercase;
     font-size: 48px;
@@ -35,7 +35,7 @@ h1{
     margin-bottom: 30px;
 }
 
-h1~p{
+.wrapper h1~p{
     text-transform:uppercase;
     font-size: 18px;
     font-weight: 600;
@@ -52,7 +52,7 @@ h1~p{
     margin-right: auto;
 }
 
-li{
+.box-wrapper li{
     height: 420px;
     max-width: 25%;
     box-sizing: border-box;
@@ -64,11 +64,11 @@ li{
     vertical-align: middle;
 }
 
-li:not(:first-child){
+.box-wrapper li:not(:first-child){
     border-left: none;
 }
 
-svg{
+.box-wrapper svg{
     width: 64px;
     height: 66px;
     margin-bottom: 45px;
@@ -100,7 +100,7 @@ svg{
     color: #1b1b1b;
 }
 
-li:hover{
+.box-wrapper li:hover{
     background-color: #0ec8cb;
 }
 
@@ -108,7 +108,7 @@ li:hover{
     fill: white;
 }
 
-li:hover p{
+.box-wrapper li:hover p{
     color: white;
 }
 
