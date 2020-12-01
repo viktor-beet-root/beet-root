@@ -1,9 +1,11 @@
-.icon{
+.icon {
     display: flex;
+
     &_small {
         height: 40px;
     }
-    &_centr{
+
+    &_centr {
         justify-content: center;
     }
 }

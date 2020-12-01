@@ -1,16 +1,50 @@
-.container{
+.container {
     max-width: 1500px;
     box-sizing: border-box;
     padding: 22px 160px 71px 160px;
-    &_centr{
+
+    &_centr {
         margin: 0 auto;
     }
-    &_bg-img1{
-        background-image: url('../img/1.png');
-        background-repeat: none;
-        background-size: cover;
+
+    &_bg-img1 {
+        @include bgCover('../img/1.png');
     }
-    &_bg-blue{
+
+    &_bg-blue {
         background-color: $colorBgBlue;
+    }
+
+    &_first_content {
+        margin: -120px auto 0 auto;
+        padding-top: 22px+120px;
+        height: 100vh;
+        max-height: 1400px;
+        z-index: 1;
+    }
+
+    &_first_content &__content {
+        height: 100%;
+    }
+
+    &__heder {
+        padding-bottom: 0;
+        height: 120px;
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+    }
+
+    &_conten-right {
+        justify-content: flex-end;
+    }
+
+    &_bottom-fix {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }

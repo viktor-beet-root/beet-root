@@ -13,7 +13,7 @@
     background-size: cover;
 }
 
-@mixin fontFace($fontFamily , $fontPath, $fontStyle: normal, $fontWeight: normal) {
+@mixin fontFace($fontFamily, $fontPath, $fontStyle: normal, $fontWeight: normal) {
     @font-face {
         font-family: $fontFamily;
         font-style: $fontStyle;
