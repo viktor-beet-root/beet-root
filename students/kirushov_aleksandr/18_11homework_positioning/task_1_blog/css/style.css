@@ -80,12 +80,12 @@ margin: 100px auto 120px;
     font-size: 21px;
     font-weight: 900;
     align-items: center;
+    z-index: 20;
 }
 
 .date>span{
     position: absolute;
     color: white;
-    z-index: 20;
     transform: translateX(-50%);
 }
 
