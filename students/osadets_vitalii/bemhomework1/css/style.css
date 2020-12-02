@@ -1,14 +1,19 @@
 .page {
-    font-family: 'Raleway';
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
     font-size: 16px;
     font-weight: 300;
     background-image: url('../images/bg-img1.png');
     background-repeat: no-repeat;
-    max-width: 1500px;
 }
 
-.header_center {
-    padding: 30px 170px 0 170px;
+.container {
+    max-width: 1500px;
+    
+}
+
+.header_center {  
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .header__menu{
@@ -69,30 +74,32 @@
     line-height: 27px;
 }
 
-.main-block__button{
+
+
+.main-block__button_free{
+    display: inline-block;
+    box-sizing: border-box;
+    text-align: center;
+    padding-top: 15px;
+    background-color: #ff6033;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     width: 200px;
     height: 55px;
     color: #ffffff;
     font-size: 20px;
     font-weight: 300;
     text-transform: uppercase;
-    line-height: 37px;
+    text-decoration: none;
 }
 
-.main-block__button_bg-orange{
-    background-color: #ff6033;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-    outline: none;
-    border: none;
-}
 
-.main-block__button_bg-orange:hover{
+
+.main-block__button_free:hover{
     background-color: #ff603050;
 }
 
 .scroll_center{
     padding-top: 250px;
-    margin-bottom: 100px;
     position: relative;
 }
 .scroll__scroll-img{
@@ -102,6 +109,7 @@
 }
 
 .about-block_bg-green{
+    margin-top: 100px;
     position: relative;
     padding: 400px 0 300px 0;
     background-image: url('../images/footer.png');
