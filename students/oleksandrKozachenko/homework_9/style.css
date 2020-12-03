@@ -1,5 +1,5 @@
 @font-face {
-    font-family:"Miso";
+    font-family:'Miso', 'Arial', sans-serif;
     src:url("/fonts/miso.eot?") format("eot"),
         url("/fonts/miso.woff") format("woff"),
         url("/fonts/miso.ttf") format("truetype"),
@@ -64,7 +64,7 @@ body {
     margin-top: 25px;
     width: 160px;
     text-align: center;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato', 'Arial', sans-serif;
     font-size: 20px;
     font-weight: light;
 }
