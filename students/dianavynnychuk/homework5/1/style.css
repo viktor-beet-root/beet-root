@@ -5,16 +5,16 @@
  body {
     font-family: "Proxima Nova Regular", sans-serif;
     font-size: 14px;
-    line-height: 1.2em;
+    line-height: 12px;
 }
-.parent{
+.conteiner {
     width: 100%;
     text-align: center;
     margin: 0 auto;
 }
 .child {
     margin: 10px;
-    padding: 0 2.2em 0 2.2em;
+    padding: 0 35px 0 35px;
     display: inline-block;
     width: 220px;
 }
@@ -39,8 +39,9 @@
     background-color: #2a69a6;
     margin-bottom: 10px;
 }
+
 svg {
-    fill: #ffffff;
+    fill:white;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -48,11 +49,15 @@ svg {
     right: 0;
     margin: auto;
 }
-
+.colorsvg:hover{
+    background-color: #ffffff;
+    fill: blue;
+}
 .r:hover {
     background-color: #ffffff;
+    
+    
+
 }
 
-.r:hover svg {
-    fill: #2a69a6;
-}
+
