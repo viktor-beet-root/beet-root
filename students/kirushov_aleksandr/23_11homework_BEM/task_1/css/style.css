@@ -72,3 +72,126 @@
     height: 3px;
     background-color: #ff6033;
 }
+
+.main{}
+
+.main__fresh-life {
+    margin-top: -147px;
+    padding: 147px 0 149px 0;
+    background-image: url(../images/img01.png);
+    background-position: top center;
+    background-size: 1500px auto;
+    background-repeat: no-repeat;
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: #f9f8fb;
+}
+
+.fresh-life__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.fresh-life__item {
+    display: flex;
+    max-width: 370px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.heading {
+    font-size: 60px;
+    font-weight: 900;
+    margin: 0;
+}
+
+.fresh-life__heading{
+    padding-top: 178px;
+}
+
+.heading_color-white{
+    color: white;
+}
+
+.fresh-life__scroll {
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.text {
+    margin: 0;
+}
+
+.fresh-life__text {
+    margin-bottom: 29px;
+}
+
+.btn {
+    width: 200px;
+    height: 55px;
+    text-align: center;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    border: 0;
+}
+
+.btn_orange{
+    background-color: #ff6033;
+}
+
+.scroll {}
+
+.about-us {
+    background-color: #00afaf;
+}
+
+.main__about-us{
+    padding: 70px 0;
+}
+
+.about-us_color-white {
+    color: white
+}
+
+.about-us__container {
+    display: flex;
+}
+
+.about-us__image-box {
+    width: 63%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.about-us__image {
+    max-width: 100%;
+    position: absolute;
+    left: -49px;
+}
+
+.about-us__item {
+    width: 47%;
+    box-sizing: border-box;
+    padding: 125px 0 194px;
+}
+
+.about-us__heading{
+    font-size: 90px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 6px;
+}
+
+.about-us__text {
+    margin-bottom: 14px;
+}
