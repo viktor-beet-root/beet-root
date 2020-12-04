@@ -84,7 +84,6 @@ margin: 100px auto 120px;
 }
 
 .date>span{
-    position: absolute;
     color: white;
     transform: translateX(-50%);
 }
