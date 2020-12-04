@@ -1,0 +1,26 @@
+@font-face {
+    font-family: $defaultFont;
+    font-style: $fontStyle;
+    font-weight: 300;
+    src: local(''),
+    url('#{$defaultFont300Path}.woff2') format('woff2'), 
+    url('#{$defaultFont300Path}.woff') format('woff'); 
+}
+
+@font-face {
+    font-family: $defaultFont;
+    font-style: $fontStyle;
+    font-weight: 700;
+    src: local(''),
+    url('#{$defaultFont700Path}.woff2') format('woff2'),
+    url('#{$defaultFont700Path}.woff') format('woff');
+}
+
+@font-face {
+    font-family: $defaultFont;
+    font-style: $fontStyle;
+    font-weight: 900;
+    src: local(''),
+    url('#{$defaultFont900Path}.woff2') format('woff2'),
+    url('#{$defaultFont900Path}.woff') format('woff'); 
+}
