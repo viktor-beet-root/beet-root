@@ -1,16 +1,19 @@
 @font-face {
-    font-family: "Proxima Nova";  
-    src: url("/fonts/Proxima_Nova.otf");
+    font-family: 'Proxima Nova';  
+    src: url('/fonts/ProximaNova-Regular.woff2') format('woff2'),
+        url('/fonts/ProximaNova-Regular.woff') format('woff');
 }
 
 @font-face {
-    font-family: "Futura PT Heavy";
-    src: url("/fonts/FuturaPT.ttf");
+    font-family: 'Futura PT Heavy';
+    src: url('FuturaPT-Heavy.woff2') format('woff2'),
+        url('FuturaPT-Heavy.woff') format('woff');
 }
 
 @font-face {
-    font-family: "Georgia";
-    src: url("/fonts/Georgia.ttf");
+    font-family: 'Georgia';
+    src: url('/fonts/Georgia.woff2') format('woff2'),
+        url('/fonts/Georgia.woff') format('woff');
 }
 
 * {
@@ -21,7 +24,7 @@
 
 body, html {
     height: 100%;
-    font-family: "Georgia";
+    font-family: 'Georgia', 'Times New Roman', serif;
 }
 
 body {
@@ -40,7 +43,7 @@ outline: none;
 
 h1 {
     margin-top: 40px;
-    font-family: "Futura PT Heavy";
+    font-family: 'Futura PT Heavy' 'Arial', sans-serif;
     font-size: 78px;
     /* font-weight: lighter; */
     text-transform: uppercase;
@@ -94,14 +97,14 @@ h1 {
 
 .comment {
     text-transform: uppercase;
-    font-family: 'Proxima Nova';
+    font-family: 'Proxima Nova', 'Arial', sans-serif;
     font-size: 15px;
     letter-spacing: 0.5em;
     opacity: 0.5;
 }
 
 .input-area {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', 'Times New Roman', serif;
     font-size: 48px;
     background-color: #181818;
     color:#fff;

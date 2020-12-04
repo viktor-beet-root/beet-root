@@ -1,8 +1,8 @@
 @font-face {
-  src: url(font/lucida-grande.woff);
-  font-family: 'Lucida Grande', 'Arial', sans-serif;
+  font-family: 'Lucida Grande';
+  src: url('font/lucida-grande.woff2') format("woff2"),
+        url('font/lucida-grande.woff') format("woff");
  }
- 
  
  /* RESET*/
 
@@ -19,7 +19,7 @@
   body {
     background-color: #3399cc;
     border: 20px solid #2b81ac;
-    font-family: 'Lucida Grande', sans-serif;
+    font-family: 'Lucida Grande', 'Arial', sans-serif;
     color:#fff;
   }
 
