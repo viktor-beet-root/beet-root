@@ -14,7 +14,11 @@
     flex-wrap: wrap;
 }
 
-[class^="col-"],
+[class*="col-"] {
+    width: 100%;
+}
+
+[class*="col-"],
 .col {
     padding: 15px;
 }

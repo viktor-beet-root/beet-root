@@ -9,6 +9,11 @@
     padding-top: 100px;
   }
 
+    &__pics {
+      box-shadow:  5px 5px 5px 1px rgba(0, 0, 255, .2);
+      
+    }
+
     &__title {
     font-family: $defaultFont, $fallbackFont;
     font-size: 90px;
@@ -24,15 +29,15 @@
   }
 }
 
-.col-4 {
-    display: flex;
-   flex-direction: column;
-   justify-content: space-around;
+.gallery__photos_clmn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 @media (max-width: 1200px) {
     
-  .col-4 {
+  .gallery__photos_clmn {
       flex-direction: row;
       justify-content: space-around;
   }

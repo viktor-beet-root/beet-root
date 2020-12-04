@@ -1,0 +1,30 @@
+.footer {
+  width: 1500px;
+  background-color: #262626;
+
+      &__info{
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 15px;
+}
+
+     &__rights {
+       color: #b9b9b9;
+     }
+
+    &__link {
+      font-family: $secondaryFont, $fallbackFont;
+      text-decoration: none;
+      color: #b9b9b9;
+      font-size: 27px;
+    }
+
+    &__author {
+      color: #b9b9b9;
+      font-size: 17px;
+
+      &_color-red {
+        color:red;
+      }
+    }
+}

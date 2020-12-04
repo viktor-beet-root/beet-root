@@ -1,24 +1,53 @@
 .header {
-    Padding: 50px 10px 0 160px;
+    padding: 50px 10px 0 160px;
+    display: flex;
+    justify-content: space-between;
 
     &__navigation {
-    display: flex;
     align-items: center;
-    justify-content: space-between;
     padding-right: 150px;
+    }
+}
 
-     & .logo__link {
+.logo {
+           
+    &__link {
         font-family: 'Pacifico';
         font-size: 50px;
         color: #262626;
         text-decoration: none;
-     }
+    }
+    @media screen and (max-width: 768px) {
+        display: block;
+        margin-top: -20px; 
+    }
+}
 
-     & .navigation__list  {
+.navigation {
+//     @media screen and (max-width: 768px) {
+//         position: relative;
+//    }
+        
+    &__list  {
         display: flex;
-       list-style-type: none;
-      
-      & .navigation__item {
+        list-style-type: none;
+
+        @media screen and (max-width: 768px) {
+            display: block;
+            visibility: hidden;
+            pointer-events: none;
+            position: absolute;
+            left: 0;
+            right: 0;
+            background-color: rgba($color: white, $alpha: 1);
+            text-align: center;
+            transition: all 1s ease-in-out;
+            opacity: 0;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__item {
         margin-left: 40px;
         padding-top: 5px;
         line-height: 25px;
@@ -29,11 +58,82 @@
 
         &:hover {
             border-top: solid 3px #ff6033;
-           }
+            background: rgb(255, 96, 51, .2);
+            
         }
-    & .navigation__link {
-        text-decoration: none;
-        color:black;}
-       }
+
+        @media screen and (max-width: 768px){
+            border-bottom:1px solid rgb(255, 96, 51, .5);
+        }
     }
-}  
+
+    &__link {
+        text-decoration: none;
+        color:black;
+
+        @media screen and (max-width: 768px){
+            display: block;
+        }
+    }
+
+    &__button {
+        display: none;
+        width: 35px;
+        height: 35px;
+        position: relative;
+        cursor: pointer;
+
+        &::before, &::after, &_line {
+            position: absolute;
+            content: '';
+            width:25px;
+            height: 1px;
+            background-color: grey;
+            left: 5px;
+        }
+
+        &::before {
+            top: 5px;
+        }
+
+        &::after {
+            top:15px;
+        }
+
+        &_line {
+            top:25px;
+        }
+
+
+        @media screen and (max-width: 768px) {
+            display: block;
+        }
+    }
+
+    &__input:checked{
+        @media screen and (max-width: 768px){
+
+            & + .navigation__button_line{ 
+                height:5px;
+            }
+
+        &~.navigation__button::before{
+            transform: rotate(45deg);
+            top:10px;
+        }
+
+        &~.navigation__button::after{
+            transform: rotate(-45deg);
+            top:10px;
+        }        
+
+        &~.navigation__list {
+            display: block;
+            opacity: 1;
+            visibility: visible;
+            pointer-events: all;
+            transform: translateX(0);
+        }
+        } 
+    }
+}
