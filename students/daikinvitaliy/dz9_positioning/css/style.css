@@ -1,0 +1,25 @@
+body {
+    font-family: "Raleway", Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    font-size: 16px;
+    background-color: #b07cf7;
+    line-height: 1.5;
+    font-weight: 300;
+}
+h1,
+h2 {
+    font-weight: 700;
+}
+h1 {
+    font-size: 90px;
+    text-align: center;
+}
+h1 + p {
+    text-align: center;
+    font-size: 17px;
+}
+.blog-list {
+    padding: 50px 0;
+}
+.article-list {
+}
