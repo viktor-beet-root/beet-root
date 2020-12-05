@@ -9,6 +9,7 @@ body{
 }
 
 main{
+    margin: 0 auto;
     max-width: 1468px;
     min-width: 850px;
     border: 25px solid #2b81ac;

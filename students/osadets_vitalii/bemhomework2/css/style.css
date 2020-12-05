@@ -1,0 +1,212 @@
+@font-face{
+    font-family: "Museo Sand Rounded";  
+    src: url("../fonts/museosansrounded.woff2") format("woff2"),
+    url("../fonts/museosansrounded.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.page {
+    font-family: "Museo Sand Rounded", Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 0.28px; 
+}
+
+/* This is container for body and fonts*/
+
+.container {
+    max-width: 800px;
+    background-image: url("images/bg.jpg");
+    background-repeat: no-repeat;
+    display: block;
+    box-sizing: border-box;
+    padding: 80px 51px 40px 53px;
+    position: relative;
+}
+
+.container_center {
+    margin: 140px auto;
+}
+
+/*  This is container for main part of product card*/
+
+.container__product-card {
+    display: block;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    width: 686px;
+    background-color: #111a28;
+    box-shadow: 0 0 65px rgba(0, 0, 0, 0.82);
+}
+
+.logo {
+    display: block;
+    padding: 20px;
+}
+
+/* Set flex for our 2 blocks*/
+
+.product-card__info {
+    display: flex;
+}
+
+/* Size of first block*/
+
+.product-card__item{
+    padding: 40px 69px 30px 36px ;
+    width: 329;    
+}
+
+/* Set position and paddings of color-list*/
+
+.color-list {
+    display: flex;
+    justify-content: center; 
+ }
+
+/* Background color and value before item was checked. Set colors for each item*/
+
+.color-list__black-color[type='radio']:after,
+.color-list__white-color[type='radio']:after,
+.color-list__red-color[type='radio']:after,
+.color-list__blue-color[type='radio']:after {
+    width: 10px;
+    height: 9px;
+    border-radius: 15px;
+    position: relative;
+    background-color: #d1d3d1;
+    left: -1px;
+    top: -.5px;
+    content: '';
+    display: inline-block;
+    border: 2px solid transparent;
+}
+
+.color-list__black-color[type='radio']:after {
+    background-color: #1f273f;
+}
+.color-list__red-color[type='radio']:after {
+    background-color: #ed3333;
+}
+.color-list__blue-color[type='radio']:after {
+    background-color: #29e3ea;
+}
+
+/* Backgorund color and value after checked. Set colors for each item*/
+
+.color-list__black-color[type='radio']:checked:after,
+.color-list__white-color[type='radio']:checked:after,
+.color-list__red-color[type='radio']:checked:after,
+.color-list__blue-color[type='radio']:checked:after {
+    width: 12px;
+    height: 12px;
+    background-color: #1f273f;
+    content: '';
+    top: -2px;
+    border: 2px solid white;
+}
+
+.color-list__white-color[type='radio']:checked:after {
+    background-color: #ffffff;
+}
+
+.color-list__red-color[type='radio']:checked:after {
+    background-color: #ed3333;
+}
+.color-list__blue-color[type='radio']:checked:after {
+    background-color: #29e3ea;
+}
+
+/* Set position of second block.*/
+
+.product-card__second-block {
+    width: 200px;
+}
+
+/* Set fonts of title and text under title*/
+
+.product-card__model-name,
+.product-card__text {
+    font-family: "Museo Sans Rounded", Arial, Helvetica, sans-serif;
+    color: #e1e1e1;
+    font-weight: 400;
+}
+
+.product-card__model-name {
+    font-size: 24px;
+    letter-spacing: .48px;    
+}
+
+.product-card__text {
+    font-size: 14px;
+    opacity: .54;
+    font-size: 14px;
+}
+
+
+.product-card__raiting {
+    display: flex;  
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 62px;
+    margin-bottom: 20px;
+}
+
+.product-card__raiting-item {
+    width: 12px;
+    height: 12px;
+    background-image: url("/images/star.png");
+    margin-right: 2px;
+}
+
+.product-card__raiting-item:last-child {
+    margin-right: 0;
+}
+
+.product-card__raiting-item_active {
+    background-image: url("/images/star-active.png");
+}
+
+.product-card__size-quantity{
+    display: flex;
+    padding-bottom: 30px;
+   
+}
+.product-card__size-list,
+.product-card__quantity-list {
+    box-sizing: border-box;
+    color: #e1e1e1;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: .28px;
+}
+
+.product-card__size {
+    margin-right: 5px;
+}
+
+.product-card__size,
+.product-card__quantity {
+    width: 80px;
+    height: 32px;
+    text-align: center;
+    border: 1px solid  #e1e1e1;
+    opacity: .26;
+    background-color: #111a28;
+}
+
+.button-submit__add-to-cart {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .28px;
+    color: #e1e1e1;
+    width: 184px;
+    height: 40px;
+    border: 1px solid #ffffff;
+    background-color: #4c525a;
+    opacity: .26;
+    margin-bottom: 40px;
+}
