@@ -1,0 +1,76 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.form__inputs {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+}
+
+.form__inputs:checked~.form__label {
+  background-color: green;
+}
+.form__label {
+    display: block;
+    width:40px;
+    height:40px;
+    background-color:red;
+    border:1px solid pink;
+}
+
+.form__label_check {
+    border-radius: 15%;
+}
+
+.form__label_radio {
+    border-radius: 50%;
+}
+
+.form__label {
+    position: relative;
+}
+
+.form__label::after {
+    display: block;
+    content: '';
+    position: absolute;
+}
+
+.form__label_check::after {
+    width: 22px;
+    height: 11px;
+    border-left: 3px solid white;
+    border-bottom: 3px solid white;
+    top: 50%;
+    left: 10%;
+    transform: translate(-50%, -50%) rotate(-45deg) scale(0);
+    transition: all .5s step-end;
+}
+
+.form__inputs:checked~.form__label_check::after {
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg) scale(1);
+}
+
+.form__label_radio::after {
+    border: 5px solid green;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all .5s step-start;
+}
+
+.form__inputs:checked~.form__label_radio::after {
+    transform: translate(-50%, -50%) scale(1);
+    border-color: lightgreen;
+}
+
+
+
+
