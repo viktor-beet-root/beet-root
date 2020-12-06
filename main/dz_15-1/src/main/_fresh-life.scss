@@ -1,0 +1,37 @@
+.fresh-life {
+    position: relative;
+    min-height: 500px;
+
+    &__container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @include media('sm') {
+            display: block;
+            text-align: center;
+        }
+    }
+
+    &__scroll {
+        position: absolute;
+        bottom: 68px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @include media('sm') {
+            bottom: 10px;
+        }
+    }
+
+    &__text {
+        margin-bottom: 30px;
+    }
+}
