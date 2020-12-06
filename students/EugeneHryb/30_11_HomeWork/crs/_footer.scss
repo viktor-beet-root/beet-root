@@ -1,0 +1,45 @@
+.footer{
+    color: $colorTextFooter;
+
+    &__bg{
+        background-color: $colorBgFooter;
+    }
+
+    &__autor-wrap{
+        text-align: right;
+    }
+
+    &__logo{
+        display: block;
+        margin: 0 auto;
+    }
+
+    &__autor > strong {
+        color: $colorTextStrongFooter;
+        font-weight: 700;
+    }
+}
+
+@media (max-width: $SM) {
+    .footer{
+        &__autor-wrap{
+            order: 2;
+            text-align: center;
+        }
+
+        &__logo-wrap{
+            order: 1;
+        }
+
+        &__copyright-wrap{
+            order: 3;
+            text-align: center;
+        }
+
+        &__autor-wrap, 
+        &__logo-wrap,
+        &__copyright-wrap{
+            padding: 3px;
+        }
+    }
+}
