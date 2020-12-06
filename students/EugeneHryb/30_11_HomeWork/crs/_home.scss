@@ -1,0 +1,47 @@
+.home{
+    color: $colorTextBlack;
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    &__title{
+        font-family: $defaultFont ;
+        font-size: 60px;
+        font-weight: 900;
+        margin: 34px 0;
+
+        @media (max-width: $MD) {
+            font-size: 50px;
+        }
+    }
+
+    &__text{
+        margin: 31px 0;
+    }
+
+    &__bg{
+        @include bgCover('../img/1.png');
+    }
+
+    &__wrapper{
+        height: 100vh;
+        max-height: 1264px;
+        min-height: 504px;
+        position: relative;
+    }
+}
+
+.scroll {
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX( -50% );
+
+    @media (max-height: 640px){
+        bottom: 10px;
+    }
+}
+
+.header{
+    position: relative;
+}

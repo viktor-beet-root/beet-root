@@ -1,0 +1,99 @@
+.services{
+    display: flex;
+    align-items: stretch;
+    padding: 100px 0 150px 0;
+
+    &__bg{
+        background-color: $colorBgService;
+    }
+
+    &__link{
+        display: flex;
+        align-items: center;
+        min-height: 100px;
+        margin: 10px 0;
+        text-decoration: none;
+        color: inherit;
+        position: relative;
+
+        &:active{
+            color: inherit;
+        }
+
+        &::before{
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            border-right: 1px solid $colorBorderList-item;
+            right: 25%;
+            top: 0;
+        }
+    }
+
+    &__list-item{
+        background-color: $colorBgListItem;
+        box-shadow: -2px 7px 24px -5px;
+    }
+
+    &__list-title{
+        width: 75%;
+        padding: 0 30px;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    &__list_icon{
+        width: 25%;
+
+        img{
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
+    &__title-wrapper{
+        background-image: url(../img/services_bg.png);
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        background-position-x: center;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    &__title{
+        font-size: 90px;
+        font-weight: 700;
+        color: $colorTextWhite;
+        text-align: center;
+    }
+}
+
+@media (max-width: $LG) {
+    .services{
+        &__title-wrapper{
+            order: -3;
+            justify-content: center;
+        }
+    }
+}
+
+@media (max-width: $MD){
+    .services{
+        padding: 10px 0 30px 0;
+
+        &__title{
+            font-size: 70px;
+        }
+    }
+}
+
+@media (max-width: $SM) {
+    .services{
+        &__title{
+            font-size: 50px;
+        }
+    }
+}
