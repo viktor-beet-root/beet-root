@@ -1,0 +1,23 @@
+.subscribe {
+    padding-top:145px;
+    background: url("../img/bg.png") no-repeat;
+    background-size: cover;
+
+    & .main__subscribe-center {
+        @include containerCenter;
+        padding-bottom: 130px;
+    }
+        
+    &__title {
+        font-family: $defaultFont,$fallbackFont;
+        font-weight: 700;
+        font-size: 40px;
+        margin-bottom:30px ;
+    }
+
+    &__text {
+        font-family: $defaultFont,$fallbackFont;
+        font-weight: 300;
+        margin-bottom:30px ;
+    }
+}
