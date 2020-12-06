@@ -1,12 +1,12 @@
 @mixin fontFace($fontFamily, $fontStyle, $fontWeight) {
 
-  @font-face {
-    font-family: $fontFamily;
-    font-style: $fontStyle;
-    font-weight: $fontWeight;
-    src: url('../fonts/raleway-v18-latin-300.woff2') format('woff2'),
+    @font-face {
+        font-family: $fontFamily;
+        font-style: $fontStyle;
+        font-weight: $fontWeight;
+        src: url('../fonts/raleway-v18-latin-300.woff2') format('woff2'),
          url('../fonts/raleway-v18-latin-300.woff') format('woff');
-  }
+    }
 }
 
 @mixin positionCenter {
@@ -18,6 +18,6 @@
 }
 
 @mixin containerCenter {
-  max-width: 1200px;
-  margin: 0 auto;
+    max-width: 1200px;
+    margin: 0 auto;
 }
