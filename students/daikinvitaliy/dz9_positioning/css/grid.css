@@ -20,7 +20,7 @@
     padding: 15px;
 }
 [class*="col-"] {
-    max-width: 100%;
+    width: 100%;
 }
 
 .col {

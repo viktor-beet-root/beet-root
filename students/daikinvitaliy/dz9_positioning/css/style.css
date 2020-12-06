@@ -18,8 +18,88 @@ h1 + p {
     text-align: center;
     font-size: 17px;
 }
+h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+strong {
+    font-weight: 600;
+}
+img {
+    max-width: 100%;
+}
+span {
+    display: block;
+}
 .blog-list {
     padding: 50px 0;
 }
-.article-list {
+.article-list > div {
+    position: relative;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.5s ease-in-out;
+}
+
+.article-list:hover > div {
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.9);
+}
+.article-list > div::before {
+    content: "";
+    display: block;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    z-index: 0;
+    transition: all 0.5s ease-in-out;
+}
+.article-list:hover > div::before {
+    height: 100%;
+}
+.article-list .article-daite {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 30px;
+    left: 20px;
+    font-size: 32px;
+    line-height: 0.7;
+    text-align: center;
+    border-radius: 5px;
+    padding-top: 6px;
+    background-color: rgba(33%, 35%, 38%, 0.5);
+}
+
+.article-list:hover .article-daite {
+    background-color: rgba(33%, 35%, 38%, 0.9);
+}
+.article-list img {
+    display: block;
+}
+.article-list .articale-titel {
+    padding: 45px 20px 20px 20px;
+    position: absolute;
+    bottom: 0;
+}
+.article-list .articale-titel a {
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+.btm {
+    padding: 10px;
+    height: 55xp;
+    color: white;
+    text-decoration: none;
+    display: block;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+    background-color: #f72b3b;
+    text-align: center;
+    font-size: 25px;
+    margin: auto;
+    font-weight: 300;
+    font-family: inherit;
+    width: 200px;
 }
