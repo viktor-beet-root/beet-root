@@ -7,7 +7,7 @@
 }
 
 @font-face {
-    font-family: "Georgia";
+    font-family: 'Georgia';
     src: url('../font/georgiai-webfont.woff2') format('woff2'),
          url('../font/georgiai-webfont.woff') format('woff');
     font-weight: normal;
@@ -29,96 +29,46 @@
     font-style: normal;
 }
 
-body {
+.page{
+    padding-top: 141px;
+    display: block;
+    box-sizing: border-box;
     max-width: 1200px;
     background-color: #464f54;
-    font-family: Georgia;
+    font-family: 'Georgia', Arial, Helvetica, sans-serif;
 }
 
-section { 
+.text {
+    position: relative;
+    box-sizing: border-box;
     display: block;
-    margin-top: 150px;
-    margin-right: auto;
-    margin-left: auto;
-    width: 1060px;
+    margin: 0 auto;
+    max-width: 1060px;
     box-shadow: 0 0 35px rgba(0, 0, 0, 0.22);
     background-color: #ffffff;
-    position: relative;
-    font-family: 'Playfair Display';
-    padding-top: 202px;
-    box-shadow: 0 0 35px rgba(0, 0, 0, 0.22);
 }
 
-input::placeholder {
-    color: white;
-}
-
-.block {
-    z-index: 100;
-    position: absolute;
-    left: 324px;
-    top: 50px;
-    width: 876px;
-    height: 187px;
-    box-shadow: -4px -4px 59px rgba(0, 0, 0, 0.16);
-    background-color: #181818;
-}
-
-.input-text {
-    box-sizing: border-box;
-    position: absolute;
-    top: 64px;
-    padding-left: 60px;
-    font-family: 'Playfair Display';
-    color: white;
-    font-size: 48px;
-    text-align: left;
-    background-color:#181818;
-    border-bottom: 3px solid #2F2F2F;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-}
-
-.conteiner {
-    top: 237px;
-    left: 387px;
-    position: absolute;
-    width: 773px;
-    box-shadow: -4px -4px 59px rgba(0, 0, 0, 0.16);
-    background-color: #fbc02d;
-    z-index: 100;
-    padding: 22px 0 22px 42px;
-}
-
-.icon {
-padding-right: 25px;
-}
-
-.title {
-    padding-left: 63px;
-    padding-top: 42px;
-    color: #767676;
-    font-family: "Proxima Nova";
-    font-size: 15px;
-    text-align: left;
-    text-transform: uppercase;
-    letter-spacing: 4.8px;
-}
-
-.line {
-    top: 0;
-    left: 66px;
-    position: absolute;
+.text::before {
+    content: '';
+    display: block;
     width: 2px;
-    height: 759px;
+    height: 770px;
     background-color: #e8eced;
+    position: absolute;
+    left: 69px;
+}
+
+.text__section {
+    box-sizing: border-box;
+    display: block;
+    margin: 0 auto;
+    max-width: 806px;
 }
 
 .autor {
-    padding-left: 125px;
+    padding-top: 202px;
     color: #b4b4b4;
-    font-family: "Proxima Nova";
+    font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
     font-size: 20px;
     text-align: left;
     text-transform: uppercase;
@@ -126,10 +76,9 @@ padding-right: 25px;
 }
 
 .maintitle {
-    padding-left: 127px;
-    padding-top: 35px;
+    padding-top: 47px;
     color: #2a2a2a;
-    font-family: 'Futura PT Heavy';
+    font-family: 'Futura PT Heavy', Arial, Helvetica, sans-serif ;
     font-size: 78px;
     line-height: 73.52px;
     text-align: left;
@@ -138,17 +87,14 @@ padding-right: 25px;
 }
 
 .titletext {
-    padding-left: 123px;
     color: #8f8f8f;
     font-size: 30px;
     font-style: italic;
     line-height: 62.44px;
-    text-align: justifyLeft;
     padding-bottom: 25px;
 }
 
 .part {
-    padding:0 124px;
     color: #000000;
     font-size: 27px;
     line-height: 40.38px;
@@ -161,3 +107,58 @@ span {
     text-align: justifyLeft;
     font-style: italic;
 }
+
+.block__input {
+    z-index: 100;
+    position: absolute;
+    left: 324px;
+    top: 47px;
+    box-shadow: -4px -4px 59px rgba(0, 0, 0, 0.16);
+    background-color: #181818;
+    display: block;
+    padding-left: 60px;
+    padding-bottom: 70px;
+}
+
+.title {
+    display: block;
+    padding-top: 42px;
+    color: #767676;
+    font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 4.8px;
+
+}
+
+.input-text {
+    width: 816px;
+    display: block;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 48px;
+    background-color:#181818;
+    border: none;
+    border-bottom: 3px solid #767676;
+}
+
+
+input::placeholder {
+    color: white;
+}
+
+.conteiner-icon {
+    top: 234px;
+    left: 388px;
+    position: absolute;
+    width: 771px;
+    box-shadow: -4px -4px 59px rgba(0, 0, 0, 0.16);
+    background-color: #fbc02d;
+    padding: 22px 0 22px 42px;
+}
+
+.icon {
+padding-right: 25px;
+}
+
