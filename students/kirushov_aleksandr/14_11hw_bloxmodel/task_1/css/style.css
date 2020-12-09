@@ -10,7 +10,7 @@ body{
 }
 
 .wrapper{
-    padding: 133px 170px 100px;
+    padding: 15px;
 }
 
 .text1{
@@ -21,7 +21,6 @@ body{
     line-height: 30px;
     letter-spacing: 4.8px;
     color: #898f99;
-    margin-left: 24px;
     margin-bottom: 18px;
 }
 
@@ -48,8 +47,7 @@ body{
 .box-wrapper{
     font-size: 0;
     max-width: 940px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
 
 .box-wrapper li{
@@ -92,7 +90,7 @@ body{
 
 .web{
     text-transform:uppercase;
-    font-family: Montserrat;
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
     font-size: 21px;
     font-weight: 600;
     margin: -13px;
@@ -104,14 +102,9 @@ body{
     background-color: #0ec8cb;
 }
 
-.box-wrapper li:hover svg{
+.box-wrapper li:hover p,
+.box-wrapper li:hover h3,
+.box-wrapper li:hover svg {
+    color: white;
     fill: white;
-}
-
-.box-wrapper li:hover p{
-    color: white;
-}
-
-.box-wrapper li:hover h3{
-    color: white;
 }

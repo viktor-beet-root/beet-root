@@ -119,3 +119,7 @@ li:not(:first-child){
     letter-spacing: 0.02em;
     margin-top: 30px;
 }
+
+.box__item span:first-child {
+    display: block;
+}
