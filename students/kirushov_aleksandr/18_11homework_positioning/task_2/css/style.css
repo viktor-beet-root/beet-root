@@ -5,7 +5,7 @@
 
 body{
     font-family: 'Lato', Arial, Helvetica, sans-serif;
-    font-size: 16 px;
+    font-size: 16px;
     font-weight: 300;
     font-style: normal;
     line-height: 1.5;
@@ -66,7 +66,7 @@ body{
 }
 
 .social-network{
-    display: none;
+    visibility: hidden;
     position: absolute;
     width: 269px;
     height: 269px;
@@ -97,8 +97,9 @@ a>img{
 }
 
 .hover:hover .social-network{
-    display: block;
-    transform: scale(1.1) rotate(4deg);
+    visibility: visible;
+    transform: scale(1.1);
+    transition: transform .5s ease-in-out;
 }
 
 .name{
