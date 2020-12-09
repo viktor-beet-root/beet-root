@@ -33,9 +33,7 @@ strong {
 img {
     max-width: 100%;
 }
-span {
-    display: block;
-}
+
 .blog-list {
     padding: 50px 0;
 }
@@ -92,6 +90,9 @@ span {
     display: block;
     color: white;
     text-decoration: none;
+}
+.article-daite span {
+    display: block;
 }
 .btm {
     padding: 10px;
