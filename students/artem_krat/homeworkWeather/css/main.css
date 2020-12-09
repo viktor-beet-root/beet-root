@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lucida Sans", "Lucida Grande", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  border: 20px solid #2b81ac;
+  background-color: #3399cc;
+  padding: 0 217px;
+}
+
+h1 {
+  color: white;
+  letter-spacing: 1.5px;
+  margin-top: 38px;
+  margin-left: 130px;
+}
+
+.weatherCity {
+  color: white;
+  display: inline-block;
+  border: solid;
+  text-align: center;
+  box-sizing: border-box;
+}
