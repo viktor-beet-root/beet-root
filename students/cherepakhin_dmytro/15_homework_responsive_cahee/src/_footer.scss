@@ -2,25 +2,25 @@
     background-color: $MineShaft;
     color: $Silver;
     font-size: 16px;
-}
 
-.footer__row{
-    padding: 20px 15px 10px;
-    justify-content: space-between;
-}
+    &__row{
+        padding: 20px 15px 10px;
+        justify-content: space-between;
+    }
 
-.footer_logo{
-    padding-right: 50px;
-    padding-top: 5px;
-}
+    &_logo{
+        padding-right: 50px;
+        padding-top: 5px;
+    }
 
-.footer_developer{
-    font-size: 15px;
-}
+    &_developer{
+        font-size: 15px;
+    }
 
-.footer_developer strong{
-    color: $RadicalRed;
-    font-size: 700;
+    &_developer strong{
+        color: $RadicalRed;
+        font-size: 700;
+    }
 }
 
 @media (max-width: 768px){
@@ -28,6 +28,7 @@
         flex-direction: column;
         align-items: center;
     }
+    
     .footer_logo{
         padding: 10px;
     }

@@ -16,55 +16,10 @@
 .header__logo{
     margin-left: 42px;
     padding-top: 20px;
-    @media screen and  (max-width: 768px){
-        margin-top: -40px;
-    }
 }
 
 .header__menu{
     max-width: 588px;
-}
-
-.menu__btn{
-    @media screen and  (max-width: 768px){
-        display: block;
-        width: 30px;
-        height: 30px;
-        position: absolute;
-        right: 30px;
-        top: 30px;
-    }
-}
-
-.menu__btn_line{
-    @media screen and  (max-width: 768px){
-        position: relative;
-        height: 5px;
-        width: 100%;
-        background-color: $Orange;
-    }
-}
-
-.menu__btn_line::after{
-    @media screen and  (max-width: 768px){
-        content: '';
-        position: absolute;
-        bottom: -12px;
-        height: 5px;
-        width: 100%;
-        background-color: $Orange;
-    }
-}
-
-.menu__btn_line::before{
-    @media screen and  (max-width: 768px){
-        content: '';
-        position: absolute;
-        bottom: -25px;
-        height: 5px;
-        width: 100%;
-        background-color: $Orange;
-    }
 }
 
 .menu__input:checked ~.menu__btn .menu__btn_line{
@@ -83,17 +38,6 @@
     list-style: none;
     display: flex;
     justify-content: space-between;
-    @media screen and  (max-width: 768px){
-        margin-top: 40px;
-        visibility: hidden;
-        pointer-events: none;
-        position: absolute;
-        left: 0;
-        right: 0;
-        background-color: $white;
-        text-align: center;
-        opacity: 0;
-    }
 }
 
 .menu__input:checked ~.menu__items{
@@ -113,20 +57,72 @@
     box-sizing: border-box;
     border-top: 3px solid transparent;
     transition: all 0.1s ease-in;
-    @media screen and  (max-width: 768px){
+
+    &:first-child,
+    &:hover{
+        border-top: 3px solid $Orange;
+        transition: all 0.1s ease-in;
+    }
+
+    &_link{
+        text-decoration: none;
+        color: $MineShaft;
+    }
+}
+
+@media screen and  (max-width: 768px){
+    .header__logo{
+        margin-top: -40px;
+    }
+
+    .menu__btn{
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        right: 30px;
+        top: 30px;
+    }
+
+    .menu__btn_line{
+        position: relative;
+        height: 5px;
+        width: 100%;
+        background-color: $Orange;
+
+        &::after,
+        &::before{
+            content: '';
+            position: absolute;
+            height: 5px;
+            width: 100%;
+            background-color: $Orange;
+        }
+
+        &::after{
+            bottom: -12px;
+        }
+
+        &::before{
+            bottom: -25px;
+        }
+    }
+
+    .menu__items{
+        margin-top: 40px;
+        visibility: hidden;
+        pointer-events: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        background-color: $white;
+        text-align: center;
+        opacity: 0;
+    }
+
+    .menu__item{
         border-bottom: 1px solid gray;
         margin: 0;
         padding: 10px;
     }
-}
-
-.menu__item:first-child,
-.menu__item:hover{
-    border-top: 3px solid $Orange;
-    transition: all 0.1s ease-in;
-}
-
-.menu__item_link{
-    text-decoration: none;
-    color: $MineShaft;
 }
