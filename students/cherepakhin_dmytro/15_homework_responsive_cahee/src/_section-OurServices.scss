@@ -1,0 +1,77 @@
+.our-services{
+    @include bgCover("../img/tomato.png");
+    font-weight: 700;
+    padding-bottom: 118px;
+}
+
+.our-services__list{
+    padding: 165px 85px 0 15px;
+}
+
+.our-services__item{
+    background-color: $white;
+    color: $MineShaft;
+    font-size: 20px;
+    @include box-shadow;
+    margin-bottom: 20px;
+}
+
+.our-services__item:hover{
+    @include box-shadow-hover;
+}
+
+.our-services__item_link{
+    align-items: center;
+    text-decoration: none;
+    color: $MineShaft;
+    height: 100px;
+    margin: 0;
+}
+
+.our-services__item_name,
+.our-services__item_icon{
+    text-align: center;
+}
+
+.our-services__item_icon{
+    border-left: 1px solid #9d9d9d;
+    height: 100%;
+    position: relative;
+}
+
+.our-services__name{
+    padding: 300px 0 0 45px;
+    font-size: 60px;
+    color: $white;
+}
+
+.our-services__item_img{
+    @include absoluteCentering;
+}
+
+@media  (max-width: 1200px){
+    .services__row{
+        flex-direction: column-reverse;
+    }
+    .our-services__list{
+        margin: 0 auto;
+        padding: 0;
+    }
+    .our-services__name{
+        margin: 0 auto;
+        padding: 10px 0;
+        text-align: center;
+    }
+}
+
+@media  (max-width: 992px){
+    .our-services__list{
+        margin: 0 auto;
+        padding: 0;
+    }
+    .our-services__name{
+        margin: 0 auto;
+        padding: 10px 0;
+        text-align: center;
+    }
+}
