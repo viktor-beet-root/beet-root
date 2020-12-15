@@ -1,21 +1,21 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     font-family: 'PT Sans', Arial, Helvetica, sans-serif;
     font-size: 14px;
     text-align: center;
 }
 
-.wrapper{
+.wrapper {
     padding: 15px;
 }
 
-.text1{
+.text1 {
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-    text-transform:uppercase;
+    text-transform: uppercase;
     font-weight: 700;
     font-size: 12px;
     line-height: 30px;
@@ -24,9 +24,9 @@ body{
     margin-bottom: 18px;
 }
 
-.text1+h1{
+.text1+h1 {
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-    text-transform:uppercase;
+    text-transform: uppercase;
     font-size: 48px;
     letter-spacing: 4.8px;
     line-height: 48px;
@@ -34,8 +34,8 @@ body{
     margin-bottom: 30px;
 }
 
-.wrapper h1~p{
-    text-transform:uppercase;
+.wrapper h1~p {
+    text-transform: uppercase;
     font-size: 18px;
     font-weight: 600;
     line-height: 30px;
@@ -44,13 +44,13 @@ body{
     margin-bottom: 99px;
 }
 
-.box-wrapper{
+.box-wrapper {
     font-size: 0;
     max-width: 940px;
     margin: 0 auto;
 }
 
-.box-wrapper li{
+.box-wrapper li {
     height: 420px;
     max-width: 25%;
     box-sizing: border-box;
@@ -62,35 +62,35 @@ body{
     vertical-align: middle;
 }
 
-.box-wrapper li:not(:first-child){
+.box-wrapper li:not(:first-child) {
     border-left: none;
 }
 
-.box-wrapper svg{
+.box-wrapper svg {
     width: 64px;
     height: 66px;
     margin-bottom: 45px;
     fill: #1b1b1b;
 }
 
-.box-wrapper .h3{
-    text-transform:uppercase;
-    font-family: Montserrat;
+.box-wrapper .h3 {
+    text-transform: uppercase;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-size: 21px;
     font-weight: 600;
     margin-bottom: 23px;
     color: #1b1b1b;
 }
 
-.box-wrapper p{
+.box-wrapper p {
     color: #777777;
     line-height: 22px;
     font-weight: 400;
 }
 
-.web{
-    text-transform:uppercase;
-    font-family: Montserrat, Arial, Helvetica, sans-serif;
+.web {
+    text-transform: uppercase;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-size: 21px;
     font-weight: 600;
     margin: -13px;
@@ -98,7 +98,7 @@ body{
     color: #1b1b1b;
 }
 
-.box-wrapper li:hover{
+.box-wrapper li:hover {
     background-color: #0ec8cb;
 }
 
