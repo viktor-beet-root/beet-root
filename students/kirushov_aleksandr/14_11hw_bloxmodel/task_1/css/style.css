@@ -1,33 +1,32 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     font-family: 'PT Sans', Arial, Helvetica, sans-serif;
     font-size: 14px;
     text-align: center;
 }
 
-.wrapper{
-    padding: 133px 170px 100px;
+.wrapper {
+    padding: 15px;
 }
 
-.text1{
+.text1 {
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-    text-transform:uppercase;
+    text-transform: uppercase;
     font-weight: 700;
     font-size: 12px;
     line-height: 30px;
     letter-spacing: 4.8px;
     color: #898f99;
-    margin-left: 24px;
     margin-bottom: 18px;
 }
 
-h1{
+.text1+h1 {
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-    text-transform:uppercase;
+    text-transform: uppercase;
     font-size: 48px;
     letter-spacing: 4.8px;
     line-height: 48px;
@@ -35,8 +34,8 @@ h1{
     margin-bottom: 30px;
 }
 
-h1~p{
-    text-transform:uppercase;
+.wrapper h1~p {
+    text-transform: uppercase;
     font-size: 18px;
     font-weight: 600;
     line-height: 30px;
@@ -45,14 +44,13 @@ h1~p{
     margin-bottom: 99px;
 }
 
-.box-wrapper{
+.box-wrapper {
     font-size: 0;
     max-width: 940px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
 
-li{
+.box-wrapper li {
     height: 420px;
     max-width: 25%;
     box-sizing: border-box;
@@ -64,35 +62,35 @@ li{
     vertical-align: middle;
 }
 
-li:not(:first-child){
+.box-wrapper li:not(:first-child) {
     border-left: none;
 }
 
-svg{
+.box-wrapper svg {
     width: 64px;
     height: 66px;
     margin-bottom: 45px;
     fill: #1b1b1b;
 }
 
-.box-wrapper .h3{
-    text-transform:uppercase;
-    font-family: Montserrat;
+.box-wrapper .h3 {
+    text-transform: uppercase;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-size: 21px;
     font-weight: 600;
     margin-bottom: 23px;
     color: #1b1b1b;
 }
 
-.box-wrapper p{
+.box-wrapper p {
     color: #777777;
     line-height: 22px;
     font-weight: 400;
 }
 
-.web{
-    text-transform:uppercase;
-    font-family: Montserrat;
+.web {
+    text-transform: uppercase;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-size: 21px;
     font-weight: 600;
     margin: -13px;
@@ -100,18 +98,13 @@ svg{
     color: #1b1b1b;
 }
 
-li:hover{
+.box-wrapper li:hover {
     background-color: #0ec8cb;
 }
 
-.box-wrapper li:hover svg{
+.box-wrapper li:hover p,
+.box-wrapper li:hover h3,
+.box-wrapper li:hover svg {
+    color: white;
     fill: white;
-}
-
-li:hover p{
-    color: white;
-}
-
-.box-wrapper li:hover h3{
-    color: white;
 }
