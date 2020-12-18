@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1
+        let firstName = prompt('Enter your First Name: ', '');
+        console.log('Hello ' + firstName + '!');
+        // 2
+        const currentYear = 2020;
+        let yearOfBirth = prompt('Enter your year of birth: ', '');
+        let age = currentYear - yearOfBirth;
+        console.log('You are ' + age +' years.');
+        // 3
+        let side = +prompt('Enter lenth of side of a square: ', '');
+        console.log('Perimeter of the square is: ' + (side * 4) +';');
+        // 4
+        let radius = +prompt('Enter radius of circle: ', '');
+        console.log('Square of the circle is: ' + (radius**2*Math.PI).toFixed(2) + ';');
+        // 5
+        let distance = +prompt('Enter distance between the cities (km): ', '');
+        let time = +prompt('Enter wishful time of jorney, (h): ', '');
+        console.log('The necessary speed is: ' + ((Math.round((distance/time)*100))/100) + ' km/h;');
+    </script>
+    <script src="./script.js"></script>
+</body>
+</html>
