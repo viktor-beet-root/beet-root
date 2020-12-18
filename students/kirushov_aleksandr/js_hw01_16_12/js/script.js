@@ -15,8 +15,8 @@ console.log("Периметр квадрата равен " + p);
 
 console.log("Задание 4");
 const circle = prompt("Введите радиус окружности", "");
-const sCircle = 3.14 * (circle ** 2);
-console.log("Площадь круга равна " + sCircle);
+const sCircle = Math.PI * (circle ** 2);
+console.log("Площадь круга равна " + parseFloat(sCircle.toFixed(2)));
 
 console.log("Задание 5");
 const distance = prompt("Укажите расстояние между городами А и Б, км", "");
@@ -48,7 +48,10 @@ console.log("Вы сможете купить " + quantity2 + " шоколадо
 
 console.log("Задание 9");
 const numberBase = prompt("Укажите трехзначное число", "");
-console.log("Ваше число задом наперед " + numberBase[2] + numberBase[1] + numberBase[0]);
+const num1 = numberBase % 10;
+const num2 = ~~((numberBase % 100) / 10);
+const num3 = ~~(numberBase / 100);
+console.log("Ваше число задом наперед " + ((num1 * 100) + (num2 * 10) + num3));
 
 console.log("Задание 10");
 const deposit = prompt("Укажите сумму вклада, грн", "");
