@@ -8,23 +8,26 @@
 <body>
     <script>
         // 1
-        let firstName = prompt('Enter your First Name: ', '');
+        const firstName = prompt('Enter your First Name: ', '');
         console.log('Hello ' + firstName + '!');
         // 2
         const currentYear = 2020;
-        let yearOfBirth = prompt('Enter your year of birth: ', '');
+        const yearOfBirth = prompt('Enter your year of birth: ', '');
         let age = currentYear - yearOfBirth;
         console.log('You are ' + age +' years.');
         // 3
-        let side = +prompt('Enter lenth of side of a square: ', '');
-        console.log('Perimeter of the square is: ' + (side * 4) +';');
+        const side = +prompt('Enter lenth of side of a square: ', '');
+        let lenthOfPerimeter = side * 4;
+        console.log('Perimeter of the square is: ' + lenthOfPerimeter +';');
         // 4
-        let radius = +prompt('Enter radius of circle: ', '');
-        console.log('Square of the circle is: ' + (radius**2*Math.PI).toFixed(2) + ';');
+        const radius = +prompt('Enter radius of circle: ', '');
+        let squareOfCircle = (radius**2*Math.PI).toFixed(2);
+        console.log('Square of the circle is: ' + squareOfCircle + ';');
         // 5
-        let distance = +prompt('Enter distance between the cities (km): ', '');
-        let time = +prompt('Enter wishful time of jorney, (h): ', '');
-        console.log('The necessary speed is: ' + ((Math.round((distance/time)*100))/100) + ' km/h;');
+        const distance = +prompt('Enter distance between the cities (km): ', '');
+        const time = +prompt('Enter wishful time of jorney, (h): ', '');
+        let speed = (Math.round((distance/time)*100))/100;
+        console.log('The necessary speed is: ' + speed + ' km/h;');
     </script>
     <script src="./script.js"></script>
 </body>
