@@ -1,0 +1,26 @@
+Name: Dmytro Cherepakhin
+Adress: Kharkiv, Ukraine
+Phone: +38(050)999-99-99
+email: dmytro@ukr.net
+Date of birth: 15 jan 1900
+
+Education:
+1991-1996 Kharkiv Military University
+2008-2011 Kharkiv National University of Economics
+2019-present Kharkiv National University of Radio Electronics (Computer science)
+2020 Programming in Java courses at the CyberBionic Systematics
+oct. 2020-present Front-End development courses at the Beetroot Academy
+
+Languiges:
+Ukranian, Rusian, English, Spanish
+
+Technical Skills:
+Java, Python, Git
+
+Work Experience:
+2013-2020 - Director of "TPM" company (Industrial production) 
+
+Hobbies: 
+sport, foreign languages, literature
+
+Car license - "B"

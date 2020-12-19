@@ -1,0 +1,56 @@
+$defaultFont: 'Raleway';
+
+$defaultFontLightPath: '../fonts/raleway-v18-latin-300';
+$defaultFontBoldPath: '../fonts/raleway-v18-latin-700';
+$defaultFontHeavyPath: '../fonts/raleway-v18-latin-900';
+
+$fullbak: Arial,
+Helvetica,
+sans-serif;
+
+$defaultFonts: $defaultFont,
+$fullbak;
+
+$defaultFontSize: 17px;
+$defaultLineHeight: 27px / $defaultFontSize;
+$defaultFontWeight: 300;
+
+$containerWidth: 1200px;
+$defaultGap: 15px;
+
+/* colors */
+$white: #fff;
+$black: black;
+$outrageous-orange: #ff6033;
+$whisper: #f9f8fb;
+$bondi-blue:#00afaf;
+$malibu:#70bfff;
+$yellow: #ffe92f;
+$cornflower-blue: #5585a2;
+$atlantis: #96b92c;
+$heliotrope: #b07cf7;
+$red-orange: #f72b3b;
+$grey-50: rgba(0, 0, 0, 0.5);
+$date-color: rgba(38, 38, 38, 1);
+$input-color: rgba(0, 196, 196, 1);
+$input-border-color:#355b82;
+$footer-color: #262626;
+$text-red: #ff2b58;
+
+
+$defaultShadow: 0px 2px 5px 0px $grey-50;
+
+$orangeColor: $outrageous-orange;
+$buttonColor: $white;
+$textColor: $black;
+$secondaryTextColor: $white;
+$firstBlockBg: $whisper;
+
+$beack-points: ("xl": 1200px,
+    "lg": 992px,
+    "md": 768px,
+    "sm": 576px);
+
+$header-height: 147px;
+
+$image-dir: "../images/";

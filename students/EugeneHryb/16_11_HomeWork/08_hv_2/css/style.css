@@ -1,0 +1,115 @@
+@font-face{
+    font-family: 'HansKendrick';
+    src: url(../font/HansKendrick-Regular.woff2) format("woff2"),
+    url(../font/HansKendrick-Regular.woff) format("woff");
+    font-style: normal;
+    font-weight: normal;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'HansKendrick', Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    background-color: #e2e7ec;
+    text-transform: uppercase;
+}
+.wrapper_title,
+.wrapper_list{
+    padding: 10px 10px 9px 10px;
+    position: relative;
+}
+.list_title{
+    padding-top: 71px;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+.wrapper_title:first-child .wrapper_img::after{
+    content: "";
+	display: block;
+	width: calc(100% - 20px);
+	height: calc(100% - 20px);    
+	position: absolute;
+	top: 10px;    
+	left: 10px;
+    background-image: linear-gradient( 0deg,black 30%,transparent 100% );
+    opacity: 0.75;
+}
+.topic{
+    padding-top: 20px;
+    padding-right: 20px;
+}
+.wrapper_title:first-child .topic{
+    padding: 0;
+    position: absolute;
+    top: 411px;
+    color: white;
+    padding-left: 43px;
+    padding-right: 40px;
+}
+.wrapper_title:first-child .topic h2{
+    font-size: 30px;
+    letter-spacing: 1px;
+    line-height: 38px;
+    padding-left: 0;
+    padding-bottom: 14px;
+}
+.wrapper_title:first-child .topic p {
+    opacity: 0.6;
+    font-size: 13px;
+    padding-left: 0;
+}
+.title{
+    width: 360px;
+    height: 540px;
+    background-color: white;
+    background-image: url(../img/autor_icon.png);
+    background-repeat: no-repeat;
+    background-position: 28px 462px;
+
+}
+.title>img {
+    margin-bottom: 19px;
+}
+.title h2{
+    font-size: 22px;
+    letter-spacing: 1px;
+    padding-top: 14px;
+    line-height: 30px;
+}
+.title p{
+    font-size: 13px;
+    opacity: 0.6;
+}
+.title h2, p {
+    padding-left: 27px;
+}
+.wrapper_title:first-child .title {
+    width: auto;
+}
+.wrapper_title:first-child .title .wrapper_img{
+    background-color: white;
+    height: 540px;
+}
+.wrapper_title:first-child .title>div>img{
+    width: 100%;
+    height: 100%;
+}
+.preloader{
+    text-align: center;
+    font-size: 13px;
+    color: #99a5b0;
+    margin: 60px auto 0;
+    
+}
+.preloader>*{
+    display: inline-block;
+    vertical-align: middle;
+    letter-spacing: 1px;
+}
+.preloader img{
+    padding: 10px;
+}

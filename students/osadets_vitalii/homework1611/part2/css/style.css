@@ -1,0 +1,105 @@
+@font-face{
+    font-family: "Hans Kendrick";
+    src: url("../fonts/hans.woff2") format("woff2"),
+    url("../fonts/hans.woff") format("woff");
+    font-style: normal;
+    font-weight: normal;
+}
+
+*{
+   padding: 0;
+   margin: 0;
+}
+
+body{
+   font-family: "Hans Kendrick", Helvetica, sans-serif;
+   font-size: 22px;
+   background-color: #e2e7ec;
+   text-transform: uppercase;  
+
+}
+.wrapper {
+   margin: 0 auto;
+   position: relative;
+   max-width: 1150px;
+   padding: 91px, 240px, 409px, 240px;
+   display: flex;
+   flex-wrap: wrap;
+   border: 1px solid transparent;   
+}
+
+  .wrapper div:first-child article>div:first-child::before{
+    content: '';
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+    position: absolute;
+    display: block;
+    width: 44%;
+    height: 54.8%;
+  }
+
+
+.items{
+   background-color: white;
+   min-height: 540px;
+   margin: 10px;
+   width: 360px;
+   text-align: center;
+   background-image: url("../images/guy.png");
+   background-repeat: no-repeat;
+   background-position: 28px 460px 
+}
+
+.items p {
+   color: #818181;
+   font-size: 13px; 
+   font-weight: 500;
+   line-height: 30px;
+   letter-spacing: 0.33px;
+   margin-bottom: 12px;
+   text-align: left;
+   margin-left: 28px;
+   margin-top: 18px;
+}
+
+.items h2{
+   font-family: "Hans Kendrick";
+   color: #1d1d1d;
+   font-size: 22px;
+   font-weight: 400;
+   line-height: 30px;
+   text-align: left;
+   letter-spacing: 0.55px;
+   margin-left: 27px;  
+}
+
+.items:first-child{
+   max-height: 540px;
+   width: 740px;
+}
+
+.text {
+   position: absolute;
+   top: 385px;
+   padding-left: 10px;    
+}
+
+.text p{
+   color: #ffffff;
+   font-size: 13px;
+   padding-bottom: 14px;
+}
+
+.text h2 {
+   color: #ffffff;
+   font-size: 23px;
+   letter-spacing: 1px;
+   line-height: 38px;
+}
+
+.loader {
+   text-align: center;
+   font-size: 13px;
+   color: #99a5b0;
+   margin: 0 auto;
+   vertical-align: middle;  
+}

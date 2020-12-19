@@ -1,0 +1,29 @@
+@import "./fresh-life";
+@import "./scroll";
+@import "./about-us";
+@import "./our-services";
+@import "./gallery";
+@import "./subscribe";
+@import "./blog";
+@import "./contact";
+
+
+body {
+    min-width: 320px;
+}
+
+.main {
+    &__fresh-life {
+        margin-top: -$header-height;
+        padding-top: $header-height;
+        height: 100vh;
+        max-height: 1000px;
+        padding-bottom: 149px;
+        background-color: $firstBlockBg;
+        background-image: url(#{$image-dir}bg-1.jpg);
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: 1500px auto;
+        box-sizing: border-box;
+    }
+}

@@ -1,0 +1,121 @@
+@font-face{
+    font-family: 'HansKendrick'; 
+    src: url('../fonts/NeueHansKendrick-Regular.woff2') format("woff2"),
+    url('../fonts/NeueHansKendrick-Regular.woff') format("woff");
+     font-weight: normal;
+     font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #e2e7ec;
+    font-family: 'HansKendrick', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #1d1d1d;
+}
+
+.wrapper{
+    margin: 90px auto 310px;
+    padding: 0 10px;
+    width: 100%;
+    max-width: 1120px;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0 -10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.blog-item{
+    display: block;
+    width: 33.33%;
+    max-width: 33.33%;
+    height: 100%;
+}
+
+.blog-item-main{
+    width: 66.66%;
+    max-width: 66.66%;
+}
+
+img{
+    display: block;
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.fantastic{
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%), url(../images/01.png);
+    background-size: 100%;
+}
+
+.fantastic>p{
+    color: white;
+    margin-top: 404px;
+    margin-left: 46px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.33px;
+    opacity: 0.5;
+}
+.fantastic>h2{
+    color: white;
+    margin: 10px 43px 46px;
+    padding-right: 215px;
+}
+
+div>p{
+    color: #818181;
+    margin-top: 28px;
+    margin-left: 28px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.33px;
+}
+
+h2{
+    color: #1d1d1d;
+    margin-top: 20px;
+    margin-left: 28px;
+    margin-right: 26px;
+    font-size: 22px;
+    font-weight: 900;
+    letter-spacing: 0.55px
+}
+
+.heading-4{
+    margin-top: 62px;
+}
+
+article{
+    height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    justify-content: space-between;
+}
+
+.author{
+    margin-top: 70px;
+    margin-left: 28px;
+    margin-bottom: 15px;
+}
+
+.load{
+    margin-top: 87px;
+    text-align: center;
+    letter-spacing: 0.33px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #99a5b0;
+}

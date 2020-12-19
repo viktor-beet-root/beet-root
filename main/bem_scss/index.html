@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEM</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="page">
+    <header class="header">
+        <div class="container container_center header__content">
+            <div class="logo header__logo">
+                <a href="#" class="logo__link">
+                    <img src="./image/logo.png" alt="Nike" class="logo__img">
+                </a>
+            </div>
+            <nav class="menu header__menu">
+                <input class="hidden" id="menu" type="checkbox" name="menu">
+                <label for="menu" class="mobile-menu-btn menu__mobile-menu-btn">
+                    <span class="mobile-menu-btn__line">Menu</span>
+                </label>
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Lifestyle</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link menu__link_active">Running</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Football</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Skateboarding</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container container_center">
+            <div class="product-crad">
+                <div class="product-crad__slider">
+                    <div class="product-crad__slider-list">
+                        <div class="product-crad__slider-item">
+                            <img class="product-crad__slider-img" src="image/01.png" alt="The running has just begun">
+                        </div>
+                    </div>
+                    <ul class="product-crad__slider-dost-list">
+                        <li class="product-crad__slider-dost-item">
+                            <a href="#" class="product-crad__slider-dost-link">
+                                <img class="product-crad__slider-dost-img" src="image/p1.jpg" alt="Nike">
+                            </a>
+                        </li>
+                        <li class="product-crad__slider-dost-item">
+                            <a href="#" class="product-crad__slider-dost-link">
+                                <img class="product-crad__slider-dost-img" src="image/p2.jpg" alt="Nike">
+                            </a>
+                        </li>
+                        <li class="product-crad__slider-dost-item">
+                            <a href="#" class="product-crad__slider-dost-link">
+                                <img class="product-crad__slider-dost-img" src="image/p3.jpg" alt="Nike">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <form action="#" class="product-crad__info">
+                    <a href="#" class="close-btn product-crad__close-btn"></a>
+                    <p class="product-crad__promotion product-crad__promotion_bg-orange">New</p>
+                    <h2 class="product-crad__title">
+                        The <span class="product-crad__title_color-blue">running</span> has just begun
+                    </h2>
+                    <div class="product-crad__raiting-wrapper">
+                        <p class="product-crad__model-name">Huarache</p>
+                        <ul class="raiting product-crad__raiting">
+                            <li class="raiting__item raiting__item_active"></li>
+                            <li class="raiting__item raiting__item_active"></li>
+                            <li class="raiting__item raiting__item_active"></li>
+                            <li class="raiting__item raiting__item_active"></li>
+                            <li class="raiting__item"></li>
+                        </ul>
+                    </div>
+                    <p class="price product-crad__price">
+                        <span class="price__currency">$</span> 200
+                    </p>
+                    <div class="size product-crad__size">
+                        <p class="size__title">Size</p>
+                        <ul class="size__list">
+                            <li class="size__item">
+                                <label class="size__label">
+                                    <input class="size__input size__input_hidden" type="radio" value="7" name="size">
+                                    <span class="size__value">7</span>
+                                </label>
+                            </li>
+                            <li class="size__item">
+                                <label class="size__label">
+                                    <input class="size__input size__input_hidden" type="radio" value="8" name="size">
+                                    <span class="size__value">8</span>
+                                </label>
+                            </li>
+                            <li class="size__item">
+                                <label class="size__label">
+                                    <input class="size__input size__input_hidden" type="radio" value="9" name="size">
+                                    <span class="size__value">9</span>
+                                </label>
+                            </li>
+                            <li class="size__item">
+                                <label class="size__label">
+                                    <input class="size__input size__input_hidden" checked type="radio" value="10"
+                                        name="size">
+                                    <span class="size__value">10</span>
+                                </label>
+                            </li>
+                            <li class="size__item">
+                                <label class="size__label">
+                                    <input class="size__input size__input_hidden" type="radio" value="11" name="size">
+                                    <span class="size__value">11</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="button button_pimiry product-crad__button">
+                        <span class="button__text">Add to cart</span>
+                    </button>
+                    <button class="button button_secondary">
+                        <span class="button__text">Wishlist</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

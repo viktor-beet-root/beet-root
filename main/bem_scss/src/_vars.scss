@@ -1,0 +1,38 @@
+$defaultFont: 'Roboto';
+$secondaryFont: 'Roboto Condensed';
+
+$secondaryFontPath: '../fonts/roboto-condensed-v19-latin-regular';
+$defaultFontLithPath: '../fonts/roboto-v20-latin-300';
+$defaultFontRegularPath: '../fonts/roboto-v20-latin-regular';
+
+$follbak: Arial,
+Helvetica,
+sans-serif;
+
+$mainFont: $defaultFont,
+$follbak;
+$secondaryMainFont: $secondaryFont,
+$follbak;
+
+$defaultFontSize: 14px;
+
+/* colors */
+$white: #fff;
+$black: black;
+$yellowSea: #ffa60d;
+$purple:#a200b8;
+$dodgerBlue:#5e4fff;
+$lightGrey: rgb(215, 215, 215);
+
+$buttonColor: $purple;
+$buttonColorSecondary: $white;
+$textColor: $black;
+$menuColor: $white;
+$textColorWhite: $white;
+$menuBorderBottomColor: $white;
+$promotionColor: $yellowSea;
+$secondaryTextColor: $dodgerBlue;
+$productCardBg: $white;
+$closeMenuLineColor: $lightGrey;
+
+$defaultBoxShadow: 0 0 2px 1px rgba(0, 0, 0, .35);

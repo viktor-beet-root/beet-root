@@ -1,0 +1,46 @@
+.team {
+    padding: 89px 0;
+    display: block;
+
+    &__subtitle {
+        text-align: center;
+        text-transform: uppercase;
+        color: $subtitleColor;
+        font-size: 18px;
+    }
+
+    &__title {
+        color: $mainColor;
+        line-height: 1;
+        margin-top: 3px;
+        margin-bottom: 95px;
+        position: relative;
+
+        &::before,
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &::before {
+            width: 450px;
+            height: 1px;
+            background-color: $mainColor;
+            bottom: -47px;
+        }
+
+        &::after {
+            width: 30px;
+            height: 16px;
+            bottom: -47px - 8px;
+            background-color: $white;
+            background-image: url(../images/ico1.svg);
+            background-repeat: no-repeat;
+            background-size: 16px auto;
+            background-position: center;
+        }
+    }
+}

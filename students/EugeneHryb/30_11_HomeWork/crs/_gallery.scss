@@ -1,0 +1,55 @@
+.gallery{
+    &__bg{
+        background-color: $colorBgGallery;
+    }
+
+    &__article{
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+        color: $colorTextBlack;
+        padding: 40px 0;
+    }
+
+    &__title{
+        font-size: 90px;
+        font-weight: 700;
+        margin-bottom: 20px;
+
+        @media (max-width: $SM) {
+            font-size: 50px;
+        }
+    }
+
+    &__img-list {
+        align-items: flex-start;
+        position: relative;
+
+        &::after{
+            content: '';
+            display: block;
+            width: 66.666667%;
+            order: -1;
+            height: 0;
+            background-color: transparent;
+            pointer-events: none;
+        }
+    }
+
+    &__img img{
+        display: block;
+        width: 100%;
+    }
+
+    &__img{
+        &:first-child{
+            margin-bottom: -100%;
+            order: -3;
+        }
+
+        &:nth-child(2){
+            order: -2;
+        }
+    }
+
+}
