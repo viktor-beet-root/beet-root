@@ -1,48 +1,51 @@
-let enterUserName = +prompt("Введите свое имя", "");
-const welcomeUser = "Привет,"+enterUserName+"!";
+//старое поисправлял, сейчас буду пытаться 2 последних задания делать
+const enterUserName = prompt("Введите свое имя", "");
+const welcomeUser = "Привет, " +enterUserName+ "!";
 console.log("Задание 1", welcomeUser);
 
-let enterUserAge = +prompt("Укажите Ваш возраст", "");
-const currentYear = 2020;
+const enterUserAge = +prompt("Укажите Ваш возраст", "");
+let currentYear = 2020;
 const userAge = currentYear - enterUserAge;
 console.log("Задание 2",userAge);
 
-let squareSide = +prompt("Укажите сторону квадрата", "");
-const squarePerimetr = squareSide * 4;
+const squareSide = +prompt("Укажите сторону квадрата", "");
+const squareSidesQuantity = 4;
+const squarePerimetr = squareSide * squareSidesQuantity;
 console.log("Задание 3", squarePerimetr);
 
-let radius = +prompt("Введите радиус окружности", "");
-const piNumber = 3.14;
-const circleSquare = piNumber * radius ** 2;
-console.log("Задание 4", ~~circleSquare);
+const radius = +prompt("Введите радиус окружности", "");
+const degree = 2;
+const circleSquareDrob = Math.PI * radius ** degree;
+const circleSquare = ~~circleSquareDrob;
+console.log("Задание 4", circleSquare);
 
-let cityDistance = +prompt("Введите расстояние между городами (в км)", "");
-let travelTime = +prompt("Введите время, за которое Вы хотите добраться до точки прибытия (в часах)", "");
+const cityDistance = +prompt("Введите расстояние между городами (в км)", "");
+const travelTime = +prompt("Введите время, за которое Вы хотите добраться до точки прибытия (в часах)", "");
 const travelSpeed = cityDistance / travelTime;
 console.log("Задание 5", travelSpeed);
 
-let dollarQuantity = +prompt("Долары США", "");
-let euroQuatity = dollarQuantity * 0.82;
+const dollarQuantity = +prompt("Долары США", "");
+const euroCourse = 0.82;
+const euroQuatityDrob = dollarQuantity * euroCourse;
+const euroQuatity = ~~euroQuatityDrob;
 console.log("Задание 6", euroQuatity);
 
-let flashVolume = +prompt("Введите объем памяти (в Gb)", "");
+const flashVolume = +prompt("Введите объем памяти (в Gb)", "");
 let fileSize = 812;
 const filesQuantity = flashVolume % fileSize ;
 console.log("Задание 7", filesQuantity, "размером в 812 Mb");
 
-let moneyQuantity = +prompt("Введите сумму денег в кошельке", "");
-let enterChocolatePrice = +prompt("Введите сумму 1 шоколадки", "");
-let chocolateQuantity = moneyQuantity / enterChocolatePrice;
+const moneyQuantity = +prompt("Введите сумму денег в кошельке", "");
+const enterChocolatePrice = +prompt("Введите сумму 1 шоколадки", "");
+const chocolateQuantityDrob = moneyQuantity / enterChocolatePrice;
+const chocolateQuantity = ~~chocolateQuantityDrob;
 const residue = moneyQuantity % enterChocolatePrice;
-console.log("Задание 8", "количество шоколадок", ~~chocolateQuantity, "сдача", residue);
+console.log("Задание 8", "количество шоколадок", chocolateQuantity, "сдача", residue);asdasd
 
-//можно ли сделать через Array? будет ли считаться?
-let threeNumber = +prompt("Введите трехзначное число", "");
+/*const threeNumber = +prompt("Введите трехзначное число", "");
 const backNumber1 = threeNumber %  10;
 const backNumber2Fake = threeNumber % 100;
 const backNumber2 = ~~(backNumber2Fake / 10);
 const backNumber3 = ~~(threeNumber / 100);
 threeNumber = [backNumber1, backNumber2, backNumber3];
-console.log("Задание 9", threeNumber);
-//одно еще не сделал, завтра скину последнее
-
+console.log("Задание 9", threeNumber);*/
