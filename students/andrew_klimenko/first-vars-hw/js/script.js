@@ -1,4 +1,3 @@
-//старое поисправлял, сейчас буду пытаться 2 последних задания делать
 const enterUserName = prompt("Введите свое имя", "");
 const welcomeUser = "Привет, " +enterUserName+ "!";
 console.log("Задание 1", welcomeUser);
@@ -33,19 +32,30 @@ console.log("Задание 6", euroQuatity);
 const flashVolume = +prompt("Введите объем памяти (в Gb)", "");
 let fileSize = 812;
 const filesQuantity = flashVolume % fileSize ;
-console.log("Задание 7", filesQuantity, "размером в 812 Mb");
+console.log("Задание 7", filesQuantity, "файлов размером в 812 Mb");
 
 const moneyQuantity = +prompt("Введите сумму денег в кошельке", "");
 const enterChocolatePrice = +prompt("Введите сумму 1 шоколадки", "");
 const chocolateQuantityDrob = moneyQuantity / enterChocolatePrice;
 const chocolateQuantity = ~~chocolateQuantityDrob;
 const residue = moneyQuantity % enterChocolatePrice;
-console.log("Задание 8", "количество шоколадок", chocolateQuantity, "сдача", residue);asdasd
+console.log("Задание 8", "количество шоколадок", chocolateQuantity, "сдача", residue);
 
-/*const threeNumber = +prompt("Введите трехзначное число", "");
-const backNumber1 = threeNumber %  10;
-const backNumber2Fake = threeNumber % 100;
-const backNumber2 = ~~(backNumber2Fake / 10);
-const backNumber3 = ~~(threeNumber / 100);
-threeNumber = [backNumber1, backNumber2, backNumber3];
-console.log("Задание 9", threeNumber);*/
+const threeNumber = +prompt("Введите трехзначное число", "");
+let firstNumber = threeNumber % 10;
+firstNumber = firstNumber * 100;
+let secondTwoNumbers = threeNumber / 10;
+secondTwoNumbers = ~~secondTwoNumbers;
+let secondNumber = secondTwoNumbers % 10;
+secondNumber = secondNumber * 10;
+let thirdNumber = secondTwoNumbers / 10;
+thirdNumber = ~~thirdNumber;
+const fullNumber = firstNumber + secondNumber + thirdNumber;
+console.log("задание 9", fullNumber);
+
+let moneySum = +prompt("Введите сумму денег (в грн)", "");
+const sumPercent = 0.05;
+const quatityOfMonth = 2;
+const sumPercentForTwoMonth = sumPercent / quatityOfMonth;
+moneySum = moneySum * sumPercentForTwoMonth + moneySum;
+console.log("Задание 10", moneySum);
