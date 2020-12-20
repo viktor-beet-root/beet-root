@@ -14,21 +14,20 @@
         console.log('Привет, ' + name);
         console.log('Задание 2');
         const yearsNow = 2020;
-        let yearOfBirth = prompt('Ваш год рождения', '');
-        yearOfBirth = yearsNow - yearOfBirth;
-        console.log(yearOfBirth);
+        const yearOfBirth = prompt('Ваш год рождения', '');
+        const age = yearsNow - yearOfBirth;
+        console.log(age);
         console.log('Задание 3');
-        let sideLength = prompt('Назовите длину стороны квадрата', '');
-        sideLength = sideLength * 4;
-        console.log(sideLength);
+        const sideLength = prompt('Назовите длину стороны квадрата', '');
+        const perimeter = sideLength * 4;
+        console.log(perimeter);
         console.log('Задание 4');
-        const piNumber = 3.14;
-        let circleRadius = prompt('Задайте радиус окружности', '')
-        circleRadius = circleRadius * 2 * piNumber;
+        const circleRadius = prompt('Задайте радиус окружности', '')
+        const perimeterRadius = circleRadius * 2 * Math.PI;
         console.log(circleRadius);
         console.log('Задание 5');
-        let distanceS = prompt('Задайте расстояние между городами в км', '');
-        let time = prompt('За сколько времени хотите добраться', '');
+        const distanceS = prompt('Задайте расстояние между городами в км', '');
+        const time = prompt('За сколько времени хотите добраться', '');
         const speed = distanceS / time;
         console.log(speed, 'км.ч');
     </script>
