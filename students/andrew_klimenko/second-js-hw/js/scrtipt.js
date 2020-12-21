@@ -1,4 +1,3 @@
-//сделал, что успел
 const userAge = +prompt("Введите Ваш возраст", "");
 console.log("Задание 1,", userAge); 
 const child = 12;
@@ -106,24 +105,23 @@ if(numberOne == numberTwo == numberThree == numberFour == numberFive) {
     console.log("Это число не палиндром");
 }
 
-/* const dollarSum = +prompt("Введите сумму в долларах", "");
+const dollarSum = +prompt("Введите сумму в долларах", "");
 console.log("Задание 6,", dollarSum);
 const chooseCurrency = prompt("Выберите валюту, в котороую хотите перевести доллары (EUR, UAH, AZN)", "");
 console.log(chooseCurrency);
 const eurValue = 0.82;
-const eurSum = ~~(dollarSum * EUR);
+const eurSum = ~~(dollarSum * eurValue);
 const uahValue = 27.9;
-const uahSum = ~~(dollarSum * UAH);
+const uahSum = ~~(dollarSum * uahValue);
 const aznValue = 1.7;
-const aznSum = ~~(dollarSum * AZN);
-if(chooseCurrency = "EUR")  { //сдесь проблема, выыдает почему то ошибку пронедействительное присвоение, не понимаю почему
+const aznSum = ~~(dollarSum * aznValue);
+if(chooseCurrency == "EUR")  {
     console.log(eurSum);
-} else if(chooseCurrency = "UAH") {
+} else if(chooseCurrency == "UAH") {
     console.log(uahSum);
-  } else if(chooseCurrency = "AZN") {
+  } else if(chooseCurrency == "AZN") {
     console.log(aznSum);
-    } */
-//пытался сначала через swith делать, не получилос :(
+    }
 
 const purchaseCost = +prompt("Введите стоимость Вашей покупки в грн");
 console.log("Задание 7,", purchaseCost);
@@ -159,26 +157,115 @@ if(squadSideSize == circleSize) {
 } else {
     console.log("Такая окружность не сможет поместится в данный квадрат");
 }
-
-/* const firstQuestion = +prompt("Сколько будет 2 * 2? Варианты ответа: А)3 Б)4 В)5", "");
-const firstAnswer = 4;
-console.log("Задание 9,", firstQuestion);
-const secondQuestion = prompt("Алгебра это наука про природу? Варианты ответа: A)Да Б)Нет В)Это не наука", "");
-const secondAnswer = "Нет";
-console.log(secondQuestion);
-const thirdQuestion = prompt("Какой язык является международным? Варианты ответа: А)", "");
-const thirdAnswer = "Английский";
-console.log(thirdQuestion);
+const costOfOneRightAnswer = 2;
 let userMark = 0;
-if(firstQuestion == firstAnswer) {
-    userMark = userMark + 2;
-    console.log(userMark);
-} else if(secondQuestion = secondAnswer) {
-    userMark = userMark + 2;
-    console.log(userMark);
-} else if(thirdQuestion = thirdAnswer) {
-    userMark = userMark + 2;
-    console.log(userMark);
+const rightAnswer = "Верно!";
+const uncorrectAnswer = "Неверно!";
+const chooseAnswer = "Выберите один из трех вариантон ответа";
+const firstVaiantOfAnswer = "А)";
+const secondVariantOfAnswer = "Б)";
+const thirdVariantOfAnswer = "В)"
+const firstQuestion = prompt("Сколько будет 2 * 2? Варианты ответа: А)3 Б)0 В)4", "");
+const firstQuestionAnswer1 = 3;
+const firstQuestionAnswer2 = 0;
+const firstQuestionRightAnswer = 4;
+console.log("Задание 9");
+if(firstQuestion == thirdVariantOfAnswer) {
+    console.log(thirdVariantOfAnswer, firstQuestionRightAnswer, rightAnswer);
+    userMark = userMark + costOfOneRightAnswer;
+} else if((firstQuestion !== firstVaiantOfAnswer) && (firstQuestion !== secondVariantOfAnswer)) {
+     console.log(chooseAnswer);
+  } else {
+    console.log(uncorrectAnswer);
+    }
+const secondQuestion = prompt("Алгебра это наука про природу? Варианты ответа: А)Нет Б)Да В)Это не наука", "");
+const secondQuestionRightAnswer = "Нет";
+const secondQuestionAnswer2 = "Да";
+const secondQuestionAnswer3 = "Это не наука";
+if(secondQuestion == firstVaiantOfAnswer) {
+    console.log(firstVaiantOfAnswer, secondQuestionRightAnswer, rightAnswer);
+    userMark = userMark + costOfOneRightAnswer;
+} else if((secondQuestion !== secondVariantOfAnswer) && (secondQuestion !== thirdVariantOfAnswer)) {
+    console.log(chooseAnswer);
+  } else {
+    console.log(uncorrectAnswer);
+    }
+
+const thirdQuestion = prompt("Какой язык является международным? Варианты ответа: А)Русский Б)Анлгийский В)Немецкий", "");
+const thirdQuestionAnwer1 = "Русский";
+const thirdQuestionRightAnswer = "Английский";
+const thirdQuestionAnwer3 = "Немецкий";
+if(thirdQuestion == secondVariantOfAnswer) {
+    console.log(secondVariantOfAnswer, thirdQuestionRightAnswer, rightAnswer);
+    userMark = userMark + costOfOneRightAnswer;
+} else if((thirdQuestion !== firstVaiantOfAnswer) && (thirdQuestion !== thirdVariantOfAnswer)) {
+    console.log(chooseAnswer);
+} else {
+    console.log(uncorrectAnswer);
 }
-alert("У вас "+userMark+" баллов") */
-//знаю, что не так делал, переделаю
+if(userMark === 2) {
+    console.log("Вы набрали "+userMark+" балла!");
+    alert("Вы набрали "+userMark+" балла!");
+} else {
+    console.log("Вы набрали "+userMark+" баллов!");
+    alert("Вы набрал "+userMark+" баллов!");
+}
+//пока что 10 сделать не могу, не обращайте внимание, я его криво написал
+/* console.log("Задание 10");
+const dayError = "Введите верную дату дня";
+const monthError = "Введите верный месяц";
+const yearError = "Введите верный год";
+const maxDays = 31;
+const maxMonths = 12;
+const uncorrectDate = "Неправильная дата";
+let daySecondCase = 1;
+let day = +prompt("Введите дату дня", "");
+let month = +prompt("Введите месяц", "");
+let year = +prompt("Введите год", "");
+console.log(day);
+
+if(day === 30) {
+    day = maxDays;
+} else if(day === maxDays) {
+    day = 1;
+}
+if(month === 11) {
+    month = maxMonths;
+} else if(month === maxMonths) {
+    month = 1;
+}
+
+if((day > 1) && (day < 30)) {
+    day = day + 1;
+    console.log( day);
+} else {
+      console.log(dayError);
+  }
+  
+
+console.log(month);
+if ((month >= 0) && (month < 11)) {
+    month = month + 1;
+    console.log(month);
+} else {
+    console.log(monthError);
+  }
+  
+
+console.log(year);
+if(year >= 0) {
+    year = year + 1;
+    console.log(year);
+} else {
+    console.log(yearError);
+}
+
+
+if(month >= maxMonths) {
+    month = 1;
+    year = year + 1;
+}
+if((day < 0) && (month < 0) && (year < 0)) {
+    console.log(uncorrectDate);
+}
+console.log(day, month, year); */
