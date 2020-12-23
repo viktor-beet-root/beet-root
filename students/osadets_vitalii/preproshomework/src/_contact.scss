@@ -1,0 +1,67 @@
+.contact {
+    background-image: url('../images/bg-section5.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    
+    &__wrapper{
+         padding-top: 100px;
+         padding-bottom: 100px;
+         margin-bottom: -50px;
+
+    }
+}
+
+.contact-header{
+    &__title {
+        color: $mainTextColor;
+        font-size: 90px;
+        font-weight: 700;
+        padding-bottom: 40px;
+    }
+    &__text{
+        color: $mainTextColor;
+        text-align: center;
+        font-size: 17px;
+        padding-bottom: 40px;
+    }
+}
+
+.contact-block__input,
+.contact-block__textarea{
+    background-color: $contactInputBg;
+    color: $secondaryTextColor;
+    width: 100%;
+    margin-bottom: 20px;
+    height: 50px;
+    opacity: .7;
+    padding-left: 20px;
+    :hover,
+    :active {
+        border-left: 5px solid $contactInputLeft-Border;
+        opacity: 1;
+    }
+    &::placeholder{
+        color: $secondaryTextColor;
+    }
+}
+
+.contact-block__textarea{
+    height: 250px;
+    resize: none;
+}
+
+.contact-address {
+    &__address{
+        font-size: 17px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    &__text{
+        font-size: 20px;
+        margin-bottom: 20px;
+        &:last-child{
+            margin-bottom: 350px;
+        }
+    }
+}

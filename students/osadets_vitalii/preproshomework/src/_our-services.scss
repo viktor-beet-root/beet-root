@@ -1,0 +1,95 @@
+.our-services{
+     @include bgCover ('../images/bg-section3.jpg');
+     &__wrapper {
+         padding-top: 250px;
+         padding-bottom: 220px;
+     }
+
+     &__item{
+         padding-bottom: 20px;
+         display: flex;
+         flex-direction: column;     
+     }
+
+     &__item:last-child{
+         padding-bottom: 0;
+     }
+
+     &__link {
+         display: block;
+         box-sizing: border-box;
+         width: 400px;
+         height: 100px;
+         background-color: $serviceBgColor;
+         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+         font-size: 20px;
+         font-weight: 700;
+         text-decoration: none;
+         color: $mainTextColor;
+         text-align: center;
+         padding: 40px 130px 0 80px;
+         position: relative;
+
+         
+       
+    &::before {
+        position: absolute;
+        content: "";
+        width: 1px;
+        height: 100px;
+        top: 0;
+        right: 100px;
+        background-color: $serviceLine;
+    }
+
+     
+ }
+ &__item:nth-child(3) > &__link {
+    padding: 30px 100px 0 30px;
+}
+&__item:first-child > &__link::after,
+&__item:nth-child(2) > &__link::after,
+&__item:nth-child(3) > &__link::after,
+&__item:last-child > &__link::after{
+    position: absolute;
+    content: "";
+    top: 30px;
+}
+&__item:first-child > &__link::after{
+    width: 47px;
+    height: 44px;
+    right: 30px;
+    background-image: url("../images/icon1.png");
+}
+&__item:nth-child(2) > &__link::after {
+    width: 55px;
+    height: 49px;
+    right: 26px;
+    background-image: url("../images/icon2.png");
+}
+&__item:nth-child(3) > &__link::after{
+    width: 54px;
+    height: 54px;
+    top: 23px;
+    right: 24px;
+    background-image: url("../images/icon3.png");
+}
+&__item:last-child > &__link::after{
+    width: 55px;
+    height: 55px;
+    top: 23px;
+    right: 24px;
+    background-image: url("../images/icon4.png");
+}
+}
+.our-services-second-block__title {
+    max-width: 650px;
+    position: absolute;
+    top: 40%;
+    left: 65%;
+    display: block;
+    color: $secondaryTextColor;
+    font-size: 90px;
+    font-weight: 700;
+    fill: #222233;
+}

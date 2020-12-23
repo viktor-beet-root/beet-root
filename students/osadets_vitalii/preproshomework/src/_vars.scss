@@ -1,0 +1,47 @@
+$defaultFont: "Raleway";
+$secondaryFont: "Pacifico";
+
+$fallback: Arial, Helvetica, sans-serif;
+
+$mainFont: $defaultFont, $fallback;
+
+$defaultFontSize: 14px;
+
+$white: #fff;
+$black: black;
+$robinBlue: #00c4c4;
+$silverChalice: #9d9d9d;
+$outrageousOrange: #ff6033;
+$mineShaft: #262626;
+$horizon: #5585a2;
+$atlantis: #96b92c;
+$redOrange: #f72b3b;
+$silver: #b9b9b9;
+$radicalRed: #ff2b58;
+$brightSun: #FFE92F;
+$heliotrope: #B07CF7;
+$maroonOak: #5E0B12;
+$chambray: #355B82;
+$bermuda: #75D8D7;
+$lightblue: #add8e6;
+$lime: #00ff00;
+
+$mainTextColor: $mineShaft;
+$secondaryTextColor: $white; 
+$freshLifeOverlineButton: $outrageousOrange;
+$galleryButton: $horizon;
+$galleryHoverButton: $lightblue;
+$galleryTextButton: $brightSun;
+$subscribeButton: $atlantis;
+$subscribeHoverButton: $lime;
+$blogButton: $redOrange;
+$blogHoverButton: $maroonOak;
+$AboutUsBg: $robinBlue;
+$contactFooter: $silver;
+$contactFooterAuthor: $radicalRed;
+$serviceBgColor: $white;
+$serviceLine: $silverChalice;
+$galleryBgColor: $brightSun;
+$blogBgColor: $heliotrope;
+$contactInputLeft-Border: $chambray;
+$contactInputBg: $bermuda;
