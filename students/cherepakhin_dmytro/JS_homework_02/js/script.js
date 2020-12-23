@@ -1,14 +1,16 @@
 // 1
 const userAge=+prompt('How old are you?','');
 let userStatus;
-if ((userAge>=0) && (userAge<12)){
-    userStatus='child';
+if ((userAge>=0) && (userAge<=2)){
+    userStatus='baby';
 } else if ((userAge>=12) && (userAge<18)){
     userStatus='teenager';
 } else if ((userAge>=18) && (userAge<60)){
     userStatus='adult';
-} else {
+} else if(userAge>=60){
     userStatus='retiree';
+} else {
+    userStatus='child';
 }
 console.log('You are '+userStatus);
 
@@ -72,23 +74,11 @@ if (isNaN(numberForCheck)){
 const yearForCheck=+prompt('Enter an year:','');
 if ((isNaN(yearForCheck)) || ((yearForCheck-(~~yearForCheck))>0)){
     console.log('Wrong year. Try again.')
-} else if (Math.abs(yearForCheck)<100){
-    if (yearForCheck==0 || (yearForCheck/4==Math.floor(yearForCheck/4))){
-        console.log('The leap-year')
+} else {
+    if((yearForCheck%4===0) && (yearForCheck%100!==0 || yearForCheck%400===0)){
+        console.log('The leap-year');
     } else {
-        console.log('Non a leap-year')
-    }
-} else if (Math.abs(yearForCheck)>=100 && Math.abs(yearForCheck)<400){
-    if ((yearForCheck/4==Math.floor(yearForCheck/4)) && (yearForCheck/100!=Math.floor(yearForCheck/100)) ){
-        console.log('The leap-year')
-    } else {
-        console.log('Non a leap-year')
-    }
-} else if (Math.abs(yearForCheck)>=400){
-    if (((yearForCheck/4==Math.floor(yearForCheck/4)) && (yearForCheck/100!=Math.floor(yearForCheck/100))) || (yearForCheck/400==Math.floor(yearForCheck/400))){
-        console.log('The leap-year')
-    } else {
-        console.log('Non a leap-year')
+        console.log('Non a leap-year');
     }
 }
 
@@ -174,47 +164,29 @@ if (lengthOfCircle<=0 || isNaN(lengthOfCircle) || perimeterOfSquare<=0 || isNaN(
 const answer_1=+prompt('Boolean is: 1-number, 2-type of data, 3-animal');
 const answer_2=+prompt('JavaScript is: 1-coffe, 2-programming language, 3-plant');
 const answer_3=+prompt('BeetRoot is: 1-car, 2-restaurant, 3-academy');
-let result_1=0;
-let result_2=0;
-let result_3=0;
+let result_1;
+let result_2;
+let result_3;
 switch (answer_1){
-    case 1:
-        result_1=0;
-        break;
     case 2:
         result_1=2;
         break;
-    case 3:
-        result_1=0;
-        break;
     default:
-        console.log('Wrong number of answer');
+        result_1=0;;
 }
 switch (answer_2){
-    case 1:
-        result_2=0;
-        break;
     case 2:
         result_2=2;
         break;
-    case 3:
-        result_2=0;
-        break;
     default:
-        console.log('Wrong number of answer');
+        result_2=0;;
 }
 switch (answer_3){
-    case 1:
-        result_3=0;
-        break;
-    case 2:
-        result_3=0;
-        break;
     case 3:
         result_3=2;
         break;
     default:
-        console.log('Wrong number of answer');
+        result_3=0;
 }
 const totalResult=result_1+result_2+result_3;
 console.log('You get '+totalResult+' points');
@@ -226,69 +198,37 @@ const yearOfDate=+prompt('Enter year:');
 let typeOfMonth;
 switch (monthOfDate){
     case 1:
+    case 3:
+    case 5:
+    case 7:
+    case 8:
+    case 10:
+    case 12:
         typeOfMonth='long';
         break;
     case 2:
         typeOfMonth='febr';
         break;
-    case 3:
-        typeOfMonth='long';
-        break;
     case 4:
-        typeOfMonth='short';
-        break;
-    case 5:
-        typeOfMonth='long';
-        break;
     case 6:
-        typeOfMonth='short';
-        break;
-    case 7:
-        typeOfMonth='long';
-        break;
-    case 8:
-        typeOfMonth='long';
-        break;
     case 9:
-        typeOfMonth='short';
-        break;
-    case 10:
-        typeOfMonth='long';
-        break;
     case 11:
         typeOfMonth='short';
-        break;
-    case 12:
-        typeOfMonth='long';
         break;
     default:
         console.log('Incorrect number of month.');
 }
 let typeOfYear;
-if (Math.abs(yearOfDate)<100){
-    if (yearOfDate==0 || (yearOfDate/4==Math.floor(yearOfDate/4))){
-        typeOfYear='leap-year';
-    } else {
-        typeOfYear='not-leap-year';
-    }
-} else if (Math.abs(yearOfDate)>=100 && Math.abs(yearOfDate)<400){
-    if ((yearOfDate/4==Math.floor(yearOfDate/4)) && (yearOfDate/100!=Math.floor(yearOfDate/100)) ){
-        typeOfYear='leap-year';
-    } else {
-        typeOfYear='not-leap-year';
-    }
-} else if (Math.abs(yearOfDate)>=400){
-    if (((yearOfDate/4==Math.floor(yearOfDate/4)) && (yearOfDate/100!=Math.floor(yearOfDate/100))) || (yearOfDate/400==Math.floor(yearOfDate/400))){
-        typeOfYear='leap-year';
-    } else {
-        typeOfYear='not-leap-year';
-    }
+if((yearOfDate%4===0) && (yearOfDate%100!==0 || yearOfDate%400===0)){
+    typeOfYear='leap-year';
+} else {
+    typeOfYear='not-leap-year';
 }
 let nextDay;
-if ((dayOfDate<31 && typeOfMonth=='long') || (dayOfDate<30 && typeOfMonth=='short') || (dayOfDate<28 && typeOfMonth=='febr' && typeOfYear=='not-leap-year') || (dayOfDate<29 && typeOfMonth=='febr' && typeOfYear=='leap-year')){
+if ((dayOfDate<28) || (dayOfDate<31 && typeOfMonth=='long') || (dayOfDate<30 && typeOfMonth=='short') || (dayOfDate<29 && typeOfMonth=='febr' && typeOfYear=='leap-year')){
     nextDay=dayOfDate+1;
-} else if((dayOfDate>31 && typeOfMonth=='long') || (dayOfDate>30 && typeOfMonth=='short') || (dayOfDate>28 && typeOfMonth=='febr' && typeOfYear=='not-leap-year') || (dayOfDate>29 && typeOfMonth=='febr' && typeOfYear=='leap-year')){
-    console.log('Wrong number of day.')
+} else if((dayOfDate>31) || (dayOfDate>30 && typeOfMonth=='short') || (dayOfDate>28 && typeOfMonth=='febr' && typeOfYear=='not-leap-year') || (dayOfDate>29 && typeOfMonth=='febr' && typeOfYear=='leap-year')){
+    console.log('Wrong number of day.');//валидация даты по кол-ву дней в месяце.
 }else{
     nextDay=1;
 }
