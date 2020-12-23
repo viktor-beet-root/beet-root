@@ -18,16 +18,16 @@ $atlantis: #96b92c;
 $redOrange: #f72b3b;
 $silver: #b9b9b9;
 $radicalRed: #ff2b58;
-$brightSun: #FFE92F;
-$heliotrope: #B07CF7;
-$maroonOak: #5E0B12;
-$chambray: #355B82;
-$bermuda: #75D8D7;
+$brightSun: #ffe92f;
+$heliotrope: #b07cf7;
+$maroonOak: #5e0b12;
+$chambray: #355b82;
+$bermuda: #75d8d7;
 $lightblue: #add8e6;
 $lime: #00ff00;
 
 $mainTextColor: $mineShaft;
-$secondaryTextColor: $white; 
+$secondaryTextColor: $white;
 $freshLifeOverlineButton: $outrageousOrange;
 $galleryButton: $horizon;
 $galleryHoverButton: $lightblue;
@@ -45,3 +45,16 @@ $galleryBgColor: $brightSun;
 $blogBgColor: $heliotrope;
 $contactInputLeft-Border: $chambray;
 $contactInputBg: $bermuda;
+
+//размер XL
+$XL: 1200px;
+$XL_width: 960px;
+//размер LG
+$LG: 992px;
+$LG_width: 720px;
+//размер MD
+$MD: 768px;
+$MD_width: 540px;
+//размер SM
+$SM: 576px;
+$SM_width: 100%;

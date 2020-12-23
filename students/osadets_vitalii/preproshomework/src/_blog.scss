@@ -2,7 +2,7 @@
     background-color: $blogBgColor;
     background-size: cover;
 
-    @media (max-width: 1200px){
+    @media (max-width: $XL){
         .blog__main_row{
             flex-direction: column;
             align-items: center;
@@ -19,20 +19,20 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    &__title {        
-        color: $secondaryTextColor;
-        font-size: 90px;
-        font-weight: 700;
-        padding-bottom: 30px;
-        margin: 0 auto;
+        &__title {        
+            color: $secondaryTextColor;
+            font-size: 90px;
+            font-weight: 700;
+            padding-bottom: 30px;
+            margin: 0 auto;
+        }
+        &__text{    
+            color: $secondaryTextColor;
+            font-size: 17px;
+            font-weight: 300;
+            margin: 0 auto;
+        }
     }
-    &__text{    
-        color: $secondaryTextColor;
-        font-size: 17px;
-        font-weight: 300;
-        margin: 0 auto;
-    }
-}
 
 .blog-menu {
     display: flex;
@@ -41,17 +41,18 @@
     padding-bottom: 100px;   
     &__items{
         position: relative;
-        &::after{
-            position: absolute;
-            box-sizing: content-box;
-            content: "";
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+            &::after{
+                position: absolute;
+                box-sizing: content-box;
+                content: "";
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
         }
     }
+
     &__img {  
         display: block;
         max-width: 370px;
@@ -111,7 +112,7 @@
     background-color: $blogButton; 
     border: 1px solid $blogButton; 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);  
-    &:hover {
-        background-color: $blogHoverButton; 
+        &:hover {
+            background-color: $blogHoverButton; 
+        }
     }
-}
