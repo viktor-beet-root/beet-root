@@ -55,11 +55,7 @@ const secondNum = (num % 100 - num % 10) / 10;
 const firstNum = Math.floor(num / 100);
 if ((lastNum === secondNum) && (lastNum === firstNum)) {
     console.log ("Число состоит из всех одинаковых цифр");
-} else if (lastNum === secondNum){
-    console.log ("Число состоит из двух одинаковых цифр");
-} else if (lastNum === firstNum){
-    console.log ("Число состоит из двух одинаковых цифр");
-} else if (secondNum === firstNum){
+} else if ((lastNum === secondNum) || (lastNum === firstNum) || (secondNum === firstNum)) {
     console.log ("Число состоит из двух одинаковых цифр");
 } else {
     console.log ("Число состоит из разных цифр");
@@ -83,23 +79,25 @@ if ((fiveDigitNumber[0] === fiveDigitNumber[4]) && (fiveDigitNumber[1] === fiveD
 
 console.log ("Задание 6");
 const amountOfDollars = +prompt("Введите суму в USD", "");
+const  currency = prompt("Введите валюту ( EUR, UAN, AZN)", "");
 const rateEur = 0.82;
 const rateUan = 27.90;
 const rateAzn = 1.7;
 let amountOfMoney = amountOfDollars;
-let currency = confirm ("Валюта EUR?");
-if  (currency) {
+let resultAmountOfMoney = "";
+if  (currency === "EUR"){
     amountOfMoney = amountOfDollars * rateEur;
-    console.log ("Ваша сума "+ amountOfMoney.toFixed(2) + " EUR");
-} else if (currency = confirm ("Валюта UAN?")) {
+    resultAmountOfMoney = "Ваша сума "+ amountOfMoney.toFixed(2) + " EUR";
+} else if (currency === "UAN") {
     amountOfMoney = amountOfDollars * rateUan;
-    console.log ("Ваша сума "+ amountOfMoney.toFixed(2) + " UAN");
-} else if (currency = confirm ("Валюта AZN?")) {
+    resultAmountOfMoney = "Ваша сума "+ amountOfMoney.toFixed(2) + " UAN";
+} else if (currency = "AZN") {
     amountOfMoney = amountOfDollars * rateAzn;
-    console.log ("Ваша сума "+ amountOfMoney.toFixed(2) + " AZN");
+    resultAmountOfMoney = "Ваша сума "+ amountOfMoney.toFixed(2) + " AZN";
 } else {
-    console.log ("Вы не выбрали валюту");
+    console.log ("Вы неверно ввели валюту");
 }
+console.log (resultAmountOfMoney);
 
 console.log ("Задание 7");
 let amountOfPurchase = +prompt("Введите общую суму покупки", "");
@@ -133,32 +131,23 @@ if (squareSide >= cicleDiametr) {
 console.log ("Задание 9");
 let amoutOfBals = 0;
 const firstQuest = +prompt ('Вопрос: 2 + 2*2 +2/2. Варианты ответа: 7 , 5 , 12. Введите правильний ответ');
-switch (firstQuest) {
-    case 7:
-        console.log ("Ответ верный");
-        amoutOfBals = amoutOfBals +2;
-    break;
-    default:
-        console.log ("Ответ не верный");
-}
 const secondQuest = prompt ('Вопрос: какого цвета жираф. Варианты ответа: оранжевый, желтый, синий. Введите правильний ответ');
-switch (secondQuest) {
-    case "желтый":
-        amoutOfBals = amoutOfBals + 2;
-        console.log ("Ответ верный");
-    break;
-    default:
-        console.log ("Ответ не верный");
-}
 const thirdQuest = +prompt ('Вопрос: какого цветов у радуги. Варианты ответа: 9, 8, 7. Введите правильний ответ');
-switch (thirdQuest) {
-    case 7:
+const firstRightAnswer = 7;
+const secondRightAnswer = "желтый";
+const thirdRightAnswer = 7;
+if (firstQuest === firstRightAnswer){
+    console.log ("Ответ верный");
         amoutOfBals = amoutOfBals + 2;
-        console.log ("Ответ верный");
-    break;
-    default:
-        console.log ("Ответ не верный");
-}
+} else console.log ("Ответ не верный");
+if (secondQuest === secondRightAnswer){
+    console.log ("Ответ верный");
+        amoutOfBals = amoutOfBals + 2;
+} else console.log ("Ответ не верный");
+if (thirdQuest === thirdRightAnswer){
+    console.log ("Ответ верный");
+        amoutOfBals = amoutOfBals + 2;
+} else console.log ("Ответ не верный");
 console.log (amoutOfBals);
 
 console.log ("Задание 10");
@@ -170,18 +159,20 @@ let yearOnly = +(dateFul[6]+dateFul[7]+dateFul[8]+dateFul[9]);
 if ((dateOnly === 31) && (monthOnly === 12)) {
     dateOnly = 1;
     monthOnly = 1;
-    yearOnly = ++yearOnly;
+    yearOnly = yearOnly + 1;
+} else if ((dateOnly === 28) && (monthOnly === 2) &&((yearOnly % 400 === 0) || (yearOnly % 4 === 0 && yearOnly % 100 !== 0))) {
+    dateOnly = dateOnly + 1;
 } else if ((dateOnly === 29 || dateOnly === 28) && (monthOnly === 2)){
     dateOnly = 1;
-    monthOnly = ++monthOnly;
+    monthOnly = monthOnly + 1;
 } else if ((dateOnly === 30) && ((monthOnly === 4) || (monthOnly === 6) || (monthOnly === 9) || (monthOnly === 11))){
     dateOnly = 1;
-    monthOnly = ++monthOnly;
+    monthOnly = monthOnly + 1;
 } else if (dateOnly === 31) {
     dateOnly = 1;
-    monthOnly = ++monthOnly;
+    monthOnly = monthOnly + 1;
 } else {
-    dateOnly = ++dateOnly;
+    dateOnly = dateOnly + 1;
 }
 if (dateOnly < 10) dateOnly = ("0" + dateOnly);
 if (monthOnly < 10) monthOnly =("0" + monthOnly);
@@ -189,3 +180,4 @@ const resultData = dateOnly + "." + monthOnly +"."+ yearOnly;
 if ((!(dateOnly <= 31)) || (!(monthOnly <= 12))){
     console.log ('Дата введена не верно')
 }else console.log (resultData);
+
