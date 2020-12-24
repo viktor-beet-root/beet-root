@@ -5,7 +5,8 @@ let sum = 0;
 for (let i = fisrtNum; i <= lastNum; i++ ) {
     sum = sum + i;
 }
-console.log ("Cумму всех чисел " + sum);
+const resultSumOfNum = "Cумма всех чисел " + sum;
+console.log (resultSumOfNum);
 
 console.log ("Задание 2. Hаибольший общий делитель");
 const numFisrt= +prompt("Введите первое число ", "");
@@ -17,7 +18,8 @@ while (min > 0){
     if (!(numFisrt % min) && !(numSecond % min) && (min > max)) max = min;
     min--;
 }
-console.log ("Наибольший общий делитель " + max);
+const resultMaxNumber = "Наибольший общий делитель " + max;
+console.log (resultMaxNumber);
 
 console.log ("Задание 3. Все делители числа.");
 const num = +prompt("Введите число ", "");
@@ -27,7 +29,8 @@ while (newNum > 0){
     if (num % newNum === 0) allNum.push(newNum);
     newNum--;
 }
-console.log ("Все делители числа " + allNum);
+const resultAllNum = "Все делители числа " + allNum;
+console.log (resultAllNum);
 
 console.log ("Задание 4. Количество цифр в введенном числе.");
 let numDigit = +prompt("Введите число ", "");
@@ -35,7 +38,8 @@ let j;
 for (j = 0; numDigit >1 ; j++) {
     numDigit = numDigit / 10;
 }
-console.log ("Количество цифр в введенном числе " + j);
+const resultNumDigit = "Количество цифр в введенном числе " + j;
+console.log (resultNumDigit);
 
 console.log ("Задание 5. 10 чисел");
 let pnum;
@@ -53,11 +57,16 @@ for (let g =1; g <= 10; g++){
         ++neg;
     } else ++zero;
 }
-console.log ("Количество четных " + even);
-console.log ("Количество нечетных " + odd);
-console.log ("Количество нулей " + zero);
-console.log ("Количество положительных " + pos);
-console.log ("Количество отрицательных " + neg);
+const resultEven = "Количество четных " + even;
+const resultOdd = "Количество нечетных " + odd;
+const resultZero = "Количество нулей " + zero;
+const resultPos = "Количество положительных " + pos;
+const resultNeg = "Количество отрицательных " + neg;
+console.log (resultEven);
+console.log (resultOdd);
+console.log (resultZero);
+console.log (resultPos);
+console.log (resultNeg);
 
 console.log ("Задание 6. Зациклить калькулятор.");
 let result;
@@ -89,10 +98,11 @@ while (numOfShift > 0){
     numLong = (numLong - newNumLong * length) * 10 + newNumLong;
     --numOfShift;
 }
-console.log ('Новое число после сдвига ' + numLong);
+const resultNumLong = 'Новое число после сдвига ' + numLong;
+console.log (resultNumLong);
 
 console.log ("Задание 8. Зациклить вывод дней недели");
-let day = [ 'monday', 'tuesday' , 'wednesday', 'thursday', 'friday' , 'saturday', 'sunday'];
+let day = ['monday', 'tuesday' , 'wednesday', 'thursday', 'friday' , 'saturday', 'sunday'];
 let dayNum = -1;
 do {
     ++dayNum;
