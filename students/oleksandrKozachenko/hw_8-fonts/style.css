@@ -1,17 +1,23 @@
 @font-face {
-    font-family: 'Proxima Nova';  
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 400;
     src: url('/fonts/ProximaNova-Regular.woff2') format('woff2'),
         url('/fonts/ProximaNova-Regular.woff') format('woff');
 }
 
 @font-face {
     font-family: 'Futura PT Heavy';
+    font-style: normal;
+    font-weight: 400;
     src: url('FuturaPT-Heavy.woff2') format('woff2'),
         url('FuturaPT-Heavy.woff') format('woff');
 }
 
 @font-face {
     font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
     src: url('/fonts/Georgia.woff2') format('woff2'),
         url('/fonts/Georgia.woff') format('woff');
 }

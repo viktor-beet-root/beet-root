@@ -1,17 +1,18 @@
 @font-face {
-    font-family:'Miso';
-    font-weight:normal;
-    font-style:normal;
+    font-family: 'Miso';
+    font-weight: 400;
+    font-style: normal;
     src: url('/fonts/miso.woff') format('woff');
 }
 
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;   
+    box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     height: 100%;
 }
 
