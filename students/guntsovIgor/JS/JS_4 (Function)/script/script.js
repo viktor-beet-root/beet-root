@@ -45,23 +45,23 @@ function perfect(a) {
         }
     }
     if (result === a) {
-        console.log("4islo" + " " + a + " " + "sovershennoe");
+        return true;
     }
     if (result !== a) {
-        console.log("4islo" + " " + a + " " + "ne sovershennoe");
+        return false;
     }
-    return result;
 }
 console.log(perfect(6));
 
 console.log("Задание 4.6");
 function perfetcZone(a, b) {
     for (let i = Math.min(a, b); i <= Math.max(a, b); i++) {
-        if (i !== perfect(i)) continue;
-        console.log(i + " " + " SOVERSHENNOE");
+        if (perfect(i)) {
+            console.log("Chislo " + i + " " + " sovershennoe");
+        }
     }
 }
-console.log(perfetcZone(1, 100));
+console.log(perfetcZone(1, 1000));
 
 console.log("Задание 4.7");
 function date(a, b, c) {
