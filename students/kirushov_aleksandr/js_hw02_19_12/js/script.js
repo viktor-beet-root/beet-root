@@ -2,16 +2,12 @@ console.log("Задание 1");
 const age = +prompt("Укажите сколько Вам лет:");
 if (age < 12) {
     console.log("Вы являетесь - ребенком");
+} else if (age >= 12 && age < 18) {
+    console.log("Вы являетесь - подростком");
+} else if (age >= 18 && age < 60) {
+    console.log("Вы являетесь - взрослым");
 } else {
-    if (age >= 12 && age < 18) {
-        console.log("Вы являетесь - подростком");
-    } else {
-        if (age >= 18 && age < 60) {
-            console.log("Вы являетесь - взрослым");
-        } else {
-            console.log("Вы являетесь - пенсионером");
-        }
-    }
+    console.log("Вы являетесь - пенсионером");
 }
 
 console.log("Задание 2");
@@ -64,7 +60,7 @@ if (num1 == num2 || num1 == num3 || num2 == num3) {
 }
 
 console.log("Задание 4");
-let year = prompt("Укажите год", "");
+const year = prompt("Укажите год", "");
 if (year % 400 == 0 || (year % 4 == 0 && year % 100 !== 0)) {
     console.log("Данный год являеться высокосным");
 } else {
@@ -91,16 +87,12 @@ const sumUah = USD * 27.90;
 const sumAzn = USD * 1.7;
 if (currency == "EUR") {
     console.log("Сумма в евро = " + sumEur);
+} else if (currency == "UAH") {
+    console.log("Сумма в украинских гривнях = " + sumUah);
+} else if (currency == "AZN") {
+    console.log("Сумма в азербайджанских манатах = " + sumAzn);
 } else {
-    if (currency == "UAH") {
-        console.log("Сумма в украинских гривнях = " + sumUah);
-    } else {
-        if (currency == "AZN") {
-            console.log("Сумма в азербайджанских манатах = " + sumAzn);
-        } else {
-            console.log("Вы неверно ввели котируемую валюту");
-        }
-    }
+    console.log("Вы неверно ввели котируемую валюту");
 }
 
 console.log("Задание 7");
@@ -110,16 +102,12 @@ const discount5 = sum * 0.95;
 const discount7 = sum * 0.93;
 if (sum >= 200 && sum < 300) {
     console.log("Сумма к оплате со скидкой " + discount3);
+} else if (sum >= 300 && sum < 500) {
+    console.log("Сумма к оплате со скидкой " + discount5);
+} else if (sum >= 500) {
+    console.log("Сумма к оплате со скидкой " + discount7);
 } else {
-    if (sum >= 300 && sum < 500) {
-        console.log("Сумма к оплате со скидкой " + discount5);
-    } else {
-        if (sum >= 500) {
-            console.log("Сумма к оплате со скидкой " + discount7);
-        } else {
-            console.log("К сожалению, при данной сумме покупки скидка отсутствует");
-        }
-    }
+    console.log("К сожалению, при данной сумме покупки скидка отсутствует");
 }
 
 console.log("Задание 8");
@@ -141,31 +129,45 @@ let bal = 0;
 if (ask1 == 4) {
     bal = bal + 2;
 } else {
-    bal = bal + 0;
+    bal = bal;
 }
 if (ask2 == 6) {
     bal = bal + 2;
 } else {
-    bal = bal + 0;
+    bal = bal;
 }
 if (ask3 == 5) {
     bal = bal + 2;
 } else {
-    bal = bal + 0;
+    bal = bal;
 }
-console.log("Вы оценка в баллах " + bal);
+console.log("Ваша оценка в баллах " + bal);
 
 console.log("Задание 10");
 let day = +prompt('Введите номер дня', '');
 let month = +prompt('Введите порядковый номер месяца', '');
 let year10 = +prompt('Введите год', '');
-let date = day + "." + month + "." + year10;
-if ((day + 1 == 32 && month < 12) || ((day + 1 == 30 && month == 2) && (year10 % 400 == 0 || (year10 % 4 == 0 && year10 % 100 !== 0))) || ((day + 1 == 29 && month == 2) && (year10 % 400 !== 0 || (year10 % 4 !== 0 && year10 % 100 == 0)))) {
-    console.log(date = 1 + "." + (month + 1) + "." + year10);
-} else {
-    if (day + 1 == 32 && month == 12) {
-        console.log(date = 1 + "." + 1 + "." + (year10 + 1));
+
+if (month == 2) {
+    if (day == 28 && (year10 % 400 == 0 || (year10 % 4 == 0 && year10 % 100 !== 0))) {
+        day = day + 1;
+    } else if (day >= 28) {
+        day = 1;
+        month = month + 1;
     } else {
-        console.log(day + 1 + "." + month + "." + year10);
+        day = day + 1;
     }
+} else if (day >= 30 && (month == 4 || month == 6 || month == 9 || month == 11)) {
+    day = 1;
+    month = month + 1;
+} else if (day >= 31 && month !== 12) {
+    day = 1;
+    month = month + 1;
+} else if (day == 31 && month == 12) {
+    day = 1;
+    month = 1;
+    year10 = year10 + 1;
+} else {
+    day = day + 1;
 }
+console.log(day + '.' + month + '.' + year10);
