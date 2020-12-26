@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log("Task 1");
+        let userNumMin = +prompt("Enter number MIN", "");
+        const userNumMax = +prompt("Enter number MAX", "");
+        let sumNum = userNumMin;
+        const range = userNumMax - userNumMin;
+        for (let i = 1; i <= range; i++) {
+            userNumMin++;
+            sumNum += userNumMin;
+        }
+        console.log(sumNum);
+
+        console.log("Task 2");
+        const userNum1 = +prompt("Enter number 1", "");
+        const userNum2 = +prompt("Enter number 2", "");
+        let min = (userNum1 < userNum2) ? userNum1 : userNum2;
+        let divider = false;
+        let maxDivider;
+        while ((min > 0) && !divider) {
+            if (userNum1 % min === 0 && userNum2 % min === 0) {
+                maxDivider = min;
+                divider = true;
+            }
+            min--;
+        };
+        console.log(maxDivider);
+
+        console.log("Task 3");
+        const userNum3 = +prompt("Enter number 3", "");
+        const arrdivNum3 = [];
+        let divNam3 = userNum3;
+        while (divNam3 > 0) {
+            if (userNum3 % divNam3 === 0)
+                arrdivNum3.push(divNam3);
+            divNam3--;
+        };
+        console.log(arrdivNum3);
+
+        console.log("Task 4");
+        let userNum4 = +prompt("Enter number 4", "");
+        let numberOfDigits = 0;
+        while (userNum4 > 1) {
+            userNum4 /= 10;
+            numberOfDigits++
+        }
+        console.log(numberOfDigits);
+
+        console.log("Task 5");
+        let amountPositive = 0;
+        let amountNegative = 0;
+        let amountEven = 0;
+        let amountOdd = 0;
+        let amountZero = 0;
+        let quantityNumber = 1;
+        let userNum5;
+        while (quantityNumber <= 10) {
+            userNum5 = +prompt("Enter number " + quantityNumber);
+            if (userNum5 > 0) amountPositive++;
+            if (userNum5 < 0) amountNegative++;
+            if (userNum5 % 2 === 0 && userNum5 !== 0) amountEven++;
+            if (userNum5 % 2 !== 0 && userNum5 !== 0) amountOdd++;
+            if (userNum5 === 0) amountZero++;
+            quantityNumber++;
+        }
+        console.log('Positive: ' + amountPositive + ' Negative: ' + amountNegative + ' Even: ' + amountEven + ' Odd: ' + amountOdd + ' Zero: ' + amountZero);
+
+        console.log("Task 6");
+        let userNum6_1;
+        let userNum6_2;
+        let userOperator;
+        let anotherExample = true;
+        let result6;
+        do {
+            userNum6_1 = +prompt('Enter your number 1', '');
+            userOperator = prompt('Enter your operator', '');
+            userNum6_2 = +prompt('Enter your number 2', '');
+
+            if (!isNaN(userNum6_1) && !isNaN(userNum6_2)) {
+                switch (userOperator) {
+                    case '+':
+                        result6 = userNum6_1 + userNum6_2;
+                        break;
+                    case '-':
+                        result6 = userNum6_1 - userNum6_2;
+                        break;
+                    case '*':
+                        result6 = userNum6_1 * userNum6_2;
+                        break;
+                    case '/':
+                        result6 = userNum6_1 / userNum6_2;
+                        break;
+                    default:
+                        result6 = 'Enter the correct operator';
+                }
+            } else {
+                console.log('Enter the number');
+            }
+            console.log(result6);
+            anotherExample = confirm("Do you want to solve another example");
+        } while (anotherExample);
+
+        console.log("Task 7");
+        let userNumber7 = prompt('Enter your number');
+        let countMove = +prompt('Enter your number move');
+        let arrUserNumber7 = userNumber7.split('');
+
+        for (let i = 1; i <= countMove; i++) {
+            arrUserNumber7.unshift(arrUserNumber7.pop());
+            console.log(arrUserNumber7);
+        }
+        userNumber7 = +arrUserNumber7.join('');
+        console.log(userNumber7);
+
+        console.log("Task 8");
+        const week = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
+        let dayOfWeek = prompt('Enter the number the day of week', '');
+        let nextDay;
+        do {
+            if (dayOfWeek <= 7 && !isNaN(dayOfWeek)) {
+                if (dayOfWeek < 7) {
+                    console.log(week[dayOfWeek - 1]);
+                    dayOfWeek++;
+                } else {
+                    console.log(week[dayOfWeek - 1]);
+                    dayOfWeek = 1;
+                }
+                nextDay = confirm('Do you want to see the next day?');
+            } else {
+                console.log('Enter the correct day')
+            }
+        } while (nextDay);
+
+        console.log("Task 9");
+        let times;
+        for (let i = 2; i <= 9; i++) {
+            console.log('multiplication table ' + i + ':')
+            for (let j = 1; j <= 10; j++) {
+                times = i * j;
+                console.log(i + '*' + j + '=' + times)
+            }
+        }
+
+        console.log("Task 10");
+        console.log("Guess a number from 0 to 100");
+        let guessNumber;
+        let rangeMin = 0;
+        let rangeMax = 100;
+        let halfRange;
+        let signComparison;
+        do {
+            halfRange = Math.ceil((rangeMax + rangeMin) / 2);
+            signComparison = prompt(`Your number is <= "${halfRange}" or > "${halfRange}"`)
+            if (signComparison === '<') {
+                rangeMax = halfRange;
+            } else if (signComparison === '>') {
+                rangeMin = halfRange;
+            }
+            console.log(`Your number is ${signComparison} ${halfRange}`);
+        } while (!(signComparison === '='));
+
+    </script>
+</body>
+
+</html>
