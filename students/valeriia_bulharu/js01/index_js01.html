@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<d>, initial-scale=1.0">
+    <title> Homework js01 </title>
+</head>
+
+<body>
+    <script>
+        // 1)   Запросите у пользователя его имя и выведите в ответ: «Привет, его имя!».
+        const askName = prompt("Hello! What is your name?", "");
+        const answerName = "Hi  " + askName + "!";
+        console.log(answerName);
+
+        /*  2)Запросите у пользователя год его рождения, посчитайте, сколько ему лет и 
+          выведите результат. Текущий год укажите в коде как константу. */
+        const askAge = prompt("How old are you?", "");
+        const currentYear = 2020;
+        const userAge = currentYear - askAge;
+        console.log(userAge);
+
+        /* 3)   Запросите у пользователя длину стороны квадрата и выведите периметр такого квадрата. */
+        const sideOfSquare = prompt("Name thw side of square?", "");
+        const squareArea = sideOfSquare * sideOfSquare;
+        console.log(squareArea);
+
+        // 4)   Запросите у пользователя радиус окружности и выведите площадь такой окружности.
+        const radius = prompt("Name the radius of circle?", "");
+        const circleArea = Math.PI * Math.pow(radius, 2);
+        const.log(circleArea);
+
+        // 5)   Запросите у пользователя расстояние в км между двумя городами и за сколько часов он хочет добраться. 
+        // Посчитайте скорость, с которой необходимо двигаться, чтобы успеть вовремя.
+        const distance = prompt("What distance is?", "");
+        const time = prompt("How much time?", "");
+        const speed = distance / time;
+        console.log(speed);
+
+        // 6)   Реализуйте конвертор валют. Пользователь вводит доллары, программа переводит в евро.
+        // Курс валюты храните в константе.
+        const amountDollar = prompt("Type your amount", "");
+        const evroCourse = 39.9000;
+        const value = amountDollar * evroCourse;
+        console.log(value);
+
+        // 7)   Пользователь указывает объем флешки в Гб. Программа должна посчитать сколько файлов
+        // размером в 820 Мб помещается на флешку.
+        const driveVolumeGb = prompt("What is volume of your drive?", "");
+        const driveVolumeMb = driveVolumeGb * 1024;
+        const filesSize = 820;
+        const amount = driveVolumeMb / filesSize;
+        console.log(amount);
+
+        // 8)   Пользователь вводит сумму денег в кошельке и цену одной шоколадки. 
+        // Программа выводит сколько шоколадок может купить пользователь и сколько сдачи у него останется.
+        const moneyAmount = prompt("How much money do you have?");
+        const chocolatePrice = prompt("how much one chocolate coast?");
+        const chocolateAmount = moneyAmount / chocolatePrice;
+        const moneyLeft = moneyAmount % chocolatePrice;
+        const answer = "You can buy " + chocolateAmount + "chocolates and you will have " + moneyLeft +
+            " dollars  in pocket ";
+        console.log(answer);
+
+        // 9)   Запросите у пользователя трехзначное число и выведите его задом наперед.
+        //  Для решения задачи вам понадобится оператор % (остаток от деления).
+
+        let digits = prompt("Type three-digit number", "");
+        const lastDigit = digits % 10 * 100;
+        digits = ~~(digits / 10);
+        const secondDigit = digits % 10 * 10;
+        digits = ~~(digits / 10);
+        const thirdDigit = digits % 10 * 10;
+        const result = lastDigit + secondDigit + thirdDigit;
+        console.log(result);
+
+        // 10) Пользователь вводит сумму вклада в банк на 2 месяца, с процентной ставкой депозита 5% годовых.
+        //  Вывести сумму начисленных процентов.
+
+        const deposit = prompt("Type your deposit", "");
+        const percent = deposit / 100 * 5;
+        const month = 12;
+        const depositDuration = 2;
+        const benefit = percent / month * depositDuration;
+        console.log(benefit);
+    </script>
+</body>
+
+</html>
