@@ -159,7 +159,7 @@ let N;
 let answer;
 do {
     N = Math.floor((N1 + N2) / 2);
-    answer = prompt("Vashe chislo   '>'   ,   '<'   ili   '='   " + N + " ?", "");
+    answer = prompt("Vashe chislo   '>'   ,   '<'   ili   '=='   " + N + " ?", "");
     switch (answer) {
         case ">":
             N1 = N + 1;
@@ -167,10 +167,10 @@ do {
         case "<":
             N2 = N - 1;
             break;
-        case "=":
+        case "==":
             console.log(N + " vashe chislo!!!");
             break;
         default:
             console.log("SDELAI VIBOR " + "\n");
     }
-} while (answer !== "=");
+} while (answer !== "==");
