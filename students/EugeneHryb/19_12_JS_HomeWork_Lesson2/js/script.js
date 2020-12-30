@@ -3,7 +3,7 @@ const endPart = '_____________________________________\n';
 //Part 1
 const part1 = 'Запросить у пользователя его возраст и определить, кем он является: ребенком (0–2), подростком (12–18), взрослым (18_60) или пенсионером (60– ...).';
 console.log('Часть 1 \n' + part1 + '\n');
-const userAge = prompt ('Сколько вам лет', '');
+const userAge = prompt('Сколько вам лет', '');
 let ageMessage;
 if (userAge < 12) {
     ageMessage = 'Да ты совсем ребенок!!';
@@ -23,7 +23,7 @@ console.log(endPart);
 const part2 = 'Запросить у пользователя число от 0 до 9 и вывести ему спецсимвол, который расположен на этой клавише (1–!, 2–@, 3–# и т. д).';
 console.log('Часть 2 \n' + part2 + '\n');
 
-const oneNumber = +prompt ('Ведите чило от 0 до 9', '');
+const oneNumber = +prompt('Ведите чило от 0 до 9', '');
 if (oneNumber < 0 && 9 < oneNumber) {
     alert('Вы ввсели число выше или ниже допустимого диапазана');
 }else {
@@ -67,7 +67,7 @@ console.log(endPart);
 //Part 3
 const part3 = 'Запросить у пользователя трехзначное число и проверить, есть ли в нем одинаковые цифры.';
 console.log('Часть 3 \n' + part3 + '\n');
-const threeNumber = prompt ('Введите трех-значное число', '');
+const threeNumber = prompt('Введите трех-значное число', '');
 const firstDigit = ~~(threeNumber / 100);
 const secondDigit = ~~((threeNumber - (threeNumber % 100)) / 10);
 const thirdDigit = threeNumber % 10;
@@ -96,7 +96,7 @@ console.log('Часть 5 \n' + part5 + '\n');
 
 // Я дико извиняють но мне было лень писать один и тот же кот четыре раза.
 function numberRank(number, rank){
-    let ansver = ~~((number % (10**rank)) / 10**(rank-1));
+    const ansver = ~~((number % (10**rank)) / 10**(rank-1));
     return ansver
 };
 const fiveNumber = prompt('Ведите пятизначное число', '');
@@ -123,7 +123,7 @@ const maneyRequestMessage = 'Введите в какую валюту нужн�
 'EUR - Евро \n' +
 'UAN - Украинская гривна \n' + 
 'AZN - Азейбаржанский манат \n'
-const maneyConv = prompt (maneyRequestMessage, '' )
+const maneyConv = prompt(maneyRequestMessage, '' )
 const conversionToEUR = 0.82;
 const conversionToUAN = 27.90;
 const conversionToAZN = 1.7;
@@ -173,8 +173,8 @@ console.log(endPart);
 const part8 = 'Запросить у пользователя длину окружности и периметр квадрата. Определить, может ли такая окружность поместиться в указанный квадрат.';
 console.log('Часть 8 \n' + part8 + '\n');
 
-const circumference = prompt ('Введите длину окружности' , '');
-const perimeterSquare = prompt ('Введите периметр квадрата','');
+const circumference = prompt('Введите длину окружности' , '');
+const perimeterSquare = prompt('Введите периметр квадрата','');
 const circumDiameter = circumference / Math.PI ;
 const aquareSide = perimeterSquare / 4;
 let circumMessage;
@@ -216,7 +216,7 @@ const ansver2 = prompt(question2, '');
 if (ansver2 == 3) {
     rating = rating +2;
 };
-const ansver3 = prompt (question3, '');
+const ansver3 = prompt(question3, '');
 if (ansver3 == 2) {
     rating = rating +2;
 };
@@ -229,23 +229,30 @@ const part10 = 'Запросить дату (день, месяц, год) и в
 console.log('Часть 10 \n' + part10 + '\n');
 
 const userDate = +prompt('Введите день','');
-const userMount = +prompt ('Введите месяц', '');
-const userYear = +prompt ('Введите год', '');
+const userMount = +prompt('Введите месяц', '');
+const userYear = +prompt('Введите год', '');
 
-const mountLong = [
-    true,
-    false,
-    true,
-    false,
-    true,
-    false,
-    true,
-    true,
-    false,
-    true,
-    false,
-    true
-    ]
+let mountLong = false 
+
+switch( userMount ){
+    case 1:
+    case 3:
+    case 5:
+    case 7:
+    case 8:
+    case 10:
+    case 12:
+        mountLong = true;
+        break
+    case 2:
+    case 4:
+    case 6:
+    case 9:
+    case 11:
+        mountLong = false;
+        break
+}
+
 let nextData;
 let nextMount;
 let nextYear;
@@ -297,7 +304,7 @@ if (userMount == 2){
     };
 }else if(userMount > 12){
     console.log('Такого месяца не существует');
-} else if (mountLong[(userMount + 1)]){
+} else if (mountLong){
     if (userDate == 31) {
         nextData = 1;
         nextMount = userMount +1;
