@@ -2,10 +2,11 @@ console.log("Задание 4.1");
 function compare(a, b) {
     if (a < b) return "-1";
     if (a > b) return "1";
-    if (a === b) return "0";
-    if (a === undefined || b === undefined) return "Vi ne vveli chislo";
+    if ((a === null && b === null) || (a === "" && b === "")) {
+        return "Vi ne vveli ni odnogo chisla";
+    } else return "0";
 }
-console.log(compare(+prompt("Vvedi chislo 1"), +prompt("Vvedi chislo 2")));
+console.log(compare(prompt("Vvedi chislo 1"), prompt("Vvedi chislo 2")));
 
 console.log("Задание 4.2");
 function factorial(a) {
@@ -37,25 +38,31 @@ console.log(square(7));
 
 console.log("Задание 4.5");
 
-function perfect(a) {
+function divSum(a) {
     let result = 0;
     for (i = 1; i < a; i++) {
         if (a % i === 0) {
             result = result + i;
         }
     }
-    if (result === a) {
+    return result;
+}
+
+function perfect(a) {
+    if (divSum(a) === a) {
         return true;
     }
-    if (result !== a) {
+    if (divSum(a) !== a) {
         return false;
     }
 }
-console.log(perfect(6));
+console.log(perfect(28));
 
 console.log("Задание 4.6");
 function perfetcZone(a, b) {
-    for (let i = Math.min(a, b); i <= Math.max(a, b); i++) {
+    const max = Math.max(a, b);
+    const min = Math.min(a, b);
+    for (let i = min; i <= max; i++) {
         if (perfect(i)) {
             console.log("Chislo " + i + " " + " sovershennoe");
         }
@@ -66,17 +73,21 @@ console.log(perfetcZone(1, 1000));
 console.log("Задание 4.7");
 function date(a, b, c) {
     let time = "";
-    if (a < 24 && b < 60 && c < 60) {
-        return (time = a + ":" + b + ":" + c);
+    if (b < 60 && c < 60) {
+        time = a + ":" + b + ":" + c;
+        return time;
     }
     if (b === undefined && c === undefined) {
-        return (time = a + ":" + "00" + ":" + "00");
+        time = a + ":" + "00" + ":" + "00";
+        return time;
     }
     if (b === undefined) {
-        return (time = a + ":" + "00" + ":" + c);
+        time = a + ":" + "00" + ":" + c;
+        return time;
     }
     if (c === undefined) {
-        return (time = a + ":" + b + ":" + "00");
+        time = a + ":" + b + ":" + "00";
+        return time;
     } else {
         return "vvedi pravilnoe vremia";
     }
@@ -86,17 +97,21 @@ console.log(date(+prompt("chasi"), +prompt("minuti"), +prompt("sekyndi")));
 console.log("Задание 4.8");
 function dateTransform(a, b, c) {
     let seconds = 0;
-    return (seconds = a * 60 * 60 + b * 60 + c);
+    seconds = a * 60 * 60 + b * 60 + c;
+    return seconds;
 }
 console.log(dateTransform(+prompt("chasi"), +prompt("minuti"), +prompt("sekyndi")) + "s");
 
 console.log("Задание 4.9");
 function secondsTransform(a) {
     let time = "";
-    let hours = Math.trunc(a / 3600);
-    let minutes = Math.trunc((a - hours * 3600) / 60);
-    let seconds = a % 60;
-    return (time = hours + "h : " + minutes + "m : " + seconds + "s");
+    const hourSec = 3600;
+    const minSec = 60;
+    let hours = Math.trunc(a / hourSec);
+    let minutes = Math.trunc((a - hours * hourSec) / minSec);
+    let seconds = a % minSec;
+    time = hours + "h : " + minutes + "m : " + seconds + "s";
+    return time;
 }
 console.log(secondsTransform(3661));
 
