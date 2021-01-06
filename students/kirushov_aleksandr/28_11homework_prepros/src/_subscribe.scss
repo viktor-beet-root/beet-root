@@ -1,0 +1,79 @@
+.subscribe {
+    background-image: url(../images/bg_subscribe.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    padding: 106px 0 133px;
+
+    &__heading {
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 18px;
+    }
+
+    &__text {
+        line-height: 1.5;
+    }
+
+    &__email {
+        width: 100%;
+        padding: 18px 14px;
+        border: 1px solid $textColorLending;
+        font-size: 15px;
+    }
+
+    &__button {
+        width: 170px;
+        height: 55px;
+        background-color: $bgBtnSubscribe;
+        border: none;
+        box-shadow: $defaultBoxShadow;
+        padding: 0;
+
+        &-text {
+            font-size: 20px;
+            text-transform: uppercase;
+            color: $textColorWhite;
+        }
+
+        &:hover {
+            transform: scale(1.1);
+            transition: transform .5s ease-in-out;
+            box-shadow: blogHoverBoxShadow;
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+@media (max-width: $SM) {
+    .subscribe {
+
+        &__content,
+        &__email-wrapp,
+        &__button {
+            margin: 0 auto;
+        }
+
+        &__heading,
+        &__text {
+            text-align: center;
+        }
+
+        &__form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__button-wrapp {
+            display: flex;
+        }
+    }
+}
