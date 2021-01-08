@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log('Task 1');
+        (function () {
+            function getCompareNumber(num1, num2) {
+                if (num1 < num2) return -1;
+                if (num1 > num2) return 1;
+                if (num1 === num2) return 0;
+            }
+            console.log(getCompareNumber(3, 5))
+        })()
+
+        console.log('Task 2');
+        (function () {
+            function factorial(num) {
+                if (num === undefined || isNaN(num)) return false;
+                let times = 1;
+                for (let i = 1; i <= num; i++) {
+                    times = num * (num - 1);
+                }
+                return times;
+            }
+            console.log(factorial(5));
+        })()
+
+        console.log('Task 3');
+        (function () {
+            function getJoinNumbers(num1, num2, num3) {
+                let joinNumber = String(num1) + String(num2) + String(num3)
+                return joinNumber;
+            }
+            console.log(getJoinNumbers(1, 2, 3));
+        })()
+
+        console.log('Task 4');
+        (function () {
+            function calcSquare(side1, side2) {
+                let square;
+                if (side2 === undefined) {
+                    square = side1 * side1;
+                } else {
+                    square = side1 * side2;
+                }
+                return square;
+            }
+            console.log(calcSquare(3, 4));
+            console.log(calcSquare(4));
+        })()
+
+        console.log('Task 5');
+        (function () {
+            function checkNumber(num) {
+                let sumDivNum = 0;
+                let divNam = 1;
+                while (divNam < num) {
+                    if (num % divNam === 0)
+                        sumDivNum += divNam;
+                    divNam++;
+                };
+
+                if (num === sumDivNum) {
+                    return 'Your number is PERFECT';
+                } else {
+                    return 'Your number is NOT PERFECT';
+                }
+            }
+            console.log(checkNumber(+prompt('Enter number', '')));
+        })()
+
+        console.log('Task 6');
+        (function () {
+            function checkNumber(num) {
+                let sumDivNum = 0;
+                let divNam = 1;
+                while (divNam < num) {
+                    if (num % divNam === 0)
+                        sumDivNum += divNam;
+                    divNam++;
+                };
+                if (num === sumDivNum) {
+                    return true;
+                } else {
+                    return false
+                }
+            }
+
+            function choisePerfectNumber(minNum, maxNum) {
+                const arrPerfectNum = []
+                for (let i = minNum; i <= maxNum; i++) {
+                    if (checkNumber(i)) arrPerfectNum.push(i);
+                }
+                return arrPerfectNum;
+            }
+
+            console.log(choisePerfectNumber(1, 1000));
+        })()
+
+        console.log('Task 7');
+        (function () {
+            function time(hours, minutes, seconds) {
+                let hoursTime = "";
+                let minutesTime = "";
+                let secondsTime = "";
+                if (Number(hours) && (hours <= 24)) {
+                    hoursTime = hours;
+                } else {
+                    hoursTime = 'Enter the correct HOURS';
+                }
+                if (Number(minutes) && (minutes <= 60)) {
+                    minutesTime = (minutes > 10) ? minutes : ('0' + minutes);
+                } else if (minutes === undefined) {
+                    minutesTime = '00';
+                } else {
+                    minutesTime = 'Enter the correct MINUTES';
+                }
+                if (Number(seconds) && (seconds <= 60)) {
+                    secondsTime = (seconds > 10) ? seconds : ('0' + seconds);
+                } else if (seconds === undefined) {
+                    secondsTime = '00';
+                } else {
+                    secondsTime = 'Enter the correct SECONDS';
+                }
+                return hoursTime + ':' + minutesTime + ":" + secondsTime;
+            }
+            console.log(time(12, 9, 15));
+        })()
+
+        console.log('Task 8');
+        (function () {
+            function getTimeSecond(hours, minutes, seconds) {
+                let timeInSeconds = 0;
+                if ((hours >= 0) && (minutes >= 0) && (minutes < 60) && (seconds >= 0) && (seconds < 60)) {
+                    timeInSeconds = hours * 3600 + minutes * 60 + seconds;
+                    return timeInSeconds
+                } else {
+                    return 'Enter the correct Time';
+                }
+            }
+            console.log(getTimeSecond(5, 10, 22));
+        })()
+
+        console.log('Task 9');
+        (function () {
+            function formatTime(seconds) {
+                let hoursTime = "";
+                let minutesTime = "";
+                let secondsTime = "";
+                if (seconds >= 0) {
+                    hoursTime = Math.floor(seconds / 3600);
+                    minutesTime = Math.floor((seconds - (hoursTime * 3600)) / 60);
+                    minutesTime = (minutesTime >= 10) ? minutesTime : ('0' + minutesTime);
+                    secondsTime = seconds - (hoursTime * 3600) - (minutesTime * 60);
+                    secondsTime = (secondsTime >= 10) ? secondsTime : ('0' + secondsTime);
+                    return hoursTime + ':' + minutesTime + ":" + secondsTime;
+                } else {
+                    return 'Enter the correct SECONDS';
+                }
+            }
+            console.log(formatTime(3661));
+        })()
+
+        console.log('Task 10');
+        (function () {
+
+            function getTimeSecond(hours, minutes, seconds) {
+                let timeInSeconds = 0;
+                if ((hours >= 0) && (minutes >= 0) && (minutes < 60) && (seconds >= 0) && (seconds < 60)) {
+                    timeInSeconds = hours * 3600 + minutes * 60 + seconds;
+                    return timeInSeconds
+                } else {
+                    return 'Enter the correct Time';
+                }
+            }
+
+            function formatTime(seconds) {
+                let hoursTime = "";
+                let minutesTime = "";
+                let secondsTime = "";
+                if (seconds >= 0) {
+                    hoursTime = Math.floor(seconds / 3600);
+                    minutesTime = Math.floor((seconds - (hoursTime * 3600)) / 60);
+                    minutesTime = (minutesTime >= 10) ? minutesTime : ('0' + minutesTime);
+                    secondsTime = seconds - (hoursTime * 3600) - (minutesTime * 60);
+                    secondsTime = (secondsTime >= 10) ? secondsTime : ('0' + secondsTime);
+                    return hoursTime + ':' + minutesTime + ":" + secondsTime;
+                } else {
+                    return 'Enter the correct SECONDS';
+                }
+            }
+
+            function getDateDifference(startHour, startMinute, startSecond, finishHour, finishMinute, finishSecond) {
+                const startDateInSeconds = getTimeSecond(startHour, startMinute, startSecond);
+                const finishDateInSeconds = getTimeSecond(finishHour, finishMinute, finishSecond);
+                const dateDifferenceInSeconds = finishDateInSeconds - startDateInSeconds;
+                const dateFormat = formatTime(dateDifferenceInSeconds);
+                return dateFormat;
+            }
+            console.log(getDateDifference(10, 15, 25, 10, 25, 30))
+        })()
+
+    </script>
+</body>
+
+</html>
