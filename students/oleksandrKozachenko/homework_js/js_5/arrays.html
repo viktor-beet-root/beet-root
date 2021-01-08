@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //TASK 1
+        console.log('Task 1');
+
+        (function () {
+            const shoppingArr = [
+                {
+                    name: 'potatous',
+                    quantity: 5,
+                    bought: true,
+                },
+                {
+                    name: 'orange',
+                    quantity: 1,
+                    bought: false,
+                },
+                {
+                    name: 'milk',
+                    quantity: 2,
+                    bought: true,
+                },
+                {
+                    name: 'bread',
+                    quantity: 1,
+                    bought: false,
+                },
+                {
+                    name: 'meat',
+                    quantity: 3,
+                    bought: false,
+                },
+            ];
+            function sortShopping(shopping) {
+                shopping.sort(function (purchaseA, purchaseB) {
+                    if (purchaseA.bought === false && purchaseB.bought === true) return -1;
+                    if (purchaseA.bought === true && purchaseB.bought === false) return 1;
+                    if (purchaseA.bought === purchaseB.bought) return 0;
+                })
+                return shopping;
+            }
+
+            function addShopping(name, quantity, bought, arr) {
+                const shoppingPosition = {
+                    name,
+                    quantity,
+                    bought,
+                };
+                const rezultFind = arr.find(item => item.name === shoppingPosition.name);
+
+                if (rezultFind) {
+                    rezultFind.quantity += shoppingPosition.quantity;
+                } else {
+                    arr.push(shoppingPosition)
+                }
+                return arr;
+            }
+
+            function boughtShopping(nameShopping, arr) {
+                const rezultFind = arr.find(item => item.name === nameShopping);
+                if (rezultFind) {
+                    rezultFind.bought = true;
+                    return arr;
+                } else {
+                    return 'This purchase is not listed';
+                }
+
+            }
+
+            //Добавление покупки
+            console.log(addShopping('banana', 4, false, shoppingArr));
+            //Отметить продукт как купленный
+            console.log(boughtShopping('bread', shoppingArr));
+            //Вывод покупок: некупленные, потом купленные
+            console.log(sortShopping(shoppingArr));
+        })()
+
+        //TASK 2
+        console.log('Task 2');
+        (function () {
+            const checkList = [
+                {
+                    name: 'potatous',
+                    quantity: 5,
+                    price: 15,
+                },
+                {
+                    name: 'orange',
+                    quantity: 3,
+                    price: 35,
+                },
+                {
+                    name: 'milk',
+                    quantity: 2,
+                    price: 20,
+                },
+                {
+                    name: 'bread',
+                    quantity: 1,
+                    price: 10,
+                },
+            ];
+
+            function printCheckList(arr) {
+                arr.forEach(element => console.log(element));
+            }
+
+            function countSum(arr) {
+                let sumCheckList = 0;
+                arr.forEach(element => sumCheckList += element.price * element.quantity);
+                return sumCheckList;
+            }
+
+            function getMostExpensive(arr) {
+                let mostExpensiveRosition;
+                let maxShopping = 0;
+                let currentElement;
+                arr.forEach(function (element) {
+                    currentElement = element.price * element.quantity;
+                    if (currentElement > maxShopping) {
+                        maxShopping = currentElement;
+                        mostExpensiveRosition = element;
+                    }
+                })
+                return mostExpensiveRosition;
+            }
+
+            function countAverageCost(arr) {
+                let sumPrice = arr.reduce((sum, nextElement) => sum + nextElement.price, 0);
+                const averageCost = sumPrice / arr.length;
+                return averageCost;
+            }
+
+            //рРаспечатка чека
+            printCheckList(checkList);
+            //Подсчет общей суммы покупки
+            console.log(countSum(checkList));
+            //Получение самой дорогой покупки в чеке
+            console.log(getMostExpensive(checkList));
+            //Подсчет средней стоимости одного товара в чеке
+            console.log(countAverageCost(checkList));
+        })()
+
+        //TASK 3
+        console.log('Task 3');
+        (function () {
+            const styleList = [
+                {
+                    name: 'color',
+                    value: 'red',
+                },
+                {
+                    name: 'font-size',
+                    value: '24px',
+                },
+                {
+                    name: 'text-aline',
+                    value: 'center',
+                },
+                {
+                    name: 'text-transform',
+                    value: 'uppercase',
+                },
+            ];
+
+            function createElement(arrStyleList, text) {
+                let styleString = arrStyleList.reduce(function (sumString, nextElement) {
+                    return sumString + nextElement.name + ':' + nextElement.value + ';'
+                }, '');
+
+                let element = `<p style = "${styleString}">${text}</p>`;
+                return document.write(element);
+            }
+            createElement(styleList, 'Hello from javaScript');
+        })()
+
+
+        //TASK 4
+        console.log('Task 4');
+        (function () {
+            const lectureRooms = [
+                {
+                    name: '205А',
+                    seats: 10,
+                    attachment: 'meсhanical',
+                },
+                {
+                    name: '210А',
+                    seats: 12,
+                    attachment: 'history',
+                },
+                {
+                    name: '306B',
+                    seats: 20,
+                    attachment: 'information',
+                },
+                {
+                    name: '107A',
+                    seats: 15,
+                    attachment: 'meсhanical',
+                },
+                {
+                    name: '235B',
+                    seats: 18,
+                    attachment: 'history',
+                },
+                {
+                    name: '322B',
+                    seats: 15,
+                    attachment: 'information',
+                },
+            ];
+
+            const group1 = {
+                name: '305ME',
+                quantity: 17,
+                faculty: 'meсhanical',
+            }
+
+            function printLectureRooms(arrLectureRooms) {
+                arrLectureRooms.forEach(element => console.log(element));
+            }
+
+            function printFacultyRooms(arrLectureRooms, faculty) {
+                arrLectureRooms.forEach(function (element) {
+                    if (element.attachment === faculty) {
+                        console.log(element)
+                    }
+                })
+            }
+
+            function printLectureRoomsForGroup(arrLectureRooms, group) {
+                arrLectureRooms.forEach(function (element) {
+                    if (element.seats >= group.quantity) {
+                        console.log(element)
+                    }
+                })
+            }
+
+            function sortLectureRoomsForSeats(arrLectureRooms) {
+                arrLectureRooms.sort(function (roomA, roomB) {
+                    if (roomA.seats < roomB.seats) return -1;
+                    if (roomA.seats > roomB.seats) return 1;
+                    if (roomA.seats === roomB.seats) return 0;
+                })
+                return console.log(arrLectureRooms);
+            }
+
+            function sortLectureRoomsForName(arrLectureRooms) {
+                arrLectureRooms.sort(function (roomA, roomB) {
+                    if (roomA.name < roomB.name) return -1;
+                    if (roomA.name > roomB.name) return 1;
+                    if (roomA.name === roomB.name) return 0;
+                })
+                return console.log(arrLectureRooms);
+            }
+
+            //Вывод на экран всех аудиторий
+            printLectureRooms(lectureRooms);
+
+            //Вывод на экран аудиторий для указанного факультета;
+            printFacultyRooms(lectureRooms, 'meсhanical');
+
+            //Вывод на экран только тех аудиторий, которые подходят для переданной группы
+            printLectureRoomsForGroup(lectureRooms, group1);
+
+            //сортировки аудиторий по количеству мест;
+            sortLectureRoomsForSeats(lectureRooms);
+
+            //сортировки аудиторий по названию
+            sortLectureRoomsForName(lectureRooms);
+        })()
+
+    </script>
+</body>
+
+</html>
