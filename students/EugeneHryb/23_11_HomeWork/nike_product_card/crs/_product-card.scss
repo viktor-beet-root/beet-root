@@ -1,0 +1,79 @@
+.product-card{
+    background-color: $product-cardBg;
+    max-width: 687px;
+    padding: 24px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    &__wrap-product{
+        display: flex;
+        justify-content: space-around;
+    }
+    &__slider{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    &__slider-img{
+        padding-bottom: 70px;
+    }
+    &__slider-dots{
+        display: flex;
+        justify-content: center;
+    }
+    &__slider-dot{
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        + label{
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border: 2px solid transparent;
+            border-radius: 50%;
+            margin: 0 4.5px;
+        }
+        &:checked + label{
+            width: 12px;
+            height: 12px;
+            border-color: $frenchGray;
+        }
+    }
+    &_dot-blac{
+        background-color: $dotsBlac;
+    }
+    &_dot-white{
+        background-color: $dotsWhite;
+    }
+    &_dot-red{
+        background-color: $dotsRed;
+    }
+    &_dot-blue{
+        background-color: $dotsBlue;
+    }
+    &__info{
+        max-width: 200px;
+        color: $textColor;
+        padding-bottom: 75px - 24px;
+        padding-left: 39px;
+    }
+    &__title{
+        margin: 14px 0;
+        font-family: $defaultFont;
+        font-weight: 100;
+        font-size: 24px;
+        line-height: 26px;
+    }
+    &__description{
+        margin: 0;
+        font-family: $defaultFont;
+        font-weight: 100;
+        font-size: 14px;
+        opacity: 0.54;
+
+    }
+    &__wrap-data-list{
+        display: flex;
+        padding: 22px 0 29px 0;
+    }
+}
+

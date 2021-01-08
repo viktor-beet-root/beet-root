@@ -1,0 +1,89 @@
+.contact {
+    background: url('../img/contact-bg.jpg') no-repeat;
+    background-size: cover;
+    font-family: $mainFont;
+    line-height: 1.5;
+    padding-bottom: 60px;
+
+    &__tittle {
+        margin: 0 auto;
+        text-align: center;
+        max-width: 360px;
+        margin-bottom: 44px;
+        padding-top:67px;
+
+        &_big{
+           color:$textColor;
+           font-size: 90px;
+           font-weight: 700;
+           text-align: center;
+           margin-bottom: 8px;
+        }
+
+        &_text {
+           color: $textColor;
+           font-weight: 300;
+           font-size: 17px;
+        }
+    }
+
+    &__form {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__input{
+        min-width:500px;
+        padding: 20px;
+        background-color: rgba(0,196,196, 0.5);
+        border: none;
+
+        &::-webkit-input-placeholder {
+          color: white;
+        }
+    }
+}
+
+.textarea {
+    margin-bottom: 30px;
+    height: 100%;
+
+    &__text {
+        min-height: 250px;
+        width:100%;
+        background-color: rgba(0,196,196, 0.5);
+        border: none;
+        resize: none;
+        padding: 20px;
+        width:500px;
+
+        &::-webkit-input-placeholder {
+           color: white;
+        }
+    }
+}
+
+.form__button {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 25px;
+    display:block;
+    text-align:center;
+    width:200px;
+    height:55px;
+    background-color: rgba(0,196,196, 0.8);
+    color:white;
+    line-height: 50px;
+    text-decoration: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.contact-info {
+    display: flex;
+
+    &__details {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,37 @@
+$defaultFont: 'Raleway';
+$secondaryFont: 'Roboto';
+
+$secondaryFontPath: '../fonts/roboto-v20-latin-900';
+$defaultFontMediumPath: '../fonts/raleway-v18-latin-500';
+$defaultFontRegularPath: '../fonts/raleway-v18-latin-regular';
+
+$follbak: Arial,
+Helvetica,
+sans-serif;
+
+$defaultFonts: $defaultFont,
+$follbak;
+$secondaryFonts: $secondaryFont,
+$follbak;
+
+$defaultFontSize: 14px;
+$defaultLineHeight: 24 / 14;
+$defaultFontWeight: 500;
+
+$containerWidth: 1170px;
+$defaultGap: 15px;
+
+/* colors */
+$white: #fff;
+$supernova: #ffcc00;
+$osloGray: #898F8F;
+$doveGray: #666;
+$mineShaft: #333;
+$silver: #cccccc;
+
+$mainColor: $supernova;
+$buttonColor: $white;
+$textColor: $mineShaft;
+$secondaryTextColor: $doveGray;
+$subtitleColor: $osloGray;
+$socialColor: $silver;

@@ -1,0 +1,25 @@
+.grid-box-1 { grid-area: img-1; }
+.grid-box-2 { grid-area: img-2; }
+.grid-box-3 { grid-area: img-3; }
+.grid-box-4 { grid-area: img-4; }
+.grid-box-5 { grid-area: img-5; }
+
+.gallery-grid {
+    display: grid;
+    grid-template-areas:
+        'img-1 img-1 img-1 img-1 img-2 img-2'
+        'img-1 img-1 img-1 img-1 img-3 img-3'
+        'img-4 img-4 img-4 img-5 img-5 img-5';
+    grid-gap: 20px;
+
+    @media (max-width: $SM) {
+        grid-gap: 5px;
+    }
+}
+
+.grid-img {
+    display: block;
+    width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}

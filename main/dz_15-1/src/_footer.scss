@@ -1,0 +1,26 @@
+.footer {
+    background-color: $footer-color;
+
+    &__text {
+        font-size: 15px;
+        color: $white;
+
+        @include media('sm') {
+            text-align: center;
+        }
+
+        &_right {
+            text-align: right;
+
+            @include media('sm') {
+                text-align: center;
+            }
+        }
+    }
+
+    &__logo {
+        width: 65px;
+        margin: 0 auto;
+        display: block;
+    }
+}

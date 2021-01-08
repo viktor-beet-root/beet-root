@@ -1,0 +1,47 @@
+.fresh-life{
+    @include bgCover('../img/strawberry.png');
+    padding-top: 307px;
+}
+
+.fresh-life__info_header{
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 1.6;
+    margin-left: -5px;
+}
+
+.fresh-life__info{
+    padding-bottom: 278px;
+}
+
+.fresh-life__info_text{
+    line-height: 1.6;
+    padding-bottom: 24px;
+}
+
+.fresh-life__info_link{
+    text-decoration: none;
+}
+
+.fresh-life__info_button{
+    width: 200px;
+    background-color: $Orange;
+    box-shadow: 0 2px 4px 2px #9a9a9c;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: $white;
+    padding: 15px 0;
+    text-align: center;
+    margin: 3px;
+    transition: all 0.1s ease-in;
+}
+
+.fresh-life__info_button:hover{
+    @include box-shadow-hover;
+}
+
+.fresh-life__mouse{
+    margin: 0 auto;
+    width: 24px;
+    padding-bottom: 64px;
+}

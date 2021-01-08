@@ -27,9 +27,13 @@
     margin: 0;
 }
 
-main{
-    box-sizing: border-box;
+body{
     background-color: #fdde7e;
+}
+
+main{
+    margin: 0 auto;
+    box-sizing: border-box;
     width: 1200px; 
     height: 600px;
     padding: 0 30px;

@@ -1,0 +1,60 @@
+$defaultFont: "Raleway";
+$secondaryFont: "Pacifico";
+
+$fallback: Arial, Helvetica, sans-serif;
+
+$mainFont: $defaultFont, $fallback;
+
+$defaultFontSize: 14px;
+
+$white: #fff;
+$black: black;
+$robinBlue: #00c4c4;
+$silverChalice: #9d9d9d;
+$outrageousOrange: #ff6033;
+$mineShaft: #262626;
+$horizon: #5585a2;
+$atlantis: #96b92c;
+$redOrange: #f72b3b;
+$silver: #b9b9b9;
+$radicalRed: #ff2b58;
+$brightSun: #ffe92f;
+$heliotrope: #b07cf7;
+$maroonOak: #5e0b12;
+$chambray: #355b82;
+$bermuda: #75d8d7;
+$lightblue: #add8e6;
+$lime: #00ff00;
+
+$mainTextColor: $mineShaft;
+$secondaryTextColor: $white;
+$freshLifeOverlineButton: $outrageousOrange;
+$galleryButton: $horizon;
+$galleryHoverButton: $lightblue;
+$galleryTextButton: $brightSun;
+$subscribeButton: $atlantis;
+$subscribeHoverButton: $lime;
+$blogButton: $redOrange;
+$blogHoverButton: $maroonOak;
+$AboutUsBg: $robinBlue;
+$contactFooter: $silver;
+$contactFooterAuthor: $radicalRed;
+$serviceBgColor: $white;
+$serviceLine: $silverChalice;
+$galleryBgColor: $brightSun;
+$blogBgColor: $heliotrope;
+$contactInputLeft-Border: $chambray;
+$contactInputBg: $bermuda;
+
+//размер XL
+$XL: 1200px;
+$XL_width: 960px;
+//размер LG
+$LG: 992px;
+$LG_width: 720px;
+//размер MD
+$MD: 768px;
+$MD_width: 540px;
+//размер SM
+$SM: 576px;
+$SM_width: 100%;

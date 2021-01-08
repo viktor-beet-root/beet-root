@@ -1,0 +1,65 @@
+.servises__list {
+    max-width: 100%;
+
+    &_item {
+        position: relative;
+        max-width: 100%;
+        background-color: #fff;
+        list-style: none;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 0 7px 15px rgba(0, 0, 0, .5);
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &--shopping::before,
+    &--product::before,
+    &--delivery::before,
+    &--organized::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0px;
+        background-color: #fff;
+        display: block;
+        height: 100px;
+        width: 100px;
+        border-left: 1px solid #9d9d9d;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    &--shopping::before {
+        background-image: url(../img/shopping.png);               
+    }
+
+    &--product::before {
+        background-image: url(../img/product.png);               
+    }
+
+    &--delivery::before {
+        background-image: url(../img/delivery.png);               
+    }
+
+    &--organized::before {
+        background-image: url(../img/organazed.png);               
+    }
+
+    &_link {
+        width: 100%; 
+        font-size: 20px;
+        font-weight: 700;
+        text-align: center;
+        padding-right: 100px;
+        cursor: pointer;
+
+        @media (max-width: $LG) {
+            font-size: $default-font-size;
+        }
+    }
+}
