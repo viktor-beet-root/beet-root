@@ -1,0 +1,139 @@
+.subscribe {
+    @include bgCover('../image/bg.jpg');
+    background-position: center;
+    min-height: 500px;
+    padding-top: 98px;
+}
+
+.subscribe__item {
+    color: $subscribeItem;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 27px;
+    text-align: left;
+    padding: 47px 0 34px;
+    display: block;
+}
+
+.subscribe__text {
+    color: $subscribeText;
+    line-height: 27px;
+    text-align: left;
+    max-width: 541px;
+    padding-bottom: 30px;
+    display: block;
+}
+
+.subscribe-input {
+    width: 570px;
+    height: 55px;
+    border: 1px solid $borderInput;
+    opacity: 0.5;
+    color: $subscribeInput;
+    font-family: $mainFont;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 27px;
+    text-align: left;
+    padding: 22px 0 22px 15px;
+    margin-bottom: 145px;
+}
+
+.button-subscribe {
+    width: 170px;
+    height: 55px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    background-color: $buttonSubscribeBg;
+    color: $buttonSubscribe;
+    font-family: $mainFont;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 27px;
+    text-align: center;
+    text-transform: uppercase;
+    border: none;
+    margin-left: 30px;
+}
+
+@media (min-width: 1200px) {
+    .subscribe {
+        padding-top: 40px;
+    }
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .subscribe__item {
+        text-align: center;
+    }
+
+    .subscribe {
+        padding-top: 30px;
+    }
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+    .subscribe {
+        padding-top: 20px;
+    }
+
+    .subscribe__item {
+        text-align: center;
+    }
+
+    .subscribe-input {
+        margin-bottom: 10px;
+    }
+
+    .button-subscribe {
+        margin: 0 auto;
+    }
+
+}
+
+@media (max-width: 767px) {
+    .subscribe {
+        padding-top: 20px;
+    }
+
+    .subscribe__item {
+        text-align: center;
+    }
+
+    .subscribe-input {
+        margin-bottom: 10px;
+    }
+
+    .subscribe__text {
+        text-align: center;
+    }
+
+    .button-subscribe {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .subscribe {
+        padding-top: 0;
+    }
+
+    .subscribe__item {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .subscribe-input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .subscribe__text {
+        text-align: center;
+    }
+
+    .button-subscribe {
+        margin: 0 auto;
+    }
+}

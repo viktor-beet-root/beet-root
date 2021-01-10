@@ -1,0 +1,131 @@
+.services {
+    width: 100%;
+    background-color: $servicesBg;
+}
+
+.services_left {
+    padding: 179px 0 151px;
+}
+
+.services__menu {
+    margin: 0 auto;
+    display: flex;
+    max-width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    background-color: $servicesMenu;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.icon-item {
+    width: 300px;
+    color: $iconItem;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 27px;
+    text-align: center;
+}
+
+.icon {
+    border-left: solid 1px $iconBefore;
+    width: 100px;
+    height: 100px;
+    display: flex;
+}
+
+.icon svg {
+    margin: auto;
+}
+
+.services_right {
+    display: block;
+    background-image: url(../image/tomatos.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+
+}
+
+.services__item {
+    padding-top: 331px;
+    color: $servicesItem;
+    font-size: 90px;
+    font-weight: 700;
+    line-height: 27px;
+}
+
+@media (min-width: 1200px) {
+    .services__item {
+        font-size: 75px;
+    }
+}
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .services__item {
+        font-size: 65px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .services_right {
+        margin: 0 auto;
+        background-image: none;
+        order: -1;
+    }
+
+    .services__item {
+        margin: 0 auto;
+        padding-top: 50px;
+        font-size: 60px;
+        text-align: center;
+    }
+
+    .services_left {
+        margin: 0 auto;
+        text-align: center;
+        padding: 100px 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .services_right {
+        margin: 0 auto;
+        background-image: none;
+        order: -1;
+    }
+
+    .services__item {
+        margin: 0 auto;
+        padding-top: 50px;
+        font-size: 55px;
+        text-align: center;
+    }
+
+    .services_left {
+        margin: 0 auto;
+        padding: 75px 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .services_right {
+        margin: 0 auto;
+        background-image: none;
+        order: -1;
+    }
+
+    .services__item {
+        margin: 0 auto;
+        padding-top: 50px;
+        font-size: 50px;
+        text-align: center;
+    }
+
+    .services_left {
+        margin: 0 auto;
+        padding: 50px 0;
+        text-align: center;
+    }
+}

@@ -1,0 +1,138 @@
+.header {
+    padding: 40px 0;
+    width: 100%;
+    height: 150px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.logo__img {
+    display: block;
+}
+
+.logo__link {
+    display: block;
+}
+
+.menu__list {
+    display: flex;
+}
+
+.menu__item {
+    cursor: pointer;
+    display: block;
+    list-style-type: none;
+    padding: 0 18px;
+}
+
+.menu__item:last-child {
+    padding-right: 0;
+}
+
+.menu__link {
+    display: block;
+    color: $menuLink;
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 700;
+    text-align: right;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.menu__link:hover,
+.link__active:active {
+    border-top: solid 3px $menuLinkHover;
+}
+
+.menu__btn {
+    width: 30px;
+    height: 30px;
+    display: none;
+    position: relative;
+
+    @media (max-width: 995px) {
+        display: block;
+    }
+}
+
+.menu__burger,
+.menu__btn::before,
+.menu__btn::after {
+    content: '';
+    background-color: $menuLink;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    transition: .3s ease-in-out;
+}
+
+.menu__btn::before {
+    top: 0;
+}
+
+.menu__btn::after {
+    bottom: 0;
+}
+
+.menu__burger {
+    top: 13px;
+}
+
+.menu__input:checked {
+    &~.menu__list {
+        display: block;
+    }
+}
+
+@media (max-width: 995px) {
+    .menu__list {
+        display: none;
+        position: absolute;
+        right: 120px;
+        top: 120px;
+        transform: translateY(-50%);
+        transition: .3s ease-in-out;
+    }
+}
+
+.menu__link {
+    text-align: center;
+    font-size: 25px;
+}
+
+.menu__item:last-child {
+    padding-right: 18px;
+}
+
+.menu__item:hover {
+    background-color: $menuLinkHover;
+    border-radius: 10%;
+}
+
+.menu__input:checked {
+    &~.menu__list {
+        display: block;
+    }
+
+    &+.menu__btn .menu__burger {
+        background-color: transparent;
+    }
+
+    &+.menu__btn::before {
+        top: 13px;
+        transform: rotate(45deg);
+    }
+
+    &+.menu__btn::after {
+        top: 13px;
+        transform: rotate(-45deg);
+    }
+}

@@ -1,0 +1,74 @@
+/*colors*/
+$nero:#262626;
+$outrageousOrange: #ff6033;
+$white: #ffffff;
+$mediumPurple: #b07cf7;
+$alizarin: #f72b3b;
+$mayaBlue:#70bfff;
+$robinEggBlue:rgba(0, 196, 196, 0.5);
+$robinEgg: #00c4c4;
+$matisse:#355b82;
+$silver:#b9b9b9;
+$gorse:#ffe92f;
+$airForceBlue:#5585a2;
+$nobel: #9d9d9d;
+$limerick: #96b92c;
+
+
+
+/*ColorVars*/
+$blockItem: $nero;
+$blockText: $nero;
+$buttonGet:$outrageousOrange;
+$buttonText:$white;
+$blogPurpuleBg:$mediumPurple;
+$dataColor:$white;
+$eventItem:$white;
+$eventText:$white;
+$buttonBlogPurpule:$alizarin;
+$buttonText:$white;
+$servicesBg:$mayaBlue;
+$servicesMenu:$white;
+$iconItem:$nero;
+$iconBefore:$nobel;
+$servicesItem:$white;
+$contactItem:$nero;
+$contactInput:$robinEggBlue;
+$contactInputText:$white;
+$contactInputBg:$robinEgg;
+$borderContactInput:$matisse;
+$contactText:$nero;
+$footerBg:$nero;
+$footerText:$silver;
+$loveText:$alizarin;
+$blokItem:$white;
+$blokBg:$robinEgg;
+$galaryBg:$gorse;
+$galaryItem:$nero;
+$galaryText:$nero;
+$buttonFree:$airForceBlue;
+$menuLink:$nero;
+$menuLinkHover:$outrageousOrange;
+$subscribeItem:$nero;
+$subscribeText:$nero;
+$borderInput:$nero;
+$subscribeInput:$nero;
+$buttonSubscribe:$white;
+$buttonSubscribeBg:$limerick;
+
+/*fonts*/
+$defaultFont: 'Raleway';
+
+$defaultFontLithPath: '../fonts/raleway-v18-latin-300';
+$defaultFontRegularPath: '/raleway-v18-latin-regular';
+$defaultFontBoldPath: '../fonts/raleway-v18-latin-700';
+$defaultFontBlackPath: '../fonts/raleway-v18-latin-900';
+
+
+$follbak: Arial,
+Helvetica,
+sans-serif;
+
+$mainFont: $defaultFont,
+$follbak;
+$defaultFontSize: 17px;
