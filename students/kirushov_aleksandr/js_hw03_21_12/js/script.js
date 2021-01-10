@@ -2,6 +2,7 @@ console.log("Задание 1");
 const num1 = +prompt("Введите число начала диапазона");
 const num2 = +prompt("Введите число конца диапазона");
 let result = 0
+
 if (num1 !== num2) {
     for (let i = Math.min(num1, num2); i <= Math.max(num1, num2); i++) {
         result = result + i;
@@ -15,6 +16,7 @@ console.log("Задание 2");
 let a = +prompt("Введите первое число");
 let b = +prompt("Введите второе число");
 let del;
+
 if (a < 0 || b < 0) {
     console.log("Вы ввели отрицательным одно из чисел!!!");
 } else if (a === 0 || b === 0) {
@@ -36,9 +38,11 @@ const numZ3 = +prompt("Введите число");
 let res3 = '';
 let del3 = 1;
 while (del3 <= numZ3) {
+
     if (numZ3 % del3 === 0) {
         res3 = res3 + ' ' + del3;
     }
+
     del3++;
 }
 console.log('Все делители введенного Вами чила:' + res3);
@@ -123,7 +127,6 @@ startNum = ~~(numeric / 10 ** (numeric.length - quantity));
 changedNum = String(numeric % 10 ** (numeric.length - quantity)) + String(startNum);
 console.log(changedNum);
 
-
 console.log("Задание 8");
 let day = "";
 let counting = 0;
@@ -175,6 +178,7 @@ let answer = '';
 do {
     N = ~~((oneNum + twoNum) / 2);
     answer = prompt('Ваше число: 1) больше ' + N + '; 2) меньше ' + N + '; 3) равно ' + N + ' ? ');
+
     if (answer === '1') {
         oneNum = N + 1;
     } else if (answer === '2') {
