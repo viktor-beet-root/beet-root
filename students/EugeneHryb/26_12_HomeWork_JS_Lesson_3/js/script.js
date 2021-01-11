@@ -4,13 +4,11 @@
         const text = 'Part № ' + value;
         console.log("+++++++++++++++++++++++++");
         console.log(text);
-        return 1
     }
 
     function endPart(){
         console.log('End Part');
         console.log("+++++++++++++++++++++++++");
-        return 1
     }
 
     //Part 1
@@ -23,8 +21,6 @@
             return 1;
         }else if (number1 === number2){
             return 0;
-        }else {
-            return 'Что то пошло не так';
         }
     }
 
@@ -74,7 +70,7 @@
     //Part4
     //Написать функцию, которая принимает длину и ширину прямоугольника и вычисляет его площадь. Если в функцию передали 1 параметр, то она вычисляет площадь квадрата.
 
-    function areaOfRectangle(number1, number2 = 0){
+    function areaOfRectangle(number1, number2){
         if (!number2){
             return number1**2;
         } else{
@@ -109,7 +105,7 @@
     }
 
     //Part6
-    //Написать функцию, которая принимает минимальное и максимальное значения для диапазона, и выводит только те числа из диапазона, которые являются совершенными. Используйте написанную ранее функцию, чтобы узнавать, совершенное число или нет. 
+    //Написать функцию, которая принимает минимальное и максимальное значения для диапазона, и выводит только те числа из диапазона, которые являются совершенными. Используйте написанную ранее функцию, чтобы узнавать, совершенное число или нет.
 
     function perfectNumbers(min, max){
         const perfectNum = [];
@@ -118,7 +114,7 @@
             if(isTheNumberPerfect(i)){
                 perfectNum[counter] = i;
                 counter++;
-            } 
+            }
         }
         return perfectNum;
     }
@@ -153,7 +149,7 @@
             }
             return answer;
         }
-        
+
         hours = remuveUndefined(hours);
         minutes = remuveUndefined(minutes);
         seconds = remuveUndefined(seconds);
