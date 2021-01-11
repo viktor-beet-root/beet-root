@@ -1,0 +1,155 @@
+.contact {
+    background-image: url(../images/bg_contact.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    padding: 54px 0 20px;
+
+    &__content {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    &__heading {
+        font-size: 90px;
+        line-height: 1.1;
+        font-weight: 700;
+        margin-bottom: 24px;
+    }
+
+    &__text {
+        margin-bottom: 12px;
+    }
+
+    &__feedback {
+        display: flex;
+        flex-direction: column;
+        padding-right: 0;
+        width: 42.666667%;
+        flex-basis: 42.666667%;
+
+        &__text,
+        &__message {
+            background-color: $bgInputContact;
+            border: transparent;
+            font-size: 15px;
+            font-weight: 700;
+            color: $textColorWhite;
+
+            &::placeholder {
+                color: $textColorWhite;
+                font-size: 15px;
+                font-weight: 300;
+            }
+
+            &:hover,
+            &:active,
+            &:focus {
+                outline: none;
+                border-left: 5px solid $chambray;
+            }
+        }
+
+        &__text {
+            margin-bottom: 15px;
+            height: 50px;
+            padding: 0 20px;
+        }
+
+        &__message {
+            height: 250px;
+            padding: 18px 20px;
+            margin-bottom: 15px;
+        }
+
+        &__btn {
+            margin: 0 auto;
+            width: 200px;
+            height: 55px;
+            background-color: $red;
+            border: transparent;
+            box-shadow: $defaultBoxShadow;
+
+            &:hover,
+            &:active,
+            &:focus {
+                outline: none;
+            }
+
+            &:hover {
+                transform: scale(1.1);
+                transition: transform .5s ease-in-out;
+                box-shadow: $blogHoverBoxShadow;
+            }
+
+            &-text {
+                font-size: 20px;
+                color: $textColorWhite;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    &__info {
+        margin-left: 13.2%;
+        line-height: 1.1;
+
+        &-heading {
+            font-weight: 700;
+            margin-bottom: 1px;
+        }
+
+        &-text {
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+    }
+}
+
+@media (max-width: $LG) {
+    .contact {
+        &__feedback {
+            display: flex;
+            flex-direction: column;
+            padding-right: 0;
+            width: 55%;
+            flex-basis: 55%;
+        }
+
+        &__info {
+            margin-left: 11.2%;
+        }
+    }
+}
+
+@media (max-width: $MD) {
+    .contact {
+        &__feedback {
+            width: 50%;
+            flex-basis: 50%;
+        }
+
+        &__info {
+            margin-left: 0;
+        }
+    }
+}
+
+@media (max-width: $SM) {
+    .contact {
+        &__heading {
+            font-size: 70px;
+        }
+
+        &__feedback {
+            padding-right: 15px;
+            width: 100%;
+            flex-basis: 100%;
+        }
+
+        &__info {
+            text-align: center;
+            color: $black;
+        }
+    }
+}
