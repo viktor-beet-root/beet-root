@@ -1,7 +1,7 @@
 (function(){
 
     const endPart = '\n ____________________________________ \n'
-    // Part 1
+    // // Part 1
 
     console.log (' Подсчитать сумму всех чисел в заданном пользователем диапазоне.');
 
@@ -101,7 +101,7 @@
     numbersStatistic.odd + ' - нечетных чисел; \n');
     console.log(endPart );
 
-    //Part 6 
+    //Part 6
     console.log("Зациклить калькулятор. Запросить у пользователя 2 числа и знак, решить пример, вывести результат и спросить, хочет ли он решить еще один пример. И так до тех пор, пока пользователь не откажется.");
 
     do {
@@ -130,28 +130,15 @@
     //Part 7
     console.log('Запросить у пользователя число и на сколько цифр его сдвинуть. Сдвинуть цифры числа и вывести результат (если число 123456 сдвинуть на 2 цифры, то получится 345612)');
 
-    const number7 = +prompt('Введитн число', '');
-    const digits = [];
+    const number7 = +prompt('Введите число', '');
 
     let counterOne = 0;
     while((number7 / (10**counterOne)) > 1){
-        digits[counterOne] = ~~( (number7 % 10**(counterOne +1)) / 10**counterOne);
         counterOne++;
     }
 
     const digitmove = +prompt('На сколько цифр сдвинуть ?', '');
-    let counterTwo = 0;
-    let answer7 = 0;
-
-    for( let i = counterOne - digitmove ; i < counterOne ; i++){
-        answer7 = answer7 + digits[i]*(10**counterTwo);
-        counterTwo++;
-    }
-
-    for(let i = 0; i < (counterOne - digitmove) ; i++){
-        answer7 = answer7 + digits[i]*(10**counterTwo);
-        counterTwo++;
-    }
+    let answer7 = ~~( number7 / ( 10 ** ( counterOne - digitmove ) ) ) + (number7 % ( 10 ** ( counterOne - digitmove )) ) * ( 10 ** digitmove);
 
     const textAnswer7 = 'Получиться число ' + answer7;
 
@@ -160,30 +147,38 @@
 
     //Part 8
     console.log('Зациклить вывод дней недели таким образом: «День недели. Хотите увидеть следующий день?» и так до тех пор, пока пользователь нажимает OK.');
-    const daysOfWeek = [
-        'Понеденльник',
-        "Вторник",
-        "Среда",
-        "Четверг",
-        "Пятница",
-        "Субота",
-        "Воскресение"
-    ]
 
     let question = '';
-    let counter = 0;
-
+    let dayOfWeek = '';
     do {
-        question = daysOfWeek[counter] + '. Хотите увидеть следующий день?';
-        if (counter >= 6) {
-            counter = 0;
-        } else {
-            counter++;
+        switch (dayOfWeek) {
+            case 'Понедельник' :
+                dayOfWeek = 'Вторник';
+                break;
+            case 'Вторник':
+                dayOfWeek = 'Среда';
+                break;
+            case 'Среда':
+                dayOfWeek = 'Четверг';
+                break;
+            case 'Четверг':
+                dayOfWeek = 'Пятница';
+                break;
+            case 'Пятница':
+                dayOfWeek = 'Субота';
+                break;
+            case 'Субота':
+                dayOfWeek = 'Воскресение';
+                break;
+            default:
+                dayOfWeek = 'Понедельник';
         }
+
+        question = dayOfWeek + '. Хотите увидеть следующий день?';
     } while(confirm(question));
     console.log(endPart );
 
-    //Part 9 
+    //Part 9
     console.log('Вывести таблицу умножения для всех чисел от 2 до 9. Каждое число необходимо умножить на числа от 1 до 10.');
 
     ansvwer9 = '';
