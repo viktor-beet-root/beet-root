@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const person = {
+            firstName: 'Aleksandr',
+            soname: 'Kozachenko',
+            age: 31,
+            tel: '123-45-67-89',
+            skills: ['html', 'css', 'js'],
+            hobbies: ['reading books', 'programming', 'rest at nature'],
+
+            setFirstName: setFirstName,
+            getFirstName: getFirstName,
+
+            setSoname: setSoname,
+            getSoname: getSoname,
+            getFullName: getFullName,
+
+            setAge: setAge,
+            getAge: getAge,
+
+            setTel: setTel,
+            getTel: getTel,
+
+            addSkill: addSkill,
+            removeSkill: removeSkill,
+            getSkills: getSkills,
+
+            addHobbies: addHobbies,
+            removeHobbies: removeHobbies,
+            getHobbies: getHobbies,
+
+            getAnketa: getMyAnketa,
+
+            setAnyProperty: setAnyProperty,
+        };
+
+        function setFirstName(yourName) {
+            if (yourName === undefined) return;
+            this.firstName = yourName;
+        };
+
+        function getFirstName() {
+            return console.log('my name is ' + this.firstName);
+        };
+
+
+        function setSoname(yourSoname) {
+            if (yourSoname === undefined) return;
+            this.soname = yourSoname;
+        };
+
+        function getSoname() {
+            return console.log('my soname is ' + this.soname);
+        };
+
+
+        function getFullName() {
+            return console.log('My fullname ' + this.firsrName + ' ' + this.soname);
+        };
+
+        function setAge(addAge) {
+            if (addAge === undefined) return;
+            this.age += addAge;
+        };
+
+        function getAge() {
+            return console.log('My age is ' + this.age);
+        };
+
+        function setTel(addTel) {
+            if (addTel === undefined) return;
+            this.tel = addTel;
+        };
+
+        function getTel() {
+            return console.log('My tel. number is ' + this.tel);
+        };
+
+        function addSkill(yourSkill) {
+            this.skills.push(yourSkill);
+        };
+
+        function removeSkill(yourSkill) {
+            const indexSkill = this.skills.indexOf(yourSkill);
+            if (indexSkill === -1) {
+                return console.log('This skill is not find');
+            } else {
+                this.skills.splice(indexSkill, 1)
+            }
+        };
+
+        function getSkills() {
+            return console.log('My skills - ' + this.skills.join(' * '));
+        };
+
+        function addHobbies(yourHobbies) {
+            this.hobbies.push(yourHobbies);
+        };
+
+        function removeHobbies(yourHobbies) {
+            const indexHobbies = this.hobbies.indexOf(yourHobbies);
+            if (indexHobbies === -1) {
+                return console.log('This hobby is not find');
+            } else {
+                this.hobbies.splice(indexHobbies, 1)
+            }
+        };
+
+        function getHobbies() {
+            return console.log('My hobbies - ' + this.hobbies.join(' * '));
+        };
+
+        function getMyAnketa() {
+            for (let key in person) {
+                if (typeof (person[key]) !== 'function') {
+                    if (Array.isArray(person[key])) {
+                        console.log('My ' + key + ' is ' + person[key].join(' * '))
+                    } else {
+                        console.log('My ' + key + ' is ' + person[key])
+                    }
+                }
+            }
+        };
+
+        function setAnyProperty(key, value) {
+            if (key !== undefined && value !== undefined) {
+                this[key] = value;
+            }
+        }
+
+
+        person.setFirstName('ALEKSANDR');
+        person.setFirstName();
+        person.getFirstName();
+
+        person.setSoname('KOZACHENKO');
+        person.setSoname();
+        person.getSoname();
+
+        person.setAge(1);
+        person.setAge();
+        person.getAge();
+
+        person.setTel('987-65-43-21');
+        person.setTel();
+        person.getTel();
+
+
+        person.addSkill('git');
+        person.removeSkill('css');
+        person.removeSkill('react');
+        person.getSkills();
+
+        person.addHobbies('play chess');
+        person.removeHobbies('programming');
+        person.removeHobbies('running');
+        person.getHobbies();
+
+        person.getAnketa();
+
+        person.setAnyProperty('nationality', 'Ukrainian');
+
+        console.log(person);
+
+
+    </script>
+</body>
+
+</html>
