@@ -9,7 +9,7 @@
 
 <body>
     <script>
-        console.log("Task 1");
+        console.log("Task 1 - Подсчитать сумму всех чисел в заданном пользователем диапазоне");
         let userNumMin = +prompt("Enter number MIN", "");
         const userNumMax = +prompt("Enter number MAX", "");
         let sumNum = userNumMin;
@@ -20,7 +20,7 @@
         }
         console.log(sumNum);
 
-        console.log("Task 2");
+        console.log("Task 2 - Запросить 2 числа и найти только наибольший общий делитель");
         const userNum1 = +prompt("Enter number 1", "");
         const userNum2 = +prompt("Enter number 2", "");
         let min = (userNum1 < userNum2) ? userNum1 : userNum2;
@@ -35,19 +35,18 @@
         };
         console.log(maxDivider);
 
-        console.log("Task 3");
-        const userNum3 = +prompt("Enter number 3", "");
+        console.log("Task 3 - Запросить у пользователя число и вывести все делители этого числа");
+        const userNum3 = +prompt("Enter number", "");
         const arrdivNum3 = [];
         let divNam3 = userNum3;
         while (divNam3 > 0) {
-            if (userNum3 % divNam3 === 0)
-                arrdivNum3.push(divNam3);
+            if (userNum3 % divNam3 === 0) arrdivNum3.push(divNam3);
             divNam3--;
         };
         console.log(arrdivNum3);
 
-        console.log("Task 4");
-        let userNum4 = +prompt("Enter number 4", "");
+        console.log("Task 4 - Определить количество цифр в введенном числе");
+        let userNum4 = +prompt("Enter number", "");
         let numberOfDigits = 0;
         while (userNum4 > 1) {
             userNum4 /= 10;
@@ -55,7 +54,7 @@
         }
         console.log(numberOfDigits);
 
-        console.log("Task 5");
+        console.log("Task 5 - Запросить у пользователя 10 чисел и подсчитать, сколько он ввел положительных, отрицательных и нулей, четных и нечетных");
         let amountPositive = 0;
         let amountNegative = 0;
         let amountEven = 0;
@@ -74,7 +73,7 @@
         }
         console.log('Positive: ' + amountPositive + ' Negative: ' + amountNegative + ' Even: ' + amountEven + ' Odd: ' + amountOdd + ' Zero: ' + amountZero);
 
-        console.log("Task 6");
+        console.log("Task 6 - Зациклить калькулятор. Запросить у пользователя 2 числа и знак, решить пример, вывести результат и спросить, хочет ли он решить еще один пример");
         let userNum6_1;
         let userNum6_2;
         let userOperator;
@@ -109,38 +108,61 @@
             anotherExample = confirm("Do you want to solve another example");
         } while (anotherExample);
 
-        console.log("Task 7");
+        console.log("Task 7 - Запросить у пользователя число и на сколько цифр его сдвинуть");
         let userNumber7 = prompt('Enter your number');
         let countMove = +prompt('Enter your number move');
-        let arrUserNumber7 = userNumber7.split('');
-
-        for (let i = 1; i <= countMove; i++) {
-            arrUserNumber7.unshift(arrUserNumber7.pop());
-            console.log(arrUserNumber7);
+        let capacity = 0;
+        while ((userNumber7 / (10 ** capacity)) > 1) {
+            capacity++;
         }
-        userNumber7 = +arrUserNumber7.join('');
-        console.log(userNumber7);
+        let moveNumber = userNumber7;
+        for (let i = 1; i <= countMove; i++) {
+            moveNumber = ((moveNumber % 10) * (10 ** (capacity - 1))) + Math.floor(moveNumber / 10)
+        }
+        console.log(moveNumber);
 
-        console.log("Task 8");
-        const week = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
-        let dayOfWeek = prompt('Enter the number the day of week', '');
+        console.log("Task 8 Зациклить вывод дней недели таким образом: «День недели. Хотите увидеть следующий день?»");
+
+        let dayOfWeek = prompt('Enter the day of week', '');
         let nextDay;
         do {
-            if (dayOfWeek <= 7 && !isNaN(dayOfWeek)) {
-                if (dayOfWeek < 7) {
-                    console.log(week[dayOfWeek - 1]);
-                    dayOfWeek++;
-                } else {
-                    console.log(week[dayOfWeek - 1]);
-                    dayOfWeek = 1;
-                }
-                nextDay = confirm('Do you want to see the next day?');
-            } else {
-                console.log('Enter the correct day')
+            switch (dayOfWeek) {
+                case 'Monday':
+                    nextDay = 'Tuesday';
+                    break;
+                case 'Tuesday':
+                    nextDay = 'Wednesday';
+                    break;
+                case 'Wednesday':
+                    nextDay = 'Thursday';
+                    break;
+                case 'Thursday':
+                    nextDay = 'Friday';
+                    break;
+                case 'Friday':
+                    nextDay = 'Saturday';
+                    break;
+                case 'Saturday':
+                    nextDay = 'Sunday';
+                    break;
+                case 'Sunday':
+                    nextDay = 'Monday';
+                    break;
+                default:
+                    nextDay = 'Enter the correct day';
             }
-        } while (nextDay);
+            if (nextDay !== 'Enter the correct day') {
+                dayOfWeek = confirm(dayOfWeek + '! Do you want to see the next day?');
+                if (dayOfWeek) dayOfWeek = nextDay;
+            } else {
+                console.log(nextDay);
+                dayOfWeek = false;
+            }
 
-        console.log("Task 9");
+        } while (dayOfWeek);
+
+
+        console.log("Task 9 - Вывести таблицу умножения для всех чисел от 2 до 9. Каждое число необходимо умножить на числа от 1 до 10");
         let times;
         for (let i = 2; i <= 9; i++) {
             console.log('multiplication table ' + i + ':')
@@ -150,7 +172,7 @@
             }
         }
 
-        console.log("Task 10");
+        console.log("Task 10 - Игра «Угадай число»");
         console.log("Guess a number from 0 to 100");
         let guessNumber;
         let rangeMin = 0;
