@@ -9,18 +9,18 @@
 
 <body>
     <script>
-        console.log('Task 1');
         (function () {
+
+            console.log('Task 1 - Написать функцию, которая принимает 2 числа и возвращает -1, если первое меньше; 1 – если первое больше и 0 – если числа равны.');
             function getCompareNumber(num1, num2) {
                 if (num1 < num2) return -1;
                 if (num1 > num2) return 1;
                 if (num1 === num2) return 0;
             }
             console.log(getCompareNumber(3, 5))
-        })()
 
-        console.log('Task 2');
-        (function () {
+
+            console.log('Task 2 - Написать функцию, которая вычисляет факториал переданного ей числа');
             function factorial(num) {
                 if (num === undefined || isNaN(num)) return false;
                 let times = 1;
@@ -30,19 +30,17 @@
                 return times;
             }
             console.log(factorial(5));
-        })()
 
-        console.log('Task 3');
-        (function () {
+
+            console.log('Task 3 - Написать функцию, которая принимает три отдельные цифры и превращает их в одно число');
             function getJoinNumbers(num1, num2, num3) {
                 let joinNumber = String(num1) + String(num2) + String(num3)
                 return joinNumber;
             }
             console.log(getJoinNumbers(1, 2, 3));
-        })()
 
-        console.log('Task 4');
-        (function () {
+
+            console.log('Task 4 - Написать функцию, которая принимает длину и ширину прямоугольника и вычисляет его площадь. Если в функцию передали 1 параметр, то она вычисляет площадь квадрата');
             function calcSquare(side1, side2) {
                 let square;
                 if (side2 === undefined) {
@@ -54,11 +52,10 @@
             }
             console.log(calcSquare(3, 4));
             console.log(calcSquare(4));
-        })()
 
-        console.log('Task 5');
-        (function () {
-            function checkNumber(num) {
+
+            console.log('Task 5 - Написать функцию, которая проверяет, является ли переданное ей число совершенным');
+            function perfectNumber(num) {
                 let sumDivNum = 0;
                 let divNam = 1;
                 while (divNam < num) {
@@ -66,46 +63,28 @@
                         sumDivNum += divNam;
                     divNam++;
                 };
-
                 if (num === sumDivNum) {
                     return 'Your number is PERFECT';
                 } else {
                     return 'Your number is NOT PERFECT';
                 }
             }
-            console.log(checkNumber(+prompt('Enter number', '')));
-        })()
+            console.log(perfectNumber(28));
+            console.log(perfectNumber(100));
 
-        console.log('Task 6');
-        (function () {
-            function checkNumber(num) {
-                let sumDivNum = 0;
-                let divNam = 1;
-                while (divNam < num) {
-                    if (num % divNam === 0)
-                        sumDivNum += divNam;
-                    divNam++;
-                };
-                if (num === sumDivNum) {
-                    return true;
-                } else {
-                    return false
-                }
-            }
 
+            console.log('Task 6 - Написать функцию, которая принимает минимальное и максимальное значения для диапазона, и выводит только те числа из диапазона, которые являются совершенными');
             function choisePerfectNumber(minNum, maxNum) {
                 const arrPerfectNum = []
                 for (let i = minNum; i <= maxNum; i++) {
-                    if (checkNumber(i)) arrPerfectNum.push(i);
+                    if (perfectNumber(i) === 'Your number is PERFECT') arrPerfectNum.push(i);
                 }
                 return arrPerfectNum;
             }
-
             console.log(choisePerfectNumber(1, 1000));
-        })()
 
-        console.log('Task 7');
-        (function () {
+            console.log('Task 7 - Написать функцию, которая принимает время (часы, минуты, секунды) и выводит его на экран в формате «чч:мм:сс».Если при вызове функции минуты и/или секунды не были переданы, то выводить их как 00');
+
             function time(hours, minutes, seconds) {
                 let hoursTime = "";
                 let minutesTime = "";
@@ -132,10 +111,9 @@
                 return hoursTime + ':' + minutesTime + ":" + secondsTime;
             }
             console.log(time(12, 9, 15));
-        })()
+            console.log(time(11));
 
-        console.log('Task 8');
-        (function () {
+            console.log('Task 8 - Написать функцию, которая принимает часы, минуты и секунды и возвращает это время в секундах.');
             function getTimeSecond(hours, minutes, seconds) {
                 let timeInSeconds = 0;
                 if ((hours >= 0) && (minutes >= 0) && (minutes < 60) && (seconds >= 0) && (seconds < 60)) {
@@ -146,11 +124,9 @@
                 }
             }
             console.log(getTimeSecond(5, 10, 22));
-        })()
 
-        console.log('Task 9');
-        (function () {
-            function formatTime(seconds) {
+            console.log('Task 9 - Написать функцию, которая принимает количество секунд, переводит их в часы, минуты и секунды и возвращает в виде строки «чч:мм:сс».');
+            function getFormatTime(seconds) {
                 let hoursTime = "";
                 let minutesTime = "";
                 let secondsTime = "";
@@ -165,46 +141,19 @@
                     return 'Enter the correct SECONDS';
                 }
             }
-            console.log(formatTime(3661));
-        })()
+            console.log(getFormatTime(3661));
 
-        console.log('Task 10');
-        (function () {
-
-            function getTimeSecond(hours, minutes, seconds) {
-                let timeInSeconds = 0;
-                if ((hours >= 0) && (minutes >= 0) && (minutes < 60) && (seconds >= 0) && (seconds < 60)) {
-                    timeInSeconds = hours * 3600 + minutes * 60 + seconds;
-                    return timeInSeconds
-                } else {
-                    return 'Enter the correct Time';
-                }
-            }
-
-            function formatTime(seconds) {
-                let hoursTime = "";
-                let minutesTime = "";
-                let secondsTime = "";
-                if (seconds >= 0) {
-                    hoursTime = Math.floor(seconds / 3600);
-                    minutesTime = Math.floor((seconds - (hoursTime * 3600)) / 60);
-                    minutesTime = (minutesTime >= 10) ? minutesTime : ('0' + minutesTime);
-                    secondsTime = seconds - (hoursTime * 3600) - (minutesTime * 60);
-                    secondsTime = (secondsTime >= 10) ? secondsTime : ('0' + secondsTime);
-                    return hoursTime + ':' + minutesTime + ":" + secondsTime;
-                } else {
-                    return 'Enter the correct SECONDS';
-                }
-            }
+            console.log('Task 10 - Написать функцию, которая считает разницу между датами. Функция принимает 6 параметров, которые описывают 2 даты, и возвращает результат в виде строки «чч:мм:сс»');
 
             function getDateDifference(startHour, startMinute, startSecond, finishHour, finishMinute, finishSecond) {
                 const startDateInSeconds = getTimeSecond(startHour, startMinute, startSecond);
                 const finishDateInSeconds = getTimeSecond(finishHour, finishMinute, finishSecond);
                 const dateDifferenceInSeconds = finishDateInSeconds - startDateInSeconds;
-                const dateFormat = formatTime(dateDifferenceInSeconds);
+                const dateFormat = getFormatTime(dateDifferenceInSeconds);
                 return dateFormat;
             }
             console.log(getDateDifference(10, 15, 25, 10, 25, 30))
+
         })()
 
     </script>
