@@ -4,100 +4,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Clock</title>
     <style>
-        .error {
-            border-color: red;
+        .clock {
+            margin: 0 auto;
+            color: yellow;
+            font-size: 120px;
+            text-align: center;
         }
     </style>
 </head>
 
 <body>
-    <nav id="menu">
-        <h2>previous</h2>
-        <ul class="menu">
-            <li class="menu__item"><a href="#" class="menu__link"><span>Home</span></a></li>
-            <li class="menu__item"><a href="#" class="menu__link"><span>Text</span></a></li>
-            <li class="menu__item"><a href="#" class="menu__link"><span>Form</span></a></li>
-            <li class="menu__item"><a href="#" class="menu__link"><span>Sing in</span></a></li>
-            <li class="menu__item"><a href="#" class="menu__link"><span>Sing up</span></a></li>
-        </ul>
-        <h2>next</h2>
-    </nav>
-    <input type="text" name="text">
-    <input type="text" name="name">
-    <div id="users">
-        <hr>
+    <div class="clock">
+        <span class="hours">00</span>
+        <span class="fistSeparator" name="separator">:</span>
+        <span class="minutes">00</span>
+        <span class="secondSeparator" name="separator">:</span>
+        <span class="seconds">00</span>
     </div>
     <script>
-        const nav = document.getElementById("menu"); // самый быстрий метод 
-        const ul = document.getElementsByClassName('menu'); // по класу, получаем колекцию
-        //console.log(nav, menu); // переменная созадает браузер через id
-        console.log(nav, ul);
+        const hours = document.querySelector(".hours");
+        const minutes = document.querySelector(".minutes");
+        const seconds = document.querySelector('.seconds');
 
-        [...ul].forEach(function (item) { // превращаем колекцию в массив
-            console.log(item); // нельзя пуш для колекции, не может изменить количество элементов
-        });
-        const li = document.getElementsByTagName('li'); // возвращает колекцию
-        const input = document.getElementsByTagName('text'); //возвращаеи нодлист,есть forEach
+        let h = 0;
+        let m = 0;
+        let s = 0;
 
-        const firstSpan = document.querySelector('.menu__item span'); // возвращает 1 элемент, которий нашел
-        const allSpan = document.querySelectorAll('.menu__item span');
-        console.log(nav, ul, input, firstSpan, allSpan);
-        const div = document.querySelector('#users');
-        console.log(div);
-        const inputName = document.querySelector("[name=text]");
-        console.log(inputName);
-        const text = "<h1>hello</h1>";
+        function clock() {
+            const date = new Date();
+            h = (date.getHours() < 10) ? '0' + date.getHours() : date.getHours();
+            m = (date.getMinutes() < 10) ? '0' + date.getMinutes() : date.getMinutes();
+            s = (date.getSeconds() < 10) ? '0' + date.getSeconds() : date.getSeconds();
+            hours.textContent = h;
+            minutes.textContent = m;
+            seconds.textContent = s;
+        }
+        setInterval(clock, 1000);
 
-        console.log(nav.innerHTML); //
-        //nav.innerHTML = text;
-        //nav.innerHTML = '';// медленная операция, нежелательно что то так вставлять, 
-        console.log(nav.outerHTML); // содержимое єлемента
-        //nav.outerHTML = text; //можно удалить элемент, редко используеться
+        const firstSeparator = document.querySelector('.fistSeparator');
+        const secondSeparator = document.querySelector('.secondSeparator');
+        const allSeparator = document.querySelectorAll('[name=separator]');
 
-        console.log(firstSpan.innerText);
-        //firstSpan.innerText = text;
-        console.log(firstSpan.outerText);
-        console.log(firstSpan.textContent); //для довавления текста
-        firstSpan.textContent = text;
+        function separatorChange() {
+            if (s % 2 === 0) {
+                firstSeparator.style.visibility = "hidden";
+                secondSeparator.style.visibility = "hidden";
+            } else {
+                firstSeparator.style.visibility = "visible";
+                secondSeparator.style.visibility = "visible";
+            }
+        }
+        setInterval(separatorChange, 1000);
 
-        //Атрибуты
-        nav.setAttribute('title', "Main menu1");
-        ul[0].setAttribute('title', "Main menu2");
+        function changeColorSeparator() {
+            if (+s % 10 === 3 || +s % 10 === 7 || +s % 10 === 9) {
+                allSeparator.forEach(function (item) {
+                    item.style.color = "lime";
+                });
+            } else {
+                allSeparator.forEach(function (item) {
+                    item.style.color = "fuchsia";
+                });
+            }
+        }
+        setInterval(changeColorSeparator, 1000);
 
-        console.log(nav.getAttribute('title')); //получить значение атрибута
-        console.log(nav.hasAttribute('title')); //проверить
-        console.log(nav.attributes);
-        nav.removeAttribute('title');
-        console.log(nav.hasAttribute('title'));
+        function changeColor() {
+            (s < 30) ? seconds.style.color = "blue": seconds.style.color = "purple";
+            (h % 2 === 0) ? minutes.style.color = "green": minutes.style.color = "aqua";
+        }
+        setInterval(changeColor, 1000);
 
-        const allInput = [...document.querySelectorAll('[type = "text"]')];
-        console.log(allInput);
-        allInput.forEach(function (item) {
-            item.setAttribute('placeholder', item.getAttribute('name'));
-            console.log(item);
-        });
-        //Классы
-        nav.classList.add('active', 'test'); // добавить элемент
-        console.log(nav.classList.contains('active'), nav.classList.value);
-        nav.classList.toggle('active'); //клас есть - удалем, если нету - добавляет
-        nav.classList.remove('test'); // удаляет
+        const clockBlock = document.querySelector("div");
 
-        allInput.forEach(function (item) {
-            item.classList.add('error');
-            console.log(item);
-        });
-
-        //Добавление стилей
-        nav.style.color = "red";
-        nav.style.paddingTop = "50px";
-        //nav.style[padding - bottom] = "50px";
-        nav.style.setProperty('color', 'black');
-        //console.log(nav.style.getPropertyValue('padding'));
-        console.log(nav.style);
-        //nav.style.removeProperty('color');
-        nav.style.color = "";
+        function paddingTop() {
+            if (s < 15) clockBlock.style.paddingTop = "100px";
+            if (s >= 15 && s < 30) clockBlock.style.paddingTop = "150px";
+            if (s >= 30 && s < 45) clockBlock.style.paddingTop = "200px";
+            if (s >= 45 && s < 60) clockBlock.style.paddingTop = "250px";
+        }
+        setInterval(paddingTop, 1000);
     </script>
 </body>
 
