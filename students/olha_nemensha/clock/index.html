@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .error {
+            border-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="menu">
+        <h2>previous</h2>
+        <ul class="menu">
+            <li class="menu__item"><a href="#" class="menu__link"><span>Home</span></a></li>
+            <li class="menu__item"><a href="#" class="menu__link"><span>Text</span></a></li>
+            <li class="menu__item"><a href="#" class="menu__link"><span>Form</span></a></li>
+            <li class="menu__item"><a href="#" class="menu__link"><span>Sing in</span></a></li>
+            <li class="menu__item"><a href="#" class="menu__link"><span>Sing up</span></a></li>
+        </ul>
+        <h2>next</h2>
+    </nav>
+    <input type="text" name="text">
+    <input type="text" name="name">
+    <div id="users">
+        <hr>
+    </div>
+    <script>
+        const nav = document.getElementById("menu"); // самый быстрий метод 
+        const ul = document.getElementsByClassName('menu'); // по класу, получаем колекцию
+        //console.log(nav, menu); // переменная созадает браузер через id
+        console.log(nav, ul);
+
+        [...ul].forEach(function (item) { // превращаем колекцию в массив
+            console.log(item); // нельзя пуш для колекции, не может изменить количество элементов
+        });
+        const li = document.getElementsByTagName('li'); // возвращает колекцию
+        const input = document.getElementsByTagName('text'); //возвращаеи нодлист,есть forEach
+
+        const firstSpan = document.querySelector('.menu__item span'); // возвращает 1 элемент, которий нашел
+        const allSpan = document.querySelectorAll('.menu__item span');
+        console.log(nav, ul, input, firstSpan, allSpan);
+        const div = document.querySelector('#users');
+        console.log(div);
+        const inputName = document.querySelector("[name=text]");
+        console.log(inputName);
+        const text = "<h1>hello</h1>";
+
+        console.log(nav.innerHTML); //
+        //nav.innerHTML = text;
+        //nav.innerHTML = '';// медленная операция, нежелательно что то так вставлять, 
+        console.log(nav.outerHTML); // содержимое єлемента
+        //nav.outerHTML = text; //можно удалить элемент, редко используеться
+
+        console.log(firstSpan.innerText);
+        //firstSpan.innerText = text;
+        console.log(firstSpan.outerText);
+        console.log(firstSpan.textContent); //для довавления текста
+        firstSpan.textContent = text;
+
+        //Атрибуты
+        nav.setAttribute('title', "Main menu1");
+        ul[0].setAttribute('title', "Main menu2");
+
+        console.log(nav.getAttribute('title')); //получить значение атрибута
+        console.log(nav.hasAttribute('title')); //проверить
+        console.log(nav.attributes);
+        nav.removeAttribute('title');
+        console.log(nav.hasAttribute('title'));
+
+        const allInput = [...document.querySelectorAll('[type = "text"]')];
+        console.log(allInput);
+        allInput.forEach(function (item) {
+            item.setAttribute('placeholder', item.getAttribute('name'));
+            console.log(item);
+        });
+        //Классы
+        nav.classList.add('active', 'test'); // добавить элемент
+        console.log(nav.classList.contains('active'), nav.classList.value);
+        nav.classList.toggle('active'); //клас есть - удалем, если нету - добавляет
+        nav.classList.remove('test'); // удаляет
+
+        allInput.forEach(function (item) {
+            item.classList.add('error');
+            console.log(item);
+        });
+
+        //Добавление стилей
+        nav.style.color = "red";
+        nav.style.paddingTop = "50px";
+        //nav.style[padding - bottom] = "50px";
+        nav.style.setProperty('color', 'black');
+        //console.log(nav.style.getPropertyValue('padding'));
+        console.log(nav.style);
+        //nav.style.removeProperty('color');
+        nav.style.color = "";
+    </script>
+</body>
+
+</html>
