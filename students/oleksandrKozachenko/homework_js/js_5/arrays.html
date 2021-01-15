@@ -9,10 +9,11 @@
 
 <body>
     <script>
-        //TASK 1
-        console.log('Task 1');
 
         (function () {
+
+            //TASK 1
+            console.log('Task 1 - Создать массив «Список покупок». Каждый элемент массива является объектом, который содержит название продукта, необходимое количество и куплен или нет');
             const shoppingArr = [
                 {
                     name: 'potatous',
@@ -40,15 +41,9 @@
                     bought: false,
                 },
             ];
-            function sortShopping(shopping) {
-                shopping.sort(function (purchaseA, purchaseB) {
-                    if (purchaseA.bought === false && purchaseB.bought === true) return -1;
-                    if (purchaseA.bought === true && purchaseB.bought === false) return 1;
-                    if (purchaseA.bought === purchaseB.bought) return 0;
-                })
-                return shopping;
-            }
 
+
+            console.log('Добавление покупки в список. ')
             function addShopping(name, quantity, bought, arr) {
                 const shoppingPosition = {
                     name,
@@ -64,7 +59,9 @@
                 }
                 return arr;
             }
+            console.log(addShopping('banana', 4, false, shoppingArr));
 
+            console.log('Покупка продукта. Функция принимает название продукта и отмечает его как купленный.')
             function boughtShopping(nameShopping, arr) {
                 const rezultFind = arr.find(item => item.name === nameShopping);
                 if (rezultFind) {
@@ -75,18 +72,21 @@
                 }
 
             }
-
-            //Добавление покупки
-            console.log(addShopping('banana', 4, false, shoppingArr));
-            //Отметить продукт как купленный
             console.log(boughtShopping('bread', shoppingArr));
-            //Вывод покупок: некупленные, потом купленные
-            console.log(sortShopping(shoppingArr));
-        })()
 
-        //TASK 2
-        console.log('Task 2');
-        (function () {
+            console.log('Вывод всего списка на экран таким образом, чтобы сначала шли некупленные продукты, а потом – купленные.')
+            function sortShopping(shopping) {
+                shopping.sort(function (purchaseA, purchaseB) {
+                    if (purchaseA.bought === false && purchaseB.bought === true) return -1;
+                    if (purchaseA.bought === true && purchaseB.bought === false) return 1;
+                    if (purchaseA.bought === purchaseB.bought) return 0;
+                })
+                return shopping;
+            }
+            console.log(sortShopping(shoppingArr));
+
+            //TASK 2
+            console.log('Task 2 - Создать массив, описывающий чек в магазине. Каждый элемент массива состоит из названия товара, количества и цены за единицу товара');
             const checkList = [
                 {
                     name: 'potatous',
@@ -110,16 +110,21 @@
                 },
             ];
 
+            console.log('Распечатка чека на экран');
             function printCheckList(arr) {
                 arr.forEach(element => console.log(element));
             }
+            printCheckList(checkList);
 
+            console.log('Подсчет общей суммы покупки');
             function countSum(arr) {
                 let sumCheckList = 0;
                 arr.forEach(element => sumCheckList += element.price * element.quantity);
                 return sumCheckList;
             }
+            console.log(countSum(checkList));
 
+            console.log('Получение самой дорогой покупки в чеке');
             function getMostExpensive(arr) {
                 let mostExpensiveRosition;
                 let maxShopping = 0;
@@ -133,26 +138,18 @@
                 })
                 return mostExpensiveRosition;
             }
+            console.log(getMostExpensive(checkList));
 
+            console.log('Подсчет средней стоимости одного товара в чеке');
             function countAverageCost(arr) {
                 let sumPrice = arr.reduce((sum, nextElement) => sum + nextElement.price, 0);
                 const averageCost = sumPrice / arr.length;
                 return averageCost;
             }
-
-            //рРаспечатка чека
-            printCheckList(checkList);
-            //Подсчет общей суммы покупки
-            console.log(countSum(checkList));
-            //Получение самой дорогой покупки в чеке
-            console.log(getMostExpensive(checkList));
-            //Подсчет средней стоимости одного товара в чеке
             console.log(countAverageCost(checkList));
-        })()
 
-        //TASK 3
-        console.log('Task 3');
-        (function () {
+            //TASK 3
+            console.log('Task 3 - Создать массив CSS-стилей');
             const styleList = [
                 {
                     name: 'color',
@@ -181,12 +178,11 @@
                 return document.write(element);
             }
             createElement(styleList, 'Hello from javaScript');
-        })()
 
 
-        //TASK 4
-        console.log('Task 4');
-        (function () {
+
+            //TASK 4
+            console.log('Task 4 - Создать массив аудиторий академии');
             const lectureRooms = [
                 {
                     name: '205А',
@@ -226,26 +222,33 @@
                 faculty: 'meсhanical',
             }
 
+            console.log('Вывод на экран всех аудиторий');
             function printLectureRooms(arrLectureRooms) {
                 arrLectureRooms.forEach(element => console.log(element));
-            }
+            };
+            printLectureRooms(lectureRooms);
 
+            console.log('Вывод на экран аудиторий для указанного факультета');
             function printFacultyRooms(arrLectureRooms, faculty) {
                 arrLectureRooms.forEach(function (element) {
                     if (element.attachment === faculty) {
                         console.log(element)
                     }
                 })
-            }
+            };
+            printFacultyRooms(lectureRooms, 'meсhanical');
 
+            console.log('Вывод на экран только тех аудиторий, которые подходят для переданной группы');
             function printLectureRoomsForGroup(arrLectureRooms, group) {
                 arrLectureRooms.forEach(function (element) {
                     if (element.seats >= group.quantity) {
                         console.log(element)
                     }
                 })
-            }
+            };
+            printLectureRoomsForGroup(lectureRooms, group1);
 
+            console.log('Функция сортировки аудиторий по количеству мест');
             function sortLectureRoomsForSeats(arrLectureRooms) {
                 arrLectureRooms.sort(function (roomA, roomB) {
                     if (roomA.seats < roomB.seats) return -1;
@@ -253,8 +256,10 @@
                     if (roomA.seats === roomB.seats) return 0;
                 })
                 return console.log(arrLectureRooms);
-            }
+            };
+            sortLectureRoomsForSeats(lectureRooms);
 
+            console.log('Функция сортировки аудиторий по названию');
             function sortLectureRoomsForName(arrLectureRooms) {
                 arrLectureRooms.sort(function (roomA, roomB) {
                     if (roomA.name < roomB.name) return -1;
@@ -262,22 +267,37 @@
                     if (roomA.name === roomB.name) return 0;
                 })
                 return console.log(arrLectureRooms);
+            };
+            sortLectureRoomsForName(lectureRooms);
+
+
+            //TASK 5
+            console.log('Task 5 - Дешифровать строку');
+            const al = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't',
+                'u', 'v', 'w', 'x', 'y', 'z'];
+
+            function coding(text) {
+                const arrString = text.toLowerCase().split('');
+                const arrSymbols = arrString.map(function (item) {
+                    const indexElement = al.indexOf(item);
+                    return indexElement === -1 ? item : indexElement;
+                });
+                return arrSymbols.join(',');
             }
 
-            //Вывод на экран всех аудиторий
-            printLectureRooms(lectureRooms);
+            const codeStr = coding("Education is the best friend!")
+            console.log(codeStr);
 
-            //Вывод на экран аудиторий для указанного факультета;
-            printFacultyRooms(lectureRooms, 'meсhanical');
+            function deCoding(stringCode) {
+                let arrstring = stringCode.split(',');
+                console.log(arrstring)
+                const symbols = arrstring.map(function (item) {
+                    return (al[item] !== undefined) ? al[item] : item;
+                })
+                return symbols.join('');
+            }
+            console.log(deCoding(codeStr));
 
-            //Вывод на экран только тех аудиторий, которые подходят для переданной группы
-            printLectureRoomsForGroup(lectureRooms, group1);
-
-            //сортировки аудиторий по количеству мест;
-            sortLectureRoomsForSeats(lectureRooms);
-
-            //сортировки аудиторий по названию
-            sortLectureRoomsForName(lectureRooms);
         })()
 
     </script>
