@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS_CW_objects</title>
+    </head>
+    <body>
+        <script>
+            const me = {
+                firstName: 'Alex',
+                lastName: 'Kirushov',
+                age: 28,
+                skilList: ['html', 'css', 'js'],
+                tel: 333333,
+                hobby: ['music', 'basketball', 'dancing'],
+
+                setFirstName: function (name) {
+                    if (name === undefined) return;
+                    this.firstName = name;
+                },
+
+                getFirstName: function () {
+                    return "Мое имя: " + this.firstName;
+                },
+
+
+                setLastName: function (lastName) {
+                    if (lastName === undefined) return;
+                    this.lastName = lastName;
+                },
+
+                getLastName: function () {
+                    return "Моя фамилия: " + this.lastName;
+                },
+
+
+                addSkillList: function (skilList) {
+                    if (skilList === undefined) return;
+                    this.skilList.push(skilList);
+                },
+
+                deleteSkillList: function (skilList) {
+                    const deleteSkill = this.skilList.indexOf(skilList);
+                    if (deleteSkill === -1) return console.log('Данного навыка не существует');
+                    return this.skilList.splice(deleteSkill, 1);
+                },
+
+
+                getSkillList: function () {
+                    return "Мои навыки: " + "\n•" + this.skilList.join("\n•");
+                },
+
+
+                setTel: function (tel) {
+                    if (tel === undefined) return;
+                    this.tel = tel;
+                },
+
+                getTel: function () {
+                    return "Мой номер телефона: " + this.tel;
+                },
+
+
+                addHobby: function (hobby) {
+                    if (hobby === undefined) return;
+                    this.hobby.push(hobby);
+                },
+
+                deleteHobby: function (hobby) {
+                    const deleteHobby = this.hobby.indexOf(hobby);
+                    if (deleteHobby === -1) return console.log('Данного навыка не существует');
+                    return this.hobby.splice(deleteHobby, 1);
+                },
+
+                getHobby: function () {
+                    return 'Мои увлечения: ' + "\n•" + this.hobby.join('\n•');
+                },
+
+
+                creatingNewParameter: function (key, value) {
+                    if (key === undefined || value === undefined) return;
+                    this[key] = value;
+                },
+
+                getAnketa() {
+                    return this.getFirstName() + '\n' + this.getLastName() + '\n' + this.getSkillList() + '\n' +
+                        this.getTel() + '\n' + this.getHobby();
+                },
+
+            };
+
+            console.log(me.getAnketa());
+            me.deleteSkillList('js');
+            console.log(me.getAnketa());
+            me.deleteHobby('dancing');
+            console.log(me.getAnketa());
+            me.creatingNewParameter('growth', '170cm');
+            console.log(me.growth);
+        </script>
+    </body>
+</html>
