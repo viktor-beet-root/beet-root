@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>DOM CLOCK</title>
+        <style type="text/css">
+            .clock {
+                background-color: #1f97ac;
+                text-align: center;
+                width: 200px;
+                height: 220px;
+                margin: 200px auto 0;
+                border-radius: 30%;
+                vertical-align: middle;
+                border: 1px solid #0a6d47;
+                line-height: 200px;
+            }
+
+            .clock__hours,
+            .clock__minutes,
+            .clock__dots,
+            .clock__seconds {
+                font-size: 50px;
+                color: white;
+            }
+
+            .clock__seconds {
+                font-size: 25px;
+            }
+
+            .belt {
+                width: 100px;
+                height: 700px;
+                margin: 0 auto;
+                background-color: #f8f40c;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                z-index: -1;
+                transform: translateX(-50%);
+            }
+
+            .holes {
+                width: 10px;
+                height: 10px;
+                background-color: white;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                border-radius: 50%;
+            }
+
+            .hole1 {
+                top: 25px;
+            }
+
+            .hole2 {
+                top: 55px;
+            }
+
+            .hole3 {
+                top: 85px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="belt"></div>
+        <div class="holes hole1"></div>
+        <div class="holes hole2"></div>
+        <div class="holes hole3"></div>
+
+        <div class="clock">
+            <span class="clock__hours">00</span>
+            <span class="clock__dots">:</span>
+            <span class="clock__minutes">00</span>
+            <span class="clock__seconds">00</span>
+        </div>
+        <script>
+            let hours = document.querySelector(".clock__hours");
+            let hoursValue = "0" + parseInt(hours.innerHTML);
+            hours.innerHTML = hoursValue;
+
+            let minutes = document.querySelector(".clock__minutes");
+
+            let minutesValue = "0" + parseInt(minutes.innerHTML);
+            minutes.innerHTML = minutesValue;
+
+            let dotsOutter = document.querySelector(".clock__dots");
+
+            let seconds = document.querySelector(".clock__seconds");
+            let secondsValue = "0" + parseInt(seconds.innerHTML);
+            seconds.innerHTML = secondsValue;
+
+            function dotssIn() {
+                dotsOutter.style.visibility = "hidden";
+            }
+            function dotssOut() {
+                dotsOutter.style.visibility = "visible";
+            }
+
+            function hoursIn() {
+                hours.innerHTML++;
+                if (hours.innerHTML < 10) {
+                    hours.innerHTML = "0" + hours.innerHTML;
+                }
+            }
+
+            function minutesIn() {
+                minutes.innerHTML++;
+                if (minutes.innerHTML > 59) {
+                    minutes.innerHTML = 0;
+                }
+                if (minutes.innerHTML < 10) {
+                    minutes.innerHTML = "0" + minutes.innerHTML;
+                }
+            }
+
+            function secondsIn() {
+                seconds.innerHTML++;
+                if (seconds.innerHTML > 59) {
+                    seconds.innerHTML = 0;
+                }
+                if (seconds.innerHTML < 10) {
+                    seconds.innerHTML = "0" + seconds.innerHTML;
+                }
+            }
+
+            function randomColor() {
+                const secondsColor = "rgb(" + Math.floor(Math.random() * 256) + "," + Math.floor(Math.random() * 256) + "," + Math.floor(Math.random() * 256) + ")";
+                seconds.style.color = secondsColor;
+            }
+
+            setInterval(dotssIn, 500);
+            setInterval(dotssOut, 1000);
+            setInterval(secondsIn, 1000);
+            setInterval(minutesIn, 60000);
+            setInterval(hoursIn, 3600000);
+            setInterval(randomColor, 1000);
+        </script>
+    </body>
+</html>
