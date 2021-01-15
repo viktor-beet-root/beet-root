@@ -1,0 +1,120 @@
+.blog{
+    padding: 100px 0 100px 0;
+
+    &__article{
+        margin: 0 auto;
+        text-align: center;
+        color: $colorTextWhite;
+    }
+
+    &__title{
+        font-size: 90px;
+        font-weight: 700;
+
+        @media (max-width: $SM) {
+            font-size: 50px;
+        }
+    }
+
+    &__bg{
+        background-color: $colorBgBlog;
+    }
+
+    &__item-wrapper{
+        position: relative;
+        text-decoration: none;
+        color: $colorTextWhite;
+        display: block;
+
+        &:hover .blog__item-img-wrapp::after{
+            content: '';
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            box-sizing: border-box;
+            position: absolute;
+            display: block;
+            background-color: rgba(255, 255, 255, .5);
+            opacity: .7;
+        }
+    }
+
+    &__item-img-wrapp{
+        position: relative;
+        box-sizing: content-box;
+
+        > img {
+            display: block;
+            width: 100%;
+        }
+        &::before{
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            display: block;
+            background-image: linear-gradient( to top, rgba(0, 0, 0, 0.9) 0%, transparent 100%);
+        }
+    }
+
+    &__item-date-wrap{
+        background-color: rgba($color: #000000, $alpha: .5);
+        height: 60px;
+        width: 60px;
+        text-align: center;
+        border-radius: 5px;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+    }
+
+    &__item-date{
+        font-size: 32px;
+        font-weight: 700;
+        text-transform: uppercase;
+        line-height: 32px;
+    }
+    
+    &__item-month{
+        font-size: 21px;
+        font-weight: 900;
+        line-height: 21px;
+        text-transform: uppercase;
+    }
+
+    &__item-title-wrap{
+        position: absolute;
+        width: calc(100%-60px);
+        bottom: 20px;
+        padding: 0 40px 0 20px;
+        box-sizing: border-box;
+    }
+
+    &__item-title{
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    &__item-autor{
+        font-size: 13px;
+        font-weight: 300;
+    }
+
+    &__button__wrap{
+        padding: 20px;
+    }
+
+    &__button{
+        margin: 0 auto;
+        background-color: $colorBgButton;
+        color: $colorTextWhite;
+        
+    }
+}
+
+@media (max-width: $MD ){
+    .blog{
+        padding: 10px 0 10px 0;
+    }
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DZ js1</title>
+</head>
+
+<body>
+    <script>
+        console.log('Задание 1');
+        const name = prompt('Ваше имя', '');
+        console.log('Привет, ' + name);
+        console.log('Задание 2');
+        const yearsNow = 2020;
+        const yearOfBirth = prompt('Ваш год рождения', '');
+        const age = yearsNow - yearOfBirth;
+        console.log(age);
+        console.log('Задание 3');
+        const sideLength = prompt('Назовите длину стороны квадрата', '');
+        const perimeter = sideLength * 4;
+        console.log(perimeter);
+        console.log('Задание 4');
+        const circleRadius = prompt('Задайте радиус окружности', '')
+        const perimeterRadius = circleRadius * 2 * Math.PI;
+        console.log(circleRadius);
+        console.log('Задание 5');
+        const distanceS = prompt('Задайте расстояние между городами в км', '');
+        const time = prompt('За сколько времени хотите добраться', '');
+        const speed = distanceS / time;
+        console.log(speed, 'км.ч');
+    </script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+.header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.header__container{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 43px 0 40px;
+}
+
+.header__logo{
+    margin-left: 42px;
+    padding-top: 20px;
+}
+
+.header__menu{
+    max-width: 588px;
+}
+
+.menu__input:checked ~.menu__btn .menu__btn_line{
+    transform:translateY(12px) rotate(45deg) ;
+}
+
+.menu__input:checked ~.menu__btn .menu__btn_line::after{
+    transform: translateY(-12px) rotate(-90deg);
+}
+
+.menu__input:checked ~.menu__btn .menu__btn_line::before{
+    width: 0;
+}
+
+.menu__items{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu__input:checked ~.menu__items{
+    display: block;
+    visibility: visible;
+    pointer-events: all;
+    transition: .5s ease-in-out;
+    opacity: 1;
+}
+
+.menu__item{
+    padding: 5px 0 5px;
+    margin: 15px;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    border-top: 3px solid transparent;
+    transition: all 0.1s ease-in;
+
+    &:first-child,
+    &:hover{
+        border-top: 3px solid $Orange;
+        transition: all 0.1s ease-in;
+    }
+
+    &_link{
+        text-decoration: none;
+        color: $MineShaft;
+    }
+}
+
+@media screen and  (max-width: 768px){
+    .header__logo{
+        margin-top: -40px;
+    }
+
+    .menu__btn{
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        right: 30px;
+        top: 30px;
+    }
+
+    .menu__btn_line{
+        position: relative;
+        height: 5px;
+        width: 100%;
+        background-color: $Orange;
+
+        &::after,
+        &::before{
+            content: '';
+            position: absolute;
+            height: 5px;
+            width: 100%;
+            background-color: $Orange;
+        }
+
+        &::after{
+            bottom: -12px;
+        }
+
+        &::before{
+            bottom: -25px;
+        }
+    }
+
+    .menu__items{
+        margin-top: 40px;
+        visibility: hidden;
+        pointer-events: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        background-color: $white;
+        text-align: center;
+        opacity: 0;
+    }
+
+    .menu__item{
+        border-bottom: 1px solid gray;
+        margin: 0;
+        padding: 10px;
+    }
+}

@@ -1,0 +1,12 @@
+.rating{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    &__star{
+        list-style-type: none;
+        opacity: 0.11;
+    }
+    &_activ{
+        opacity: 1;
+    }
+}

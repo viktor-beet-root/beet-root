@@ -1,0 +1,63 @@
+.about-us {
+    background-color: $bgColorAbout;
+
+    &__container {
+        padding: 55px 0;
+    }
+
+    &__img-box {
+        display: flex;
+        justify-content: center;
+        margin-left: 1.4%;
+    }
+
+    &__img {
+        display: block;
+        width: 100%;
+        filter: drop-shadow(-18.794px 6.84px 25px rgba(0, 0, 0, 0.3));
+    }
+
+    &__item {
+        color: $textColorWhite;
+        padding: 15px 14px 15px 0;
+        margin-left: 5.5%;
+
+        &-heading {
+            margin: 90px 0 6px;
+            font-size: 90px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        &-text {
+            margin-bottom: 14px;
+        }
+    }
+}
+
+@media (max-width: $LG) {
+    .about-us {
+
+        &__container {
+            padding: 55px 15px;
+        }
+
+        &__img-box {
+            margin: 0 auto;
+        }
+
+        &__item {
+            margin: 0 auto;
+            padding: 15px;
+
+            &-heading {
+                text-align: center;
+                margin: 0 0 6px;
+            }
+
+            &-text {
+                text-align: justify;
+            }
+        }
+    }
+}

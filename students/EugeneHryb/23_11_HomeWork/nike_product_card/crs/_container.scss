@@ -1,0 +1,14 @@
+.container{
+    @include bgCover('../img/conteiner_bg.png');
+    max-height: 600px;
+    max-width: 800px;
+    padding: 100px 60px;
+    position: relative;
+    &_centr{
+        margin: 0 auto;
+    }
+    &_centr-item{
+        margin: 0 auto;
+    }
+}
+

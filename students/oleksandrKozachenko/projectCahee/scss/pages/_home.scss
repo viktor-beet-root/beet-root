@@ -1,0 +1,255 @@
+.start-screen {
+    height: 100vh;
+    background: url(../img/startScreen_bg.png) no-repeat center;
+    background-size: cover;
+
+    &__text {
+        margin-top: 15vh;
+
+        @media (max-width: $SM) {
+            margin-top: 10vh;
+        }
+    }
+
+    &__paragraph {
+        max-width: 370px;
+        margin-bottom: 50px;
+        font-weight: 300;
+    }
+
+    &__scroll {
+        position: absolute;
+        bottom: 70px;
+        left: 50%;
+
+        @media (max-width: $SM) {
+            display: none;
+        }
+    }
+}
+
+.about {
+    background-color: $color-aqua;
+
+    &__img {
+        max-width: 100%;
+    }
+}
+
+.servises {
+    background-color: $color-blue-light;
+    min-height: 790px;
+    padding: 150px 0;
+
+    @media (max-width: $LG) {
+        padding: 60px 0;
+    }
+
+    @media (max-width: $SM) {
+        padding: 30px 0;
+    }
+
+    &__heading-block {
+        background-image: url(../img/servises_background.png);
+        background-size: 70%;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media (max-width: $MD) {
+            height: 400px;
+        }
+
+        @media (max-width: $SM) {
+            height: 250px;
+        }
+    }
+
+}
+
+.gallery {
+    background-color: $color-yellow;
+    padding: 100px 0;
+
+    @media (max-width: $LG) {
+        padding: 60px 0;
+    }
+
+    @media (max-width: $SM) {
+        padding: 30px 0;
+    }
+
+    &__text {
+        margin: 0 auto;
+        max-width: 580px;
+        text-align: center;
+    }
+}
+
+.subscribe {
+
+    &__content {
+        background-image: url(../img/subscribe_bg.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        padding: 150px 0;
+        background-position: right;
+
+        @media (max-width: $SM) {
+            padding: 60px 0;
+        }
+
+        &-text {
+            max-width: 50%;
+
+            @media (max-width: $SM) {
+                max-width: 60%;
+            }
+        }
+    }
+
+    &__form {
+        width: 100%;
+    }
+
+    &__email {
+        width: 50%;
+        height: 55px;
+        outline: none;
+        margin-right: 30px;
+        margin-bottom: 10px;
+
+        @media (max-width: $SM) {
+            width: 100%;
+        }
+    }
+
+    &__submit {
+        outline: none;
+        border: none;
+        text-transform: uppercase;
+    }
+}
+
+.blog {
+    background-color: $color-purple;
+    padding: 100px 0;
+    color: $color-white;
+
+    @media (max-width: $LG) {
+        padding: 60px 0;
+    }
+
+    @media (max-width: $SM) {
+        padding: 30px 0;
+    }
+
+    &__text {
+        margin: 0 auto;
+        max-width: 580px;
+        text-align: center;
+    }
+}
+
+.contact {
+    padding: 100px 0;
+    background-image: url(../img/contact_bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @media (max-width: $LG) {
+        padding: 60px 0;
+    }
+
+    @media (max-width: $SM) {
+        padding: 30px 0;
+    }
+
+    &__text {
+        margin: 0 auto;
+        max-width: 350px;
+        text-align: center;
+    }
+
+    &__form {
+        width: 100%;
+
+        &_item {
+            width: 100%;
+            height: 50px;
+            background-color: rgba($color-aqua, .5);
+            color: #fff;
+            margin-bottom: 18px;
+            outline: none;
+            border: none;
+            font-size: 15px;
+            font-family: $default-fonts;
+            font-weight: 700;
+            padding: 0 15px;
+            border-left: 5px solid transparent;
+
+            @media (max-width: $SM) {
+                height: 35px;
+                margin-bottom: 10px;
+                padding: 0 5px;
+            }
+
+            &:focus {
+                background-color: $color-aqua;
+                border-left: 5px solid $color-blue-light;
+            }
+
+            &::placeholder {
+                color: $color-white;
+                font-size: 15px;
+                font-family: $default-fonts;
+                font-weight: 400;
+            }
+        }
+
+        &_textarea {
+            resize: none;
+            height: 250px;
+        }
+    }
+
+    &__adress {
+        font-style: normal;
+
+        &_list {
+            text-transform: uppercase;
+            font-size: $default-font-size;
+
+            @media (max-width: $SM) {
+                font-size: $small-font-size;
+            }
+        }
+
+        &_text {
+            font-size: 20px;
+            font-weight: 300;
+            margin-bottom: 15px;
+
+            @media (max-width: $SM) {
+                font-size: $default-font-size;
+            }
+        }
+    }
+}
+
+.footer {
+    background-color: $color-grey;
+    color: rgba($color-white, .5);
+
+    &__logo {
+        display: block;
+        margin: 0 auto;
+    }
+
+    &__text {
+        text-align: right;
+    }
+}

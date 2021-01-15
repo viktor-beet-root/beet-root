@@ -1,29 +1,29 @@
-*{
-margin: 0;
-padding: 0;
+* {
+    margin: 0;
+    padding: 0;
 }
-.dishes{
-width: 800px;
-margin: 0;
-font-size: 0;
-background-color: rgb(75, 72, 72);
-border: 1px solid red
+.dishes {
+    width: 800px;
+    margin: 0;
+    font-size: 0;
+    background-color: rgb(75, 72, 72);
+    border: 1px solid red;
 }
-ul.dishes li{
-	display: inline-block;
-	font-size: 22px;
-	box-sizing: border-box;
-	width: 25%;
-	text-align: center;
+ul.dishes li {
+    display: inline-block;
+    font-size: 22px;
+    box-sizing: border-box;
+    width: 25%;
+    text-align: center;
 }
 ul.dishes li:not(:last-child) {
-	border-right: 1px solid red
+    border-right: 1px solid red;
 }
 ul.dishes li:hover {
-	background-color: yellow;
+    background-color: yellow;
 }
 a {
-	display: block;
-	padding: 15px;
-	color: green;
+    display: block;
+    padding: 15px;
+    color: green;
 }
