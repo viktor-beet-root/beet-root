@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-Clock</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script src="sevenSeg.js"></script>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    .page {
+        background-color: black;
+    }
+
+    .clock {
+        margin: 0 auto;
+        font-size: 70px;
+        color: red;
+        font-weight: bold;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+
+    }
+
+    .time {
+        width: 57px;
+        height: 80px;
+    }
+
+    .sepatator {
+        padding-right: 8px;
+    }
+</style>
+
+<body class="page">
+    <div id="clock" class="clock">
+        <span id="hour_1" class="time"></span>
+        <span id="hour_2" class="time"></span>
+        <span class="sepatator">:</span>
+        <span id="minute_1" class="time"></span>
+        <span id="minute_2" class="time"></span>
+        <span class="sepatator">:</span>
+        <span id="second_1" class="time"></span>
+        <span id="second_2" class="time"></span>
+    </div>
+
+    <script>
+        let hour_1;
+        let hour_2;
+        let minute_1;
+        let minute_2;
+        let second_1;
+        let second_2;
+
+        function setRange(time) {
+            let firstDigit;
+            let secondDigit;
+            if (time >= 10) {
+                firstDigit = ~~(time / 10);
+                secondDigit = time % 10;
+            } else {
+                firstDigit = 0;
+                secondDigit = time;
+            }
+            return [firstDigit, secondDigit]
+        }
+
+        function setTime() {
+            let now = new Date();
+            let seconds = now.getSeconds();
+            let minutes = now.getMinutes();
+            let hours = now.getHours();
+            hour_1 = setRange(hours)[0];
+            hour_2 = setRange(hours)[1];
+            minute_1 = setRange(minutes)[0];
+            minute_2 = setRange(minutes)[1];
+            second_1 = setRange(seconds)[0];
+            second_2 = setRange(seconds)[1];
+            $("#hour_1").sevenSeg({
+                value: hour_1
+            });
+            $("#hour_2").sevenSeg({
+                value: hour_2
+            });
+            $("#minute_1").sevenSeg({
+                value: minute_1
+            });
+            $("#minute_2").sevenSeg({
+                value: minute_2
+            });
+            $("#second_1").sevenSeg({
+                value: second_1
+            });
+            $("#second_2").sevenSeg({
+                value: second_2
+            });
+            clock.style.color = (second_2 % 2 === 0) ? 'transparent' : 'red';
+        }
+
+        setInterval(setTime, 1000);
+    </script>
+</body>
+
+</html>
