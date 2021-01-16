@@ -132,16 +132,19 @@ console.log("Задание 1");
             totalSeconds = hours * 3600;
         } else {
             console.log("не верно введены часы");
+            return "00:00:00";
         }
         if (validationNumber(minutes, 0, 60)) {
             totalSeconds = totalSeconds + minutes * 60;
         } else {
             console.log("не верно введены минуты");
+            return "00:00:00";
         }
         if (validationNumber(seconds, 0, 60)) {
             totalSeconds = totalSeconds + seconds;
         } else {
             console.log("не верно введены секунды");
+            return "00:00:00";
         }
         return totalSeconds;
     }
