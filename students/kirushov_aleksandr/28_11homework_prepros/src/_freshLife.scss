@@ -1,0 +1,102 @@
+.fresh-life {
+    margin-top: -147px;
+    padding-top: 147px;
+    background-image: url(../images/img01.png);
+    background-position: top center;
+    background-size: 1500px auto;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-color: $whisper;
+    display: flex;
+    align-items: center;
+
+
+    &__heading {
+        font-size: 60px;
+        font-weight: 900;
+        line-height: 1.1;
+        margin-bottom: 19px;
+    }
+
+    &__text {
+        text-align: justify;
+        margin-bottom: 29px;
+    }
+
+    &__btn {
+        display: flex;
+        width: 200px;
+        height: 55px;
+        text-align: center;
+        font-size: 20px;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        box-shadow: $defaultBoxShadow;
+        border: transparent;
+        background-color: $bgColorBtnFresh;
+
+        &:hover,
+        &:active,
+        &:focus {
+            outline: none;
+        }
+
+        &:hover {
+            transform: scale(1.1);
+            transition: transform .5s ease-in-out;
+            box-shadow: $blogHoverBoxShadow;
+        }
+
+        &-text {
+            color: $textColorWhite;
+            font-weight: 300;
+        }
+    }
+
+
+    &__scroll {
+        display: block;
+        position: absolute;
+        bottom: 53px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        &:hover {
+            transform: translate(-10px, -15px);
+            transition: transform .5s ease-in-out;
+        }
+
+        &:hover &-img {
+            transform: scale(1.1);
+            transition: transform .5s ease-in-out;
+        }
+
+        &-img {
+            display: block;
+        }
+    }
+}
+
+@media (max-width: $MD) {
+    .fresh-life {
+        &__heading {
+            font-size: 50px;
+            margin-top: 78px;
+        }
+    }
+}
+
+@media (max-width: $SM) {
+    .fresh-life {
+        &__heading {
+            font-size: 50px;
+            margin-top: 85px;
+        }
+
+        &__scroll {
+            visibility: hidden;
+        }
+    }
+}

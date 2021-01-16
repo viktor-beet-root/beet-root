@@ -1,0 +1,79 @@
+.services {
+    background-color: $servicesColor;
+
+    &__container {
+        display: flex;
+        padding-bottom: 150px;
+        @include containerCenter;
+    }
+
+    &__item {
+        padding-top: 180px;
+    }
+
+    &__link {
+        display: block;
+        position: relative;
+        text-decoration: none;
+        padding:40px 150px 40px 70px;
+        font-family: $defaultFont,$fallbackFont;
+        font-weight: 700;
+        background-color: $iconServiceColorBg;
+        margin-bottom: 20px;
+        color: $textColor;
+        min-width: 400px;
+        height: 100px;
+        box-sizing: border-box;
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 1px;
+            height: 100px;
+            background-color: #9d9d9d;
+            top:0;
+            right:99px;
+        }
+
+        &::after {
+            position: absolute;
+           content: '';
+            width: 55px;
+            height: 55px;
+            background: url('../img/icon1.png') no-repeat;
+            background-size: cover;
+            top:25px;
+            right: 25px;
+        }
+
+        &:nth-child(2)::after {
+            background: url('../img/icon2.jpg') no-repeat;
+          }
+
+          &:nth-child(3)::after {
+              background: url('../img/icon3.jpg') no-repeat;
+          }
+
+          &:nth-child(4)::after {
+             background: url('../img/icon4.jpg') no-repeat;
+          }
+    }
+    
+    &__title {
+        position: relative;
+        text-align: center;
+        background: url('../img/tomato.png') no-repeat;
+        background-position: 100% 100%;
+
+        &_big {
+            font-family: $defaultFont,$fallbackFont;
+            font-weight: 700;
+            font-size: 90px;
+            color: $titleColor;
+            vertical-align: middle;
+            position: absolute;
+           top:50%;
+            right:0;
+        }
+    }
+}

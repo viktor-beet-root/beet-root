@@ -1,0 +1,85 @@
+/* grid */
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: $containerWidth;
+    width: 100%;
+    margin: 0 auto;
+    padding: $defaultGap;
+}
+
+.row {
+    margin: 0 (-$defaultGap);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+[class*="col-"],
+.col {
+    padding: $defaultGap;
+}
+
+.col {
+    flex-grow: 1;
+    width: 100%;
+    flex-basis: 0;
+
+    &_center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.col-auto {
+    flex-basis: auto;
+    width: auto;
+}
+
+@include grid;
+
+.offset-11 {
+    margin-left: 91.6666667%;
+}
+
+.offset-10 {
+    margin-left: 83.333333%;
+}
+
+.offset-9 {
+    margin-left: 75%;
+}
+
+.offset-8 {
+    margin-left: 66.6666667%;
+}
+
+.offset-7 {
+    margin-left: 58.333333%;
+}
+
+.offset-6 {
+    margin-left: 50%;
+}
+
+.offset-5 {
+    margin-left: 41.666667%;
+}
+
+.offset-4 {
+    margin-left: 33.333333%;
+}
+
+.offset-3 {
+    margin-left: 25%;
+}
+
+.offset-2 {
+    margin-left: 16.666667%;
+}
+
+.offset-1 {
+    margin-left: 8.333333%;
+}

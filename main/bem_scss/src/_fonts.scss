@@ -1,0 +1,5 @@
+@include fontFace($secondaryFont, $secondaryFontPath, 400);
+
+@include fontFace($defaultFont, $defaultFontLithPath, 300);
+
+@include fontFace($defaultFont, $defaultFontRegularPath);

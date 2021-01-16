@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const o = {
+            name: "Kolya",
+            tail: true,
+            nogiCount: 4,
+        };
+
+        //console.log(o['name']);
+
+        for (let key in o) {
+            console.log(key, o[key]);
+        }
+
+        const people = {
+            firstName: 'Viktor',
+            lastName: 'sdgfklhdfkjg',
+            age: 0,
+            skillList: [],
+            setFirstName: function (name) {
+                if (name === undefined) return;
+
+                this.firstName = name;
+            },
+            getFullName: getFullName,
+        }
+
+        const people1 = {
+            firstName: 'Vasya',
+            lastName: 'Pupkin',
+            age: 42,
+            skillList: [],
+            setFirstName: function (name) {
+                if (name === undefined) return;
+
+                this.firstName = name;
+            },
+            getFullName: getFullName,
+        }
+
+        function getFullName() {
+            return this.firstName + " " + this.lastName;
+        }
+
+        console.log(people.firstName);
+
+        people.setFirstName('Viktor');
+
+        console.log(people, people1);
+
+        console.log(people.getFullName(), people1.getFullName());
+
+        people1.addres = 'Rivne';
+
+        console.log(people1.hasOwnProperty('addres'), people1);
+    </script>
+</body>
+
+</html>

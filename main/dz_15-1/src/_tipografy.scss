@@ -1,0 +1,99 @@
+* {
+    @include reset;
+}
+
+body {
+    font-family: $defaultFonts;
+    font-size: $defaultFontSize;
+    line-height: $defaultLineHeight;
+    font-weight: $defaultFontWeight;
+}
+
+img {
+    max-width: 100%;
+}
+
+.title {
+    font-size: 60px;
+    font-weight: 900;
+    margin: 0;
+
+    &_big {
+        font-size: 90px;
+        font-weight: 700;
+
+        @include media('sm') {
+            font-size: 60px;
+        }
+    }
+
+    &_center {
+        text-align: center;
+    }
+
+    &_sm {
+        font-size: 40px;
+        font-weight: 700;
+    }
+
+    &_color-white {
+        color: white;
+    }
+
+    @include media('sm') {
+        text-align: center;
+    }
+}
+
+.text {
+    margin: 0;
+
+    &_center {
+        text-align: center;
+    }
+
+    &_white {
+        color: $white;
+    }
+
+    &_bold {
+        font-weight: 700;
+    }
+
+    &_red {
+        color: $text-red;
+    }
+
+    @include media('sm') {
+        text-align: center;
+    }
+}
+
+.default-block {
+    padding: 22px 0;
+    min-width: 320px;
+
+    &_color-white {
+        color: $secondaryTextColor;
+    }
+
+    &_color-black {
+        color: $black;
+    }
+
+    &_bg-green {
+        background-color: $bondi-blue;
+    }
+
+    &_bg-blue {
+        background-color: $malibu;
+    }
+
+    &_bg-yellow {
+        background-color: $yellow;
+    }
+
+    &_bg-heliotrope {
+        background-color: $heliotrope;
+    }
+}

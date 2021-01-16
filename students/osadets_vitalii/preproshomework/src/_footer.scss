@@ -1,0 +1,21 @@
+.contact-footer {
+	background-color: #262626;
+
+	&__copy,
+	&__author {
+		font-size: 16px;
+		color: #b9b9b9;
+	}
+
+	&__logo {
+		font-family: "Pacifico";
+		font-size: 25px;
+		text-decoration: none;
+		color: #b9b9b9;
+	}
+
+	&__author_red {
+		color: red;
+		font-weight: 700;
+	}
+}

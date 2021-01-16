@@ -1,0 +1,20 @@
+.button {
+    min-width: 118px;
+    height: 30px;
+    border: 1px solid transparent;
+    font-family: $secondaryMainFont;
+    font-size: 12px;
+    text-transform: uppercase;
+
+    &_pimiry {
+        background-color: $buttonColor;
+        border-color: $buttonColor;
+        color: $white;
+    }
+
+    &_secondary {
+        background-color: $buttonColorSecondary;
+        border-color: $black;
+        color: $black;
+    }
+}

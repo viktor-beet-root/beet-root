@@ -1,0 +1,22 @@
+.raiting {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 61px;
+
+    &__item {
+        width: 9px;
+        height: 9px;
+        @include bgCover('../image/star.svg');
+        margin-right: 4px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &_active {
+            background-image: url(../image/star-active.svg);
+        }
+    }
+}

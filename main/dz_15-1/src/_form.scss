@@ -1,0 +1,61 @@
+.form {
+    &__groupe {
+        margin-bottom: 10px;
+    }
+
+    &__item {
+        padding: 0 20px;
+        width: 100%;
+        border: none;
+        border-left: 4px solid transparent;
+        color: $white;
+        font-size: 15px;
+        font-weight: 700;
+
+        &::-webkit-input-placeholder {
+            color: $white;
+            font-weight: 300;
+        }
+
+        &::-moz-placeholder {
+            color: $white;
+            font-weight: 300;
+        }
+
+        &:-ms-input-placeholder {
+            color: $white;
+            font-weight: 300;
+        }
+
+        &:-moz-placeholder {
+            color: $white;
+            font-weight: 300;
+        }
+
+        &:active,
+        &:focus {
+            border-color: $input-border-color;
+            outline: none;
+        }
+
+        &_green-bg {
+            background-color: transparentize($input-color, .5);
+
+
+            &:active,
+            &:focus {
+                background-color: $input-color;
+            }
+        }
+    }
+
+    &__textarea {
+        padding: 20px;
+        resize: none;
+        height: 250px;
+    }
+
+    &__input {
+        height: 50px;
+    }
+}

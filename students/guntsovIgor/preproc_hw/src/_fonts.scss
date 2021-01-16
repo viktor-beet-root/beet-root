@@ -1,0 +1,7 @@
+@include fontFace($defaultFont, 'normal', 300);
+
+@include fontFace($defaultFont, 'normal', 700);
+
+@include fontFace($defaultFont, 'normal', 900);
+
+@include fontFace($secondaryFont, 'normal', 400);

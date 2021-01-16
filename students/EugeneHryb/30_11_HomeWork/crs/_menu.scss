@@ -1,0 +1,141 @@
+.menu {
+    &__list{
+        display: flex;
+        padding: 0;
+        margin: 0;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    &__item {
+        text-align: center;
+        list-style-type: none;
+        font-family: $defaultFont;
+        font-size: 16px;
+        font-weight: 700;
+        padding: 0 15px;
+        color: $colorHeadertext;
+        text-transform: uppercase;
+        position: relative;
+        margin: 0;
+
+        &:hover::before {
+            content: '';
+            border-top: solid 3px $colorMenuHover;
+            position: absolute;
+            width: calc(100% - 30px);
+            top: 0;
+            left: 15px;
+        }
+    }
+
+    &__link {
+        padding: 9px 0;
+        display: block;
+        text-decoration: none;
+        color: inherit;
+    }
+
+    &__button{
+        display: none;
+        pointer-events: none;
+        height: 60px;
+        width: 60px;
+        padding-top: 28px;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        align-self: center;
+        z-index: 20;
+    }
+
+    &__button-line{
+        display: block;
+        position: relative;
+        height: 4px;
+        width: 100%;
+        transition: height 1s ease-in-out;
+        background-color: $colorMenuHover;
+
+        &::before{
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: -15px;
+            height: 4px;
+            width: 100%;
+            background-color: $colorMenuHover;
+            transition: transform 1s ease-in-out;
+        }
+
+        &::after{
+            content: '';
+            display: block;
+            position: absolute;
+            top: -15px;
+            height: 4px;
+            width: 100%;
+            background-color: $colorMenuHover;
+            transition: transform 1s ease-in-out;
+        }
+    }
+}
+
+@media ( max-width: $LG ) {
+    .menu{
+        &__list{
+            visibility: hidden;
+            pointer-events: none;
+            width: 100%;
+            height: calc(100vh - 100% - 15px );
+            background-color: rgba($color: $colorMenuBg, $alpha: .9);
+            pointer-events: auto;
+            justify-content: flex-start;
+            flex-direction: column;
+            padding: 0 10px;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            opacity: 0;
+            transform: translateX(-50%);
+            transition: opacity 1s ease-in-out;
+            z-index: 10;
+            overflow: auto;
+        }
+
+        &__item{
+            font-size: 30px;
+            border: 3px solid $colorMenuHover;
+            border-radius: 20px;
+            width: 100%;
+            margin: 15px 0;
+        }
+
+        &__button{
+            display: block;
+            pointer-events: auto;
+        }
+
+        &__check:checked{
+            & ~ .menu__list {
+                visibility: visible;
+                pointer-events: all;
+                opacity: 1;
+            }
+
+            & ~ .menu__button .menu__button-line{
+                height: 0px;
+
+                &::before{
+                    transform: rotate(45deg)  translate(-7px, -7px);
+                }
+
+                &::after{
+                    transform: rotate(-45deg) translate(-11px, 11px);
+                }
+            }
+            
+        }
+    }
+}

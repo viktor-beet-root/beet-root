@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript. Lesson 2</title>
+</head>
+
+<body>
+    <script>
+        const nuber = (NaN, Infinity, 1, 1.5, -1, 0, -0);
+        const sting = (" \\\ \"'Hello'\" " + ' "Hello" ' + ` Hello ${nuber}`);
+        console.log("1 \n\r df");
+        let s, df, gh;
+        console.log(s)
+        let typeUndefined = undefined;
+        let typeNull = null;
+        let bool = true;
+        bool = false;
+
+        const arr = [345, 14, 57, 1, 2, 'dsf', true, ['q', 1]];
+        console.log(new Array(5));
+
+        const a = [];
+        a[500] = 66;
+        console.log(a);
+
+        const obj = {
+            name: "Vasya",
+            age: 15,
+            main: "dsfdf",
+        };
+
+        const {
+            name,
+            age
+        } = obj;
+        console.log(name, age);
+
+        const sss = 'main';
+        console.log(obj.age, obj[sss]);
+
+        function init() {
+
+        }
+
+        console.log('2' == 2);
+        console.log('2' === 2);
+        console.log(2 != 3);
+        console.log(3 !== 3);
+        console.log(2 < 3);
+        console.log(2 <= 3);
+        console.log(2 >= 3);
+
+        let n = 1;
+        console.log(++n);
+        console.log(n);
+
+        console.log(2 ** 2);
+
+        console.log(3 && 0 && 5);
+        console.log(0 || 1);
+        console.log(!false);
+
+
+        if (true) {
+            console.log(2);
+        } else {
+            alert('sss');
+        }
+
+        if (2 + 2 > 5) {
+            console.log(2);
+        } else if (2 + 2 < 4) {
+            console.log(3);
+        } else if (2 + 2 === 4) {
+            console.log(4);
+        } else {
+
+        }
+        // const s = 18;
+        // if (s < 18) {
+
+        // } else if (s >= 18 && s < 21) {
+
+        // } else {
+
+        // }
+
+        // const fistName = prompt("First Name", "");
+        // const lastName = prompt("Last Name", "");
+
+        // if (fistName || lastName) {
+        //     if (fistName && !lastName) {
+        //         console.log('Name')
+        //     } else if (lastName && !fistName) {
+        //         console.log('Last Name')
+        //     } else {
+        //         console.log('Fierst Name Last Name')
+        //     };
+        // } else {
+        //     console.log('not');
+        // }
+
+        if (true) {
+
+        } else {
+
+        }
+        // const age1 = prompt("age", "");
+        // const ternar = (2 + 3 === 4) ? "yes" : "not";
+        // console.log(ternar);
+
+
+
+        const result = +prompt("2 + 2?", "");
+
+        switch (result) {
+            case 3:
+                console.log('Malo');
+                break;
+            case 4:
+                console.log("Ugadal");
+                break;
+            case 5:
+                console.log("mnogo");
+                break;
+            default:
+                console.log("cho-to poshlo ne tak");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+.our-services {
+    min-height: 790px;
+    display: flex;
+    align-items: center;
+
+    &__list {
+        margin-top: 25px;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @include media('xl') {
+            order: 1;
+            padding: 0;
+        }
+    }
+
+    &__item {
+        background-color: $white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 90px 0 22px;
+        width: 400px;
+        box-shadow: $defaultShadow;
+        min-height: 100px;
+        line-height: 1.4;
+
+        &:hover {
+            box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+
+        @include media('sm') {
+            width: 300px;
+        }
+    }
+
+    &__name {
+        text-align: center;
+        display: block;
+        flex-basis: calc(100%);
+        font-weight: 700;
+        font-size: 20px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-right: 1px solid #9d9d9d;
+    }
+
+    &__icon {
+        margin-right: -70px;
+    }
+
+    &__title-wrapper {
+        padding: 179px 0 151px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url(#{$image-dir}our_services.png);
+        background-repeat: no-repeat;
+        background-position: center;
+
+        @include media('xl') {
+            background-image: none;
+            padding: 0;
+        }
+    }
+
+    &__title {
+        margin-bottom: 20px;
+    }
+}

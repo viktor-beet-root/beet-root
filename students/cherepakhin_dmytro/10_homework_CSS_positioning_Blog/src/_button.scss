@@ -1,0 +1,26 @@
+.blog__button{
+    display: block;
+    width: 200px;
+    height: 55px;
+    font-size: 20px;
+    font-weight: 300;
+    margin:  0 auto;
+    background-color: #f72b3b;
+    text-align: center;
+    text-transform: uppercase;
+    box-shadow: 0 2px 5px 2px rgba( 0, 0, 0, .3);
+}
+
+.blog__button:hover{
+    box-shadow: 0 3px 10px 5px rgba( 0, 0, 0, .5);
+    transition: all .1s ease-in;
+}
+
+.blog__button_link{
+    display: block;
+    text-decoration: none;
+    color: white;
+    height: 100%;
+    padding-top: 15px;
+}
+

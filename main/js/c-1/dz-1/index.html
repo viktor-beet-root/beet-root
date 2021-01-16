@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript. Home Worck - 1</title>
+</head>
+
+<body>
+    <script>
+        console.log('1. Запросите у пользователя его имя и выведите в ответ: «Привет, его имя!».');
+        const userName = prompt("Ваше имя", "");
+        const userMessage = "Привет, " + userName + "!";
+        console.log(userMessage);
+
+        console.log(
+            '2. Запросите у пользователя год его рождения, посчитайте, сколько ему лет и выведите результат. Текущий год укажите в коде как константу.'
+        );
+        const thisYear = 2020;
+        const userYear = prompt("Год вашего рождения", "");
+        const age = thisYear - userYear;
+        console.log(age);
+
+        console.log('3. Запросите у пользователя длину стороны квадрата и выведите периметр такого квадрата.');
+        const sideOfSquare = prompt("Сторона квадрата", "");
+        const perimeterOfSquare = sideOfSquare * 4;
+        console.log(perimeterOfSquare);
+
+        console.log('4. Запросите у пользователя радиус окружности и выведите площадь такой окружности.');
+        const circleRadius = +prompt("Радиуст окржности", "");
+        const areOfCercle = Math.PI * Math.pow(circleRadius, 2);
+        console.log(areOfCercle);
+
+        console.log(
+            '5. Запросите у пользователя расстояние в км между двумя городами и за сколько часов он хочет добраться. Посчитайте скорость, с которой необходимо двигаться, чтобы успеть вовремя.'
+        );
+        const distanse = prompt("Расстояние км.", "");
+        const time = prompt("За сколько часов вы хочетите добраться", "");
+        const speed = distanse / time;
+        console.log(speed);
+
+        console.log(
+            '6. Реализуйте конвертор валют. Пользователь вводит доллары, программа переводит в евро. Курс валюты храните в константе.'
+        );
+        const rate = 0.82;
+        const dollars = +prompt("Доллары", "");
+        const euro = dollars * rate;
+        console.log(euro);
+
+        console.log(
+            '7. Пользователь указывает объем флешки в Гб. Программа должна посчитать сколько файлов размером в 820 Мб помещается на флешку.'
+        );
+        const sizeFlash = prompt("Объем флешки в Гб", "");
+        const sizeFile = 820;
+        const countFiles = ~~((sizeFlash * 1024) / sizeFile);
+        console.log(countFiles);
+
+        console.log(
+            '8. Пользователь вводит сумму денег в кошельке и цену одной шоколадки. Программа выводит сколько шоколадок может купить пользователь и сколько сдачи у него останется.'
+        );
+        const summCoast = prompt("Сумма денег в кошельке", "");
+        const prise = prompt("Цена одной шоколадки", "");
+        const countProduct = ~~(summCoast / prise);
+        const monyLeft = summCoast % prise;
+        const message8 = "Шоколадок " + countProduct + " можно купить. " + monyLeft + " осталось в кошельке.";
+        console.log(message8);
+
+
+        console.log(
+            '9. Запросите у пользователя трехзначное число и выведите его задом наперед. Для решения задачи вам понадобится оператор % (остаток от деления).'
+        );
+        let numberValue = prompt("Трехзначное число", "");
+        const lastNumber = numberValue % 10 * 100;
+        numberValue = ~~(numberValue / 10);
+        const secontNumber = numberValue % 10 * 10;
+        numberValue = ~~(numberValue / 10);
+        const thridNumber = numberValue % 10;
+        const resultNumber = lastNumber + secontNumber + thridNumber;
+        console.log(resultNumber);
+
+        console.log(
+            "10. Пользователь вводит сумму вклада в банк на 2 месяца, с процентной ставкой депозита 5% годовых. Вывести сумму начисленных процентов."
+        )
+        const summDeposit = prompt("Сумма вклада в банк", "");
+        const precent = 5 / 100;
+        const year = 12;
+        const durationDeposit = 2;
+        const profit = +(summDeposit * precent / year * durationDeposit).toFixed(2);
+        console.log(profit);
+    </script>
+</body>
+
+</html>
