@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .error {
+            border-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="menu" title="ffff">
+        <h2>previous</h2>
+        <ul class="menu">
+            <li class="menu__item"><a href="#" class="menu__link"><span>Home</span></a></li>
+            <li class="menu__item"><a href="#" class="menu__link"><span>Text</span></a></li>
+            <li class="menu__item"><a href="#" class="menu__link"><span>Form</span></a></li>
+            <li class="menu__item"><a href="#" class="menu__link"><span>Sing in</span></a></li>
+            <li class="menu__item"><a href="#" class="menu__link"><span>Sing up</span></a></li>
+        </ul>
+        <h2>next</h2>
+    </nav>
+
+    <input type="text" name="text">
+    <input type="text" name="name">
+
+    <div id="users">
+        <hr>
+    </div>
+    <div class="clock">
+        <span class="m">01</span>
+        <span class="d">:</span>
+        <span class="s">06</span>
+    </div>
+    <script>
+        const nav = document.getElementById("menu");
+        const ul = document.getElementsByClassName('menu');
+
+        [...ul].forEach(function (item) {
+            console.log(item);
+        });
+
+        const li = document.getElementsByTagName('li');
+        const input = document.getElementsByName('text');
+
+        const firstSpan = document.querySelector('.menu__item span');
+        const allSpan = document.querySelectorAll('.menu__item span');
+
+        console.log(nav, ul, li, input, firstSpan, allSpan);
+
+        allSpan.forEach(function (item) {
+            console.log(item);
+        });
+
+        const text = "<h1>Hello</h1>";
+
+        // Управление содержимым
+
+        console.log(nav.innerHTML);
+
+        //nav.innerHTML = '';
+
+        console.log(nav.outerHTML);
+
+        //nav.outerHTML = text;
+
+        console.log(firstSpan.innerText);
+
+        //firstSpan.innerText = text;
+
+        console.log(firstSpan.outerText);
+
+        console.log(firstSpan.textContent);
+
+        firstSpan.textContent = text;
+
+        // Работа с атрибутами
+        nav.setAttribute('title', "Main menu1");
+        ul[0].setAttribute('title', "Main menu2");
+
+        console.log(nav.getAttribute('title'));
+
+        console.log(nav.hasAttribute('title'));
+
+        console.log(nav.attributes);
+
+        // nav.removeAttribute('title');
+
+        console.log(nav.hasAttribute('title'));
+
+        // Работа с калссами
+
+        nav.classList.add('active', 'test');
+
+        console.log(nav.classList.contains('active'), nav.classList);
+
+        nav.classList.toggle('active');
+
+        nav.classList.remove('test');
+
+        // Добаления инлайнт стилей
+
+        nav.style.color = 'red';
+        nav.style.paddingTop = '50px';
+        nav.style['padding-bottom'] = '50px';
+        nav.style.setProperty('color', 'black');
+        console.log(nav.style.getPropertyValue('padding'));
+        //nav.style.removeProperty('color');
+        nav.style.color = '';
+
+        console.log(nav.style);
+    </script>
+</body>
+
+</html>

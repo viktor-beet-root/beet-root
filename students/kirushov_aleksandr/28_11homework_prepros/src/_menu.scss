@@ -1,0 +1,133 @@
+.menu {
+    // position: relative;
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        padding: 33px 0 36px;
+
+        @media screen and (max-width: 768px) {
+            display: block;
+            visibility: hidden;
+            pointer-events: none;
+            padding: 0;
+            opacity: 0;
+            position: absolute;
+            top: 105px;
+            left: 0;
+            right: 0;
+            background-color: $bgColorWhite;
+            text-align: center;
+            transform: scale(0);
+            transition: all .5s ease-in-out;
+        }
+    }
+
+    &__item {
+        @media screen and (max-width: 768px) {
+            border-bottom: 1px solid grey;
+            padding: 0;
+        }
+    }
+
+    &__link {
+        text-transform: uppercase;
+        color: $black;
+        font-weight: 700;
+        text-decoration: none;
+        position: relative;
+        display: inline-block;
+
+        @media screen and (max-width: 768px) {
+            display: block;
+        }
+
+        &:hover::before {
+            content: '';
+            position: absolute;
+            top: -6px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: $bgColorBtnFresh;
+        }
+    }
+
+    &__btn {
+        width: 30px;
+        height: 30px;
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 60px;
+
+        @media screen and (max-width: 768px) {
+            display: block;
+        }
+
+        &-line {
+            display: block;
+            position: relative;
+            height: 4px;
+            width: 100%;
+            transition: height 1s ease-in-out;
+            background-color: $bgLineBtnMenu;
+
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 13px;
+                height: 4px;
+                width: 100%;
+                background-color: $bgLineBtnMenu;
+                transition: transform 1s ease-in-out;
+            }
+
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 26px;
+                height: 4px;
+                width: 100%;
+                background-color: $bgLineBtnMenu;
+                transition: transform 1s ease-in-out;
+            }
+        }
+    }
+
+    &__input:checked {
+        @media screen and (max-width: $MD) {
+            &~.menu__list {
+                display: block;
+                visibility: visible;
+                pointer-events: all;
+                transform: scale(1);
+                opacity: 1;
+                transition: all .5s ease-in-out;
+            }
+
+            &~.menu__btn>span {
+                top: 13px;
+                transform: rotate(45deg);
+                transition: transform 0.5s ease-in-out;
+                visibility: hidden;
+            }
+
+            &~.menu__btn>span::before {
+                top: 0;
+                transform: rotate(180deg);
+                transition: transform 0.5s ease-in-out;
+                visibility: visible;
+            }
+
+            &~.menu__btn>span::after {
+                top: 0;
+                transform: rotate(90deg);
+                transition: transform 0.5s ease-in-out;
+                visibility: visible;
+            }
+        }
+    }
+}
