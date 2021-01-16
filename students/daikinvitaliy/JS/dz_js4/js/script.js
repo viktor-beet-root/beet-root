@@ -37,7 +37,7 @@ console.log("Задание 1");
     console.log("Задание 4");
 
     function square(oneSide, secondSide) {
-        if (arguments.length === 1) {
+        if (secondSide === undefined) {
             const perimeter = oneSide * oneSide;
             return perimeter;
         }
@@ -58,7 +58,7 @@ console.log("Задание 1");
         return oneNambr === sum;
     }
     const test4 = perfection(8128);
-    if (test4 === false) {
+    if (!test4) {
         console.log("Не совершенное число");
     } else {
         console.log("Совершенное число");
@@ -67,7 +67,7 @@ console.log("Задание 1");
     function range(oneRange, twoRange) {
         for (let i = oneRange; i <= twoRange; i++) {
             const result = perfection(i);
-            if (result === true) {
+            if (result) {
                 console.log(i + " совершенное число");
             }
         }
@@ -123,7 +123,9 @@ console.log("Задание 1");
             prompt("введите секунды", "")
         )
     );
-    console.log("Задание 8");
+    console.log(
+        "Задание 8. Написать функцию, которая принимает время (часы, минуты, секунды) и выводит его на экран в формате «чч:мм:сс».Если при вызове функции минуты и/или секунды не были переданы, то выводить их как 00."
+    );
     function taim(hours, minutes, seconds) {
         let totalSeconds = 0;
         if (validationNumber(hours, 0, 24)) {
@@ -158,9 +160,9 @@ console.log("Задание 1");
         hours = Math.trunc(seconds / 3600);
         minutes = Math.trunc((seconds - hours * 3600) / 60);
         secondss = seconds - (hours * 3600 + minutes * 60);
-        let hoursStr = hours.toString(10);
-        let minutesStr = minutes.toString(10);
-        let secondssStr = secondss.toString(10);
+        let hoursStr = hours;
+        let minutesStr = minutes;
+        let secondssStr = secondss;
         if (hours < 10) {
             hoursStr = "0" + hours;
         }
@@ -186,7 +188,7 @@ console.log("Задание 1");
     ) {
         const taim1 = taim(hours1, minutes1, seconds1);
         const taim2 = taim(hours2, minutes2, seconds2);
-        let secondsComparison = Math.abs(taim1 - taim2);
+        const secondsComparison = Math.abs(taim1 - taim2);
         const result = totalSeconds(secondsComparison);
         return result;
     }
