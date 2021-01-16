@@ -20,17 +20,15 @@ console.log("Сумма всех чисел =", sum);
 console.log("Завдання 2");
 let firstNumber = Math.trunc(+prompt("Введите первое число", ""));
 let secondNumber = Math.trunc(+prompt("Введите второе число", ""));
-while (firstNumber != secondNumber) {
-    if (firstNumber > secondNumber) {
-        let tmp = firstNumber;
-        firstNumber = secondNumber;
-        secondNumber = tmp;
+let nod = 0;
+for (let i = Math.min(firstNumber, secondNumber); i >= 0; i--) {
+    if (firstNumber % i === 0 && secondNumber % i === 0) {
+        nod = i;
+        break;
     }
-
-    secondNumber = secondNumber - firstNumber;
 }
 
-console.log("Наибольший общий делитель: " + firstNumber);
+console.log("Наибольший общий делитель: " + nod);
 console.log("Завдання 3");
 const num = +prompt("ведите число", "");
 let dividers = "Делители: ";
