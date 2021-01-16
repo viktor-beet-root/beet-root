@@ -18,21 +18,21 @@ for (i = nStrt; i <= nEnd; ++i) {
 }
 console.log("Сумма всех чисел =", sum);
 console.log("Завдання 2");
-let FirstNumber = +prompt("Введите первое число", "");
-let SecondNumber = +prompt("Введите второе число", "");
-while (FirstNumber != SecondNumber) {
-    if (FirstNumber > SecondNumber) {
-        let tmp = FirstNumber;
-        FirstNumber = SecondNumber;
-        SecondNumber = tmp;
+let firstNumber = Math.trunc(+prompt("Введите первое число", ""));
+let secondNumber = Math.trunc(+prompt("Введите второе число", ""));
+while (firstNumber != secondNumber) {
+    if (firstNumber > secondNumber) {
+        let tmp = firstNumber;
+        firstNumber = secondNumber;
+        secondNumber = tmp;
     }
 
-    SecondNumber = SecondNumber - FirstNumber;
+    secondNumber = secondNumber - firstNumber;
 }
 
-console.log("Наибольший общий делитель: " + FirstNumber);
+console.log("Наибольший общий делитель: " + firstNumber);
 console.log("Завдання 3");
-let num = +prompt("ведите число", "");
+const num = +prompt("ведите число", "");
 let dividers = "Делители: ";
 for (i = Math.ceil(num / 2); i >= 1; i--) {
     if (num % i === 0) {
@@ -50,13 +50,7 @@ while (enteredNumber) {
     enteredNumber = Math.trunc(enteredNumber / 10);
     ++counter;
 }
-if (counter === 1) {
-    console.log("В числе " + counter + " цифра");
-} else if (counter < 5) {
-    console.log("В числе " + counter + " цифры");
-} else {
-    console.log("В числе " + counter + " цифр");
-}
+console.log(counter);
 console.log("Завдання 5");
 let poz = 0;
 let neg = 0;
@@ -103,8 +97,8 @@ while (calcСycle) {
         result = aNamber - bNamber;
     }
     console.log(result);
-    const qvechten = prompt("еще? да или нет", "");
-    if (qvechten === "нет") {
+    const qvechten = confirm("еще? да или нет", "");
+    if (qvechten === false) {
         calcСycle = false;
     }
 }
@@ -128,8 +122,8 @@ console.log("Завдання 8");
 {
     let rte = 0;
     let den = "";
-    let result = "";
-    while (result != null) {
+    let result = true;
+    while (result === true) {
         switch (rte) {
             case 0:
                 den = "понидельник";
@@ -157,13 +151,13 @@ console.log("Завдання 8");
         if (rte > 6) {
             rte = 0;
         }
-        result = prompt(den + ": продолжить?", "");
+        result = confirm(den + ": продолжить?", "");
     }
 }
 console.log("Завдання 9");
-for (i = 2; i <= 9; ++i) {
+for (let i = 2; i <= 9; ++i) {
     console.log("таблица умножения на " + i);
-    for (j = 1; j <= 10; ++j) {
+    for (let j = 1; j <= 10; ++j) {
         const result = i * j;
         console.log(i + " * " + j + " = " + result);
     }
@@ -173,15 +167,12 @@ let n = 50;
 let start = 0;
 let finish = 100;
 let comp = "";
-while (comp != "=") {
-    comp = prompt("это число " + n + "  введите, <, >, =");
-    if (comp != "=") {
-        if (comp === "<") {
-            finish = n - 1;
-        } else if (comp === ">") {
-            start = n + 1;
-        }
-        n = start + Math.floor((finish - start) / 2);
+while ((comp = prompt("это число " + n + "  введите, <, >, =")) !== "=") {
+    if (comp === "<") {
+        finish = n - 1;
+    } else if (comp === ">") {
+        start = n + 1;
     }
+    n = start + Math.floor((finish - start) / 2);
 }
 console.log("это ваше загаданное число " + n);
