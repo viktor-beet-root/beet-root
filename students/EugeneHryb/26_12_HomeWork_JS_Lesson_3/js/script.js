@@ -26,11 +26,9 @@
 
     //Отладка части 1
     startPart('1')
-    while(confirm('Выпольнить част 1')){
         let num1P1 = +prompt('Введите число 1');
         let num2P2 = +prompt ('Введите число 2');
         console.log(moreLessEquals(num1P1, num2P2));
-    }
     endPart();
 
     //Part 2
@@ -46,11 +44,9 @@
 
     //Отладка части 2
     startPart('2');
-    while(confirm('Выпольнить чать 2')){
-        let num2 = +prompt('Число для вычисления факторимал', '');
-        let ans2 = factorial(num2);
-        console.log(ans2);
-    }
+    let num2 = +prompt('Число для вычисления факторимал', '');
+    let ans2 = factorial(num2);
+    console.log(ans2);
     endPart();
 
     //Part 3
@@ -80,13 +76,11 @@
 
     //Отладка части 4.
     startPart('4');
-    while (confirm('Выполнить часть 4')){
-        const num1P4 = +prompt('Первая сторона прямоугольника', '');
-        const num2P4 = +prompt('Вторая сторона прямоуголькик', '');
-        console.log("Площа прямогульника равна " + areaOfRectangle(num1P4, num2P4));
-        const num3P4 = +prompt('Сторона квадрата', '');
-        console.log('Площа квадрата равна ' + areaOfRectangle(num3P4));
-    };
+    const num1P4 = +prompt('Первая сторона прямоугольника', '');
+    const num2P4 = +prompt('Вторая сторона прямоуголькик', '');
+    console.log("Площа прямогульника равна " + areaOfRectangle(num1P4, num2P4));
+    const num3P4 = +prompt('Сторона квадрата', '');
+    console.log('Площа квадрата равна ' + areaOfRectangle(num3P4));
     endPart();
 
     //Part5
@@ -121,11 +115,9 @@
 
     //Отладка 5-6
     startPart('5-6');
-    while (confirm('Выполнить чатсь 5-6')){
-        let num1P6 = +prompt('Нижняя сторона диапазона');
-        let num2P6 = +prompt('Верхняя часть диапазона');
-        console.log(perfectNumbers(num1P6, num2P6));
-    }
+    let num1P6 = +prompt('Нижняя сторона диапазона');
+    let num2P6 = +prompt('Верхняя часть диапазона');
+    console.log(perfectNumbers(num1P6, num2P6));
     endPart();
 
     //Part7
@@ -199,16 +191,14 @@
 
     //Отладка 7-10
     startPart('7-10');
-    while(confirm('Выполнить часть 7-10 ')){
-        let hours1P10 = +prompt('Введите часы даты 1', '');
-        let minutes1P10 = +prompt('Введите минуты первой даты', '');
-        let seconds1P10 = +prompt('Введтие секунды первой даты', '');
-        let hours2P10 = +prompt('Введите часы даты 2', '');
-        let minutes2P10 = +prompt('Введите минуты второй даты', '');
-        let seconds2P10 = +prompt('Введтие секунды второй даты', '');
+    let hours1P10 = +prompt('Введите часы даты 1', '');
+    let minutes1P10 = +prompt('Введите минуты первой даты', '');
+    let seconds1P10 = +prompt('Введтие секунды первой даты', '');
+    let hours2P10 = +prompt('Введите часы даты 2', '');
+    let minutes2P10 = +prompt('Введите минуты второй даты', '');
+    let seconds2P10 = +prompt('Введтие секунды второй даты', '');
 
-        let answer = timeDifference(hours1P10, minutes1P10, seconds1P10, hours2P10, minutes2P10, seconds2P10);
-        console.log(answer);
-    }
+    let answer = timeDifference(hours1P10, minutes1P10, seconds1P10, hours2P10, minutes2P10, seconds2P10);
+    console.log(answer);
     endPart();
 })()
