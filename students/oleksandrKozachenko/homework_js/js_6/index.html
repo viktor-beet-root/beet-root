@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        (function () {
+
+            console.log('Task 1 - Создать объект, описывающий автомобиль (производитель, модель, год выпуска, средняя скорость)');
+
+            const car = {
+                brand: 'Ford',
+                model: 'Fusion',
+                year: 2015,
+                averagSpeed: 80,
+                getInfo: getInfo,
+                countTimeForDistance: countTimeForDistance,
+            };
+
+
+            console.log('Функция для вывода на экран информации об автомобиле;');
+            function getInfo() {
+                return console.log('The car ' + this.brand + ' ' + this.model + ' year of issue ' + this.year + ' has average speed ' + this.averagSpeed);
+            };
+
+            car.getInfo();
+
+            console.log('Функция для подсчета необходимого времени для преодоления переданного расстояния со средней скоростью. Учтите, что через каждые 4 часа дороги водителю необходимо делать перерыв на 1 час');
+
+            function countTimeForDistance(distance) {
+                const restPeriod = 4;
+                const timeForDistance = distance / this.averagSpeed;
+                timeWithRestPeriod = Math.floor(timeForDistance / 4) + timeForDistance;
+                return console.log(timeWithRestPeriod);
+            };
+
+            car.countTimeForDistance(500);
+
+            console.log('Task 2 - Создать объект, хранящий в себе отдельно числитель и знаменатель дроби');
+
+            function Fraction(numerator, denominator) {
+                this.numerator = numerator;
+                this.denominator = denominator;
+            };
+
+            const fraction1 = {
+                numerator: 1,
+                denominator: 3,
+            };
+
+            const fraction2 = {
+                numerator: 3,
+                denominator: 4,
+            };
+
+            console.log('Функция сложения 2-х объектов-дробей');
+
+            function addFraction(frac1, frac2) {
+                const denominator = frac1.denominator * frac2.denominator;
+                const numerator = frac1.denominator * frac2.numerator + frac2.denominator * frac1.numerator;
+                return new Fraction(numerator, denominator);
+            }
+
+            const fraction3 = addFraction(fraction1, fraction2)
+            console.log(fraction3);
+
+            console.log('Функция вычитания 2-х объектов-дробей');
+
+            function subtractionFraction(frac1, frac2) {
+                const denominator = frac1.denominator * frac2.denominator;
+                const numerator = frac2.denominator * frac1.numerator - frac1.denominator * frac2.numerator;
+                return new Fraction(numerator, denominator);
+            }
+
+            const fraction4 = subtractionFraction(fraction1, fraction2)
+            console.log(fraction4);
+
+
+            console.log('Функция умножения 2-х объектов-дробей');
+
+            function multiplicationFraction(frac1, frac2) {
+                const numerator = frac1.numerator * frac2.numerator;
+                const denominator = frac1.denominator * frac2.denominator;
+                return new Fraction(numerator, denominator);
+            }
+
+            const fraction5 = multiplicationFraction(fraction1, fraction2)
+            console.log(fraction5);
+
+            console.log('Функция деления 2-х объектов-дробей');
+
+            function divisionFraction(frac1, frac2) {
+                const numerator = frac1.numerator * frac2.denominator;
+                const denominator = frac1.denominator * frac2.numerator;
+                return new Fraction(numerator, denominator);
+            }
+
+            const fraction6 = divisionFraction(fraction1, fraction2)
+            console.log(fraction6);
+
+            console.log('Функция сокращения объекта-дроби');
+
+            function reductionFraction(frac) {
+                let min = (Math.abs(frac.numerator) < frac.denominator) ? Math.abs(frac.numerator) : frac.denominator;
+                let divider = false;
+                let maxDivider;
+                while ((min > 0) && !divider) {
+                    if (frac.numerator % min === 0 && frac.denominator % min === 0) {
+                        maxDivider = min;
+                        divider = true;
+                    }
+                    min--;
+                };
+                const numerator = frac.numerator / maxDivider;
+                const denominator = frac.denominator / maxDivider;
+                return new Fraction(numerator, denominator);
+            }
+
+            console.log(reductionFraction(fraction3));
+            console.log(reductionFraction(fraction4));
+            console.log(reductionFraction(fraction5));
+            console.log(reductionFraction(fraction6));
+
+            console.log('Task 3 - Создать объект, описывающий время (часы, минуты, секунды)');
+
+            const time1 = {
+                hours: 3,
+                minutes: 45,
+                seconds: 0,
+                setTimeSeconds: setTimeSeconds,
+                setTimeMinutes: setTimeMinutes,
+                setTimeHours: setTimeHours,
+
+            };
+
+            console.log('Функция вывода времени на экран');
+
+            function validationTime(time) {
+                let validateTime;
+                if (Number(time) && (time <= 60)) {
+                    validateTime = (time > 10) ? time : ('0' + time);
+                } else if (time === undefined || time === 0) {
+                    validateTime = '00';
+                } else {
+                    validateTime = 'Enter the correct value';
+                }
+                return validateTime;
+            }
+
+            function getTime(obj) {
+
+                const hoursTime = function () {
+                    if (Number(obj.hours)) {
+                        return (obj.hours > 10) ? obj.hours : ('0' + obj.hours);
+                    } else if (obj.hours === undefined || obj.hours === 0) {
+                        return '00';
+                    } else {
+                        return 'Enter the correct hours';
+                    };
+                }();
+                const minutesTime = validationTime(obj.minutes);
+                const secondsTime = validationTime(obj.seconds);
+
+                return hoursTime + ':' + minutesTime + ":" + secondsTime;
+            }
+
+            console.log(getTime(time1));
+
+            console.log('Функция изменения времени на переданное количество секунд');
+
+            function setTimeSeconds(shiftSeconds) {
+                const sumSeconds = this.seconds + shiftSeconds;
+                this.seconds = sumSeconds % 60;
+                const sumMinutes = this.minutes + Math.floor(sumSeconds / 60);
+                this.minutes = sumMinutes % 60;
+                this.hours = this.hours + Math.floor(sumMinutes / 60);
+            };
+
+            time1.setTimeSeconds(100);
+            console.log(getTime(time1));
+
+            console.log('Функция изменения времени на переданное количество минут');
+
+            function setTimeMinutes(shiftMinutes) {
+                const sumMinutes = this.minutes + shiftMinutes;
+                this.minutes = sumMinutes % 60;
+                this.hours = this.hours + Math.floor(sumMinutes / 60);
+            };
+
+            time1.setTimeMinutes(50);
+            console.log(getTime(time1));
+
+            console.log('Функция изменения времени на переданное количество часов');
+
+            function setTimeHours(shiftHours) {
+                this.hours = this.hours + shiftHours;
+            };
+
+            time1.setTimeHours(50);
+            console.log(getTime(time1));
+
+
+        })()
+
+    </script>
+</body>
+
+</html>
