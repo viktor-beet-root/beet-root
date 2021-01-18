@@ -128,33 +128,28 @@ console.log("Задание 1");
     );
     function taim(hours, minutes, seconds) {
         let totalSeconds = 0;
-        if (validationNumber(hours, 0, 24)) {
-            totalSeconds = hours * 3600;
-        } else {
-            console.log("не верно введены часы");
-            return "00:00:00";
-        }
-        if (validationNumber(minutes, 0, 60)) {
-            totalSeconds = totalSeconds + minutes * 60;
-        } else {
-            console.log("не верно введены минуты");
-            return "00:00:00";
-        }
-        if (validationNumber(seconds, 0, 60)) {
-            totalSeconds = totalSeconds + seconds;
-        } else {
-            console.log("не верно введены секунды");
-            return "00:00:00";
-        }
+        totalSeconds = hours * 3600;
+        totalSeconds = totalSeconds + minutes * 60;
+        totalSeconds = totalSeconds + seconds;
         return totalSeconds;
     }
-    console.log(
-        taim(
-            prompt("введите часы", ""),
-            prompt("введите минуты", ""),
-            prompt("введите секунды", "")
-        )
-    );
+    function displayTime() {
+        const hours = +prompt("введите часы", "");
+        if (!validationNumber(hours, 0, 24)) {
+            return "не верно введены часы";
+        }
+        const minutes = +prompt("введите минуты", "");
+        if (!validationNumber(minutes, 0, 60)) {
+            return "не верно введены минуты";
+        }
+        const seconds = +prompt("введите секунды", "");
+        if (!validationNumber(seconds, 0, 60)) {
+            return "не верно введены секунды";
+        }
+        return taim(hours, minutes, seconds);
+    }
+    console.log(displayTime());
+
     console.log("Задание 9");
     function totalSeconds(seconds) {
         let hours = 0;
