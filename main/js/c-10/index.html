@@ -20,18 +20,147 @@
             bottom: 0;
             width: 0;
         }
+
+        .wrapp {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, .75);
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .window {
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            padding: 20px;
+        }
     </style>
 </head>
 
 <body>
     <div id="app">
-        <button data-btn="+">+</button>
+        <button data-btn="+"><span>+</span></button>
         <button data-btn="-">-</button>
         <div class="progress">
             <div></div>
         </div>
     </div>
+    <div id="a">
+        <div id="b">
+            <div id="c">
+                <button>GO</button>
+            </div>
+        </div>
+    </div>
+    <div class="wrapp">
+        <div class="window">
+            dfgdsfgdf
+        </div>
+    </div>
+
+    <a class="link" href="https://www.google.com/">www.google.com</a>
+
+    <button id="open">fdf</button>
+
+    <form id="form" action="" autocomplete="false">
+        <div>
+            *<input type="text" data-required="true" data-rerror-message="Поле имя не заполнено" value="" name="name">
+        </div>
+        <div data-required="true">
+            <input type="radio" name="d">
+            <input type="radio" name="d">
+            <input type="radio" name="d">
+        </div>
+
+        <input type="email" value="" name="emails" autocomplete="off">
+        <textarea name="message"></textarea>
+        <input type="submit">
+    </form>
+
     <script>
+        const form = document.getElementById('form');
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            console.dir(this)
+            var error = false;
+            for (let i = 0; i < this.length; i++) {
+                console.log(this[i].dataset.required)
+                if (this[i].type !== 'submit' && this[i].value === '') {
+                    error = true;
+                    break;
+                }
+            }
+
+            if (error) {
+                alert('Что-то пошло не так')
+            } else {
+                this.submit();
+            }
+        });
+
+        const link = document.querySelector('.link');
+
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+
+        });
+
+
+        const windowWrapp = document.querySelector('.wrapp');
+        const windowOpen = document.querySelector('#open');
+
+        windowWrapp.addEventListener('click', function (event) {
+            console.log(event.target, event.currentTarget)
+            if (event.target === event.currentTarget) {
+                hidden(event.target);
+            }
+        });
+
+        function show(element, displayValue) {
+            element.style.display = displayValue;
+        }
+
+        function hidden(element) {
+            element.style.display = 'none';
+        }
+
+        windowOpen.addEventListener('click', function () {
+            show(windowWrapp, 'flex');
+        });
+
+        const a = document.getElementById('a');
+        const b = document.getElementById('b');
+        const c = document.getElementById('c');
+        const btn = document.querySelector('#c button');
+
+        a.addEventListener('click', af);
+        b.addEventListener('click', bf);
+        c.addEventListener('click', cf, true);
+        btn.addEventListener('click', btnf);
+
+        function af(event) {
+            console.log('a', event.target, event.currentTarget);
+        }
+
+        function bf() {
+            console.log('b', event.target, event.currentTarget);
+        }
+
+        function cf() {
+            console.log('c', event.target, event.currentTarget);
+        }
+
+        function btnf() {
+            console.log('btn', event.target, event.currentTarget);
+        }
+
+
         const bntList = Array.prototype.slice.call(document.querySelectorAll("#app button"));
         const span = document.querySelector("#app span");
         const progressBar = document.querySelector("#app .progress > div");
@@ -52,11 +181,12 @@
         //     count = count < 0 ? 0 : count > 10 ? 10 : count;
         //     span.textContent = count;
         // };
-        function raite() {
-            console.log(this.dataset.btn);
-            count = this.dataset.btn === '+' ? count + 5 : count - 5;
-            count = count < 0 ? 0 : (count > 100 ? 100 : count);
-            progressBar.style.width = count + '%';
+        function raite(event) {
+            console.log(event.target, event.currentTarget);
+            // console.log(this.dataset.btn);
+            // count = this.dataset.btn === '+' ? count + 5 : count - 5;
+            // count = count < 0 ? 0 : (count > 100 ? 100 : count);
+            // progressBar.style.width = count + '%';
         };
 
 
