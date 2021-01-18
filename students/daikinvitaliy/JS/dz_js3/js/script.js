@@ -13,7 +13,7 @@ while (input) {
 }
 
 let sum = 0;
-for (i = nStrt; i <= nEnd; ++i) {
+for (let i = nStrt; i <= nEnd; ++i) {
     sum = sum + i;
 }
 console.log("Сумма всех чисел =", sum);
@@ -32,7 +32,7 @@ console.log("Наибольший общий делитель: " + nod);
 console.log("Завдання 3");
 const num = +prompt("ведите число", "");
 let dividers = "Делители: ";
-for (i = Math.ceil(num / 2); i >= 1; i--) {
+for (let i = Math.ceil(num / 2); i >= 1; i--) {
     if (num % i === 0) {
         dividers = dividers + i;
         if (i != 1) {
@@ -55,7 +55,7 @@ let neg = 0;
 let zrio = 0;
 let even = 0;
 let uneven = 0;
-for (i = 0; i < 10; ++i) {
+for (let i = 0; i < 10; ++i) {
     const checkingNumbers = +prompt(
         "введите 10 чисел по очереди №" + (i + 1),
         ""
@@ -103,7 +103,7 @@ while (calcСycle) {
 console.log("Завдання 7");
 let introduce = +prompt("введите число", "");
 let shiftNambr = +prompt("на сколько чисел сдвинуть?", "");
-for (i = shiftNambr - 1; i >= 0; --i) {
+for (let i = shiftNambr - 1; i >= 0; --i) {
     let indexZ = 0;
     let indexY = 1;
     let intro = introduce;
