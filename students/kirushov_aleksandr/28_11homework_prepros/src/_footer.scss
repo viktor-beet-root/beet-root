@@ -1,0 +1,40 @@
+.footer {
+    background-color: $bgFooter;
+    color: $textColorFooter;
+
+    &__copyright {
+        font-size: 16px;
+    }
+
+    &__logo-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &_logo {
+        display: block;
+    }
+
+    &__autor-wrap {
+        text-align: right;
+    }
+
+    &__autor {
+        font-size: 15px;
+
+        &>strong {
+            color: $footerColorLove;
+        }
+    }
+}
+
+@media (max-width: $MD) {
+    .footer {
+
+        &__copyright-wrap,
+        &__autor-wrap {
+            text-align: center;
+        }
+    }
+}

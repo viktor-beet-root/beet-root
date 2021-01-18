@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cahee</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <div class="logo header__logo">
+                <a href="#" class="logo__link">
+                    <img src="images/logo.png" alt="Chahee" class="logo__img">
+                </a>
+            </div>
+            <nav class="menu menu_left header__menu">
+                <input class="menu__input" hidden aria-hidden="true" type="checkbox" id="menuBtn">
+                <label class="menu__btn" aria-label="button menu" for="menuBtn"></label>
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <a href="#" class="menu__link menu__link_active">Home</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#about" class="menu__link">About</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#services" class="menu__link">Services</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Gallery</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Blog</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <section class="fresh-life main__fresh-life">
+            <div class="container container_center fresh-life__container">
+                <div class="row">
+                    <div class="col-4 col-xl-5 col-lg-6 col-md-7 col-sm-12 fresh-life__item">
+                        <h2 class="title fresh-life__title">Fresh Life</h2>
+                        <p class="text fresh-life__text">Sed do eiusmod tempor incididunt ut labore et dolore magna
+                            aliqua.
+                            Ut enim ad minim
+                            veniam, quis nostrud exercitation ullamco.</p>
+                        <a class="btn btn_orange" href="#">Get free now</a>
+                    </div>
+                    <a href="#about" class="scroll fresh-life__scroll"></a>
+                </div>
+            </div>
+        </section>
+        <section id="about" class="about-us default-block default-block_color-white default-block_bg-green">
+            <div class="container container_center about-us__container">
+                <div class="row">
+                    <div class="col-6 col-xl-12 about-us__image-wrapper">
+                        <img src="./images/about_us.png" alt="About Us" class="about-us__image">
+                    </div>
+                    <div class="col-6 col-xl-12 about-us__content">
+                        <h2 class="title title_big title_color-white about-us__title">About Us</h2>
+                        <p class="text about-us__text">Abore Cahee magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation
+                            ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                            reprehenderit in voluptate velit esse cillum.</p>
+                        <p class="text">Nim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit
+                            voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
+                            inventore.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="services" class="our-services default-block default-block_bg-blue">
+            <div class="container">
+                <div class="row">
+                    <ul class="col-6 col-xl-12 our-services__list">
+                        <li class="our-services__item">
+                            <stong class="our-services__name">Online Shopping</stong>
+                            <img src="./images/icon-1.svg" alt="Online Shopping" class="our-services__icon">
+                        </li>
+                        <li class="our-services__item">
+                            <stong class="our-services__name">Quality Product</stong>
+                            <img src="./images/icon-2.svg" alt="Quality Product" class="our-services__icon">
+                        </li>
+                        <li class="our-services__item">
+                            <stong class="our-services__name">Domestic & International Delivery</stong>
+                            <img src="./images/icon-3.svg" alt="Domestic & International Delivery"
+                                class="our-services__icon">
+                        </li>
+                        <li class="our-services__item">
+                            <stong class="our-services__name">Well Organized</stong>
+                            <img src="./images/icon-4.svg" alt="Well Organized" class="our-services__icon">
+                        </li>
+                    </ul>
+                    <div class="col-6 col-xl-12 our-services__title-wrapper">
+                        <h2 class="title title_big title_color-white our-services__title">Our Services</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="gallery default-block default-block_bg-yellow">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h2 class="title title_big title_color-black gallery__title">Gallery</h2>
+                        <p class="text text_center gallery__text">Consectetur adipisicing elit, sed do eiusmod tempor
+                            incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </div>
+                <div class="row gallery__list">
+                    <div class="col-8 col-lg-12 gallery__item">
+                        <img class="gallery__image" src="./images/g-1.jpg" alt="gallery">
+                    </div>
+                    <div class="col-4 col-lg-12 gallery__item gallery__item_first">
+                        <img class="gallery__image gallery__image_margin-bottom" src="./images/g-2.jpg" alt="gallery">
+                        <img class="gallery__image" src="./images/g-3.jpg" alt="gallery">
+                    </div>
+                </div>
+                <div class="row gallery__list">
+                    <li class="col-6 col-sm-12 gallery__item">
+                        <img class="gallery__image" src="./images/g-4.jpg" alt="gallery">
+                    </li>
+                    <li class="col-6 col-sm-12 gallery__item">
+                        <img class="gallery__image" src="./images/g-5.jpg" alt="gallery">
+                    </li>
+                </div>
+                <div class="row">
+                    <div class="col col_center">
+                        <a class="btn btn_cornflower-blue gallery__btn" href="#">View more</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="subscribe default-block default-block_bg-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="title title_sm title_color-black subscribe__title">Subscribe To Us</h2>
+                        <p class="text subscribe__text">Dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt
+                            ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                        <form action="#">
+                            <div class="subscribe__form">
+                                <div class="subscribe__input-group">
+                                    <input class="subscribe__input input" aria-label="Subscribe To Us" type="text"
+                                        name="subscribe" placeholder="Your email address...">
+                                </div>
+                                <div class="subscribe__input-group">
+                                    <button class="btn btn_green subscribe__button">Subscribe</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="blog default-block default-block_bg-heliotrope">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="title title_big title_color-white title_center">Blog</h2>
+                        <p class="text text_white text_center blog__text">Dolore magna aliqua. Ut enim ad minim veniam,
+                            quis
+                            nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                            in reprehenderit in voluptate velit.</p>
+                    </div>
+                </div>
+                <div class="row blog__list">
+                    <div class="col-4 col-lg-6 col-md-12">
+                        <section class="blog__article">
+                            <img class="blog__img" src="./images/01.jpg" alt="Green Smoothies">
+                            <strong class="blog__date">20 <span>nov</span></strong>
+                            <div class="blog__title-wrapper">
+                                <h2 class="blog__title">
+                                    <a class="blog__link" href="#">Green Smoothies: Too Much of a Good Thing?</a>
+                                </h2>
+                                <p class="blog__time" data-time="2 hours ago">By Auskteez</p>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="col-4 col-lg-6 col-md-12">
+                        <section class="blog__article">
+                            <img class="blog__img" src="./images/02.jpg" alt="Growing Food">
+                            <strong class="blog__date">14 <span>nov</span></strong>
+                            <div class="blog__title-wrapper">
+                                <h2 class="blog__title">
+                                    <a class="blog__link" href="#">Growing Food and a “Thirst” for Innovation</a>
+                                </h2>
+                                <p class="blog__time" data-time="3 hours ago">By Auskteez</p>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="col-4 col-lg-6 col-md-12">
+                        <section class="blog__article">
+                            <img class="blog__img" src="./images/03.jpg" alt="Pesticides & Food">
+                            <strong class="blog__date">10 <span>nov</span></strong>
+                            <div class="blog__title-wrapper">
+                                <h2 class="blog__title">
+                                    <a class="blog__link" href="#">Pesticides & Food: What You Need to Know</a>
+                                </h2>
+                                <p class="blog__time" data-time="6 hours ago">By Auskteez</p>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col_center">
+                        <button class="btn btn_red">VIEW MORE</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contact default-block">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="title title_big title_color-black title_center">Contact</h2>
+                        <p class="text text_center contact__text">For new projects, ideas, business or
+                            anything
+                            you'd like to discuss, contact with me!</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 col-sm-12">
+                        <form class="form contact__form" action="#">
+                            <div class="form__groupe">
+                                <input class="form__item form__input form__item_green-bg" type="text" name="fullName"
+                                    aria-label="Your Name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form__groupe">
+                                <input class="form__item form__input form__item_green-bg" type="email" name="email"
+                                    aria-label="Your email" placeholder="Your email" required>
+                            </div>
+                            <div class="form__groupe">
+                                <input class="form__item form__input form__item_green-bg" type="tel" name="phone"
+                                    aria-label="Your Phone number" placeholder="Your Phone number">
+                            </div>
+                            <div class="form__groupe">
+                                <textarea class="form__item form__textarea form__item_green-bg" name="message"
+                                    aria-label="Your message" placeholder="Your message"></textarea>
+                            </div>
+                            <div class="form__groupe">
+                                <button class="btn btn_green" type="submit">Send</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-6 col-sm-12">
+                        <address class="contact__address">
+                            <strong>ADDRESS</strong>
+                            123 City name, Street, City, Country
+                            <strong>EMAIL</strong>
+                            cahee@domain.com
+                            <strong>PHONE</strong>
+                            +012 345 6789
+                        </address>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 col-sm-12">
+                    <p class="footer__text">© 2015 Company. All right reserved.</p>
+                </div>
+                <div class="col-4 col-sm-12">
+                    <img class="footer__logo" src="./images/logo-small.png" alt="cahee">
+                </div>
+                <div class="col-4 col-sm-12">
+                    <p class="footer__text footer__text_right">
+                        Made with <span class="text_red text_bold">love</span> by Auskteez
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

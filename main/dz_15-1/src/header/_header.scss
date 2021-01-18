@@ -1,0 +1,17 @@
+@import "./logo";
+@import "./menu";
+
+
+.header {
+    padding: 39px 0;
+    width: 100%;
+    height: $header-height;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+}

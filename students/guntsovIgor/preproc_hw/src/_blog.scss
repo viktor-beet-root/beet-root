@@ -1,0 +1,118 @@
+   .blog {
+        background-color: #b07cf7;
+        font-family: $mainFont;
+        line-height: 1.5;
+
+    &__tittle {
+        margin: 0 auto;
+        text-align: center;
+        width: 569px;
+        margin-bottom: 44px;
+        padding-top:67px;
+
+      &_big{
+          color:white;
+          font-size: 90px;
+          font-weight: 700;
+          font-family: 'Raleway';
+          text-align: center;
+          margin-bottom: 8px;
+       }
+
+       &_text {
+          color: white;
+          font-weight: 300;
+          font-size: 17px;
+       }
+    }
+
+    &__link {
+        padding-bottom: 120px;
+
+        &_red {
+            text-transform: uppercase;
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 25px;
+            margin: 0 auto;
+            display:block;
+            text-align:center;
+            width:200px;
+            height:55px;
+            background-color: #f72b3b;
+            color:white;
+            line-height: 50px;
+            text-decoration: none;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+    }
+}
+
+.articles {
+    display: flex;
+    justify-content:space-between;
+    margin-bottom:45px ;
+
+    &__item {
+        position: relative;
+
+        &::after{
+    	      content: "";
+    	      display: block;
+    	      width: 370px;
+    	      height: 310px;
+    	      position: absolute;
+            bottom: 22px;
+    	      background: transparent;
+    	      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+        }
+    }
+
+    &__img{
+        width:370px;
+        height:310px;
+        margin-right: 30px;
+    }
+
+    &__tittle {
+        position:absolute;
+        font-size: 20px;
+        top:206px;
+        left:20px;
+        line-height: 25px;
+        color:white;
+        font-weight: 700;
+        z-index: 10;
+    }
+
+    &__author {
+        position:absolute;
+        font-size: 13px;
+        top:270px;
+        left:20px;
+        color:white;
+        font-weight: 300;
+        z-index: 10;
+    }
+
+    &__date {
+        text-transform: uppercase;
+        height: 60px;
+        width:60px;
+        text-align: center;
+        background-color:rgba(38, 38, 38, 0.5);
+        border-radius: 5px;
+        position:absolute;
+        font-size: 32px;
+        top:30px;
+        left:30px;
+        color:white;
+        font-weight: 700;
+        line-height: 25px;
+
+        &_month{
+            font-size: 25px;
+            font-weight: 900;
+        }
+    }
+}

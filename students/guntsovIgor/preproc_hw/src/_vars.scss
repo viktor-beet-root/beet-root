@@ -1,0 +1,25 @@
+$defaultFont: 'Raleway';
+$secondaryFont: 'Pacifico';
+
+$fallbackFont: Arial, Helvetica, sans-serif;
+
+$mainFont: $defaultFont, $fallbackFont;
+$secondaryMainFont: $secondaryFont, $fallbackFont;
+
+$defaultFontSize: 17px;
+
+$yellow: #ffe92f;
+$white: white;
+$black: black;
+$blue: #70bfff;
+$airForceBlue: #5585A2;
+$olive: #96b92c;
+
+
+$servicesColor: $blue;
+$iconServiceColorBg: $white;
+$textColor: $black;
+$galleryColor: $yellow;
+$titleColor: $white;
+$galleryBtnColor: $airForceBlue;
+$subscribeButtonColor: $olive;

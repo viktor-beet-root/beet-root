@@ -1,0 +1,33 @@
+.about-us{
+    padding: 70px 0;
+    color: $colorTextWhite;
+
+    &__title{
+        font-size: 90px;
+        font-weight: 700;
+
+        @media (max-width: $SM) {
+            font-size: 50px;
+        }
+    }
+
+    &__bg{
+        background-color: $colorBgBlue ;
+    }
+
+    &_article{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    &__img img{
+        width: 100%;
+    }
+}
+
+@media (max-width: $MD) {
+    .about-us{
+        padding: 10px 0;
+    }
+}

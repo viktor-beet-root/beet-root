@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .progress {
+            height: 20px;
+            background-color: grey;
+            position: relative;
+        }
+
+        .progress>div {
+            position: absolute;
+            background-color: green;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <button data-btn="+">+</button>
+        <button data-btn="-">-</button>
+        <div class="progress">
+            <div></div>
+        </div>
+    </div>
+    <script>
+        const bntList = Array.prototype.slice.call(document.querySelectorAll("#app button"));
+        const span = document.querySelector("#app span");
+        const progressBar = document.querySelector("#app .progress > div");
+
+        // bntList.forEach(function (btn) {
+        //     btn.addEventListener('click', counter);
+        // });
+
+        bntList.forEach(function (btn) {
+            btn.addEventListener('click', raite);
+        });
+
+        let count = 0;
+
+        // function counter() {
+        //     console.log(this.dataset.btn);
+        //     count = this.dataset.btn === '+' ? count + 1 : count - 1;
+        //     count = count < 0 ? 0 : count > 10 ? 10 : count;
+        //     span.textContent = count;
+        // };
+        function raite() {
+            console.log(this.dataset.btn);
+            count = this.dataset.btn === '+' ? count + 5 : count - 5;
+            count = count < 0 ? 0 : (count > 100 ? 100 : count);
+            progressBar.style.width = count + '%';
+        };
+
+
+
+        //b.removeEventListener('click', counter);
+    </script>
+</body>
+
+</html>

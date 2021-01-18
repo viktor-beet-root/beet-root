@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simple registration</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="banner.png" alt="main banner of the page" title="registration" />
+        </nav>
+    </header>
+    <main>
+        <div class="form-wrapper">
+            <form action="#" method="POST" enctype="multipart/form-data">
+                <fieldset>
+                    <legend><strong style="color: darkred">PERSONAL INFO</strong></legend>
+                    <div>
+                        <label for="name">Name Surname:</label>
+                        <input type="text" name="user_name" id="name" placeholder="Type name here" required />
+                    </div>
+                    <br />
+                    <div>
+                        <label for="phone">Phone number:</label>
+                        <input type="text"  name="user_phone" id="phone" placeholder="Type number here" required />
+                    </div>
+                    <br />
+                    <div>
+                        <label>Email adress:<input type="email" id="email" /></label>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="date">Date of birth:</label>
+                        <input type="date" id="date" name="user_birth" required>
+                    </div>
+                </fieldset>
+                <br />
+                <fieldset>
+                    <legend><strong style="color: darkred">QUESTIONS</strong></legend>
+                    <strong>Gender:</strong>
+                    <br />
+                    <div>
+                        <label for="male">Male</label>
+                        <input type="radio" id="male" name="gender" value="male" />
+                    </div>
+                    <div>
+                        <label for="female">Female</label>
+                        <input type="radio" id="female" name="gender" value="female" /></div>
+                    <hr />
+                    <strong>Native language:</strong>
+                    <div>
+                        <label>English<input type="radio" id="english" name="language" value="english" /></label>
+                    </div>
+                    <div>
+                        <label>Ukrainian<input type="radio" id="ukrainian" checked name="language" value="ukrainian" /></label>
+                    </div>
+                    <div>
+                        <label>Russian<input type="radio" id="russian" name="language" value="russian" /></label>
+                    </div>
+                    <div>
+                        <label>German<input type="radio" id="german" name="language"  value="german" /></label>
+                    </div>
+                    <hr />
+                    <strong>What kind of programming languages do you know?</strong>
+                    <div>
+                        <label>JavaScrtip<input type="checkbox" value="javascript" name="question" id="js" /></label>
+                    </div>
+                    <div>
+                        <label>HTML<input type="checkbox" value="html" name="question" id="html" checked /></label>
+                    </div>
+                    <div>
+                        <label>CSS<input type="checkbox" value="css" name="question" id="css" /></label>
+                    </div>
+                    <div>
+                        <label>Python<input type="checkbox" value="python" name="question" id="pythn" /></label>
+                    </div>
+                </fieldset>
+                <br />                                      
+                    <img src="kharkiv-sehir.jpg" width="400px" height="250px" alt="kharkiv photo" title="Kharkiv" />
+                    <img src="Kiev_1920_2.jpg" width="600px" height="250px" alt="Kyiv photo" title="Kyiv" />
+                    <img src="lviv.jpg" width="400px" height="250px" alt="Lviv photo" title="Lviv" />
+                <br />
+                <fieldset>
+                    <legend><strong style="color: darkred">COUNTRY</strong></legend>
+                    <label for="city">Select city:</label>
+                    <select name="city" id="city" required>
+                        <option value="">Kropivnitsky</option>
+                        <option value="Zhytomir">Zhytomir</option>
+                        <option value="Zaporojie">Zaporojie</option>
+                        <option value="Ivano-Frankovsk">Ivano-Frankovsk</option>
+                        <option value="Lugansk">Lugansk</option>
+                        <option value="Lytsk">Lytsk</option>
+                        <option value="Lviv">Lviv</option>
+                        <option value="Nikolaev">Nikolaev</option>
+                        <option value="Odessa">Odessa</option>
+                        <option value="Poltava">Poltava</option>
+                        <option value="Kyiv" selected>Kyiv</option>
+                        <option value="Rovno">Rovno</option>
+                        <option value="Summy">Summy</option>
+                        <option value="Uzhgorod">Uzhgorod</option>
+                        <option value="Kharkiv">Kharkiv</option>
+                        <option value="Herson">Herson</option>
+                        <option value="Hmelnitsky">Hmelnitsky</option>
+                        <option value="Cherkassy">Cherkassy</option>
+                        <option value="Chernigiv">Chernigiv</option>
+                        <option value="Chernivtsi">Chernivtsi</option>
+                        <option value="Vinnitsa">Vinnitsa</option>
+                        <option value="Ternopil">Ternopil</option>
+                        <option value="Dnipro">Dnipro</option>
+                    </select>
+                    <br />
+                    <br />
+                    <div><textarea rows="5" cols="13" placeholder="Type about your city"></textarea></div>
+                </fieldset>
+                <br>
+                <div><input type="submit" value="submit"></div>
+                <br />
+                <div><input type="reset" value="reset"></div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

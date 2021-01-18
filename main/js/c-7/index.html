@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const numbersList = [24, 5, 3, 4, 6, 75, 4, 85, 6, 7, 96, 7, 80, 7, 8, 9, 0, 6, 7, 7, 4, 5, 6, 3, 4, 5];
+
+        const arr = numbersList.concat([]);
+        console.log(arr);
+
+        const arr1 = numbersList.slice(0, 9);
+        const arr2 = [...numbersList];
+
+        console.log(arr1)
+
+        const index = numbersList.indexOf(4);
+        console.log(index);
+
+        const a = numbersList.find(function (item) {
+            return item === 4;
+        });
+
+        console.log(a);
+
+        const filter = numbersList.filter(function (item) {
+            return item % 2 === 0;
+        });
+
+        console.log(filter);
+
+        const dd = numbersList.slice();
+        console.log(dd.reverse(), numbersList);
+
+        const text = numbersList.join('|');
+        const arr5 = text.split('|');
+
+        console.log(text, arr5);
+
+        const al = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't',
+            'u', 'v', 'w', 'x', 'y', 'z'
+        ]
+
+        const sum = numbersList.reduce(function (previousValue, item, index, arr) {
+            return previousValue + item;
+        });
+
+        const sumOdd = numbersList.reduce(function (previousValue, item, index) {
+            console.log(previousValue, item, index)
+            if (item % 2 === 0) return previousValue + item;
+            else return previousValue;
+        });
+
+        const ss = numbersList.reduce(function (previousValue, item, index) {
+            if (item % 2 !== 0) {
+                previousValue.push(item);
+            }
+
+            return previousValue;
+        }, []);
+
+        console.log(ss);
+    </script>
+</body>
+
+</html>

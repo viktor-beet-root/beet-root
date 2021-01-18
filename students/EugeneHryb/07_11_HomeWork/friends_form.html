@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Давай познакомимся</title>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="childhood.html#childhood">Детство</a></li>
+            <li><a href="student_years.html#study">Студенческие годы</a></li>
+            <li><a href="hobi.html#hobi">Хобби</a></li>
+            <li><a href="friends_form.html">Давайте познакомимся</a></li>
+        </ul>
+    </header>
+    <main>
+        <section>
+            <h1>Давай познакомимся.</h1>
+            <form action="#" method="POST" id="person">
+                <fieldset>
+                    <div>
+                        <label for="name"> Как тебя зовут </label><br> 
+                        <input name="name" type="text" id="name" required placeholder="имя">
+                    </div>
+                    <div>
+                        <label for="lastName">Назовыи свою фамилию, если не жалко</label><br>
+                        <input name="lastName" id="lastName" type="text" placeholder="фамилия">
+                    </div>
+                    <div>
+                        <label for="patronym">А по отчеству</label><br>
+                        <input name="patronym" id="patronym" type="text" placeholder="отчество">
+                    </div>
+                    <div>
+                        <label for="birthday">Укажи cвой день рождения</label><br>
+                        <input name="birthday" id="birthday" type="date">
+                    </div>
+                    <div>
+                        <p>Укажи свой пол</p>
+                        <label for="men">Он<input type="radio" name="sex" id="men" value="men"></label>
+                        <label for="fomen">Она<input type="radio" name="sex" id="fomen" value="fomen"></label>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Оставь свои контакты.</legend>
+                    <div>
+                        <label >Телефон : <input id="tel" name="tel" type="tel" placeholder="(011) 111-1111" pattern="0[1-9]{2} [0-9]{3}-[0-9]{4}"> </label>
+                    </div>
+                    <div>
+                        <label>Емайл : <input id="email" name="email" type="mail" placeholder="email@mail.com"> </label>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Расскажи немного о себе</legend>
+                    <div>
+                        <label for="region">C каой ты области.</label><br>
+                        <select name="region" id="region">
+                            <option selected disabled>Выберы область.</option>
+                            <option value="vinica">Винницкая </option>
+                            <option value="volin">Волынская </option>
+                            <option value="dnepr">Днепропетровская </option>
+                            <option value="doneck">Донецкая </option>
+                            <option value="zhytomyr">Житомирская </option>
+                            <option value="zakarpaty">Закарпатская </option>
+                            <option value="zaporozhee">Запорожская </option>
+                            <option value="ivano_frankovsk">Ивано-Франковская</option>
+                            <option value="kyevskaya">Киевская </option>
+                            <option value="kirovograd">Кировоградская </option>
+                            <option value="lugansk">Луганская </option>
+                            <option value="lviv">Львовская </option>
+                            <option value="nikolayev">Николаевская </option>
+                            <option value="odesa">Одесская </option>
+                            <option value="poltava">Полтавская </option>
+                            <option value="rovno">Ровненская </option>
+                            <option value="sumi">Сумская </option>
+                            <option value="ternopil">Тернопольская </option>
+                            <option value="charkiv">Харьковская </option>
+                            <option value="cherson">Херсонская</option>
+                            <option value="chmelnick">Хмельницкая</option>
+                            <option value="cherkasi">Черкасская</option>
+                            <option value="chernigic">Черниговская</option>
+                            <option value="chernovci">Черновицкая</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Какой цвет тебе больше нравится<input id="color" name="color" type="color"></label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="rockmusik" name="rockmusik" value="true"><label for="rockmusik">Тебе нравится рок музыка ?</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="book" name="book" value="true"><label for="book">Тебе нравиться читать книги ?</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="travel" name="travel" value="true"><label for="travel">Тебе нравиться путишествовать ?</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="pets" name="pets" value="true"><label for="pets">Тебе нравятся домашние животные ?</label>
+                    </div>
+                    <div>
+                        <label> Ты любишь поболтать. Выберы от 1 до 10.
+                        <input type="range" name="communicative" min="1" max="10" step="1">
+                        </label><br>
+                    </div>
+                    <div>
+                        <label for="about_me">Раскажи о себе</label><br>
+                        <textarea name="about_me" id="about_me" placeholder="писать можно сдесь" cols="40" rows="15"></textarea>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div><input type="reset"></div>
+                    <div style="margin-top: 20px; text-align: center;"><button type="submit">
+                        <img src="images/submit.svg" alt="Отправить" height="40" title="Отправить">
+                    </button></div>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <h5>Автор в социальных сетях.</h5>
+        <ul>
+            <li><a href="https://www.facebook.com/yevhenii.hryb" target="_blank"><img src="images/f_book.svg" alt="Facebook" height="15"></a></li>
+            <li><a href="www.linkedin.com/in/eugene-hryb" target="_blank"><img src="images/in.svg" alt="Linkedin" height="15"></a></li>
+            <li><a href="https://www.instagram.com/lisovyi_mukhomor/" target="_blank"><img src="images/insta.svg" alt="Instagram" height="15"></a></li>
+        </ul>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,7 @@
+@include fontface($defaultFontName, $fontStyle, 400, '../fonts/montserrat-v15-latin-regular');
+
+@include fontface($defaultFontName, $fontStyle, 700, '../fonts/montserrat-v15-latin-700');
+
+@include fontface($defaultFontName, $fontStyle, 600, '../fonts/montserrat-v15-latin-600');
+
+@include fontface($secondaryFontName, $fontStyle, 400, '../fonts/pt-sans-v12-latin-regular');

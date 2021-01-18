@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript. Function - 1</title>
+</head>
+
+<body>
+    <script>
+        // function log1(a, b, c) {
+        //     f('aaaaa', 'dddddd');
+
+        //     if (a !== undefined) console.log('a: ' + a, b, c);
+        //     if (b !== undefined) console.log('b: ' + b);
+        //     if (c !== undefined) console.log('c: ' + c);
+        //     const res = b !== undefined ? a + b : a;
+
+        //     return res;
+        // }
+
+        // console.log(log1(15 + 2));
+        // console.log(log1(10, 11));
+        // console.log(log1(20, 2));
+
+
+        // function getCountArguments() {
+        //     if (arguments.length > 0) return arguments.length;
+        //     console.log('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
+        //     return 'dsfds';
+        // }
+
+        // function f(a, b) {
+        //     b = (b === undefined) ? "Name" : b;
+        //     b = b || "Name";
+
+        //     console.log(a, b);
+        // }
+        //f(undefined, '');
+
+
+
+        // console.log(getCountArguments(1, 2, 3, 4));
+        // console.log(getCountArguments())
+
+
+        // function p(a, b) {
+        //     return a + b;
+        // }
+
+        // function m(a, b) {
+        //     return a - b;
+        // }
+
+        // function s(a, b) {
+        //     return a * b;
+        // }
+
+        // function d(a, b) {
+        //     return a / b;
+        // }
+
+        // function plusSumm(a, b) {
+        //     return p(p(a, b), s(a, b));
+        // }
+
+        // function calc(a, b, symbol) {
+        //     if (symbol === '+') return p(a, b);
+        //     if (symbol === '-') return m(a, b);
+        //     if (symbol === '*') return s(a, b);
+        //     if (symbol === '/') return d(a, b);
+
+        // }
+
+        // p(2, 2);
+
+        // console.log(calc(2, 5, '+'));
+
+
+
+        // (function () {
+        //     let s = 1;
+
+        //     function getName(a, b) {
+        //         let s;
+        //         console.log('Vasya', s);
+        //     };
+
+        //     getName('a', 'sdf');
+        // })();
+
+        // function getName(a, b) {
+        //     console.log('Petya');
+        // };
+
+        // getName('a', 'sdf');
+
+
+        // (function () {
+
+        //     function counter(z) {
+        //         let count = 0;
+        //         return function (s) {
+        //             return ++count;
+        //         };
+        //     }
+
+        //     const counter1 = counter('?');
+        //     const counter2 = counter();
+        //     const counter3 = counter();
+        //     console.log(counter1("Ты Вася")); // Ты Вася?
+        //     console.log(counter1());
+        //     console.log(counter1());
+        //     console.log('-----------------');
+        //     console.log(counter2());
+        //     console.log(counter2());
+        //     console.log(counter2());
+        //     console.log(counter2());
+        //     console.log('-----------------');
+        //     console.log(counter3());
+        // })();
+
+        // (function () {
+        //     function getName(name) {
+        //         return name;
+        //     }
+
+        //     function sayName(fn) {
+        //         if (confirm("Говирить?")) {
+        //             return fn(prompt("What is your name?"));
+        //         }
+        //         return '';
+        //     }
+
+        //     console.log(sayName(getName));
+
+        // })();
+
+
+        (function () {
+
+            function factorial(n) {
+                if (n === 1) {
+                    return 1;
+                } else {
+                    return n * factorial(n - 1);
+                }
+            }
+
+            console.log(factorial(5));
+
+        })();
+    </script>
+</body>
+
+</html>

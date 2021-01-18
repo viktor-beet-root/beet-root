@@ -1,0 +1,72 @@
+//Polygraphy
+
+$default-fonts-name:"Raleway";
+$follbak: Arial,
+Helvetica,
+sans-serif;
+$default-fonts: $default-fonts-name,
+$follbak;
+$default-font-size: 17px;
+$default-line-height: 1.5882;
+
+$secondary-fonts-name: "montserrat";
+$secondary-fonts: $secondary-fonts-name,
+$follbak;
+//Color
+
+$chathamsblue: #194277;
+$red:#d62c40;
+$grey: #b9bcd1;
+$lightRed: #eb304d;
+
+$dodgerBlue: #3686fe;
+$chathamsBlue02: #194177;
+$scorpion: #5a5a5a;
+$white: #fff;
+$whisper: #f9f8fb;
+$black: #000000;
+$mineShaft: #262626;
+$outrageousOrange: #ff6033;
+$bondiBlue: #00afaf;
+$malibu: #70bfff;
+$silverChalice: #9d9d9d;
+$brightSun: #ffe92f;
+$horizon: #5585a2;
+$atlantis: #96b92c;
+$heliotrope: #b07cf7;
+$blackRussian: #020024;
+$gray: rgba(38, 38, 38, 0.5);
+$redOrange: #f72b3b;
+$robinsEggBlue: #00c4c4;
+$robinsEggBlue02: rgba(0, 196, 196, .5);
+$chambray: #355B82;
+$silver: #b9b9b9;
+$radicalRed: #ff2b58;
+
+
+$textColorWhite: $white;
+$bgColorWhite: $white;
+$bgColorFreshLife: $whisper;
+$bgColorAbout: $bondiBlue;
+$bgServices: $malibu;
+$bgColorGallery: $brightSun;
+$textColorBlack: $black;
+$textColorLending: $mineShaft;
+$bgColorBtnFresh: $outrageousOrange;
+$bgColorBorder: $silverChalice;
+$bgColorBtnGallery: $horizon;
+$bgLineBtnMenu: $mineShaft;
+$bgBtnSubscribe: $atlantis;
+$bgColorBlog: $heliotrope;
+$bgLinkBlog: $blackRussian;
+$bgColorBtnBlog: $redOrange;
+$bgInputContact: $robinsEggBlue02;
+$bgInputContactActive: $robinsEggBlue;
+$bgFooter: $mineShaft;
+$textColorFooter: $silver;
+$footerColorLove: $radicalRed;
+
+
+$defaultBoxShadow: 0 2px 2.5px rgba(0, 0, 0, .5);
+$blogHoverBoxShadow: 0 4px 5px rgba(0, 0, 0, .5);
+$blogLinkGradient: linear-gradient(0deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, .0));

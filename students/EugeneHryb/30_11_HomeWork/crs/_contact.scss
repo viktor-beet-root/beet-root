@@ -1,0 +1,42 @@
+.contact{
+    padding: 100px 0;
+
+    &__bg{
+        @include bgCover('../img/contact_bg.jpg');
+    }
+
+    &__article{
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    &__title{
+        font-size: 90px;
+        font-weight: 700;
+
+        @media (max-width: $SM){
+            font-size: 50px;
+        }
+    }
+
+    &__info{
+        padding-left: 12.280701%;
+    }
+
+    &__info-title{
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    &__info-date{
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: $MD) {
+    .contact {
+        padding: 10px 0;
+    }
+}
+
+

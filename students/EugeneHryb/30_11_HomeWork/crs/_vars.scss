@@ -1,0 +1,57 @@
+//
+
+$firstFont: 'Raleway';
+
+$follbak: Arial, Helvetica, sans-serif;
+
+$defaultFont: $firstFont, $follbak;
+
+//Цвета
+
+$mineShaft: #262626;
+$outrageousOrang: #ff6033;
+$white: white;
+$blue: #00c4c4;
+$malibu:#70bfff;
+
+//Universal vars
+
+$colorTextBlack: $mineShaft;
+$colorTextWhite: $white;
+
+//Buttom vars
+
+$colorButtomOrange: $outrageousOrang;
+$colorButtomOrangeText:$white;
+
+//Home and Heder vars
+
+$colorHeadertext: $mineShaft;
+$colorMenuHover: $outrageousOrang;
+$colorMenuBg: #F9F8FB;
+$colorBgBlue: $blue;
+
+//Service vars
+
+$colorBgService: $malibu;
+$colorBorderList-item: $mineShaft;
+$colorBgListItem: $white;
+$colorBgGallery: #ffe92f;
+$colorBgSubscribe: $white;
+$colorSubscribeButton: #96b92c;
+
+//Blogs vars
+
+$colorBgBlog: #00c4c4;
+$colorBgButton: #f72b3b;
+
+//Feedback
+
+$colorBgfeedbackInput: rgb(0%, 76.9%, 76.9%, 1);
+$colorBordeActiv: #355b82;
+
+//footer
+
+$colorBgFooter: #262626;
+$colorTextFooter:  #b9b9b9;
+$colorTextStrongFooter: #ff2b58;
