@@ -78,20 +78,16 @@
             <span class="clock__seconds">00</span>
         </div>
         <script>
-            let hours = document.querySelector(".clock__hours");
-            let hoursValue = "0" + parseInt(hours.innerHTML);
-            hours.innerHTML = hoursValue;
+            const hours = document.querySelector(".clock__hours");
+            let hoursValue = hours.innerHTML;
 
-            let minutes = document.querySelector(".clock__minutes");
+            const minutes = document.querySelector(".clock__minutes");
+            let minutesValue = minutes.innerHTML;
 
-            let minutesValue = "0" + parseInt(minutes.innerHTML);
-            minutes.innerHTML = minutesValue;
+            const dotsOutter = document.querySelector(".clock__dots");
 
-            let dotsOutter = document.querySelector(".clock__dots");
-
-            let seconds = document.querySelector(".clock__seconds");
-            let secondsValue = "0" + parseInt(seconds.innerHTML);
-            seconds.innerHTML = secondsValue;
+            const seconds = document.querySelector(".clock__seconds");
+            let secondsValue = seconds.innerHTML;
 
             function dotssIn() {
                 dotsOutter.style.visibility = "hidden";
