@@ -41,48 +41,54 @@ console.log("Задание 6.2");
 // Функция деления 2-х объектов-дробей;           (****)
 // Функция сокращения объекта-дроби.              (*****)
 
-function Fraction(numerator, denominator) {
-    this.numerator = numerator;
-    this.denominator = denominator;
+let fraction1 = {
+    numerator: 2,
+    denominator: 4,
+};
+
+let fraction2 = {
+    numerator: 2,
+    denominator: 3,
+};
+
+function sum(num1, num2) {
     let result;
-    this.sum = function (obj) {
-        result = this.numerator * obj.denominator + this.denominator * obj.numerator + "/" + this.denominator * obj.denominator; //.....(*)
-        return result;
-    };
-
-    this.minus = function (obj) {
-        if (this.numerator * obj.denominator - this.denominator * obj.numerator !== 0) {
-            result = this.numerator * obj.denominator - this.denominator * obj.numerator + "/" + this.denominator * obj.denominator; //.....(**)
-            return result;
-        } else return 0;
-    };
-
-    this.mult = function (obj) {
-        result = this.numerator * obj.numerator + "/" + this.denominator * obj.denominator; //.....(***)
-        return result;
-    };
-
-    this.div = function (obj) {
-        result = this.numerator * this.denominator + "/" + obj.numerator * obj.denominator; //.....(****)
-        return;
-    };
-
-    this.reduction = function (obj) {
-        let result;
-        for (var i = 1; i <= this.numerator; i++) {
-            if (this.numerator % i === 0 && this.denominator % i === 0) result = this.numerator / i + "/" + this.denominator / i; //.....(*****)
-        }
-        return result;
-    };
+    result = num1.numerator * num2.denominator + num1.denominator * num2.numerator + "/" + num1.denominator * num2.denominator; //.....(*)
+    return result;
 }
 
-let fraction1 = new Fraction(2, 4);
-let fraction2 = new Fraction(2, 3);
+function minus(num1, num2) {
+    let result;
+    if (num1.numerator * num2.denominator - num1.denominator * num2.numerator !== 0) {
+        result = num1.numerator * num2.denominator - num1.denominator * num2.numerator + "/" + num1.denominator * num2.denominator; //.....(**)
+        return result;
+    } else return 0;
+}
 
-console.log(fraction1.sum(fraction2));
-console.log(fraction1.minus(fraction2));
-console.log(fraction1.mult(fraction2));
-console.log(fraction1.reduction(fraction2));
+function mult(num1, num2) {
+    let result;
+    result = num1.numerator * num2.numerator + "/" + num1.denominator * num2.denominator; //.....(***)
+    return result;
+}
+
+function div(num1, num2) {
+    let result;
+    result = num1.numerator * num1.denominator + "/" + num2.numerator * num2.denominator; //.....(****)
+    return;
+}
+
+function reduction(num1) {
+    let result;
+    for (var i = 1; i <= num1.numerator; i++) {
+        if (num1.numerator % i === 0 && num1.denominator % i === 0) result = num1.numerator / i + "/" + num1.denominator / i; //.....(*****)
+    }
+    return result;
+}
+
+console.log(sum(fraction1, fraction2));
+console.log(minus(fraction1, fraction2));
+console.log(mult(fraction1, fraction2));
+console.log(reduction(fraction1));
 
 console.log("Задание 6.3");
 
@@ -108,9 +114,9 @@ time.secondsTransform = function (seconds) {
     let time = "";
     const hourSec = 3600;
     const minSec = 60;
-    let hours = Math.trunc(seconds / hourSec);
-    let minutes = Math.trunc((seconds - hours * hourSec) / minSec);
-    let second = seconds % minSec;
+    const hours = Math.trunc(seconds / hourSec);
+    const minutes = Math.trunc((seconds - hours * hourSec) / minSec);
+    const second = seconds % minSec;
     time = hours + "h : " + minutes + "m : " + second + "s";
     return time;
 };
