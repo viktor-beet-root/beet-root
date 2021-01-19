@@ -11,11 +11,17 @@ let buyList = [
     { itemName: "oranges", itemQuantity: 5, itemBought: true },
 ];
 
-let sortedList = buyList.slice();
-
-sortedList.sort(function (a, b) {
-    return a.itemBought - b.itemBought; //......(*)
-});
+function sortList() {
+    let sortedList = buyList.slice();
+    sortedList.sort(function (a, b) {
+        return a.itemBought - b.itemBought;
+    });
+    let result = "";
+    sortedList.forEach(function (item) {
+        result = result + item.itemName + " , quantity" + item.itemQuantity + " , bought : " + item.itemBought + "\n";
+    });
+    return result;
+}
 
 function itemAdd(itemName, itemQuantity, itemBought) {
     if (
@@ -23,7 +29,7 @@ function itemAdd(itemName, itemQuantity, itemBought) {
             return elem.itemName === itemName;
         })
     ) {
-        buyList.push({ itemName, itemQuantity, itemBought }); //..............(**)
+        buyList.push({ itemName, itemQuantity, itemBought });
     } else {
         buyList.find(function (elem) {
             return elem.itemName === itemName;
@@ -31,24 +37,18 @@ function itemAdd(itemName, itemQuantity, itemBought) {
     }
 }
 
-function bought(itemName) {
-    if (
-        !buyList.some(function (elem) {
-            return elem.itemName === itemName; //......(***)
-        })
-    ) {
-        console.log("NETY TAKOGO TOVARA");
-    } else {
-        buyList.find(function (elem) {
-            return elem.itemName === itemName;
-        })["itemBought"] = true;
-    }
+function bought(newItemName) {
+    buyList.forEach(function (product) {
+        if (product.itemName === newItemName) {
+            product["itemBought"] = true;
+        }
+    });
+    return buyList;
 }
 
-console.log(sortedList);
+console.log(sortList());
 itemAdd("mandarin", 23, false);
-bought("mandarin");
-console.log(buyList);
+console.log(bought("mandarin"));
 
 // 2. Создать массив, описывающий чек в магазине.
 // Каждый элемент массива состоит из названия товара, количества и цены за единицу товара.
@@ -64,62 +64,49 @@ let receipt = [
     { itemName: "oranges", itemQuantity: 5, itemPrice: 5 },
 ];
 
-function getPrint(productList) {
+function getPrint(receipt) {
     let result = "";
 
-    for (let i = 0; i < receipt.length; i++) {
-        result =
-            result +
-            " ITEM № :" +
-            (i + 1) +
-            "\n" +
-            productList[i]["itemName"] +
-            " : " +
-            productList[i]["itemQuantity"] +
-            " x " +
-            productList[i]["itemQuantity"] +
-            " = " +
-            productList[i]["itemQuantity"] * productList[i]["itemPrice"] +
-            "\n";
-    }
+    receipt.forEach(function (item, index) {
+        result = result + " ITEM № :" + (index + 1) + "\n" + item["itemName"] + " : " + item["itemQuantity"] + " x " + item["itemQuantity"] + " = " + item["itemQuantity"] * item["itemPrice"] + "\n";
+    });
 
-    return result; //......(*)
+    return result;
 }
 
-function getSum(productList) {
+function getSum(receipt) {
     let result = "";
-    let totalCost = 0;
+    let cost = 0;
 
-    for (let i = 0; i < receipt.length; i++) {
-        totalCost = totalCost + productList[i]["itemQuantity"] * productList[i]["itemPrice"]; //......(**)
-        result = " TOTAL PRICE : " + totalCost + "$.";
-    }
-
-    console.log(result);
-    return totalCost;
+    receipt.forEach(function (item) {
+        cost = item["itemQuantity"] * item["itemPrice"];
+        result = result + "the cost of " + item["itemName"] + " = " + cost + "$" + "\n";
+    });
+    return result;
 }
 
-function getMaxCost(productList) {
+function getMaxCost(receipt) {
     let result = "";
     let maxCost = 0;
 
-    for (let i = 0; i < receipt.length; i++) {
-        let currentCost = productList[i]["itemQuantity"] * productList[i]["itemPrice"]; //......(***)
+    receipt.forEach(function (item) {
+        let currentCost = item["itemQuantity"] * item["itemPrice"];
         if (currentCost > maxCost) {
             maxCost = currentCost;
         }
-    }
+    });
 
     result = " MAX COST ITEM   : " + maxCost + "$.";
     return result;
 }
 
-function getAverage(productList) {
-    let averageCost = getSum(productList) / productList.length; //......(****)
+function getAverage(receipt) {
+    let averageCost = getSum(receipt) / receipt.length;
     return " AVERAGE COST ITEM   : " + averageCost + "$.";
 }
 
 console.log(getPrint(receipt));
+console.log(getSum(receipt));
 console.log(getMaxCost(receipt));
 console.log(getAverage(receipt));
 
@@ -127,7 +114,7 @@ console.log(getAverage(receipt));
 // название стиля и значение стиля. Написать функцию, которая принимает массив стилей и текст, и выводит этот текст с помощью document.write() в тегах <p></p>,
 // добавив в открывающий тег атрибут style со всеми стилями, перечисленными в массиве.
 
-let styles = [
+let stylesList = [
     { styleName: "color", styleValue: "red" },
     { styleName: "font-size", styleValue: "150px" },
     { styleName: "font-weight", styleValue: "bold" },
@@ -136,13 +123,13 @@ let styles = [
 
 function setStyles(stylesArray, text) {
     let styles = "";
-    for (let style of stylesArray) {
-        styles += style.styleName + ":" + style.styleValue + ";";
-    }
+    stylesArray.forEach(function (item) {
+        styles += item.styleName + ":" + item.styleValue + ";";
+    });
     document.write('<p style="' + styles + '">' + text + "</p>");
 }
 
-setStyles(styles, "HELLO WORLD");
+setStyles(stylesList, "HELLO WORLD");
 
 // 4. Создать массив аудиторий академии. Объект-аудитория состоит из названия, количества посадочных мест (от 10 до 20) и
 // названия факультета, для которого она предназначена. Написать несколько функций для работы с ним^
@@ -158,37 +145,40 @@ let classRooms = [
     { roomName: "Small", roomCapacity: 10, roomDepartment: "Biology" },
 ];
 
-function getAllList(array) {
+function getAllList(roomsList) {
     let result = "";
 
-    for (let i = 0; i < array.length; i++) {
-        result = result + array[i]["roomName"] + " auditory for " + array[i]["roomCapacity"] + " students of " + array[i]["roomDepartment"] + " department." + "\n";
-    }
-    return result; //......(*)
+    roomsList.forEach(function (item) {
+        result = result + item["roomName"] + " auditory for " + item["roomCapacity"] + " students of " + item["roomDepartment"] + " department." + "\n";
+    });
+    return result;
 }
 
 function auditoryForDeaprtment(dep) {
-    let search = classRooms.find(function (item) {
+    const search = classRooms.find(function (item) {
         return item.roomDepartment === dep;
     });
-    console.log(search); //......(**)
+
+    getAllList(search);
 }
 
-let sortedRoomCapacity = classRooms.slice();
-
-sortedRoomCapacity.sort(function (a, b) {
-    return a.roomCapacity - b.roomCapacity; //......(***)
-});
-
-let sortedRoomName = classRooms.slice();
-
-function byField(field) {
-    return (a, b) => (a[field] > b[field] ? 1 : -1); //......(****)
+function sortedRooms() {
+    let sortedRoomCapacity = classRooms.slice();
+    sortedRoomCapacity.sort(function (a, b) {
+        return a.roomCapacity - b.roomCapacity;
+    });
+    return sortedRoomCapacity;
 }
 
-sortedRoomName.sort(byField("roomName"));
+function byField() {
+    let sortedRoomName = classRooms.slice();
+    sortedRoomName.sort(function (a, b) {
+        return a["roomName"] > b["roomName"] ? 1 : -1;
+    });
+    return sortedRoomName;
+}
 
 console.log(getAllList(classRooms));
-auditoryForDeaprtment("Math");
-console.log(sortedRoomCapacity);
-console.log(sortedRoomName);
+console.log(auditoryForDeaprtment("Math"));
+console.log(sortedRooms());
+console.log(byField());
