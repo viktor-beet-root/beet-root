@@ -79,47 +79,28 @@
         </div>
         <script>
             const hours = document.querySelector(".clock__hours");
-            let hoursValue = hours.innerHTML;
+            let hoursValue = "00";
 
             const minutes = document.querySelector(".clock__minutes");
-            let minutesValue = minutes.innerHTML;
+            let minutesValue = "00";
+
+            const seconds = document.querySelector(".clock__seconds");
+            let secondsValue = "00";
 
             const dotsOutter = document.querySelector(".clock__dots");
 
-            const seconds = document.querySelector(".clock__seconds");
-            let secondsValue = seconds.innerHTML;
-
-            function dotssIn() {
-                dotsOutter.style.visibility = "hidden";
-            }
-            function dotssOut() {
-                dotsOutter.style.visibility = "visible";
-            }
-
-            function hoursIn() {
-                hours.innerHTML++;
-                if (hours.innerHTML < 10) {
-                    hours.innerHTML = "0" + hours.innerHTML;
+            function secondsIn() {
+                secondsValue++;
+                if (secondsValue === 60) {
+                    secondsValue = 0;
+                    minutesValue++;
                 }
             }
 
             function minutesIn() {
-                minutes.innerHTML++;
-                if (minutes.innerHTML > 59) {
-                    minutes.innerHTML = 0;
-                }
-                if (minutes.innerHTML < 10) {
-                    minutes.innerHTML = "0" + minutes.innerHTML;
-                }
-            }
-
-            function secondsIn() {
-                seconds.innerHTML++;
-                if (seconds.innerHTML > 59) {
-                    seconds.innerHTML = 0;
-                }
-                if (seconds.innerHTML < 10) {
-                    seconds.innerHTML = "0" + seconds.innerHTML;
+                if (minutesValue === 60) {
+                    minutesValue = 0;
+                    hoursValue++;
                 }
             }
 
@@ -128,12 +109,25 @@
                 seconds.style.color = secondsColor;
             }
 
-            setInterval(dotssIn, 500);
-            setInterval(dotssOut, 1000);
-            setInterval(secondsIn, 1000);
-            setInterval(minutesIn, 60000);
-            setInterval(hoursIn, 3600000);
-            setInterval(randomColor, 1000);
+            function dotssOut() {
+                if (secondsValue % 2 === 0) {
+                    dotsOutter.style.visibility = "hidden";
+                } else {
+                    dotsOutter.style.visibility = "visible";
+                }
+            }
+
+            function clock() {
+                seconds.innerHTML = secondsValue;
+                minutes.innerHTML = minutesValue;
+                hours.innerHTML = hoursValue;
+                secondsIn();
+                minutesIn();
+                randomColor();
+                dotssOut();
+            }
+
+            setInterval(clock, 1000);
         </script>
     </body>
 </html>
