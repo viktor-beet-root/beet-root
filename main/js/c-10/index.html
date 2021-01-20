@@ -141,22 +141,26 @@
 
         a.addEventListener('click', af);
         b.addEventListener('click', bf);
-        c.addEventListener('click', cf, true);
+
+        c.addEventListener('click', cf);
+        c.addEventListener('click', af);
         btn.addEventListener('click', btnf);
 
         function af(event) {
             console.log('a', event.target, event.currentTarget);
         }
 
-        function bf() {
+        function bf(event) {
             console.log('b', event.target, event.currentTarget);
         }
 
-        function cf() {
+        function cf(event) {
+            //event.stopPropagation();
+            //event.stopImmediatePropagation();
             console.log('c', event.target, event.currentTarget);
         }
 
-        function btnf() {
+        function btnf(event) {
             console.log('btn', event.target, event.currentTarget);
         }
 

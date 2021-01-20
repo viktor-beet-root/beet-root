@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #app {
+            height: 200px;
+            border: 1px solid black;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        #app>div {
+            width: 20px;
+            height: 20px;
+            border: 1px solid black;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+
+    </div>
+    <script>
+        const app = document.getElementById('app');
+        let i = 0;
+        app.addEventListener('click', function (event) {
+            let elem = event.target;
+
+
+            if (elem.nodeName.toLowerCase() !== 'div') {
+                elem = event.path.find(function (element) {
+                    return element.nodeName.toLowerCase() === 'div';
+                })
+            }
+
+            if (event.target !== event.currentTarget) {
+                elem.style.backgroundColor = elem.style.backgroundColor ? '' : 'red';
+                addElem(++i);
+            }
+        });
+
+        for (i = 0; i < 250; i++) {
+            addElem(i + 1)
+        }
+
+        function addElem(i) {
+            var div = document.createElement('div');
+            var span = document.createElement('span');
+            span.textContent = i;
+            div.appendChild(span)
+            app.appendChild(div);
+        }
+    </script>
+</body>
+
+</html>
