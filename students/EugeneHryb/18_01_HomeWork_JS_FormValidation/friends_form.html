@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Давай познакомимся</title>
+</head>
+
+<body>
+    <main>
+        <section>
+            <h1>Давай познакомимся.</h1>
+            <form action="#" method="GET" id="person">
+                <fieldset>
+                    <div>
+                        <label for="name"> Как тебя зовут </label><br>
+                        <input data-required='true' data-error-mesage='Введите имя' name="name" type="text" id="name"
+                            placeholder="имя">
+                    </div>
+                    <div>
+                        <label for="lastName">Назовыи свою фамилию, если не жалко</label><br>
+                        <input name="lastName" id="lastName" type="text" placeholder="фамилия">
+                    </div>
+                    <div>
+                        <label for="patronym">А по отчеству</label><br>
+                        <input name="patronym" id="patronym" type="text" placeholder="отчество">
+                    </div>
+                    <div>
+                        <label for="birthday">Укажи cвой день рождения</label><br>
+                        <input data-required='true' data-error-mesage='Укажите день дождения' name="birthday"
+                            id="birthday" type="date">
+                    </div>
+                    <div>
+                        <p>Укажи свой пол</p>
+                        <label for="men">Он<input data-required="true" data-error-mesage='Укажите день дождения'
+                                type="radio" name="sex" id="men" value="men"></label>
+                        <label for="fomen">Она<input data-required="true" data-error-mesage='Укажите день дождения'
+                                type="radio" name="sex" id="fomen" value="fomen"></label>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Оставь свои контакты.</legend>
+                    <div>
+                        <label>Телефон : <input id="tel" name="tel" type="tel" placeholder="(011) 111-1111"
+                                pattern="0[1-9]{2} [0-9]{3}-[0-9]{4}"> </label>
+                    </div>
+                    <div>
+                        <label>Емайл : <input id="email" name="email" type="mail" placeholder="email@mail.com"> </label>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Расскажи немного о себе</legend>
+                    <div>
+                        <label for="region">C каой ты области.</label><br>
+                        <select data-required='true' data-error-mesage='Укажите регион' name="region" id="region">
+                            <option value="" selected disabled>Выберы область.</option>
+                            <option value="vinica">Винницкая </option>
+                            <option value="volin">Волынская </option>
+                            <option value="dnepr">Днепропетровская </option>
+                            <option value="doneck">Донецкая </option>
+                            <option value="zhytomyr">Житомирская </option>
+                            <option value="zakarpaty">Закарпатская </option>
+                            <option value="zaporozhee">Запорожская </option>
+                            <option value="ivano_frankovsk">Ивано-Франковская</option>
+                            <option value="kyevskaya">Киевская </option>
+                            <option value="kirovograd">Кировоградская </option>
+                            <option value="lugansk">Луганская </option>
+                            <option value="lviv">Львовская </option>
+                            <option value="nikolayev">Николаевская </option>
+                            <option value="odesa">Одесская </option>
+                            <option value="poltava">Полтавская </option>
+                            <option value="rovno">Ровненская </option>
+                            <option value="sumi">Сумская </option>
+                            <option value="ternopil">Тернопольская </option>
+                            <option value="charkiv">Харьковская </option>
+                            <option value="cherson">Херсонская</option>
+                            <option value="chmelnick">Хмельницкая</option>
+                            <option value="cherkasi">Черкасская</option>
+                            <option value="chernigic">Черниговская</option>
+                            <option value="chernovci">Черновицкая</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Какой цвет тебе больше нравится<input id="color" name="color" type="color"></label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="rockmusik" name="rockmusik" value="true"><label for="rockmusik">Тебе
+                            нравится рок музыка ?</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="book" name="book" value="true"><label for="book">Тебе нравиться
+                            читать книги ?</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="travel" name="travel" value="true"><label for="travel">Тебе нравиться
+                            путишествовать ?</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="pets" name="pets" value="true"><label for="pets">Тебе нравятся
+                            домашние животные ?</label>
+                    </div>
+                    <div>
+                        <label> Ты любишь поболтать. Выберы от 1 до 10.
+                            <input type="range" name="communicative" min="1" max="10" step="1">
+                        </label><br>
+                    </div>
+                    <div>
+                        <label for="about_me">Раскажи о себе</label><br>
+                        <textarea data-required='true' data-error-mesage='Напиши что нибудь' name="about_me"
+                            id="about_me" placeholder="писать можно сдесь" cols="40" rows="15"></textarea>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div>
+                        <input data-required='true' data-error-mesage='Дайте согласие' type="checkbox" id="agreement"
+                            name="agreement" value="true"><label for="agreement">Я даю согласие на обработку своих
+                            данных</label>
+                    </div>
+                    <div><input type="reset"></div>
+                    <div style="margin-top: 20px; text-align: center;"><button type="submit">
+                            <img src="images/submit.svg" alt="Отправить" height="40" title="Отправить">
+                        </button></div>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
