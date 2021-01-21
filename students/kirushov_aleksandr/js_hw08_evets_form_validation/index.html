@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS_HW08_EVETS_FORM_VALIDATION</title>
+        <style>
+            #form {
+                width: 500px;
+            }
+
+            .btn {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .error .required::after {
+                color: red;
+                font-size: 20px;
+            }
+
+            .error [data-required] {
+                border: 1px solid red;
+            }
+
+            .required::after {
+                content: "*";
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="anketa">Анкета</h1>
+        <form id="form" action="#" method="POST">
+            <fieldset name="cont">
+                <legend>Контактная информация</legend>
+                <div>
+                    <label class="required" for="name"> Укажи свое ФИО:</label>
+                    <div>
+                        <input data-required="true" type="text" name="name" id="name"
+                            data-error-message="Поле имя не заполнено">
+                    </div>
+                </div>
+                <div>
+                    <label class="required" for="email"> E-mail:</label>
+                    <div>
+                        <input type="email" name="email" id="email" placeholder="name@example.com" data-required="true"
+                            data-error-message="Поле email не заполнено" />
+                    </div>
+                </div>
+                <div>
+                    <label class="required" for="tel"> Моб. номер телефона:</label>
+                    <div>
+                        <input type="tel" name="tel" id="tel" placeholder="+380000000000" maxlength="13"
+                            data-required="true" data-error-message="Поле моб. телефон не заполнено" />
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset name="personal">
+                <legend>Личная информация</legend>
+                <div>
+                    <label class="required">Укажи дату своего рождения:</label>
+                    <div>
+                        <input type="date" name="birthday" data-required="true"
+                            data-error-message="Укажите дату рождения" />
+                    </div>
+                </div>
+                <div>
+                    <p>
+                        Пол:
+                    </p>
+                    <label>
+                        <input type="radio" name="Sex" value="Мужской" />
+                        М
+                    </label>
+                    <label>
+                        <input type="radio" name="Sex" value="Женский" />
+                        Ж
+                    </label>
+                </div>
+                <div>
+                    <label class="required" for="town">В каком городе ты проживаешь?</label>
+                    <div>
+                        <select data-required="true" data-error-message="Укажите город проживание" name="town"
+                            id="town">
+                            <option value="">-=Выбери область=-</option>
+                            <option value="Vinnica">Винница</option>
+                            <option value="Dnepr">Днепр</option>
+                            <option value="Doneck">Донецк</option>
+                            <option value="Zhitomir">Житомир</option>
+                            <option value="Zaporozh'e">Запорожье</option>
+                            <option value="Ivano-Frankovsk">Ивано-Франковск</option>
+                            <option value="Kiev">Киев</option>
+                            <option value="Kropivnickij">Кропивницкий</option>
+                            <option value="Lugansk">Луганск</option>
+                            <option value="Luck">Луцк</option>
+                            <option value="L'vov">Львов</option>
+                            <option value="Nikolaev">Николаев</option>
+                            <option value="Odessa">Одесса</option>
+                            <option value="Poltava">Полтава</option>
+                            <option value="Rovno">Ровно</option>
+                            <option value="Simferopol">Симферополь</option>
+                            <option value="Sumy">Сумы</option>
+                            <option value="Ternopol">Тернополь</option>
+                            <option value="Uzhgorod">Ужгород</option>
+                            <option value="Har'kov">Харьков</option>
+                            <option value="Herson">Херсон</option>
+                            <option value="Hmel'nickij">Хмельницкий</option>
+                            <option value="Cherkassy">Черкассы</option>
+                            <option value="Chernigov">Чернигов</option>
+                            <option value="Chernovcy">Черновцы</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <label>
+                        Какой у тебя рост?
+                        <div>
+                            <input type="text" name="height" size="1" placeholder="cm" maxlength="3" />
+                        </div>
+                    </label>
+                </div>
+                <div>
+                    Какой у тебя цвет волос на голове?
+                    <div>
+                        <div>
+                            <label>
+                                <input type="radio" name="color_hair" value="Rusyi" checked="checked" />Русый
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="radio" name="color_hair" value="Shaten" />Шатен
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="radio" name="color_hair" value="<Blond>" />Блонд
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="radio" name="color_hair" value="Ryzhyi" />Рыжий
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="radio" name="color_hair" value="Briunet" />Брюнет
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="radio" name="color_hair" value="Sedoi" />Седой
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="radio" name="color_hair" value="Volosy otsutstvuiut" />Волосы отсутсвуют
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    Какого цвета у тебя глаза?
+                    <div>
+                        <div>
+                            <label>
+                                <input type="radio" name="eye_color" value="Карие" checked="checked" />Карий
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="radio" name="eye_color" value="Голубые" />Голубые
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="radio" name="eye_color" value="Зеленые" />Зеленые
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <label for="dish">Твое любимое блюдо:</label>
+                    <br /><input type="text" name="dish" id="dish" size="50" />
+                </div>
+                <div>
+                    Укажи несколько увлечений которыми интересуешься:
+                    <div>
+                        <div>
+                            <label>
+                                <input type="checkbox" name="Hunting" value="Охота" checked="checked" />Охота
+                            </label>
+                        </div>
+                        <div>
+                            <label> <input type="checkbox" name="Dancing" value="Танцы" />Танцы </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="checkbox" name="Gardening" value="Садоводство" />Садоводство
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="checkbox" name="Needlework" value="Рукоделие" />Рукоделие
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="checkbox" name="Cooking" value="Кулинария" />Кулинария
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="checkbox" name="instrument" value="Игра на музыкальном инструменте" />
+                                Игра на музыкальном инструменте
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="checkbox" name="games" value="Компьютерные игры" />Компьютерные игры
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="btn">
+                <input class="btn__reset" type="reset" />
+                <input class="btn__submit" type="submit">
+            </div>
+        </form>
+
+        <script>
+            const form = document.getElementById('form');
+            const labelRequred = document.querySelectorAll('.required');
+            const inputRequired = document.querySelectorAll("[data-required]");
+            console.log(inputRequired, labelRequred);
+
+            form.addEventListener('submit', validation);
+
+            function validation(event) {
+                event.preventDefault();
+                let error = false;
+                for (let i = 0; i < this.length; i++) {
+                    console.log(this[i].dataset.required);
+
+                    if (this[i].dataset.required === 'true' && this[i].value === "") {
+                        error = true;
+                        const errorSpan = document.createElement('span');
+                        errorSpan.classList.add('error');
+                        errorSpan.innerHTML = this[i].dataset.errorMessage;
+                        errorSpan.style.color = "red";
+                        this[i].parentElement.appendChild(errorSpan);
+                        this[i].parentElement.parentElement.classList.add('error');
+                    }
+                }
+
+                if (error !== true) this.submit();
+            };
+        </script>
+    </body>
+</html>
