@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>traffic light</title>
+<style>
+
+.trafficlight{
+    display: block;
+    padding: 10px;
+    margin: 0 auto;
+    background-color: black;
+    width: 60px;
+    height: 120px;
+}
+#redLight {
+    background: red;
+}
+
+.trafficlight__view{
+    display: flex;
+    flex-direction: column;
+}
+.trafficlight__element {
+    margin: 0 auto;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.switcher_light{
+    margin-top: 10px;
+    height: 40px;
+    width: 60px;
+}
+
+</style>
+
+</head>
+
+<body class="wrap">
+<div class="trafficlight">
+    <div class="trafficlight__view">
+        <div id="redLight" class="trafficlight__element" style="background:  red;"></div>
+        <div id="yellowLight" class="trafficlight__element" style="background: rgb(85, 85, 41);"></div>
+        <div id="greenLight" class="trafficlight__element" style="background: rgb(8, 50, 8);"></div>
+        <button id="switchLight" class=" switcher_light switcher__color">Press me</button>
+    </div>
+</div>
+   
+   <script>
+    const redLight = document.getElementById('redLight');
+    const yellowLight = document.getElementById('yellowLight');
+    const greenLight = document.getElementById('greenLight');
+    const switchLight = document.getElementById('switchLight');
+    const colors = ["red", "rgb(97, 16, 16)", "yellow", "rgb(85, 85, 41)", "green", "rgb(8, 50, 8)"];
+  
+  switchLight.addEventListener('click', function changeColor(){  
+    if  (redLight.style.backgroundColor === colors[0])
+    {
+        redLight.style.backgroundColor = colors[1]; 
+        yellowLight.style.backgroundColor = colors[2]; 
+    }
+    else if (yellowLight.style.backgroundColor === colors[2]) {
+        yellowLight.style.backgroundColor = colors[3]; 
+        greenLight.style.backgroundColor = colors[4]; 
+    }
+    else if (greenLight.style.backgroundColor === colors[4]) {
+        greenLight.style.backgroundColor = colors[5];
+        redLight.style.backgroundColor = colors[0]; 
+    }
+ }); 
+    </script>
+
+</body>
+</html>
