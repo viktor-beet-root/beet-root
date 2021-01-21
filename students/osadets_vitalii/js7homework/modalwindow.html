@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    
+    <style>
+    
+        .wrap {
+            background-color: aqua;
+        }
+        .openbutton{
+            padding-top: 100px;
+        }
+        .button{
+            display: flex;
+            justify-content: center;
+            align-items: center;      
+        }
+        .button__view{
+            width: 100px;
+            height: 30px;
+            background-color: aquamarine;
+            border-color: burlywood;
+            border-radius: 5px;
+        }
+        .button__text {
+            font-size: 15px;
+            text-transform: uppercase;
+            color:indigo;
+        }
+        .popup{
+            position: fixed;
+            top: 50%;
+            left: 50%; 
+            transform: translate(-50%, -50%);
+            border: 2px solid burlywood;
+            padding: 20px;
+            display: none;
+        }
+        .popup__title {
+            display: flex;
+            justify-content: center;
+            color:indigo;
+        }
+        .popup__text{
+            color:indigo;
+        }
+        
+    </style>
+
+</head>
+
+<body class="wrap">
+    <div class="openbutton">
+        <div class="button">
+            <button id="openbtn" class="button__view"><span class="button__text">Open</span></button>
+        </div>
+    </div>
+        <div id="popupcontent" class="popup">
+            <div class="popup__content">
+                <h2 class="popup__title">Lorem</h2>
+                <p class="popup__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem autem nihil maiores consequuntur unde iste assumenda saepe nemo in quod eum nisi, illo quas obcaecati? Consequuntur aliquam vero nam cum?</p>
+                <div class="button">
+                    <button id="closebtn" class="button__view"><span class="button__text">Close</span></button>
+               </div>
+            </div>
+        </div>
+    
+    <script>
+    // 2. Создать HTML-страницу с кнопкой "Открыть" и модальным окном. На модальном окне должен быть текст и кнопка "Закрыть". Изначально модальное окно не отображается. При клике на кнопку "Открыть" появляется модальное окно, на кнопку "Закрыть" – исчезает. 
+        const openBtn = document.querySelector('#openbtn');
+        const closeBtn = document.querySelector('#closebtn');
+        const popupContent = document.querySelector('#popupcontent');
+
+        function showContent() {
+            popupContent.style.display = "flex";
+        }
+        
+        openBtn.addEventListener('click', showContent);
+
+        function hideContent() {
+            popupContent.style.display = "";
+        }
+        
+        closeBtn.addEventListener('click', hideContent);
+
+    </script>
+</body>
+</html>
