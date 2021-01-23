@@ -4,10 +4,9 @@
 
     const trafficLights = document.querySelector('.traffic-lights');
     const trafficLightsButtom = document.querySelector('.traffic-lights__buttom');
-    let lightsActiv
+    let lightsActiv;
 
-    trafficLightsButtom.addEventListener('click', trafficLightsTogle)
-    console.log(trafficLights.children);
+    trafficLightsButtom.addEventListener('click', trafficLightsTogle);
 
     function trafficLightsTogle(){
         const lights = trafficLights.children;
