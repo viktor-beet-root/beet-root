@@ -1,4 +1,4 @@
-(function(){
+(function () {
     const time = new Date();
 
     let hours = time.getHours();
@@ -9,69 +9,67 @@
     const htmlSeconds = document.querySelector('.second');
     const separator = document.querySelectorAll('.separator')
 
-    function nextHour(){
-        if(hours !== 23){
+    function nextHour() {
+        if (hours !== 23) {
             hours++;
-        }else{
+        } else {
             hours = 0;
         }
     }
 
-    function nextMinute(){
-        if(minutes !==59){
+    function nextMinute() {
+        if (minutes !== 59) {
             minutes++;
-        }else{
+        } else {
             minutes = 0;
             nextHour();
         }
     }
 
-    function nextSecond(){
-        if(seconds !== 59){
+    function nextSecond() {
+        if (seconds !== 59) {
             seconds++;
-        }else{
+        } else {
             seconds = 0;
             nextMinute();
         }
     }
 
-    function addZero(value){
-        if (value < 10){
+    function addZero(value) {
+        if (value < 10) {
             return '0' + value;
-        }else{
+        } else {
             return value;
         }
 
     }
 
-    function setClock(){
+    function setClock() {
         htmlHour.textContent = hours;
         htmlMinutes.textContent = addZero(minutes);
         htmlSeconds.textContent = addZero(seconds);
     }
 
-    function blinkSeparator(){
-        separator.forEach(function(element){
-            element.style.opacity = '0';
-        })
-
-        setTimeout(function(){
-            separator.forEach(function(element){
-                element.style.opacity = '1';
-                if(seconds%2){
+    function blinkSeparator() {
+        separator.forEach(function (element) {
+            if (seconds % 2) {
+                element.style.opacity = '0';
+            } else {
+                if (seconds % 4) {
                     element.style.color = '#a85f23';
-                }else{
+                } else {
                     element.style.color = '#692b99';
                 }
-            })
-        },500)
+
+                element.style.opacity = '1';
+            }
+        })
     }
 
-    setInterval(function(){
+    setInterval(function () {
         nextSecond();
         setClock();
         blinkSeparator();
-    },1000)
+    }, 1000)
 
-    console.log(separator)
 })()
