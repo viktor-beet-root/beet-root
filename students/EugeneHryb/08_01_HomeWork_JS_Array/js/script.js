@@ -41,27 +41,43 @@
     function printShoppingList() {
         let printString = ''
         console.log('-- Список покупок --')
+        shoppingList.sort(function (item1, item2) {
+            if (item1.purchaseMade && !item2.purchaseMade) {
+                return 1
+            } else if (!item1.purchaseMade && item2.purchaseMade) {
+                return -1
+            } else {
+                return 0
+            }
+        })
 
         for (let key in shoppingList) {
             if (!shoppingList[key].purchaseMade) {
                 printString = '__ ' + shoppingList[key].productName + ' - ' + shoppingList[key].qty + ' шт.';
                 console.log(printString);
-            }
-        };
-
-        for (let key in shoppingList) {
-            if (shoppingList[key].purchaseMade) {
+            } else {
                 printString = ' X ' + shoppingList[key].productName + ' - ' + shoppingList[key].qty + ' шт.';
                 console.log(printString);
             }
+        };
+    }
+
+    function findIndexIE11(array, property, value) {
+        let index = -1
+
+        for (let i = 0; i < array.length; i++) {
+
+            if (array[i][property] === value) {
+                index = i;
+                break;
+            }
         }
+
+        return index;
     }
 
     function addPurchase(name, qty) {
-        let index = shoppingList.findIndex(function (element) {
-            return element.productName === name
-        })
-
+        let index = findIndexIE11(shoppingList, "productName", name);
         if (index === -1) {
             let add = {
                 productName: name,
@@ -75,9 +91,8 @@
     }
 
     function purchase(item) {
-        let index = shoppingList.findIndex(function (element) {
-            return element.productName === item;
-        })
+        let index = findIndexIE11(shoppingList, "productName", item);
+
         shoppingList[index].purchaseMade = true;
 
     }
@@ -200,99 +215,102 @@
     // Функция сортировки аудиторий по названию (по алфавиту).
 
     const audience = [{
-            Name: 'audience №1',
+            name: 'Большая аудитория',
             qtySeats: 20,
-            faculty: 'TEF',
+            faculty: 'ТЕФ',
         },
         {
-            Name: 'audience №2',
+            name: 'аудитория №4',
             qtySeats: 15,
-            faculty: 'TEF',
+            faculty: 'ТЕФ',
         },
         {
-            Name: 'audience №3',
+            name: 'Аудитория №1',
             qtySeats: 10,
-            faculty: 'TEF',
+            faculty: 'ТЕФ',
         },
         {
-            Name: 'audience №4',
+            name: 'Хим лаборатория',
             qtySeats: 10,
-            faculty: 'ChTF',
+            faculty: 'ХТФ',
         },
         {
-            Name: 'audience №5',
+            name: 'Аудитория №1',
             qtySeats: 18,
-            faculty: 'ChTF',
+            faculty: 'ХТФ',
         }
     ]
 
     const groupTF = {
-        nameGroup: 'TF',
+        nameGroup: 'ТФ',
         qtyStudents: 14,
-        faculty: 'TEF',
+        faculty: 'ТЕФ',
     }
 
-     // Вывод на экран всех аудиторий;
+    // Вывод на экран всех аудиторий;
     function printAudience() {
         let print = ''
 
         audience.forEach(function (element) {
-            print = element.Name + ' ' + element.qtySeats + ' мест, факультет ' + element.faculty
+            print = element.name + ' ' + element.qtySeats + ' мест, факультет ' + element.faculty
             console.log(print);
         })
     };
 
     //Служебная функция вывода в консоль масивов основанных на масиве аудитория.
-    function printElementsAudience(arrayElements){
+    function printElementsAudience(arrayElements) {
         let print = '';
 
         arrayElements.forEach(function (element) {
-            print = element.Name + ' ' + element.qtySeats + ' мест, факультет ' + element.faculty
+            print = element.name + ' ' + element.qtySeats + ' мест, факультет ' + element.faculty
             console.log(print);
         })
     };
 
     // Вывод на экран аудиторий для указанного факультета;
     function printAudienceForFaculty(faculty) {
-        const print = audience.filter(function(element){
+        const print = audience.filter(function (element) {
             return element.faculty === faculty;
         })
         printElementsAudience(print);
     };
 
     // Вывод на экран только тех аудиторий, которые подходят для переданной группы.
-    function printAudienceForGrup(grup){
-        const print = audience.filter(function(element){
+    function printAudienceForGrup(grup) {
+        const print = audience.filter(function (element) {
             return grup.faculty === element.faculty && grup.qtyStudents <= element.qtySeats;
         })
         printElementsAudience(print);
     };
 
     // Функция сортировки аудиторий по количеству мест;
-    function sortAudienceToQtySeats(){
-        audience.sort(function(elementOne, elementTwo){
+    function sortAudienceToQtySeats() {
+        audience.sort(function (elementOne, elementTwo) {
             return elementOne.qtySeats - elementTwo.qtySeats
         })
     }
 
     // Функция сортировки аудиторий по названию (по алфавиту).
-    function sortAudienceToAlphabet(){
-        audience.sort(function(element1, element2){
-            if(element1.Name < element2.Name) return -1;
-            if(element1.Name > element2.Name) return 1;
+    function sortAudienceToAlphabet() {
+        audience.sort(function (element1, element2) {
+            let neme1 = element1.name.toLowerCase();
+            let name2 = element2.name.toLowerCase();
+
+            if (neme1 < name2) return -1;
+            if (neme1 > name2) return 1;
             return 0;
         })
     }
 
     printAudience();
-    console.log('________________ 2');
+    console.log('\n Аудитории ХТФ');
     printAudienceForFaculty("ChTF");
-    console.log('________________ 3');
+    console.log(' \n Аудитории для групы ТФ');
     printAudienceForGrup(groupTF);
-    console.log('________________ 4');
+    console.log('\n Сортировка аудиторий по количеству мест');
     sortAudienceToQtySeats();
     printAudience();
-    console.log('________________ 5');
+    console.log('\n Сортировка аудиторий по алфавиту');
     sortAudienceToAlphabet()
     printAudience();
 
