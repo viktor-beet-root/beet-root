@@ -27,6 +27,10 @@
         const hours = document.querySelector(".hours");
         const minutes = document.querySelector(".minutes");
         const seconds = document.querySelector('.seconds');
+		const clockBlock = document.querySelector("div");
+		const firstSeparator = document.querySelector('.fistSeparator');
+        const secondSeparator = document.querySelector('.secondSeparator');
+        const allSeparator = document.querySelectorAll('[name=separator]');
 
         let h = 0;
         let m = 0;
@@ -42,10 +46,6 @@
             seconds.textContent = s;
         }
         setInterval(clock, 1000);
-
-        const firstSeparator = document.querySelector('.fistSeparator');
-        const secondSeparator = document.querySelector('.secondSeparator');
-        const allSeparator = document.querySelectorAll('[name=separator]');
 
         function separatorChange() {
             if (s % 2 === 0) {
@@ -76,8 +76,6 @@
             (h % 2 === 0) ? minutes.style.color = "green": minutes.style.color = "aqua";
         }
         setInterval(changeColor, 1000);
-
-        const clockBlock = document.querySelector("div");
 
         function paddingTop() {
             if (s < 15) clockBlock.style.paddingTop = "100px";
