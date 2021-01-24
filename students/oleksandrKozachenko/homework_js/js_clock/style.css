@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'DS-Digital';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/ds-digital.woff') format('woff');
+}
+
+
+
+.wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: AliceBlue;
+}
+
+.clock {
+    display: inline-block;
+    width: 450px;
+    font-family: 'DS-Digital', 'Courier New', monospace;
+    font-size: 90px;
+    border: 2px solid #6495Ed;
+    border-radius: 10px;
+    color: #6495Ed;
+    text-align: center;
+}
+
+.separator {
+    opacity: 1;
+    transition: .8s ease;
+}
+
+.time {
+    display: inline-block;
+    width: 90px;
+    text-align: center;
+}
+
+.separator {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+}

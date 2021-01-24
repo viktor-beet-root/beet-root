@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="clock">
+            <span class="time hours">00</span>
+            <span class="separator">:</span>
+            <span class="time minutes">00</span>
+            <span class="separator">:</span>
+            <span class="time seconds">00</span>
+        </div>
+    </div>
+
+    <script>
+        (function () {
+
+            const hoursSpan = document.querySelector('.hours');
+            const minutesSpan = document.querySelector('.minutes');
+            const secondsSpan = document.querySelector('.seconds');
+            const separator = [...document.querySelectorAll('.separator')];
+
+            function blink(element) {
+                element.forEach(function(item) {
+                    item.style.opacity = (+(getComputedStyle(item).opacity) === 1) ? 0 : 1;
+                });
+            };
+
+            function setTime(time) {
+               return time = (time < 10) ? '0' + time : time;
+            }
+
+            function setSeconds(element) {
+                let seconds = new Date().getSeconds();
+                element.textContent = setTime(seconds);
+            };
+
+            function setMinutes(element) {
+                let minutes = new Date().getMinutes();
+                element.textContent = setTime(minutes);
+            };
+
+            function setHours(element) {
+                let hours = new Date().getHours();
+                element.textContent = setTime(hours);
+            };
+
+            setInterval(function () {
+                setSeconds(secondsSpan);
+                setMinutes(minutesSpan);
+                setHours(hoursSpan);
+            }, 1000);
+
+
+            setInterval(function(){
+                blink(separator);
+            }, 2000)
+
+        })()
+
+
+    </script>
+</body>
+
+</html>
