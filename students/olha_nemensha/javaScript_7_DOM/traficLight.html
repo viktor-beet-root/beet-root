@@ -8,6 +8,13 @@
     <title>Trafic light</title>
 </head>
 <style>
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
     .container__red,
     .container__yellow,
     .container__green {
@@ -53,16 +60,14 @@
     <div class="container">
         <div class="container__red">
             <div class="light red__light"></div>
-            <button class="btn" data-btn="red">Yellow</button>
         </div>
         <div class="container__yellow">
             <div class="light yellow__light"></div>
-            <button class="btn" data-btn="yellow">Green</button>
         </div>
         <div class="container__green">
             <div class="light green__light"></div>
-            <button class="btn" data-btn="green">Red</button>
         </div>
+        <button class="btn" data-btn="red">Change color</button>
     </div>
 
     <script>
@@ -71,12 +76,9 @@
         const redLight = document.querySelector('.red__light');
         const yellowLight = document.querySelector('.yellow__light');
         const greenLight = document.querySelector('.green__light');
+        const btn = document.querySelector('.btn');
 
-        const btnList = Array.prototype.slice.call(document.querySelectorAll('.btn'));
-
-        btnList.forEach(function (btn) {
-            btn.addEventListener('click', changeColor);
-        })
+        btn.addEventListener('click', changeColor);
 
         function changeColor() {
             console.log(this.dataset.btn);
@@ -84,16 +86,17 @@
                 redLight.style.opacity = "0.4";
                 yellowLight.style.opacity = "1";
                 greenLight.style.opacity = "0.4";
-            };
-            if (this.dataset.btn === "yellow") {
+                this.dataset.btn = "yellow";
+            } else if (this.dataset.btn === "yellow") {
                 redLight.style.opacity = "0.4";
                 greenLight.style.opacity = "1";
                 yellowLight.style.opacity = "0.4";
-            };
-            if (this.dataset.btn === "green") {
+                this.dataset.btn = "green";
+            } else if (this.dataset.btn === "green") {
                 greenLight.style.opacity = "0.4";
                 redLight.style.opacity = "1";
                 yellowLight.style.opacity = "0.4";
+                this.dataset.btn = "red";
             };
         }
     </script>
