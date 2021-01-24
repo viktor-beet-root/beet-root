@@ -14,7 +14,7 @@
 
             //TASK 1
             console.log('Task 1 - Создать массив «Список покупок». Каждый элемент массива является объектом, который содержит название продукта, необходимое количество и куплен или нет');
-            const shoppingArr = [
+            const shoppingList = [
                 {
                     name: 'potatous',
                     quantity: 5,
@@ -44,35 +44,39 @@
 
 
             console.log('Добавление покупки в список. ')
-            function addShopping(name, quantity, bought, arr) {
+            function addShopping(name, quantity, bought, shoppingList) {
                 const shoppingPosition = {
-                    name,
-                    quantity,
-                    bought,
+                    name: name,
+                    quantity: quantity,
+                    bought: quantity,
                 };
-                const rezultFind = arr.find(item => item.name === shoppingPosition.name);
+                const rezultFind = shoppingList.find(function(item){
+                    item.name === shoppingPosition.name
+                });
 
                 if (rezultFind) {
                     rezultFind.quantity += shoppingPosition.quantity;
                 } else {
-                    arr.push(shoppingPosition)
+                    shoppingList.push(shoppingPosition)
                 }
-                return arr;
+                return shoppingList;
             }
-            console.log(addShopping('banana', 4, false, shoppingArr));
+            console.log(addShopping('banana', 4, false, shoppingList));
 
             console.log('Покупка продукта. Функция принимает название продукта и отмечает его как купленный.')
-            function boughtShopping(nameShopping, arr) {
-                const rezultFind = arr.find(item => item.name === nameShopping);
+            function boughtShopping(nameShopping, shoppingList) {
+                const rezultFind = shoppingList.find(function(item) {
+                    item.name === nameShopping
+                });
                 if (rezultFind) {
                     rezultFind.bought = true;
-                    return arr;
+                    return shoppingList;
                 } else {
                     return 'This purchase is not listed';
                 }
 
             }
-            console.log(boughtShopping('bread', shoppingArr));
+            console.log(boughtShopping('bread', shoppingList));
 
             console.log('Вывод всего списка на экран таким образом, чтобы сначала шли некупленные продукты, а потом – купленные.')
             function sortShopping(shopping) {
@@ -83,7 +87,7 @@
                 })
                 return shopping;
             }
-            console.log(sortShopping(shoppingArr));
+            console.log(sortShopping(shoppingList));
 
             //TASK 2
             console.log('Task 2 - Создать массив, описывающий чек в магазине. Каждый элемент массива состоит из названия товара, количества и цены за единицу товара');
@@ -111,39 +115,46 @@
             ];
 
             console.log('Распечатка чека на экран');
-            function printCheckList(arr) {
-                arr.forEach(element => console.log(element));
+            function printCheckList(checkList) {
+                checkList.forEach(function(item){
+                    console.log('Name: ' + item.name + ', Quantity: ' + item.quantity + ', Price: ' + item.price)
+                });
             }
             printCheckList(checkList);
 
             console.log('Подсчет общей суммы покупки');
-            function countSum(arr) {
-                let sumCheckList = 0;
-                arr.forEach(element => sumCheckList += element.price * element.quantity);
+            function countSum(checkList) {
+                let sumCheckList = checkList.reduce(function(previousValue, item) {
+                    return previousValue + item.price * item.quantity;
+                }, 0)
                 return sumCheckList;
             }
             console.log(countSum(checkList));
 
             console.log('Получение самой дорогой покупки в чеке');
-            function getMostExpensive(arr) {
+            function getMostExpensive(checkList) {
+                let indexElement;
                 let mostExpensiveRosition;
                 let maxShopping = 0;
                 let currentElement;
-                arr.forEach(function (element) {
+                checkList.forEach(function (element, index) {
                     currentElement = element.price * element.quantity;
                     if (currentElement > maxShopping) {
                         maxShopping = currentElement;
-                        mostExpensiveRosition = element;
+                        indexElement = index;
                     }
-                })
+                });
+                mostExpensiveRosition = checkList[indexElement]
                 return mostExpensiveRosition;
             }
             console.log(getMostExpensive(checkList));
 
             console.log('Подсчет средней стоимости одного товара в чеке');
-            function countAverageCost(arr) {
-                let sumPrice = arr.reduce((sum, nextElement) => sum + nextElement.price, 0);
-                const averageCost = sumPrice / arr.length;
+            function countAverageCost(checkList) {
+                let sumPrice = checkList.reduce(function(sum, nextElement) {
+                   return sum + nextElement.price;
+                }, 0);
+                const averageCost = sumPrice / checkList.length;
                 return averageCost;
             }
             console.log(countAverageCost(checkList));
@@ -222,51 +233,55 @@
 
             console.log('Вывод на экран всех аудиторий');
             function printLectureRooms(arrLectureRooms) {
-                arrLectureRooms.forEach(element => console.log(element));
+                arrLectureRooms.forEach(function(item) {
+                    console.log('Name: ' + item.name + ', Seats: ' + item.seats + ', Attachment faculty: ' + item.attachment);
+                });
             };
             printLectureRooms(lectureRooms);
 
+
             console.log('Вывод на экран аудиторий для указанного факультета');
             function printFacultyRooms(arrLectureRooms, faculty) {
-                arrLectureRooms.forEach(function (element) {
-                    if (element.attachment === faculty) {
-                        console.log(element)
-                    }
-                })
+               const facultyRooms = arrLectureRooms.filter(function (element) {
+                    return element.attachment === faculty;
+                    });
+                printLectureRooms(facultyRooms);     
             };
             printFacultyRooms(lectureRooms, 'meсhanical');
 
+
             console.log('Вывод на экран только тех аудиторий, которые подходят для переданной группы');
             function printLectureRoomsForGroup(arrLectureRooms, group) {
-                arrLectureRooms.forEach(function (element) {
-                    if (element.seats >= group.quantity) {
-                        console.log(element)
-                    }
+                const groupRooms =  arrLectureRooms.filter(function (element) {
+                    return element.seats >= group.quantity 
                 })
+                printLectureRooms(groupRooms)
             };
             printLectureRoomsForGroup(lectureRooms, group1);
 
             console.log('Функция сортировки аудиторий по количеству мест');
             function sortLectureRoomsForSeats(arrLectureRooms) {
-                arrLectureRooms.sort(function (roomA, roomB) {
+                const sortLectureRooms = arrLectureRooms.slice();
+                sortLectureRooms.sort(function (roomA, roomB) {
                     if (roomA.seats < roomB.seats) return -1;
                     if (roomA.seats > roomB.seats) return 1;
                     if (roomA.seats === roomB.seats) return 0;
                 })
-                return console.log(arrLectureRooms);
+                return sortLectureRooms;
             };
-            sortLectureRoomsForSeats(lectureRooms);
+            console.log(sortLectureRoomsForSeats(lectureRooms));
 
             console.log('Функция сортировки аудиторий по названию');
             function sortLectureRoomsForName(arrLectureRooms) {
-                arrLectureRooms.sort(function (roomA, roomB) {
+                const sortLectureRooms = arrLectureRooms.slice();
+                sortLectureRooms.sort(function (roomA, roomB) {
                     if (roomA.name < roomB.name) return -1;
                     if (roomA.name > roomB.name) return 1;
                     if (roomA.name === roomB.name) return 0;
                 })
-                return console.log(arrLectureRooms);
+                return sortLectureRooms;
             };
-            sortLectureRoomsForName(lectureRooms);
+            console.log(sortLectureRoomsForName(lectureRooms));
 
 
             //TASK 5
