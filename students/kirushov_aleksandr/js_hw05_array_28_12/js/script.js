@@ -50,10 +50,15 @@ getShoppingSort();
 
 // Добавление покупки в список.Учтите, что при добавлении покупки с уже существующим в списке продуктом, необходимо увеличивать количество в существующей покупке, а не добавлять новую.
 function getIndex(params) {
-    const index = shoppingList.findIndex(function (item) {
-        if (item.name === params) return true;
-        return false;
-    });
+    let index;
+    for (let i = 0; i < shoppingList.length; i++) {
+
+        if (shoppingList[i].name === params) {
+            index = i
+            break;
+        } else index = -1;
+    }
+
     return index;
 };
 
@@ -142,10 +147,9 @@ printCheck();
 
 // Подсчет общей суммы покупки;
 function sum() {
-    let sumAll = (check.reduce(function (previousValue, item) {
+    return check.reduce(function (previousValue, item) {
         return previousValue + (item.price * item.quantity);
-    }, 0)).toFixed(2);
-    return sumAll;
+    }, 0).toFixed(2);
 };
 console.log(sum());
 
@@ -178,7 +182,7 @@ function averageСost() {
 };
 console.log('Cредняя стоимость одного товара в чеке: ' + averageСost() + ' грн');
 
-console.log('Задание  Создать массив CSS-стилей (цвет, размер шрифта, выравнивание, подчеркивание и т. д.). Каждый элемент массива – это объект, состоящий из двух свойств: название стиля и значение стиля. Написать функцию, которая принимает массив стилей и текст, и выводит этот текст с помощью document.write() в тегах <p></p>, добавив в открывающий тег атрибут style со всеми стилями, перечисленными в массиве.');
+console.log('Задание 3. Создать массив CSS-стилей (цвет, размер шрифта, выравнивание, подчеркивание и т. д.). Каждый элемент массива – это объект, состоящий из двух свойств: название стиля и значение стиля. Написать функцию, которая принимает массив стилей и текст, и выводит этот текст с помощью document.write() в тегах <p></p>, добавив в открывающий тег атрибут style со всеми стилями, перечисленными в массиве.');
 const cssStyles = [{
         name: 'color',
         value: 'red',
@@ -194,15 +198,16 @@ const cssStyles = [{
 ];
 
 function string(arr) {
-    let b = [];
+    let b = '';
     for (let i = 0; i < arr.length; i++) {
-        b.push(arr[i].name + ': ' + arr[i].value);
+        b = b + (arr[i].name + ': ' + arr[i].value + ';');
     };
+
     return b;
 };
 
 function enter(arr, text) {
-    document.write("<p style=\' " + string(arr).join('; ') + "\'>" + text + "</p>");
+    document.write("<p style=\' " + string(arr) + "\'>" + text + "</p>");
     document.close();
 };
 enter(cssStyles, "Lorem ipsum dolor sit.");
@@ -270,7 +275,7 @@ function classForFaculty(params) {
         } else false;
 
     });
-    if (facultyClassList.length === 0) return console.log("Для данной группы нет подходящей аудитории");
+    if (facultyClassList.length === 0) return console.log("Для данного факультета нет подходящей аудитории");
     else return outputOnDisplay(facultyClassList);
 };
 
