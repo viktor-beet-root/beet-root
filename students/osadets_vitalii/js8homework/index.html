@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class</title>
+</head>
+<body>
+    <div class="markertext">      
+        <hr>
+    <div class="marker">
+        <hr>
+    </div>      
+    </div>
+
+    <div id="employees__list">
+
+    </div>
+    <script>
+
+    //1) Реализовать класс, описывающий окружность. В классе должны быть следующие компоненты:
+    
+    const circle = new Circle(6);
+
+    //поле, хранящее радиус окружности;
+    function Circle(radius){
+        this.radius = radius;
+    };
+
+    //get-свойство, возвращающее радиус окружности;
+    Circle.prototype.getRadius = function (){
+        return this.radius;
+    }
+
+    console.log(circle.getRadius());
+
+    //set-свойство, устанавливающее радиус окружности;
+    Circle.prototype.setRadius = function (radius){
+        return this.radius = radius;
+    }
+
+    console.log(circle.setRadius(10));
+
+    //get-свойство, возвращающее диаметр окружности;
+    Circle.prototype.getDiameter = function () {
+        return this.radius * 2;
+    }
+
+    console.log(circle.getDiameter());
+
+    //метод, вычисляющий площадь окружности;
+    Circle.prototype.areaOfCircle = function (){
+        return ((Math.PI * this.getDiameter()**2)/4);
+    }
+
+    console.log(circle.areaOfCircle());
+
+    //метод, вычисляющий длину окружности.
+    Circle.prototype.circleLength = function () {
+        return Math.PI * this.getDiameter();
+    }
+
+    console.log(circle.circleLength());
+
+
+
+    //2) Реализовать класс, описывающий простой маркер. В классе должны быть следующие компоненты:
+    //поле, которое хранит цвет маркера;
+    //поле, которое хранит количество чернил в маркере (в процентах);
+    function Marker(color) {
+        this.color = color;
+        this.inkAmount = 100;
+    };
+    
+    //метод для печати (метод принимает строку и выводит текст соответствующим цветом; текст выводится до тех пор, пока в маркере есть чернила; один не пробельный символ – это 0,5% чернил в маркере).
+    Marker.prototype.print = function(text) {
+        const markerText = document.querySelector('.marker')
+        let template = '';
+        for(let i = 0; i < text.length; i++){
+            if(this.inkAmount > 0){
+                template += text[i];
+                if(text[i] !== ' '){
+                    this.inkAmount = this.inkAmount - 0.5
+                }
+            }
+            else {
+                break;
+            }
+        }
+        markerText.insertAdjacentHTML('beforebegin', `<p style="color: ${this.color};">${template}</p>`);
+    }
+    firstMarker = new Marker("olive");
+    firstMarker.print("Here you can find activities to practise your reading skills. Reading will help you to improve your understanding of the language and build your vocabulary.The self-study lessons in this section are written and organised according to the levels of the Common European Framework of Reference for languages (CEFR). There are different types of texts and interactive exercises that practise the reading skills you need to do well in your  ")
+
+    //Реализовать класс, описывающий заправляющийся маркер, унаследовав его от простого маркера и добавив метод для заправки маркера.
+    class FillMarker extends Marker {}
+
+    FillMarker.prototype.fillInk = function (enterinkAmount){
+      if(enterinkAmount <= 100) {
+            this.inkAmount = enterinkAmount;
+        } 
+      if(enterinkAmount > 100) {
+            this.inkAmount = 100;
+    }     
+ }
+
+    secondMarker = new FillMarker("red");
+    secondMarker.print("Here you can find activities to practise your reading skills. Reading will help you to improve your understanding of the language and build your vocabulary.The self-study lessons in this section are written and organised according to the levels of the Common European Framework of Reference for languages (CEFR). There are different types of texts and interactive exercises that practise the reading skills you need to do well in your  ");
+    secondMarker.fillInk(140);
+    console.log(secondMarker.inkAmount);
+    secondMarker.print("Here you can find activities to practise your reading skills. Reading will help you to improve your understanding of the language and build your vocabulary.The self-study lessons in this section are written and organised according to the levels of the Common European Framework of Reference for languages (CEFR). There are different types of texts and interactive exercises that practise the reading skills you need to do well in your  ");
+    secondMarker.fillInk(40);
+    console.log(secondMarker.inkAmount);
+    secondMarker.print("Here you can find activities to practise your reading skills. Reading will help you to improve your understanding of the language and build your vocabulary.The self-study lessons in this section are written and organised according to the levels of the Common European Framework of Reference for languages (CEFR). There are different types of texts and interactive exercises that practise the reading skills you need to do well in your  ");
+    
+
+    // 3) Реализовать класс Employee, описывающий работника, и создать массив работников банка.
+    function Employee (name, age, position, experience, skills){
+        this.name = name;
+        this.age = age;
+        this.position = position;
+        this.experience = experience;
+        this.skills = skills;
+    };
+
+    const bankWorkers = [
+        new Employee('Tony', 44, 'manager', 15, 'MS Word'),
+        new Employee('Tomas', 24, 'junior-manager', 1, 'excel'),
+        new Employee('Cris', 28, 'cashier', 3, '1C'),
+        new Employee('Donald', 54, 'CEO', 25, 'bank'),
+        new Employee('Mike', 20, 'intern', 1, 'none'),
+        new Employee('Kristina', 34, 'hr', 5, 'callback'),
+        new Employee('Kristina', 34, 'hr', 5, 'callback'),
+    ];
+
+    //Реализовать класс EmpTable для генерации HTML-кода таблицы со списком работников банка. Массив работников необходимо передавать через конструктор, а получать HTML-код с помощью метода getHtml().
+    function EmpTable (workersList) {
+        this.workersList = workersList;
+    }
+
+  
+     EmpTable.prototype.getHtml = function(){
+         let result = `
+         <table border = 4>
+         <caption>Our Workers</caption>
+         <thead>
+         <tr><td>N</td><td>Age</td><td>Position</td><td>Experience</td><td>Skills</td></tr>
+         </thead>
+         `
+         let counter = 1;
+         this.workersList.forEach(function(worker){
+             result += `
+             <tbody>
+             <tr><td>${counter}</td><td>${worker.name}</td><td>${worker.age}</td><td>${worker.experience}</td><td>${worker.skills}</td></tr>
+             </tbody>
+             `
+             counter++
+         })
+         result += `</table><table>You can add new employee on your list </table>`
+         return result;
+     }
+
+     //Создать объект класса EmpTable и вывести на экран результат работы метода getHtml().
+     const employees = new EmpTable(bankWorkers);
+     const employeesList = document.getElementById('employees__list')
+     employeesList.insertAdjacentHTML('beforeend', employees.getHtml());
+    </script>
+    
+</body>
+</html>
