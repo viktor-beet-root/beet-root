@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>JS DOM (Class)</title>
+    </head>
+    <body>
+        <script>
+            //1) Реализовать класс, описывающий окружность. В классе должны быть следующие компоненты:
+
+            // поле, хранящее радиус окружности;
+            // get-свойство, возвращающее радиус окружности;
+            // set-свойство, устанавливающее радиус окружности;
+            // get-свойство, возвращающее диаметр окружности;
+            // метод, вычисляющий площадь окружности;
+            // метод, вычисляющий длину окружности.
+            // Продемонстрировать работу свойств и методов.
+
+            function Circle(radius) {
+                this.radius = radius;
+
+                this.getRadius = function () {
+                    return this.radius;
+                };
+
+                this.setRadius = function (radius) {
+                    this.radius = radius;
+                };
+
+                this.getDiametr = function () {
+                    const result = 2 * this.radius;
+                    return result;
+                };
+            }
+
+            Circle.prototype.circleArea = function () {
+                const result = Math.PI * Math.pow(this.radius, 2);
+                return result;
+            };
+
+            Circle.prototype.circumference = function () {
+                const result = 2 * Math.PI * this.radius;
+                return result;
+            };
+
+            const circle = new Circle(2);
+            circle.setRadius(10);
+            console.log(circle.getRadius());
+            console.log(circle.getDiametr());
+            console.log(circle.circleArea());
+            console.log(circle.circumference());
+
+            // 2) Реализовать класс, описывающий простой маркер. В классе должны быть следующие компоненты:
+
+            // поле, которое хранит цвет маркера;
+            // поле, которое хранит количество чернил в маркере (в процентах);
+            // метод для печати (метод принимает строку и выводит текст соответствующим цветом; текст выводится до тех пор,
+            // пока в маркере есть чернила; один не пробельный символ – это 0,5% чернил в маркере).
+            // Реализовать класс, описывающий заправляющийся маркер, унаследовав его от простого маркера и добавив метод для заправки маркера.
+
+            // Продемонстрировать работу написанных методов.
+
+            function Marker(color, ink) {
+                this.color = color;
+                this.ink = ink;
+            }
+
+            Marker.prototype.print = function (string) {
+                let result = "";
+
+                for (let i = 0; i < string.length; i++) {
+                    if (this.ink >= 1 / 2) {
+                        result = result + string.split("")[i];
+                        if (string.split("")[i] !== " ") {
+                            this.ink = this.ink - 1 / 2;
+                        }
+                    } else {
+                        console.log("NO INK LEFT");
+                        break;
+                    }
+                }
+
+                document.body.insertAdjacentHTML(
+                    "afterbegin",
+                    `
+                    <div style = "color:${this.color}"> ${result}</div>
+
+                `
+                );
+            };
+
+            class FillMarker extends Marker {}
+
+            FillMarker.prototype.fill = function (ink) {
+                this.ink = this.ink + ink;
+                if (this.ink > 100) {
+                    this.ink = 100;
+                }
+            };
+
+            const marker1 = new Marker("red", 3);
+            const marker2 = new FillMarker("green", 4);
+
+            marker1.print("Vasia Pypkin");
+            marker2.print("Petia Sidorov");
+            marker2.fill(8);
+            marker2.print("Petia Sidorov");
+
+            // 3) Реализовать класс Employee, описывающий работника, и создать массив работников банка.
+            // Реализовать класс EmpTable для генерации HTML-кода таблицы со списком работников банка.
+            // Массив работников необходимо передавать через конструктор, а получать HTML-код с помощью метода getHtml().
+            // Создать объект класса EmpTable и вывести на экран результат работы метода getHtml().
+
+            function Employee(age, height, name) {
+                this.age = age;
+                this.height = height;
+                this.name = name;
+            }
+
+            const Employeelist = [new Employee(20, 182, "Petia"), new Employee(26, 162, "Napoleon"), new Employee(40, 181, "John")];
+
+            function EmpTable(Employeelist) {
+                this.Employeelist = Employeelist;
+            }
+
+            EmpTable.prototype.getHTML = function () {
+                console.log(Employeelist);
+                Employeelist.forEach(function (item) {
+                    document.body.insertAdjacentHTML(
+                        "afterbegin",
+                        `
+                    
+                    <table>
+                            <tr>
+                                 <th>&nbsp;</th><th>Name</th><th>Age</th><th>Height</th>
+                            </tr>
+                             <tr>
+                                     <td>1</td><td>${item.name}</td><td>${item.age}</td><td>${item.height}</td>
+                            </tr>
+  
+                     </table>
+
+                `
+                    );
+                });
+            };
+
+            const emp = new EmpTable(Employeelist);
+            emp.getHTML();
+        </script>
+    </body>
+</html>
