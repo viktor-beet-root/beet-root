@@ -112,42 +112,57 @@
             // Массив работников необходимо передавать через конструктор, а получать HTML-код с помощью метода getHtml().
             // Создать объект класса EmpTable и вывести на экран результат работы метода getHtml().
 
-            function Employee(age, height, name) {
-                this.age = age;
-                this.height = height;
+            function Employee(name, age, address) {
                 this.name = name;
+                this.age = age;
+                this.address = address;
             }
 
-            const Employeelist = [new Employee(20, 182, "Petia"), new Employee(26, 162, "Napoleon"), new Employee(40, 181, "John")];
+            const emplList = [new Employee("Vasisa", 22, "SF"), new Employee("Petia", 33, "Kiev"), new Employee("Katia", 23, "NY"), new Employee("Lena", 73, "LA")];
 
-            function EmpTable(Employeelist) {
-                this.Employeelist = Employeelist;
+            function EmpTable(list) {
+                this.list = list;
+
+                this.createTable = function () {
+                    const table = document.createElement("table");
+                    table.setAttribute("border", 1);
+                    table.style.borderCollapse = "collapse";
+                    const tr = document.createElement("tr");
+
+                    for (let prop in this.list[0]) {
+                        const td = document.createElement("td");
+                        td.innerHTML = prop;
+
+                        tr.append(td);
+                    }
+
+                    table.append(tr);
+
+                    return table;
+                };
+
+                this.table = this.createTable();
             }
 
             EmpTable.prototype.getHTML = function () {
-                console.log(Employeelist);
-                Employeelist.forEach(function (item) {
-                    document.body.insertAdjacentHTML(
-                        "afterbegin",
-                        `
-                    
-                    <table>
-                            <tr>
-                                 <th>&nbsp;</th><th>Name</th><th>Age</th><th>Height</th>
-                            </tr>
-                             <tr>
-                                     <td>1</td><td>${item.name}</td><td>${item.age}</td><td>${item.height}</td>
-                            </tr>
-  
-                     </table>
+                this.list.forEach((item, i) => {
+                    const tr = document.createElement("tr");
 
-                `
-                    );
+                    for (let prop in item) {
+                        const td = document.createElement("td");
+                        td.innerHTML = item[prop];
+
+                        tr.append(td);
+                    }
+
+                    this.table.append(tr);
                 });
+
+                document.body.append(this.table);
             };
 
-            const emp = new EmpTable(Employeelist);
-            emp.getHTML();
+            const newTable = new EmpTable(emplList);
+            newTable.getHTML();
         </script>
     </body>
 </html>
