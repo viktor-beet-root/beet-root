@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Modal Window</title>
+    <style>
+        .wrapper {
+            background-color: yellow;
+        }
+
+        .button__open {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .popup {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color: olive;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+
+        .popup__body {
+            min-height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30 px 10px;
+        }
+
+        .popup__content {
+            background-color: #fff;
+            color: black;
+            max-width: 800px;
+            padding: 30px;
+        }
+
+        .popup__title {
+            text-align: center;
+            font-size: 40px;
+        }
+    </style>
+</head>
+
+<body class="wrapper">
+    <div class="button__open">
+        <button class="popup__open">Open</button>
+    </div>
+
+    <div id="popup" class="popup">
+        <div class="popup__body">
+            <div class="popup__content">
+                <h2 class="popup__title">Modal window</h2>
+                <p class="popup__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus esse ea repellat
+                    ducimus. Repudiandae, illo! Atque reiciendis quos sapiente cumque laborum et nam neque soluta
+                    impedit facilis recusandae, blanditiis tempore!</p>
+                <button class="popup__close">Close</button>
+            </div>
+
+        </div>
+
+    </div>
+    <script>
+        console.log(
+            'Задание 2. Создать HTML-страницу с кнопкой "Открыть" и модальным окном.\n На модальном окне должен быть текст и кнопка "Закрыть". Изначально модальное окно не отображается. При клике на кнопку "Открыть" появляется модальное окно, на кнопку "Закрыть" – исчезает.'
+        );
+        const popupOpen = document.querySelector('.popup__open');
+        const popupClose = document.querySelector('.popup__close');
+        const popup = document.querySelector('.popup')
+
+        popupOpen.addEventListener('click', openWindow);
+
+        function openWindow() {
+            popup.style.display = "block";
+        }
+
+        popupClose.addEventListener('click', closeWindow);
+
+        function closeWindow() {
+            popup.style.display = "";
+        }
+    </script>
+</body>
+
+</html>
