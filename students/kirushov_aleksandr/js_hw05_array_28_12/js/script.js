@@ -270,9 +270,7 @@ outputOnDisplay(audienceList);
 function classForFaculty(params) {
     const facultyClassList = audienceList.filter(function (item) {
 
-        if (item.faculty === params) {
-            return true;
-        } else false;
+        return item.faculty === params;
 
     });
     if (facultyClassList.length === 0) return console.log("Для данного факультета нет подходящей аудитории");
@@ -280,7 +278,7 @@ function classForFaculty(params) {
 };
 
 classForFaculty('Slytherin');
-classForFaculty('Gryffindor');
+classForFaculty('fffff');
 
 //Вывод на экран только тех аудиторий, которые подходят для переданной группы.Объект - группа состоит из названия, количества студентов и названия факультета;
 const groupA = {
