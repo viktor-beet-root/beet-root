@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Slider</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="stylesheet" href="./css/slick-theme.css" />
+		<link rel="stylesheet" href="./css/slick.css" />
+		<script src="./js/jq.js"></script>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="header">
+				<p class="header__title">Our featured work</p>
+				<svg
+					class="triangle"
+					xmlns="http://www.w3.org/2000/svg"
+					width="50"
+					height="50"
+					viewBox="0 0 50 50"
+				>
+					<defs>
+						<style>
+							.triangle__settings {
+								fill: #fff;
+								stroke: #e98457;
+								stroke-linejoin: round;
+								stroke-width: 6px;
+								fill-rule: evenodd;
+							}
+						</style>
+					</defs>
+					<path
+						class="triangle__settings"
+						d="M353,237l44,10-34,34Z"
+						transform="translate(-350 -234)"
+					/>
+				</svg>
+				<svg
+					class="plus"
+					xmlns="http://www.w3.org/2000/svg"
+					width="30"
+					height="30"
+					viewBox="0 0 30 30"
+				>
+					<defs>
+						<style>
+							.plus__settings {
+								fill: #e98457;
+								fill-rule: evenodd;
+							}
+						</style>
+					</defs>
+					<path
+						class="plus__settings"
+						d="M1343,34h6V64h-6V34Zm-12,12h30v6h-30V46Z"
+						transform="translate(-1331 -34)"
+					/>
+				</svg>
+
+				<h1 class="header__content">
+					We create engaging experiences through creativity &#38;
+					craft
+				</h1>
+			</div>
+			<div class="arrow_prev">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					xmlns:xlink="http://www.w3.org/1999/xlink"
+					width="96"
+					height="96"
+					viewBox="0 0 96 96"
+				>
+					<image
+						data-name="prev"
+						width="96"
+						height="96"
+						xlink:href="data:img/png;base64,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"
+					/>
+				</svg>
+			</div>
+			<div class="slider">
+				<div class="slider__item">
+					<img
+						class="slider__img slider__decription"
+						src="./css/img/sofa.jpg"
+						alt="Apex Magazine"
+					/>
+					<p class="slider__text">Apex magazine june Issue</p>
+					<p class="slider__author">by fabrizio morra</p>
+				</div>
+				<div class="slider__item">
+					<img
+						class="slider__img"
+						src="./css/img/gaslamp.jpg"
+						alt="Gas Lamp"
+					/>
+				</div>
+				<div class="slider__item">
+					<img
+						class="slider__img"
+						src="./css/img/bicycle.jpg"
+						alt="Bicycle"
+					/>
+				</div>
+				<div class="slider__item">
+					<img
+						class="slider__img"
+						src="./css/img/fedex.jpg"
+						alt="Delievery"
+					/>
+				</div>
+			</div>
+			<div class="arrow_next">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					xmlns:xlink="http://www.w3.org/1999/xlink"
+					width="96"
+					height="96"
+					viewBox="0 0 96 96"
+				>
+					<image
+						width="96"
+						height="96"
+						xlink:href="data:img/png;base64,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"
+					/>
+				</svg>
+			</div>
+		</div>
+
+		<script src="./js/slick.min.js"></script>
+		<script src="./js/script.js"></script>
+	</body>
+</html>

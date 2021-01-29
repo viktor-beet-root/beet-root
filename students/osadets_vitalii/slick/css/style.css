@@ -1,0 +1,95 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	position: relative;
+	font-family: "Poppins", Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	font-style: normal;
+	max-width: 1830px;
+	font-weight: normal;
+	text-transform: uppercase;
+	color: #000000;
+}
+
+.header {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.header__title {
+	padding-top: 65px;
+	padding-bottom: 35px;
+	letter-spacing: 13px;
+	font-style: 300;
+}
+
+.header__content {
+	max-width: 1000px;
+	display: flex;
+	text-align: center;
+	color: #303030;
+	font-size: 86px;
+	padding-bottom: 105px;
+}
+
+.slider {
+	max-width: 1430px;
+	margin: 0 140px;
+}
+
+.slider__img {
+	box-sizing: border-box;
+	max-height: 400px;
+	max-width: 100%;
+	min-width: 440px;
+}
+
+.arrow_prev {
+	position: absolute;
+	top: 77%;
+	z-index: 1;
+	left: 2%;
+}
+.arrow_next {
+	position: absolute;
+	top: 77%;
+	z-index: 1;
+	right: 2%;
+}
+
+.slider__decription {
+	position: relative;
+}
+
+.slider__text,
+.slider__author {
+	position: absolute;
+	color: white;
+	letter-spacing: 4px;
+	padding-left: 20px;
+}
+.slider__text {
+	font-size: 28px;
+	font-weight: bold;
+	bottom: 10%;
+	max-width: 280px;
+}
+.slider__author {
+	font-size: 12px;
+	bottom: 5%;
+}
+
+.triangle {
+	position: absolute;
+	left: 10%;
+	top: 34%;
+}
+.plus {
+	position: absolute;
+	top: 3%;
+	right: 30%;
+}
