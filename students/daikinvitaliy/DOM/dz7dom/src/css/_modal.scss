@@ -1,0 +1,36 @@
+.wrapp {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.window {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    padding: 20px;
+}
+#open,
+#close {
+    width: 100px;
+    min-height: 30px;
+    background-color: greenyellow;
+    border: 3px solid rgb(212, 72, 7);
+    border-radius: 10px;
+    color: black;
+    text-transform: uppercase;
+}
+#close {
+    display: block;
+    margin: 0 auto;
+}
+.text {
+    padding-bottom: 30px;
+    color: rgb(48, 18, 148);
+}
