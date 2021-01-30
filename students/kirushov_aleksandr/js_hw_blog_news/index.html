@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS_HW_NEWS_BLOG</title>
+        <style>
+            .wrapp {
+                display: flex;
+
+            }
+
+            .wrapp>div {
+                width: 50%;
+                padding: 15px;
+                box-sizing: border-box;
+            }
+
+            .app__form,
+            .app1__form {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 210px;
+            }
+
+            .app__btn,
+            .app1__btn {
+                width: 100px;
+                align-self: flex-end;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapp">
+            <div id="app">
+                <form class="app__form" action="" method="dialog">
+                    <input type="text" name="heading" value="">
+                    <textarea name="news" value="" id="" cols="30" rows="10"></textarea>
+                    <input class="app__btn" type="submit">
+                </form>
+            </div>
+            <div id="app1">
+                <form class="app1__form" action="dialog">
+                    <input type="text" name="heading1" value="">
+                    <textarea name="news1" value="" id="" cols="30" rows="10"></textarea>
+                    <input class="app1__btn" type="submit">.
+                </form>
+            </div>
+        </div>
+        <script>
+            function Message(options) { //старый синтаксис
+                this.option = {
+                    form: options.form,
+                    wrapper: options.wrapper
+                }
+                this.messageList = [];
+
+            };
+
+            Message.prototype.renderHtmlMessage = function () {
+                const form = this.option.form;
+                const wrapper = this.option.wrapper;
+                wrapper.innerHTML = '';
+                wrapper.appendChild(form);
+
+                this.messageList.forEach(message => {
+                    wrapper.insertAdjacentHTML('beforeend', `
+                    <h2>${message.id+1}.${message.title}.</h2>
+                    <p>${message.content}</p>
+                    <p>${message.date}</p>`
+                        /*`
+                                           
+                                           <h2>${message.id+1}.${message.title}.</h2>
+                                           <p>${message.content}</p>
+                                           <p>${message.date}</p>
+                                           `*/
+                    );
+                });
+            };
+
+            Message.prototype.addMessage = function (message) {
+                message.id = this.messageList.length;
+                message.date = new Date();
+                this.messageList.push(message);
+                this.renderHtmlMessage();
+            };
+
+            Message.prototype.removeMessage = function (messageId) {};
+
+            const message = new Message({
+                wrapper: document.getElementById('app'),
+                form: document.querySelector('.app__form'),
+            });
+
+            message.option.form.addEventListener('submit', function () {
+                message.addMessage({
+                    title: message.option.form[0].value,
+                    content: message.option.form[1].value,
+                });
+                message.option.form.reset();
+            });
+
+
+
+            // message.addMessage({
+            //     title: 'dddddd',
+            //     content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur vel corrupti, quos exercitationem suscipit libero ? Id sapiente ea iure doloremque, quod sed illum, qui aut laudantium, et recusandae ? Culpa, unde!'
+            // });
+
+            const message1 = new Message({
+                wrapper: document.getElementById('app1'),
+                form: document.querySelector('.app1__form'),
+
+            });
+
+            // message1.addMessage({
+            //     title: 'aaaaaaaaaaaaaaaa',
+            //     content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur vel corrupti, quos exercitationem suscipit libero ? Id sapiente ea iure doloremque, quod sed illum, qui aut laudantium, et recusandae ? Culpa, unde!'
+            // });
+
+            // message1.addMessage({
+            //     title: 'aaaaaaaaaaaaaaaa11111',
+            //     content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur vel corrupti, quos exercitationem suscipit libero ? Id sapiente ea iure doloremque, quod sed illum, qui aut laudantium, et recusandae ? Culpa, unde!'
+            // });
+
+
+            console.log(message, message1);
+        </script>
+    </body>
+</html>
