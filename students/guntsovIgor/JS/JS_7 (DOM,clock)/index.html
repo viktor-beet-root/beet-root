@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>DOM CLOCK</title>
+        <style type="text/css">
+            .clock {
+                background-color: #1f97ac;
+                text-align: center;
+                width: 200px;
+                height: 220px;
+                margin: 200px auto 0;
+                border-radius: 30%;
+                vertical-align: middle;
+                border: 1px solid #0a6d47;
+                line-height: 200px;
+            }
+
+            .clock__hours,
+            .clock__minutes,
+            .clock__dots,
+            .clock__seconds {
+                font-size: 50px;
+                color: white;
+            }
+
+            .clock__seconds {
+                font-size: 25px;
+            }
+
+            .belt {
+                width: 100px;
+                height: 700px;
+                margin: 0 auto;
+                background-color: #f8f40c;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                z-index: -1;
+                transform: translateX(-50%);
+            }
+
+            .holes {
+                width: 10px;
+                height: 10px;
+                background-color: white;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                border-radius: 50%;
+            }
+
+            .hole1 {
+                top: 25px;
+            }
+
+            .hole2 {
+                top: 55px;
+            }
+
+            .hole3 {
+                top: 85px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="belt"></div>
+        <div class="holes hole1"></div>
+        <div class="holes hole2"></div>
+        <div class="holes hole3"></div>
+
+        <div class="clock">
+            <span class="clock__hours">00</span>
+            <span class="clock__dots">:</span>
+            <span class="clock__minutes">00</span>
+            <span class="clock__seconds">00</span>
+        </div>
+        <script>
+            const hours = document.querySelector(".clock__hours");
+            let hoursValue = "00";
+
+            const minutes = document.querySelector(".clock__minutes");
+            let minutesValue = "00";
+
+            const seconds = document.querySelector(".clock__seconds");
+            let secondsValue = "00";
+
+            const dotsOutter = document.querySelector(".clock__dots");
+
+            function secondsIn() {
+                secondsValue++;
+                if (secondsValue === 60) {
+                    secondsValue = 0;
+                    minutesValue++;
+                }
+            }
+
+            function minutesIn() {
+                if (minutesValue === 60) {
+                    minutesValue = 0;
+                    hoursValue++;
+                }
+            }
+
+            function randomColor() {
+                const secondsColor = "rgb(" + Math.floor(Math.random() * 256) + "," + Math.floor(Math.random() * 256) + "," + Math.floor(Math.random() * 256) + ")";
+                seconds.style.color = secondsColor;
+            }
+
+            function dotssOut() {
+                if (secondsValue % 2 === 0) {
+                    dotsOutter.style.visibility = "hidden";
+                } else {
+                    dotsOutter.style.visibility = "visible";
+                }
+            }
+
+            function clock() {
+                seconds.innerHTML = secondsValue;
+                minutes.innerHTML = minutesValue;
+                hours.innerHTML = hoursValue;
+                secondsIn();
+                minutesIn();
+                randomColor();
+                dotssOut();
+            }
+
+            setInterval(clock, 1000);
+        </script>
+    </body>
+</html>

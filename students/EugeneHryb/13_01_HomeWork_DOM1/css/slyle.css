@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/aleo-v4-latin-regular.woff2') format('woff2'),
+        url('../fonts/aleo-v4-latin-regular.woff') format('woff');
+}
+
+.clock {
+    font-family: 'Aleo', sans-serif, Arial, Helvetica;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 80px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #692b99;
+
+}
+
+.clock > span {
+    text-shadow: 10px 0 10px rgba(0,0,0,0.5);
+    transition: opacity .7s ease-in-out;
+
+}
+
+.clock__wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #7a7f87;
+}
+
+.separator {
+    opacity: 1;
+}
