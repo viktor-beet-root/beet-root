@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation</title>
+    <style>
+        div {
+            margin: 10px;
+            padding: 5px;
+            background-color: gainsboro;
+            border-radius: 5px;
+        }
+
+        .error {
+            color: red;
+            border: 1px solid red;
+            background-color: rgb(248, 197, 197);
+        }
+
+        .required::before {
+            content: '*';
+
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#" id='form'>
+        <h2>Enter your information</h2>
+        <div>
+            <label for="name">Enter your name</label>
+            <input type="text" id='name' name='name' data-required='true' data-error-message='Name field is empty'>
+        </div>
+        <div>
+            <label for="soname">Enter your soname</label>
+            <input type="text" id='soname' name='soname' data-required='true'
+                data-error-message='Soname field is empty'>
+        </div>
+        <div>
+            <label for="birthday">Your birthday</label>
+            <input type="date" id='birthday' name='birthday'>
+        </div>
+        <div>
+            <label for="aria">Choose the aria</label>
+            <select name="aria" id="aria">
+                <option value="" selected>Choose the aria</option>
+                <option value="vinnytsia">Vinnytsia</option>
+                <option value="volyn">Volyn</option>
+                <option value="dnepr">Dnepr</option>
+                <option value="donetsk">Donetsk</option>
+                <option value="zhytomyr">Zhytomyr</option>
+                <option value="zakarpattia">Zakarpattia</option>
+                <option value="zaporizhzhia">Zaporizhzhia</option>
+                <option value="ivano_frankivsk">Ivano-Frankivsk</option>
+                <option value="kyiv">Kyiv</option>
+                <option value="kropyvnytsk">Kropyvnytsk</option>
+                <option value="luhansk">Luhansk</option>
+                <option value="lviv">Lviv</option>
+                <option value="mykolaiv">Mykolaiv</option>
+                <option value="odesa">Odesa</option>
+                <option value="poltava">Poltava</option>
+                <option value="rivne">Rivne</option>
+                <option value="sumy">Sumy</option>
+                <option value="ternopil">Ternopil</option>
+                <option value="kharkiv">Kharkiv</option>
+                <option value="kherson">Kherson</option>
+                <option value="khmelnytsk">Khmelnytsk</option>
+                <option value="cherkasy">Cherkasy</option>
+                <option value="chernihiv">Chernihiv</option>
+                <option value="chernivtsi">Chernivtsi</option>
+            </select>
+        </div>
+        <div>
+            <input type="radio" id="male" name="gender" value="male" data-required='true'
+                data-error-message='Gender field is empty'>
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female" data-required='true'
+                data-error-message='Gender field is empty'>
+            <label for="female">Female</label>
+        </div>
+        <fieldset>
+            <legend>Appearance</legend>
+            <div>
+                <label for="height">Enter your height</label>
+                <input type="text" id='height' name='height'>
+            </div>
+            <div>
+                <label for="weight">Enter your soname</label>
+                <input type="text" id='weight' name='weight'>
+            </div>
+        </fieldset>
+        <div>
+            <h3>Mark some your hobbies</h3>
+            <input type="checkbox" id='reading' name="hobbies" value="readind">
+            <label for="reading">Read books</label>
+            <input type="checkbox" id='travel' name="hobbies" value="travel">
+            <label for="travel">Travel</label>
+            <input type="checkbox" id='sport' name="hobbies" value="sport">
+            <label for="sport">Sport</label>
+            <input type="checkbox" id='extrim' name="hobbies" value="extrim">
+            <label for="extrim">Extrim</label>
+        </div>
+        <div>
+            <textarea name="describe" id="describe" cols="30" rows="10"></textarea>
+        </div>
+        <div><input type="submit" value="Submit">
+        </div>
+    </form>
+
+    <script>
+        const form = document.getElementById('form');
+
+        function setMarker(form) {
+            for (let i = 0; i < form.length; i++) {
+                if (form[i].dataset.required === 'true') form[i].parentElement.classList.add('required')
+            }
+        }
+
+        function checkRadio(radio) {
+            let error = false;
+            for (let i = 0; i < radio.length; i++) {
+                if (radio[i].checked) {
+                    error = true;
+                    break;
+                }
+            }
+            return error;
+        }
+
+        function formValidation(event) {
+            event.preventDefault();
+
+            let error = false;
+            let parentElem;
+            let spanElem = document.createElement('span');
+            let radioElem;
+            for (let i = 0; i < this.length; i++) {
+                parentElem = this[i].parentElement;
+                spanElem = document.createElement('span');
+                parentElem.classList.remove('error');
+               
+                if (this[i].dataset.required === 'true' && this[i].value === '') {
+                    parentElem.classList.add('error');
+                    spanElem.append(this[i].dataset.errorMessage);
+                    parentElem.append(spanElem);
+                    error = true;
+                }
+                if (this[i].type === 'radio' && this[i].dataset.required === 'true') {
+                    radioElem = [...document.getElementsByName(this[i].name)];
+                    if (!checkRadio(radioElem)) {
+                        parentElem.classList.add('error');
+                        spanElem.append(this[i].dataset.errorMessage);
+                        parentElem.append(spanElem);
+                    }
+                }
+            }
+            if (!error) this.submit();
+        }
+
+        setMarker(form);
+        form.addEventListener('submit', formValidation);
+
+    </script>
+</body>
+
+</html>
