@@ -21,20 +21,20 @@
 
 
             console.log('Task 2 - Написать функцию, которая вычисляет факториал переданного ей числа');
-            function factorial(num) {
+            function countFactorial(num) {
                 if (num === undefined || isNaN(num)) return false;
-                let times = 1;
+                let factorial = 1;
                 for (let i = 1; i <= num; i++) {
-                    times = num * (num - 1);
+                    factorial = num * (num - 1);
                 }
-                return times;
+                return  factorial;
             }
-            console.log(factorial(5));
+            console.log(countFactorial(5));
 
 
             console.log('Task 3 - Написать функцию, которая принимает три отдельные цифры и превращает их в одно число');
             function getJoinNumbers(num1, num2, num3) {
-                let joinNumber = String(num1) + String(num2) + String(num3)
+                let joinNumber = num1 * 100 + num2 * 10 + num3
                 return joinNumber;
             }
             console.log(getJoinNumbers(1, 2, 3));
@@ -64,9 +64,9 @@
                     divNam++;
                 };
                 if (num === sumDivNum) {
-                    return 'Your number is PERFECT';
+                    return true;
                 } else {
-                    return 'Your number is NOT PERFECT';
+                    return false;
                 }
             }
             console.log(perfectNumber(28));
@@ -77,7 +77,7 @@
             function choisePerfectNumber(minNum, maxNum) {
                 const arrPerfectNum = []
                 for (let i = minNum; i <= maxNum; i++) {
-                    if (perfectNumber(i) === 'Your number is PERFECT') arrPerfectNum.push(i);
+                    if (perfectNumber(i)) arrPerfectNum.push(i);
                 }
                 return arrPerfectNum;
             }
