@@ -16,40 +16,62 @@
                 box-sizing: border-box;
             }
 
-            .app__form,
-            .app1__form {
+            .app__form {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
                 height: 210px;
             }
 
-            .app__btn,
-            .app1__btn {
+            .app__btn {
                 width: 100px;
                 align-self: flex-end;
+            }
+
+            .hidden {
+                display: none;
             }
         </style>
     </head>
     <body>
         <div class="wrapp">
             <div id="app">
-                <form class="app__form" action="" method="dialog">
+                <form class="app__form hidden" action="" method="dialog">
                     <input type="text" name="heading" value="">
                     <textarea name="news" value="" id="" cols="30" rows="10"></textarea>
                     <input class="app__btn" type="submit">
                 </form>
-            </div>
-            <div id="app1">
-                <form class="app1__form" action="dialog">
-                    <input type="text" name="heading1" value="">
-                    <textarea name="news1" value="" id="" cols="30" rows="10"></textarea>
-                    <input class="app1__btn" type="submit">.
-                </form>
+                <button class="app__open">Открыть</button>
+                <button class="app__close hidden">Закрыть</button>
             </div>
         </div>
         <script>
-            function Message(options) { //старый синтаксис
+            const btnOpen = document.querySelector('.app__open');
+            const btnClose = document.querySelector('.app__close');
+            const formS = document.querySelector('.app__form');
+
+            btnOpen.addEventListener('click', function (e) {
+                showHidden(formS);
+                showHidden(btnClose);
+                showHidden(btnOpen);
+
+            });
+            btnClose.addEventListener('click', function (e) {
+                showHidden(formS);
+                showHidden(btnClose);
+                showHidden(btnOpen);
+
+            });
+
+            function showHidden(element) {
+                if (element.classList.contains('hidden')) {
+                    element.classList.remove('hidden');
+                } else {
+                    element.classList.add('hidden');
+                }
+            };
+
+            function Message(options) {
                 this.option = {
                     form: options.form,
                     wrapper: options.wrapper
@@ -63,20 +85,39 @@
                 const wrapper = this.option.wrapper;
                 wrapper.innerHTML = '';
                 wrapper.appendChild(form);
-
+                wrapper.appendChild(btnOpen);
+                wrapper.appendChild(btnClose);
                 this.messageList.forEach(message => {
                     wrapper.insertAdjacentHTML('beforeend', `
+                    <div class="article${message.id+1}">
                     <h2>${message.id+1}.${message.title}.</h2>
                     <p>${message.content}</p>
-                    <p>${message.date}</p>`
-                        /*`
-                                           
-                                           <h2>${message.id+1}.${message.title}.</h2>
-                                           <p>${message.content}</p>
-                                           <p>${message.date}</p>
-                                           `*/
-                    );
+                    <p>${message.date}</p>
+                    <button class="delete${message.id+1}">Удалить</button>
+                    </div>
+                    `);
                 });
+
+                const btnDelList = document.querySelectorAll('button[class^="delete"]');
+
+                btnDelList.forEach(function (item, index) {
+                    btnDelList[index].addEventListener('click', function (event) {
+                        const arrBtnDelList = [...document.querySelectorAll(
+                            'button[class^="delete"]')];
+                        const indexOf = arrBtnDelList.indexOf(event.target);
+                        arrBtnDelList.splice(indexOf, 1);
+                        wrapper.removeChild(event.target.parentElement);
+                        message.messageList.splice(indexOf, 1);
+                        const articleDelList = document.querySelectorAll(
+                            'div[class^="article"]');
+
+                        for (let i = (indexOf); i < articleDelList.length; i++) {
+                            articleDelList[i].firstElementChild.innerHTML =
+                                `${i+1}.${message.messageList[i].title}.`;
+                            message.messageList[i].id = i;
+                        }
+                    })
+                })
             };
 
             Message.prototype.addMessage = function (message) {
@@ -100,32 +141,6 @@
                 });
                 message.option.form.reset();
             });
-
-
-
-            // message.addMessage({
-            //     title: 'dddddd',
-            //     content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur vel corrupti, quos exercitationem suscipit libero ? Id sapiente ea iure doloremque, quod sed illum, qui aut laudantium, et recusandae ? Culpa, unde!'
-            // });
-
-            const message1 = new Message({
-                wrapper: document.getElementById('app1'),
-                form: document.querySelector('.app1__form'),
-
-            });
-
-            // message1.addMessage({
-            //     title: 'aaaaaaaaaaaaaaaa',
-            //     content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur vel corrupti, quos exercitationem suscipit libero ? Id sapiente ea iure doloremque, quod sed illum, qui aut laudantium, et recusandae ? Culpa, unde!'
-            // });
-
-            // message1.addMessage({
-            //     title: 'aaaaaaaaaaaaaaaa11111',
-            //     content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur vel corrupti, quos exercitationem suscipit libero ? Id sapiente ea iure doloremque, quod sed illum, qui aut laudantium, et recusandae ? Culpa, unde!'
-            // });
-
-
-            console.log(message, message1);
         </script>
     </body>
 </html>
