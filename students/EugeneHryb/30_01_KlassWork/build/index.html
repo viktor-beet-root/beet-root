@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX</title>
+    <style>
+        #map{
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <script >
+        function myAjax(url, option){
+
+            if (!option){
+                return fetch(url).then(response => {
+                if(response.ok == true){
+                    return response.json();
+                }
+            })
+            } else {
+                return fetch(url, {
+                method: option.method,
+                body : option.body,
+                headers: option.headers
+                }
+                ).then(response => {
+                    if(response.ok){
+                        return response.json();
+                    }
+                })
+            };
+        }
+    </script>
+
+    <div id="map"></div>
+    <script>
+        let map;
+        function initMap(){
+            map =  new google.maps.Map(document.getElementById("map"), {
+                center: { lat: 51.031266, lng: 30.653218 },
+                zoom: 2,
+            });
+
+        }
+    </script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBsc8u0LY3MGRR94yt7jJPFTppJS937ZA&callback=initMap&libraries=&v=weekly"
+        defer
+    ></script>
+    <script>
+        const url = 'https://jsonplaceholder.typicode.com/users';
+
+        myAjax(url).then(addMarker);
+
+        function addMarker(data){
+
+            const mark = new Object;
+            let temporaryString = '';
+
+            data.forEach(element => {
+                mark[element.id] = {};
+
+                mark[element.id].mark  = new google.maps.Marker({
+                    position: {lat: Number(element.address.geo.lat), lng: Number(element.address.geo.lng) },
+                    map: map,
+                    title: element.username,
+                });
+
+                temporaryString = `
+                    <h3>${element.name} </h3>
+                    <p>Псевдоним: ${element.username}</p>
+                    <p>Телефон: <a href = "tel:${element.phone}" >${element.phone}</a></p>
+                    <p>Email: <a href = "mailto:${element.email}">${element.email}</a></p>
+                    <p>Веб сайет: <a href = "${element.website}">${element.website}</a></p>
+                    <h3>Компания</h3>
+                    <h4>${element.company.name}</h4>
+                    <p>${element.company.bs}</p>
+                    <p>${element.company.catchPhase}</p>
+                    <h3>Адрес</h3>
+                    <p>Город: ${element.address.city}</p>
+                    <p>Улица: ${element.address.street}</p>
+                    <p>Апартаменты: ${element.address.suite}</p>
+                    <p>Зип код: ${element.address.zipcode}</p>
+                `
+
+                mark[element.id].infoWindow = new google.maps.InfoWindow({
+                    content: temporaryString,
+                });
+
+                mark[element.id].mark.addListener('click', (event) => {
+                    mark[element.id].infoWindow.open(map, mark[element.id].mark);
+                });
+
+                temporaryString = '';
+            });
+
+        }
+    </script>
+</body>
+</html>
