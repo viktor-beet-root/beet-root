@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Google Maps with Ajax</title>
+		<style>
+			#map {
+				height: 100vh;
+			}
+			.content__image {
+				width: 10px;
+				height: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="map"></div>
+
+		<script>
+			function myAjax(method, url, callback, body) {
+				const xhr = new XMLHttpRequest();
+				xhr.responseType = "json";
+				xhr.onload = () => {
+					if (xhr.status < 400) {
+						if (typeof callback === "function") {
+							callback(xhr.response);
+						} else {
+							console.log(xhr.response);
+						}
+					} else {
+						console.log(xhr.response, xhr.status);
+					}
+				};
+
+				xhr.onerror = () => {
+					console.log(xhr.response, xhr.status);
+				};
+
+				xhr.open(method, url);
+
+				if (method === "GET") {
+					xhr.send();
+				} else if (method === "POST") {
+					xhr.setRequestHeader("Content-type", "application/json");
+					xhr.send(JSON.stringify(body));
+				}
+			}
+
+			let map;
+			let contentString;
+			let infowindow = [];
+			let marker = [];
+
+			function initMap() {
+				const cords = { lat: 49.01187, lng: 24.37308 };
+				map = new google.maps.Map(document.getElementById("map"), {
+					center: cords,
+					zoom: 2,
+				});
+			}
+
+			myAjax(
+				"GET",
+				"https://jsonplaceholder.typicode.com/users",
+				usersCoords
+			);
+
+			function usersCoords(coords) {
+				console.log(coords);
+				coords.forEach(function (elem, index) {
+					contentString = `
+					<div id="content">
+					<div id="siteNotice">
+						<img src="./src/img/boy.png" alt="photo">
+					</div>
+					<h1 class="content__title">${elem.name}</h1>
+					<div id="bodyContent>"
+					<p class="content__text">${elem.email}</p>
+					<p class="content__text">${elem.phone}</p>
+					<p class="content__text">${elem.website}</p>
+				    </div>
+			        </div>
+					`;
+					infowindow[index] = new google.maps.InfoWindow({
+						content: contentString,
+					});
+					marker[index] = new google.maps.Marker({
+						position: {
+							lat: +elem.address.geo.lat,
+							lng: +elem.address.geo.lng,
+						},
+						map: map,
+						title: elem.name,
+						icon: "./src/img/girl.png",
+					});
+					marker[index].addListener("click", () => {
+						infowindow[index].open(map, marker[index]);
+					});
+				});
+			}
+		</script>
+
+		<script
+			defer
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXg8Ixs6QBJRtbZjj1wITM0vYuzyD9Xcg&callback=initMap"
+		></script>
+	</body>
+</html>
