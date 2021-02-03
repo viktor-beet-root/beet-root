@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS_HW08_EVETS</title>
+        <style>
+            .text,
+            .form {
+                width: 50%;
+                margin: 0 auto;
+
+                font-size: 30px;
+            }
+
+            .text {
+
+                text-align: center;
+                color: green;
+            }
+
+            .changeDiv {
+                width: 100%;
+                font-size: 20px;
+                border-radius: 10px;
+                border: 3px solid blue;
+            }
+
+            .hidden {
+                display: none;
+            }
+
+            table {
+                border-collapse: collapse;
+            }
+
+            th {
+                border: 2px solid rgb(69, 6, 245);
+            }
+
+            td {
+                text-align: center;
+                border: 2px solid rgb(69, 6, 245);
+                font-size: 18px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <!-- 1. Создать HTML-страницу для отображения/редактирования текста. При открытии страницы текст отображается с помощью
+        тега div. При нажатии Ctrl + E, вместо div появляется textarea с тем же текстом, который теперь можно
+        редактировать. При нажатии Ctrl + , вместо textarea появляется div с уже измененным текстом. Не забудьте
+        выключить поведение по умолчанию для этих сочетаний клавиш. -->
+
+        <div class="text">Lorem ipsum dolor sit.</div>
+        <form class="form hidden" action="">
+            <textarea class="changeDiv" name="changeDiv" value="" cols="30" rows="10"></textarea>
+        </form>
+        <p>Нажми Ctrl+E, чтоб отредактировать текст.</p>
+        <p>Нажми Ctrl+, чтоб сохранить текст.</p>
+        <script>
+            document.body.addEventListener("keydown", pressingKey);
+
+            function pressingKey(e) {
+
+                if ((e.code === "KeyE" || e.code === "NumpadAdd") && e.ctrlKey) {
+                    e.preventDefault();
+                    let div = document.querySelector('.text');
+                    let form = document.querySelector('.form');
+
+                    if (e.code === "KeyE") {
+
+                        if (!div.classList.contains('hidden')) {
+                            form.classList.remove('hidden');
+                            form.firstElementChild.innerHTML = div.textContent;
+                            div.classList.add('hidden');
+                        }
+                    } else {
+                        if (!form.classList.contains('hidden')) {
+                            div.classList.remove('hidden');
+                            div.innerHTML = form.firstElementChild.value;
+                            form.classList.add('hidden');
+                        }
+                    }
+                }
+            }
+        </script>
+        <!-- 2. Создать HTML-страницу с большой таблицей. При клике по заголовку колонки, необходимо отсортировать данные по
+        этой колонке. Учтите, что числовые значения должны сортироваться как числа, а не как строки. -->
+        <table class="table">
+            <caption>Збір урожаю культур зернових і зернобобових на 01 грудня 2020 року</caption>
+            <tr>
+                <th class="th1">Населений пункт</th>
+                <th class="th2">Площа зібрана,
+                    тис.га</th>
+                <th class="th3">Обсяг
+                    виробництва,
+                    тис.ц</th>
+                <th class="th4">Урожайність,
+                    ц з 1 га зібраної площі</th>
+            </tr>
+            <tr>
+                <td class="td1">Запорізька</td>
+                <td class="td2">983.4</td>
+                <td class="td3">29962.5</td>
+                <td class="td4">30.5</td>
+            </tr>
+            <tr>
+                <td class="td1">Житомирська</td>
+                <td class="td2">467.6</td>
+                <td class="td3">22864.9</td>
+                <td class="td4">48.9</td>
+            </tr>
+            <tr>
+                <td class="td1">Дніпропетровська</td>
+                <td class="td2">1093.4</td>
+                <td class="td3">35732.6</td>
+                <td class="td4">32.7</td>
+            </tr>
+            <tr>
+                <td class="td1">Волинська</td>
+                <td class="td2">298.5</td>
+                <td class="td3">13347.1</td>
+                <td class="td4">44.8</td>
+            </tr>
+            <tr>
+                <td class="td1">Донецька</td>
+                <td class="td2">568.6</td>
+                <td class="td3">20143.5</td>
+                <td class="td4">35.4</td>
+            </tr>
+            <tr>
+                <td class="td1">Вінницька</td>
+                <td class="td2">856.5</td>
+                <td class="td3">40675.3</td>
+                <td class="td4">47.5</td>
+            </tr>
+        </table>
+        <script>
+            const columnTitle = [...document.querySelectorAll('th[class^="th"]')];
+            const column1 = [...document.querySelectorAll('.td1')];
+            const column2 = [...document.querySelectorAll('.td2')];
+            const column3 = [...document.querySelectorAll('.td3')];
+            const column4 = [...document.querySelectorAll('.td4')];
+
+            columnTitle.forEach(function (item, index) {
+                item.addEventListener("click", function (e) {
+                    const indexOf = columnTitle.indexOf(e.target);
+                    // console.log(e.target, indexOf);
+                    const column = [...document.querySelectorAll(`.td${indexOf+1}`)];
+
+                    let columnSort = column.sort(function (a, b) {
+
+                        if (indexOf === 0) {
+                            return a.innerHTML > b.innerHTML ? 1 : -1;
+                        } else {
+                            return a.innerHTML - b.innerHTML
+                        };
+
+                    });
+
+                    console.log(columnSort);
+
+                    const table = document.querySelector('.table');
+
+                    console.log(table, table.tBodies[0]);
+                    table.tBodies[0].append(...columnSort);
+                })
+
+                console.log(item, index)
+            })
+            console.log(columnTitle, column1);
+        </script>
+
+    </body>
+</html>
