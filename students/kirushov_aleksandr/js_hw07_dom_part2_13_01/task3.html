@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS_HW07_task3</title>
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <div class="trafficLights">
+            Светофор
+            <div id="background">
+                <div class="red"></div>
+                <div class="yellow"></div>
+                <div class="green"></div>
+            </div>
+            <button>Next</button>
+        </div>
+        <script>
+            console.log(
+                'Задание 3. Создать HTML-страницу со светофором и кнопкой, которая переключает светофор на следующий цвет.'
+            );
+            const red = document.querySelector('.red');
+            const yellow = document.querySelector('.yellow');
+            const green = document.querySelector('.green');
+            const btnNext = document.querySelector('.trafficLights button');
+
+            btnNext.addEventListener('click', function trafficLights() {
+                if (red.style.backgroundColor === 'red') {
+                    onYellow();
+                } else if (yellow.style.backgroundColor === 'yellow') {
+                    onGreen();
+                } else {
+                    onRed();
+                }
+            });
+
+            function onRed() {
+                red.style.backgroundColor = 'red';
+                yellow.style.backgroundColor = 'grey';
+                green.style.backgroundColor = 'grey';
+            };
+
+            function onYellow() {
+                red.style.backgroundColor = 'grey';
+                yellow.style.backgroundColor = 'yellow';
+                green.style.backgroundColor = 'grey';
+            };
+
+            function onGreen() {
+                red.style.backgroundColor = 'grey';
+                yellow.style.backgroundColor = 'grey';
+                green.style.backgroundColor = 'green';
+            };
+        </script>
+    </body>
+</html>
