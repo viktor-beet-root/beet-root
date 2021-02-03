@@ -4,29 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>JS_HW08_EVETS_FORM_VALIDATION</title>
-        <style>
-            #form {
-                width: 500px;
-            }
-
-            .btn {
-                display: flex;
-                justify-content: space-between;
-            }
-
-            .error .required::after {
-                color: red;
-                font-size: 20px;
-            }
-
-            .error [data-required] {
-                border: 1px solid red;
-            }
-
-            .required::after {
-                content: "*";
-            }
-        </style>
+        <link rel="stylesheet" href="./css/style.css">
     </head>
     <body>
         <h1 id="anketa">Анкета</h1>
@@ -233,7 +211,6 @@
             const form = document.getElementById('form');
             const labelRequred = document.querySelectorAll('.required');
             const inputRequired = document.querySelectorAll("[data-required]");
-            console.log(inputRequired, labelRequred);
 
             form.addEventListener('submit', validation);
 
@@ -241,7 +218,6 @@
                 event.preventDefault();
                 let error = false;
                 for (let i = 0; i < this.length; i++) {
-                    console.log(this[i].dataset.required);
 
                     if (this[i].dataset.required === 'true' && this[i].value === "") {
                         error = true;
