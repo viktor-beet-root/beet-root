@@ -4,29 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>JS_HW09_Class</title>
-        <style>
-            /* внешние границы таблицы серого цвета толщиной 1px */
-            table {
-                border: 1px solid grey;
-                border-collapse: collapse;
-            }
-
-            /* границы ячеек первого ряда таблицы */
-            th {
-                color: blue;
-                border: 1px solid grey;
-                font-size: 30px;
-                padding: 0 10px;
-            }
-
-            /* границы ячеек тела таблицы */
-            td {
-                color: black;
-                font-size: 20px;
-                background-color: burlywood;
-                border: 1px solid grey;
-            }
-        </style>
+        <link rel="stylesheet" href="./css/style.css">
     </head>
     <body>
         <script>
@@ -35,7 +13,6 @@
             //-поле, хранящее радиус окружности;
             function Circle(radius) {
                 this.radius = radius;
-
             };
 
             //get-свойство, возвращающее радиус окружности;
@@ -50,8 +27,7 @@
 
             //get-свойство, возвращающее диаметр окружности;
             Circle.prototype.getCircleDiameter = function () {
-                const circleDiameter = this.radius * 2;
-                return circleDiameter;
+                return this.radius * 2;
             }
 
             //метод, вычисляющий площадь окружности;
@@ -74,7 +50,6 @@
             console.log(circle.getCircleDiameter() + ' diameter');
             console.log(circle.areaOfCircle() + ' area');
             console.log(circle.circumference() + ' ferenceCircle');
-
 
             console.log(
                 'Задание 2. Реализовать класс, описывающий простой маркер. В классе должны быть следующие компоненты:'
@@ -106,12 +81,13 @@
             };
 
             //Реализовать класс, описывающий заправляющийся маркер, унаследовав его от простого маркера и добавив метод для заправки маркера.
-            class FilledMarker extends Marker {}
-
-            FilledMarker.prototype.addAmountInk = function (params) {
-                this.amountInk = this.amountInk + params;
-                if (this.amountInk > 100) this.amountInk = 100;
+            class FilledMarker extends Marker {
+                addAmountInk(params) {
+                    this.amountInk = this.amountInk + params;
+                    if (this.amountInk > 100) this.amountInk = 100;
+                }
             }
+
             const str =
                 'Lorem ipsum dolor sit amet, consectfetur adisicing elit. Omnis ab laboriosam cupiditate iusto, eveniet quis nobis doloremque possimus provident neque, consequuntur ates officia labore reiciendis. Nam, delectus optio dh g h ghghgh'
 
