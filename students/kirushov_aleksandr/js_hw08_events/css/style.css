@@ -1,0 +1,64 @@
+.text,
+.form {
+    width: 50%;
+    margin: 0 auto;
+
+    font-size: 30px;
+}
+
+.text {
+
+    text-align: center;
+    color: green;
+}
+
+.changeDiv {
+    width: 100%;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 3px solid blue;
+}
+
+.hidden {
+    display: none;
+}
+
+.table {
+    border-collapse: collapse;
+}
+
+.table th {
+    border: 2px solid rgb(69, 6, 245);
+    cursor: pointer;
+
+}
+
+.table th:hover {
+    background-color: aqua;
+}
+
+.table td {
+    text-align: center;
+    border: 2px solid rgb(69, 6, 245);
+    font-size: 18px;
+}
+
+.block {
+    border: 2px solid blue;
+    width: 400px;
+    text-align: center;
+    border-radius: 5px;
+    position: relative;
+}
+
+.block__resize {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    cursor: se-resize;
+    width: 0px;
+    height: 0px;
+    border-style: inset;
+    border-width: 0px 0px 10px 10px;
+    border-color: #000 transparent;
+}

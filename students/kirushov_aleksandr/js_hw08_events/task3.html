@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS_HW08_EVENTS_task3</title>
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <!-- Создать HTML-страницу с блоком текста в рамочке. Реализовать возможность изменять размер блока, если зажать
+        мышку в правом нижнем углу и тянуть ее дальше -->
+        <div class="block" id="block">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt, magni!
+            <div class="block__resize"></div>
+        </div>
+        <script>
+            const block = document.querySelector(".block");
+            const blockResize = document.querySelector(".block__resize");
+            let differWidth;
+            let differHeihght;
+            document.addEventListener('mouseup', clearXY);
+            blockResize.addEventListener('mousedown', saveWH);
+
+            function getXY(param) {
+                if (param) {
+                    x = param.pageX;
+                    y = param.pageY;
+                } else {
+                    x = window.event.clientX;
+                    y = window.event.clientY;
+                }
+                return new Array(x, y);
+            };
+
+            function saveWH(event) {
+                const point = getXY(event);
+                const widtBlock = block.clientWidth;
+                const heightBlock = block.clientHeight;
+                differWidth = widtBlock - point[0];
+                differHeihght = heightBlock - point[1];
+                document.addEventListener('mousemove', resizeBlock);
+            };
+
+            function clearXY() {
+                document.removeEventListener('mousemove', resizeBlock);
+            }
+
+            function clientWidth() {
+                return document.documentElement.clientWidth === 0 ? document.body.clientWidth : document.documentElement
+                    .clientWidth;
+            }
+
+            function clientHeight() {
+                return document.documentElement.clientHeight === 0 ? document.body.clientHeight : document
+                    .documentElement.clientHeight;
+            }
+
+            function resizeBlock(event) {
+                event.preventDefault();
+                const point = getXY(event);
+                const newWidth = differWidth + point[0];
+                const newHeight = differHeihght + point[1];
+                block.style.width = newWidth + "px";
+                block.style.height = newHeight + "px";
+
+                if (block.offsetLeft + block.clientWidth > clientWidth()) block.style.width = (clientWidth() -
+                    block.offsetLeft) + "px";
+                if (block.offsetTop + block.clientHeight > clientHeight()) block.style.height = (clientHeight() -
+                    block.offsetTop) + "px";
+            }
+        </script>
+    </body>
+</html>
