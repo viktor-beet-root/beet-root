@@ -1,0 +1,116 @@
+.contact{
+    @include bgCover('../img/contact.jpg');
+    padding-bottom: 17px;
+}
+
+.contact__row{
+    justify-content: center;
+}
+.contact__header{
+    padding: 66px 10px 25px;
+    text-align: center;
+}
+
+.contact__header_title{
+    font-size: 90px;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+
+.contact__header_text{
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.contact__form_data,
+.contact__form_text {
+    width: calc(100% + 30px);
+    height: 50px;
+    background-color: #00c4c4;
+    opacity: .5;
+    margin-bottom: 15px;
+    border: none;
+    padding-left: 20px;
+    color: $white;
+    font-size: 15px;
+    font-weight: 700;
+    outline: none;
+}
+
+.contact__form_text{
+    height: 250px;
+    padding-top: 15px;
+    resize: none;
+}
+
+.contact__form_data::placeholder,
+.contact__form_text::placeholder{
+    color: $white;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.contact__form_data:focus,
+.contact__form_text:focus,
+.contact__form_data:active,
+.contact__form_text:active{
+    border-left: 5px solid #355b82;
+    opacity: 1;
+}
+
+.contact__form_submit{
+    cursor: pointer;
+    background-color: #00c4c4;
+    opacity: .5;
+    width: 200px;
+    height: 55px;
+    border: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: $white;
+    font-weight: 300;
+    @include box-shadow;
+    outline: none;
+}
+
+.contact__form_submit:hover{
+    @include box-shadow-hover;
+    opacity: 1;
+}
+
+.contact__feedback{
+    padding-top: 10px;
+    padding-left: 85px;
+}
+
+.contact__feedback_info{
+    padding-bottom: 13px;
+    line-height: 1.3;
+}
+.contact__feedback_title{
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.contact__feedback_data{
+    font-size: 20px;
+}
+
+@media (max-width: 1200px){
+    .contact__feedback{
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 992px){
+    .contact__feedback{
+        margin-left: 50px;
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 768px){
+    .contact__feedback{
+        margin-left: 15px;
+    }
+}

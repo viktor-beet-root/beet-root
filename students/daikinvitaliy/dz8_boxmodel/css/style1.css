@@ -1,0 +1,123 @@
+@font-face {
+    font-family: HansKendrick;
+    src: url(../font/HansKendrick-Regular.woff2) format("woff2"), url(../font/HansKendrick-Regular.woff2) format("woff");
+    font-style: normal;
+    font-weight: normal;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.363;
+    color: #1d1d1d;
+    background-color: #e2e7ec;
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+.blog-list {
+    max-width: 1140px;
+    padding: 82px 10px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.blog-list ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+}
+.blog-list ul li {
+    padding: 10px;
+    width: 33.33%;
+    box-sizing: border-box;
+    text-transform: uppercase;
+}
+.blog-list ul li img {
+    width: 100%;
+}
+.blog-list ul li:first-child {
+    width: 66.66%;
+}
+.blog-list ul li:first-child article > div:first-child {
+    margin-bottom: 0;
+}
+
+.blog-list ul li article {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.blog-list ul li:first-child article,
+.blog-list ul li:first-child article > div:first-child {
+    position: relative;
+}
+
+.blog-list ul li:first-child article > div:first-child::before {
+    content: "";
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, transparent 100%);
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.blog-list ul li:first-child article > div:last-child {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0 40px 36px 44px;
+    color: white;
+    background-color: transparent;
+    height: auto;
+}
+
+.blog-list ul li:first-child article > div:last-child h2 {
+    font-size: 30px;
+    line-height: 35px;
+}
+
+.blog-list ul li:first-child article > div:last-child p {
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 18px;
+}
+
+.blog-list article p {
+    font-family: HansKendrick;
+    font-weight: normal;
+    color: #818181;
+    font-size: 13px;
+    margin-bottom: 15px;
+    letter-spacing: 0.8px;
+}
+
+.blog-list ul li article > div:last-child {
+    padding: 25px 25px 115px;
+    background-color: white;
+    flex-grow: 1;
+    position: relative;
+}
+
+.blog-list ul li article > div:last-child h2 {
+    font-size: 22px;
+}
+
+.blog-list ul li:not(:first-child) article > div:last-child::after {
+    content: "";
+    position: absolute;
+    bottom: 26px;
+    left: 29px;
+    width: 54px;
+    height: 54px;
+    background-image: url(../images/author.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

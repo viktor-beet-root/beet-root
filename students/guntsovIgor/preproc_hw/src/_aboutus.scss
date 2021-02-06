@@ -1,0 +1,17 @@
+.about {
+    padding: 200px 0 200px;
+    background-color: #00c4c4;
+    background: url('../img/img-1.jpg') no-repeat;
+    
+    &__title {
+        font-weight: 700;
+        font-size: 90px;
+        color: #ffffff;
+    }
+
+    &__text {
+        max-width: 500px;
+        color: #ffffff;
+        line-height: 27px;
+    }
+}

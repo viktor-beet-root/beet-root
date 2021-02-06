@@ -1,0 +1,61 @@
+.btn {
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 15px 25px;
+    border-radius: 2px;
+    box-shadow: 0px 2px 2.5px rgba(0, 0, 0, .5);
+    font-size: 20px;
+    font-weight: 300;
+    color: $color-white;
+    display: inline-block;
+    min-width: 150px;
+
+    &:active {
+        transform: translateY(-2px);
+    }
+
+    @media (max-width: $SM) {
+        padding: 10px 20px;
+        font-size: $small-font-size;
+    }
+
+    &--orange {
+        background-color: $color-orange;
+
+        &:hover {
+            background-color: $color-red;
+        }
+    }
+
+    &--blue {
+        background-color: $color-blue;
+
+        &:hover {
+            background-color: $color-blue-light;
+        }
+    }
+
+    &--green {
+        background-color: $color-green;
+
+        &:hover {
+            background-color: $color-aqua;
+        }
+    }
+
+    &--red {
+        background-color: $color-red;
+
+        &:hover {
+            background-color: $color-orange;
+        }
+    }
+
+    &--aqua {
+        background-color: $color-aqua;
+
+        &:hover {
+            background-color: $color-blue-light;
+        }
+    }
+}

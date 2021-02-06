@@ -1,0 +1,72 @@
+.blog {
+
+&__card {
+    max-width: 100%;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+    min-height: 320px;
+
+    @media (max-width: $LG) {
+      padding: 10px;
+      min-height: 250px;
+    }
+
+    @media (max-width: $MD) {
+      padding: 30px;
+      min-height: 320px;
+    }
+
+    &--1 {
+        background-image: url(../img/blog_1.png);
+      }
+    
+    &--2 {
+        background-image: url(../img/blog_2.png);
+      }
+    
+    &--3{
+        background-image: url(../img/blog_3.png);
+      }
+    }
+
+  &__date {
+    width: 60px;
+    height: 60px;
+    padding: 5px 0;
+    border-radius: 5px;
+    background-color: rgba(38, 38, 38, 0.5);
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 25px;
+    text-align: center;
+
+    &--month {
+        font-size: 21px;
+    }
+  }
+
+  &__list {
+    padding-top: 90px;
+
+    &--topic {
+        font-size: 20px;
+        font-weight: bold;
+
+        @media (max-width: $LG) {
+          font-size: $small-font-size;
+      }
+      
+      @media (max-width: $LG) {
+        font-size: 20px;
+    }
+  }
+
+    &--author {
+        font-size: 13px;
+        padding-top: 20px;
+    }
+  }
+}

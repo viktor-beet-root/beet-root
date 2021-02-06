@@ -1,0 +1,11 @@
+.page {
+    font-family: $defaultFont;
+    font-weight: 300;
+    font-size: $defaultFontSize;
+
+    &__wrapper {
+        background: url('../img/img-2.jpg') no-repeat;
+        background-size: cover;
+        height: 100vh;
+    }
+}

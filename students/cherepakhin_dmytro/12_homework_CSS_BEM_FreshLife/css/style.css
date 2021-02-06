@@ -1,0 +1,180 @@
+@font-face{
+    font-family: Raleway;
+    src: url(../fonts/Raleway-Black.woff2) format("woff2"),
+    url(../fonts/Raleway-Black.woff) format("woff");
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: Raleway;
+    src: url(../fonts/Raleway-Bold.woff2) format("woff2"),
+    url(../fonts/Raleway-Bold.woff) format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: Raleway;
+    src: url(../fonts/Raleway-Light.woff2) format("woff2"),
+    url(../fonts/Raleway-Light.woff) format("woff");
+    font-weight: 300;
+    font-style: normal;
+}
+
+.page{
+    padding: 0;
+    margin: 0;
+    font-family: Raleway, Arial, Helvetica, sans-serif;
+}
+
+.wrapper{
+    display: block;
+    margin: 0 auto;
+    max-width: 1500px;
+    position: relative;
+}
+
+.header{
+    position: absolute;
+    left: 50%;
+    transform: translate(calc(-50% + 20px), 40px);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 77%;
+}
+
+.logo{
+    width: 97px;
+}
+
+.menu{
+    max-width: 585px;
+    font-family: Raleway, Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #262626;
+    text-transform: uppercase;
+    justify-content: space-around;
+}
+
+.header__menu{
+    margin-right: 6px;
+}
+
+.menu__items{
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.menu__item{
+    display: block;
+    margin: 19px;
+    padding-top: 5px;
+    border-top: solid 3px transparent;
+}
+
+.menu__item_link{
+    text-decoration: none;
+    color: #262626;
+}
+
+.menu__item:hover {
+    border-top-color: #ff6033;
+    transition: .5S;
+}
+
+.menu__item_link:visited{
+    color: #262626;
+}
+
+.section-top{
+    display: block;
+    max-width: 1500px;
+    background-image: url(../img/strawberry.png);
+    padding-top: 105px;
+}
+
+.section-top__content{
+    margin: 0 auto;
+    max-width: 1180px;
+    padding-top: 225px;
+}
+
+.section-top__info{
+    margin: 0;
+    width: 375px;
+    padding-bottom: 293px;
+}
+
+.section-top__info_header{
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 6px;
+}
+
+.section-top__info_text{
+    font-weight: 300;
+    font-size: 17px;
+    padding-left: 4px;
+    line-height: 1.5;
+    padding-bottom: 13px;
+}
+
+.section-top__info_button{
+    width: 200px;
+    background-color: #ff6033;
+    box-shadow: 0 2px 4px 2px #9a9a9c;
+    font-size: 20px;
+    font-weight: 300;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    margin: 3px;
+}
+
+.section-top__mouse{
+    margin: 0 auto;
+    width: 24px;
+    padding-bottom: 64px;
+}
+
+.section-bottom{
+    display: block;
+    max-width: 1500px;
+    background-image: url(../img/raspberry.png);
+    text-align: right;
+}
+
+.section-bottom__info{
+    display: inline-block;
+    margin-left: auto;
+    width: 665px;
+    padding-top: 180px;
+    color: white;
+    margin: 0;
+    text-align: start;
+}
+
+.section-bottom__info_header{
+    font-weight: 700;
+    font-size: 90px;
+    line-height: .8;
+    margin: 0;
+    padding-bottom: 5px;
+}
+
+.section-bottom__info_text{
+    width: 505px;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 2;
+    padding:22px 0 230px;
+}
+
+.section-bottom__info_text_formated{
+    margin-top: -6px;
+    line-height: 1.6;
+}

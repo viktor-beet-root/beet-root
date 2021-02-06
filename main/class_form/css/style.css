@@ -1,0 +1,87 @@
+.form__itut {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+}
+
+.form__itut:checked~.form__label {
+    background-color: greenyellow;
+}
+
+.form__label_check,
+.form__label_radio {
+    position: relative;
+}
+
+.form__label_check::after,
+.form__label_radio::after {
+    display: block;
+    content: '';
+    position: absolute;
+}
+
+.form__label_check::after {
+    width: 15px;
+    height: 7px;
+    border-left: 5px solid green;
+    border-bottom: 5px solid green;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg) scale(0);
+    transition: all .5s ease-in-out;
+}
+
+.form__itut:checked~.form__label_check::after {
+    top: 45%;
+    border-color: brown;
+    transform: translate(-50%, -50%) rotate(-45deg) scale(1);
+}
+
+.form__label_radio::after {
+    background-color: green;
+    border: 5px solid green;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all .5s ease-in-out;
+}
+
+.form__itut:checked~.form__label_radio::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.form__label {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border: 5px solid red;
+}
+
+.form__label_check {
+    border-radius: 10px;
+}
+
+.form__label_radio {
+    border-radius: 50%;
+}
+
+.form__itut:focus~.form__label {
+    outline: 2px solid blue;
+}
+
+.form__input_text {
+    padding-left: 20px;
+    height: 50px;
+    border: 1px solid red;
+}
+
+select {
+    padding: 10px;
+    font-size: 19px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: red;
+}

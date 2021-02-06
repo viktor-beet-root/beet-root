@@ -1,0 +1,18 @@
+.data-list{
+    padding: 0 2px;
+    &__data{
+        height: 32px;
+        width: 69px;
+        background-color: inherit;
+        color: inherit;
+        border-color: $data-listBorderColor;
+        font-family: $defaultFont;
+        font-weight: 100;
+        font-size: 14px;
+        opacity: 0.5;
+        option{
+            background-color: $optionBg;
+        }
+    }
+    
+}
