@@ -90,14 +90,14 @@
                 );
             };
 
-            class FillMarker extends Marker {}
-
-            FillMarker.prototype.fill = function (ink) {
-                this.ink = this.ink + ink;
-                if (this.ink > 100) {
-                    this.ink = 100;
+            class FillMarker extends Marker {
+                fill(ink) {
+                    this.ink = this.ink + ink;
+                    if (this.ink > 100) {
+                        this.ink = 100;
+                    }
                 }
-            };
+            }
 
             const marker1 = new Marker("red", 3);
             const marker2 = new FillMarker("green", 4);
