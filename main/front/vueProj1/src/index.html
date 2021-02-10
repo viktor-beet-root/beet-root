@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio labore cupiditate praesentium dolores
+            ipsa architecto alias non facilis, aperiam adipisci illum fuga, harum earum vel dicta sed, dolorum
+            blanditiis assumenda?
+            <!-- выводит значение свойства -->
+            <br>{{ message }} <span v-text="message"></span>
+            <!-- сработае только одни раз -->
+            <span v-once>{{ message }}</span>
+        </p>
+        <p>{{ 2 + 2 }}</p>
+        <p>{{ `${number}. dfds` }}</p>
+        <p>{{ number % 2 === 0 ? 'even' : 'odd' }}</p>
+        <p>{{ message.split('').reverse().join('') }}</p>
+        <p><a v-bind:href="url">{{ url }}</a></p>
+        <p><a :href="url" :title="url">{{ url }}</a></p>
+        <p><button :disabled="isDisabled">{{ isDisabled ? 'is disabled' : 'is enabel' }}</button></p>
+
+        <h2>Вычисляемые свойства</h2>
+        <p><button :disabled="isDisabled">{{ textButton }}</button></p>
+        <!-- так можно, но не нужно -->
+        <p v-html="getUserInfo"></p>
+        <p><strong>name:</strong> {{ user.name }}</p>
+
+        <h2>Методы</h2>
+        <!-- так можно, но не нужно -->
+        <p v-html="getUserInfoHtml()"></p>
+        <button @click="setNumber">{{ number }}</button>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
