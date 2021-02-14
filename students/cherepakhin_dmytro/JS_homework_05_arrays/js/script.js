@@ -42,11 +42,12 @@ const toBuyList = [{
 
 // Вывод всего списка на экран таким образом, чтобы сначала шли некупленные продукты, а потом – купленные.
 function showTheList(arr) {
-    arr.sort((a, b) => a.wasBought > b.wasBought ? 1 : -1);
-    arr.forEach(element => {
-        console.log(element)
-    });
-}
+    let arrCopy = JSON.parse(JSON.stringify(arr));
+    arrCopy.sort((a, b) => a.wasBought > b.wasBought ? 1 : -1);
+    for (let i = 0; i < arrCopy.length; i++) {
+        console.log(`Product: ${arrCopy[i].nameOfProduct}, quantity - ${arrCopy[i].quantity}, was bought - ${arrCopy[i].wasBought}.`)
+    }
+};
 showTheList(toBuyList);
 
 // Добавление покупки в список. Учтите, что при добавлении покупки с уже существующим в списке продуктом, необходимо увеличивать количество в существующей покупке, а не добавлять новую.
@@ -87,10 +88,8 @@ showTheList(toBuyList);
 // Покупка продукта. Функция принимает название продукта и отмечает его как купленный.
 
 function productWasBought(name) {
-    let index;
     for (let i = 0; i < toBuyList.length; i++) {
         if (toBuyList[i].nameOfProduct === name) {
-            index = i;
             toBuyList[i].wasBought = true;
             break;
         }
@@ -127,26 +126,27 @@ const receipt = [{
 
 // Распечатка чека на экран;
 function printReceipt() {
+    let textReciept = '';
     for (let i = 0; i < receipt.length; i++) {
-        console.log('name: ' + receipt[i].nameOfProduct + ', quantity: ' + receipt[i].quantity + ', price: ' +
-            receipt[i].cost.toFixed(2) + ', total: ' + (receipt[i].cost * receipt[i].quantity).toFixed(2));
+        textReciept += ('name: ' + receipt[i].nameOfProduct + ', quantity: ' + receipt[i].quantity + ', price: ' +
+            receipt[i].cost.toFixed(2) + ', total: ' + (receipt[i].cost * receipt[i].quantity).toFixed(2) + '\n');
     }
+    console.log(textReciept);
 }
 
 console.log('');
 printReceipt();
 
 // Подсчет общей суммы покупки;
-function getSumTotal() {
-    let sumTotal = 0;
-    receipt.forEach(element => {
-        sumTotal += element.quantity * element.cost;
-    });
-    console.log('Sum total is: ' + sumTotal.toFixed(2));
+function getSumTotal(arr) {
+    const initialValue = 0;
+    const reducer = (accum, currentValue) => accum + (currentValue.cost * currentValue.quantity);
+    const sumTotal = ('Sum total is: ' + arr.reduce(reducer, initialValue));
+    return sumTotal;
 }
 
 console.log('');
-getSumTotal();
+console.log(getSumTotal(receipt));
 
 // Получение самой дорогой покупки в чеке;
 function getTheMostExpensive() {
@@ -158,11 +158,11 @@ function getTheMostExpensive() {
             theMostExpensive = receipt[i].cost * receipt[i].quantity;
         }
     }
-    console.log('The most expensive: ' + receipt[index].nameOfProduct + ', quantity: ' + receipt[index].quantity + ', price: ' +
-        receipt[index].cost.toFixed(2) + ', total: ' + (receipt[index].cost * receipt[index].quantity).toFixed(2));
+    return 'The most expensive: ' + receipt[index].nameOfProduct + ', quantity: ' + receipt[index].quantity + ', price: ' +
+        receipt[index].cost.toFixed(2) + ', total: ' + (receipt[index].cost * receipt[index].quantity).toFixed(2);
 }
 console.log('');
-getTheMostExpensive();
+console.log(getTheMostExpensive());
 
 // Подсчет средней стоимости одного товара в чеке.
 function getAverageCost() {
@@ -173,11 +173,11 @@ function getAverageCost() {
         sumTotal += receipt[i].quantity * receipt[i].cost;
     }
     const averageCost = sumTotal / quantityTotal;
-    console.log('quantity total: ' + quantityTotal + ', sum total: ' + sumTotal.toFixed(2) + ', average cost is: ' + averageCost.toFixed(2));
+    return 'quantity total: ' + quantityTotal + ', sum total: ' + sumTotal.toFixed(2) + ', average cost is: ' + averageCost.toFixed(2);
 }
 
 console.log('');
-getAverageCost();
+console.log(getAverageCost());
 
 // 3. Создать массив CSS-стилей (цвет, размер шрифта, выравнивание, подчеркивание и т. д.). Каждый элемент массива – это объект, состоящий из двух свойств: название стиля и значение стиля. 
 
@@ -242,64 +242,75 @@ const rooms = [{
 // Вывод на экран всех аудиторий;
 
 function showRoomList() {
+    let result = '';
     for (let i = 0; i < rooms.length; i++) {
-        console.log('number: ' + rooms[i].numberOfRoom + ', faculty: ' + rooms[i].faculty + ', number of seats: ' + rooms[i].seats)
+        result += ('number: ' + rooms[i].numberOfRoom + ', faculty: ' + rooms[i].faculty + ', number of seats: ' + rooms[i].seats) + '\n'
     }
+    return result;
 }
-showRoomList();
+
+console.log('');
+console.log(showRoomList());
 
 // Вывод на экран аудиторий для указанного факультета;
 function getRoomsOfFaculty(fac) {
+    let result = '';
     for (let i = 0; i < rooms.length; i++) {
         if (rooms[i].faculty === fac) {
-            console.log('number: ' + rooms[i].numberOfRoom + ', faculty: ' + rooms[i].faculty + ', number of seats: ' + rooms[i].seats);
+            result += ('number: ' + rooms[i].numberOfRoom + ', faculty: ' + rooms[i].faculty + ', number of seats: ' + rooms[i].seats) + '\n';
         }
     }
+    return result;
 }
 console.log('');
-getRoomsOfFaculty('philosophy');
+console.log(getRoomsOfFaculty('philosophy'));
 
 // Вывод на экран только тех аудиторий, которые подходят для переданной группы. Объект-группа состоит из названия, количества студентов и названия факультета;
 
 function showRoomsForGroup(groupName, numberOfStudents, faculty) {
-    console.log('For group ' + groupName + ' - ');
+    let result = ('For group ' + groupName + ' - \n');
     let numberOfAppropriateRoom = 0;
     for (let i = 0; i < rooms.length; i++) {
         if (rooms[i].faculty === faculty && numberOfStudents <= rooms[i].seats) {
-            console.log('number: ' + rooms[i].numberOfRoom + ', faculty: ' + rooms[i].faculty + ', number of seats: ' + rooms[i].seats);
+            result += ('number: ' + rooms[i].numberOfRoom + ', faculty: ' + rooms[i].faculty + ', number of seats: ' + rooms[i].seats + '\n');
         } else {
             numberOfAppropriateRoom += 1;
         }
     }
     if (numberOfAppropriateRoom === rooms.length) {
-        console.log('there are no appropriate room.')
+        result += 'there are no appropriate room.'
     }
+    return result;
 }
 console.log('');
-showRoomsForGroup('104-3', 12, 'philosophy');
-console.log('');
-showRoomsForGroup('307-1', 19, 'biology');
+console.log(showRoomsForGroup('104-3', 12, 'philosophy'));
+console.log(showRoomsForGroup('307-1', 19, 'biology'));
 
 // Функция сортировки аудиторий по количеству мест;
-function sortBySeats() {
-
-    rooms.sort((a, b) => a.seats > b.seats ? 1 : -1);
-    rooms.forEach(element => {
-        console.log(element)
-    });
+function sortBySeats(arr) {
+    let arrCopy = JSON.parse(JSON.stringify(arr));
+    let result = '';
+    arrCopy.sort((a, b) => a.seats > b.seats ? 1 : -1);
+    for (let i = 0; i < arrCopy.length; i++) {
+        result += (`Number: ${arrCopy[i].numberOfRoom}, quantity of seats - ${arrCopy[i].seats}, faculty - ${arrCopy[i].faculty}. \n`)
+    }
+    return result;
 }
 
-sortBySeats();
+console.log('');
+console.log(sortBySeats(rooms));
 
 // Функция сортировки аудиторий по названию (по алфавиту).
 
-function sortByName() {
-
-    rooms.sort((a, b) => a.numberOfRoom > b.numberOfRoom ? 1 : -1);
-    rooms.forEach(element => {
-        console.log(element)
-    });
+function sortByName(arr) {
+    let arrCopy = JSON.parse(JSON.stringify(arr));
+    let result = '';
+    arrCopy.sort((a, b) => a.numberOfRoom > b.numberOfRoom ? 1 : -1);
+    for (let i = 0; i < arrCopy.length; i++) {
+        result += (`Number: ${arrCopy[i].numberOfRoom}, quantity of seats - ${arrCopy[i].seats}, faculty - ${arrCopy[i].faculty}. \n`)
+    }
+    return result;
 }
 
 console.log('')
-sortByName();
+console.log(sortByName(rooms));
