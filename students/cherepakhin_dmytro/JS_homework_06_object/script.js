@@ -36,7 +36,7 @@ const fraction2 = {
 // Функция сложения 2-х объектов-дробей
 
 function getAdd(fract1, fract2) {
-    let resultFraction = {
+    const resultFraction = {
         numerator: 0,
         denominator: 0,
     };
@@ -50,7 +50,7 @@ console.log(getAdd(fraction1, fraction2))
 // Функция вычитания 2-х объектов-дробей;
 
 function getSub(fract1, fract2) {
-    let resultFraction = {
+    const resultFraction = {
         numerator: 0,
         denominator: 0,
     };
@@ -64,7 +64,7 @@ console.log(getSub(fraction1, fraction2))
 // Функция умножения 2-х объектов-дробей;
 
 function getMult(fract1, fract2) {
-    let resultFraction = {
+    const resultFraction = {
         numerator: 0,
         denominator: 0,
     };
@@ -78,7 +78,7 @@ console.log(getMult(fraction1, fraction2))
 // Функция деления 2-х объектов-дробей;
 
 function getDiv(fract1, fract2) {
-    let resultFraction = {
+    const resultFraction = {
         numerator: 0,
         denominator: 0,
     };
@@ -92,7 +92,7 @@ console.log(getDiv(fraction1, fraction2))
 // Функция сокращения объекта-дроби.
 
 function getReduction(fract) {
-    let resultFraction = {
+    const resultFraction = {
         numerator: 0,
         denominator: 0,
     };
@@ -112,7 +112,7 @@ console.log(getReduction(fraction2))
 
 // 3. Создать объект, описывающий время (часы, минуты, секунды), и следующие функции для работы с этим объектом: 
 
-let time = {
+const time = {
     hours: 10,
     minutes: 5,
     seconds: 45
@@ -121,9 +121,9 @@ let time = {
 // Функция вывода времени на экран;
 
 function showTime(obj) {
-    let hours = obj.hours > 9 ? obj.hours : '0' + obj.hours;
-    let minutes = obj.minutes > 9 ? obj.minutes : '0' + obj.minutes;
-    let seconds = obj.seconds > 9 ? obj.seconds : '0' + obj.seconds;
+    const hours = obj.hours > 9 ? obj.hours : '0' + obj.hours;
+    const minutes = obj.minutes > 9 ? obj.minutes : '0' + obj.minutes;
+    const seconds = obj.seconds > 9 ? obj.seconds : '0' + obj.seconds;
     return `${hours}:${minutes}:${seconds}`;
 }
 
@@ -136,7 +136,7 @@ function convertTimeIntoSecond(obj) {
 }
 
 function getTimefromSeonds(seconds) {
-    let time = {
+    const time = {
         hours: 0,
         minutes: 0,
         seconds: 0,
@@ -149,8 +149,8 @@ function getTimefromSeonds(seconds) {
 
 function changeSeconds(obj, seconds) {
     const oldTimeInSecond = convertTimeIntoSecond(obj);
-    let newTimeInSeconds = oldTimeInSecond + seconds;
-    let newTime = getTimefromSeonds(newTimeInSeconds);
+    const newTimeInSeconds = oldTimeInSecond + seconds;
+    const newTime = getTimefromSeonds(newTimeInSeconds);
     return showTime(newTime);
 }
 
@@ -161,8 +161,8 @@ console.log(changeSeconds(time, -55))
 
 function changeMinutes(obj, minutes) {
     const oldTimeInSecond = convertTimeIntoSecond(obj);
-    let newTimeInSeconds = oldTimeInSecond + minutes * 60;
-    let newTime = getTimefromSeonds(newTimeInSeconds);
+    const newTimeInSeconds = oldTimeInSecond + minutes * 60;
+    const newTime = getTimefromSeonds(newTimeInSeconds);
     return showTime(newTime);
 }
 
@@ -173,8 +173,8 @@ console.log(changeMinutes(time, -55))
 
 function changeHours(obj, hours) {
     const oldTimeInSecond = convertTimeIntoSecond(obj);
-    let newTimeInSeconds = oldTimeInSecond + hours * 3600;
-    let newTime = getTimefromSeonds(newTimeInSeconds);
+    const newTimeInSeconds = oldTimeInSecond + hours * 3600;
+    const newTime = getTimefromSeonds(newTimeInSeconds);
     return showTime(newTime);
 }
 
