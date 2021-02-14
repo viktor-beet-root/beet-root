@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log('Task 1 - Реализовать класс, описывающий окружность.');
+        // поле, хранящее радиус окружности;
+        // get-свойство, возвращающее радиус окружности;
+        // set-свойство, устанавливающее радиус окружности;
+        // get-свойство, возвращающее диаметр окружности;
+        // метод, вычисляющий площадь окружности;
+        // метод, вычисляющий длину окружности.
+
+        function Circle(radius) {
+            this.radius = radius;
+
+            this.setRadius = function (radius) {
+                this.radius = radius;
+            }
+
+            this.getRadius = function () {
+                return this.radius;
+            }
+
+            this.getDiameter = function () {
+                return this.radius * 2;
+            }
+        }
+
+        Circle.prototype.countSquare = function () {
+            const square = Math.PI * Math.pow(this.radius, 2);
+            return square;
+        }
+
+        Circle.prototype.countLength = function () {
+            const length = 2 * this.radius * Math.PI;
+            return length;
+        }
+
+        const circle_1 = new Circle(5);
+        console.log(circle_1.getRadius());
+        circle_1.setRadius(6);
+        console.log(circle_1.getRadius());
+        console.log(circle_1.getDiameter());
+        console.log(circle_1.countSquare());
+        console.log(circle_1.countLength());
+
+        console.log('Task 2 - Реализовать класс, описывающий простой маркер.');
+        //поле, которое хранит цвет маркера;
+        // поле, которое хранит количество чернил в маркере (в процентах);
+        // метод для печати (метод принимает строку и выводит текст соответствующим цветом;
+        //текст выводится до тех пор, пока в маркере есть чернила; один не пробельный символ – это 0,5% чернил в маркере).
+
+        function Marker(color) {
+            this.color = color;
+            this.amountOfInk = 100;
+        }
+
+        Marker.prototype.print = function (text) {
+            if (text !== undefined) {
+                const paragraph = document.createElement('p');
+                paragraph.style.color = this.color;
+
+                let printText = '';
+                const textSymbols = text.split('');
+                for (let i = 0; i < textSymbols.length; i++) {
+                    if (this.amountOfInk >= 0.5) {
+                        printText = printText + textSymbols[i];
+                        if (textSymbols[i] !== ' ') this.amountOfInk = this.amountOfInk - 0.5;
+                    } else {
+                        printText = printText + ' ...ink out';
+                        break;
+                    }
+                }
+
+                paragraph.textContent = printText;
+                document.body.appendChild(paragraph);
+            }
+        }
+
+        const markerBlue = new Marker('blue');
+        markerBlue.print('Реализовать класс, описывающий простой маркер. метод для печати (метод принимает строку и выводит текст соответствующим цветом; текст выводится до тех пор, пока в маркере есть чернила; один не пробельный символ – это 0,5% чернил в маркере');
+
+        //Заправляющийся маркер
+        function FillMarker(color) {
+            Marker.call(this, color);
+        }
+
+        FillMarker.prototype = Object.create(Marker.prototype);
+        FillMarker.prototype.constructor = FillMarker;
+
+        FillMarker.prototype.fill = function (fillInk) {
+            this.amountOfInk = this.amountOfInk + fillInk;
+            this.amountOfInk = (this.amountOfInk <= 100) ? this.amountOfInk : 100;
+        }
+
+        const fillMarkerRed = new FillMarker('red', 50);
+        fillMarkerRed.print('Реализовать класс, описывающий заправляющийся маркер, унаследовав его от простого маркера и добавив метод для заправки маркера.');
+
+        fillMarkerRed.fill(25);
+
+
+        console.log('Task 3 - Реализовать класс Employee, описывающий работника, и создать массив работников банка');
+
+        function Employee(fullName, post, age, salary) {
+            this.fullName = fullName;
+            this.post = post;
+            this.age = age;
+            this.salary = salary;
+        }
+
+        const employee_1 = new Employee('Ivan Ivanov', 'director', 45, 30000);
+        const employee_2 = new Employee('Petro Petrov', 'Credit manager', 35, 20000);
+        const employee_3 = new Employee('Anna Ivanova', 'cashier', 25, 12000);
+        const employee_4 = new Employee('Helen Petrova', 'consultant', 28, 15000);
+        const employee_5 = new Employee('Grigoriy Grigorev', 'security', 40, 18000);
+
+        const bankEmployeeList = [];
+        bankEmployeeList.push(employee_1, employee_2, employee_3, employee_4, employee_5);
+
+        function EmpTable(listEmployee) {
+            this.listEmployee = listEmployee;
+        }
+
+        EmpTable.prototype.getHtml = function () {
+            const table = document.createElement('table');
+
+            this.listEmployee.forEach(function (element) {
+                table.insertAdjacentHTML("beforeend", `
+                <tr><th>${element.fullName}</th><th>${element.age}</th><th>${element.post}</th><th>${element.salary}</th></tr>
+                `)
+            })
+            document.body.appendChild(table);
+        }
+
+        const bankEmployee = new EmpTable(bankEmployeeList);
+        bankEmployee.getHtml();
+
+    </script>
+</body>
+
+</html>
