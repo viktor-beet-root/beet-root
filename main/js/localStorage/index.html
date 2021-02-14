@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage</title>
+</head>
+
+<body>
+    <script>
+        localStorage.setItem('user', 'Viktor dfgs dgsdf h dstjdf jdg jdrty jdhj');
+        console.log(localStorage.getItem('user'));
+        console.log(localStorage.key(0));
+        console.log(localStorage.length);
+        localStorage.clear();
+        console.log(localStorage.length);
+
+        const users = [
+            {
+                user: 'Vasya',
+                email: 'test@gmail.com'
+            },
+            {
+                user: 'Petya',
+                email: 'petya@gmail.com'
+            }
+        ];
+
+        localStorage.setItem('usersList', JSON.stringify(users));
+
+        window.onstorage = (e) => {
+            console.log(e)
+        };
+    </script>
+</body>
+
+</html>

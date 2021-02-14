@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <style>
+        .clock {
+            margin: 0 auto;
+            color: yellow;
+            font-size: 120px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="clock">
+        <span class="hours">00</span>
+        <span class="fistSeparator" name="separator">:</span>
+        <span class="minutes">00</span>
+        <span class="secondSeparator" name="separator">:</span>
+        <span class="seconds">00</span>
+    </div>
+    <script>
+        const hours = document.querySelector(".hours");
+        const minutes = document.querySelector(".minutes");
+        const seconds = document.querySelector('.seconds');
+		const clockBlock = document.querySelector("div");
+		const firstSeparator = document.querySelector('.fistSeparator');
+        const secondSeparator = document.querySelector('.secondSeparator');
+        const allSeparator = document.querySelectorAll('[name=separator]');
+
+        let h = 0;
+        let m = 0;
+        let s = 0;
+
+        function clock() {
+            const date = new Date();
+            h = (date.getHours() < 10) ? '0' + date.getHours() : date.getHours();
+            m = (date.getMinutes() < 10) ? '0' + date.getMinutes() : date.getMinutes();
+            s = (date.getSeconds() < 10) ? '0' + date.getSeconds() : date.getSeconds();
+            hours.textContent = h;
+            minutes.textContent = m;
+            seconds.textContent = s;
+        }
+        setInterval(clock, 1000);
+
+        function separatorChange() {
+            if (s % 2 === 0) {
+                firstSeparator.style.visibility = "hidden";
+                secondSeparator.style.visibility = "hidden";
+            } else {
+                firstSeparator.style.visibility = "visible";
+                secondSeparator.style.visibility = "visible";
+            }
+        }
+        setInterval(separatorChange, 1000);
+
+        function changeColorSeparator() {
+            if (+s % 10 === 3 || +s % 10 === 7 || +s % 10 === 9) {
+                allSeparator.forEach(function (item) {
+                    item.style.color = "lime";
+                });
+            } else {
+                allSeparator.forEach(function (item) {
+                    item.style.color = "fuchsia";
+                });
+            }
+        }
+        setInterval(changeColorSeparator, 1000);
+
+        function changeColor() {
+            (s < 30) ? seconds.style.color = "blue": seconds.style.color = "purple";
+            (h % 2 === 0) ? minutes.style.color = "green": minutes.style.color = "aqua";
+        }
+        setInterval(changeColor, 1000);
+
+        function paddingTop() {
+            if (s < 15) clockBlock.style.paddingTop = "100px";
+            if (s >= 15 && s < 30) clockBlock.style.paddingTop = "150px";
+            if (s >= 30 && s < 45) clockBlock.style.paddingTop = "200px";
+            if (s >= 45 && s < 60) clockBlock.style.paddingTop = "250px";
+        }
+        setInterval(paddingTop, 1000);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trafic light</title>
+</head>
+<style>
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .container__red,
+    .container__yellow,
+    .container__green {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .light {
+        margin: 10px;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        background-color: green;
+    }
+
+    .red__light {
+        background-color: rgb(255, 0, 0);
+        opacity: 1;
+    }
+
+    .yellow__light {
+        background-color: yellow;
+        opacity: 0.4;
+    }
+
+    .green__light {
+        background-color: green;
+        opacity: 0.4;
+    }
+
+    .btn {
+        height: 40px;
+        width: 100px;
+        border: 1px solid #c50d82;
+        background-color: rgba(250, 128, 114, 0.8);
+        color: #9400D3;
+    }
+</style>
+
+<body>
+    <h1>Trafic light</h1>
+    <div class="container">
+        <div class="container__red">
+            <div class="light red__light"></div>
+        </div>
+        <div class="container__yellow">
+            <div class="light yellow__light"></div>
+        </div>
+        <div class="container__green">
+            <div class="light green__light"></div>
+        </div>
+        <button class="btn" data-btn="red">Change color</button>
+    </div>
+
+    <script>
+        console.log('Создать HTML-страницу со светофором и кнопкой, которая переключает светофор на следующий цвет.')
+
+        const redLight = document.querySelector('.red__light');
+        const yellowLight = document.querySelector('.yellow__light');
+        const greenLight = document.querySelector('.green__light');
+        const btn = document.querySelector('.btn');
+
+        btn.addEventListener('click', changeColor);
+
+        function changeColor() {
+            console.log(this.dataset.btn);
+            if (this.dataset.btn === "red") {
+                redLight.style.opacity = "0.4";
+                yellowLight.style.opacity = "1";
+                greenLight.style.opacity = "0.4";
+                this.dataset.btn = "yellow";
+            } else if (this.dataset.btn === "yellow") {
+                redLight.style.opacity = "0.4";
+                greenLight.style.opacity = "1";
+                yellowLight.style.opacity = "0.4";
+                this.dataset.btn = "green";
+            } else if (this.dataset.btn === "green") {
+                greenLight.style.opacity = "0.4";
+                redLight.style.opacity = "1";
+                yellowLight.style.opacity = "0.4";
+                this.dataset.btn = "red";
+            };
+        }
+    </script>
+</body>
+
+</html>

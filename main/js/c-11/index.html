@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap {
+            display: flex;
+        }
+
+        .wrap>div {
+            width: 50%;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div id="app"></div>
+        <div id="app1"></div>
+    </div>
+
+    <script>
+        function Message(options) {
+            this.option = {
+                warapper: options.warapper
+            };
+
+            this.messageList = [];
+
+            this.getCountMessages = function () {
+                return this.messageList.length;
+            }
+            this.init = function () {
+
+            }
+            this.init();
+        }
+
+        Message.prototype.renderHtmlMessage = function () {
+            const wrapper = this.option.warapper;
+
+            wrapper.innerHTML = '';
+
+            this.messageList.forEach(message => {
+                console.log(this)
+                wrapper.insertAdjacentHTML('beforeend', `
+                <h2>${message.id + 1}. ${message.title}.</h2>
+                <p>${message.content}</p>
+                <p>${message.date}</p>
+                `);
+            });
+        };
+
+        Message.prototype.addMessage = function (message) {
+            message.id = this.messageList.length;
+            message.date = new Date();
+            this.messageList.push(message);
+            this.renderHtmlMessage();
+        };
+
+        Message.prototype.removeMessage = function (messageId) {
+
+        };
+
+        // class Message1 {
+        //     constructor(options) {
+        //         this.option = {
+        //             warapper: options.warapper
+        //         };
+        //         this.messageList = [];
+        //     }
+
+        //     addMessage(message) {
+
+        //     }
+
+        //     removeMessage(messageId) {
+
+        //     }
+        // }
+
+        const message = new Message({
+            warapper: document.getElementById('app')
+        });
+
+        message.addMessage({
+            title: "bbbbbbbbbbb",
+            content: 'Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.'
+        });
+
+        const message1 = new Message({
+            warapper: document.getElementById('app1')
+        });
+
+        message1.addMessage({
+            title: "aaaaaaaaaaa",
+            content: 'Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время.'
+        })
+        message1.addMessage({
+            title: "aaaaaaaaaaa1111",
+            img: "img/1.jpg",
+            content: 'Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время.'
+        })
+
+        console.log(message, message1)
+    </script>
+</body>
+
+</html>

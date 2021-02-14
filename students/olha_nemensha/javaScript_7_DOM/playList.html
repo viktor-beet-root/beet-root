@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play List</title>
+</head>
+
+<body>
+
+    <script>
+        console.log('Задание 1. Создать страницу, которая выводит нумерованный список песен:');
+        const playList = [{
+                author: "LED ZEPPELIN",
+                song: "STAIRWAY TO HEAVEN"
+            },
+            {
+                author: "QUEEN",
+                song: "BOHEMIAN RHAPSODY"
+            },
+            {
+                author: "LYNYRD SKYNYRD",
+                song: "FREE BIRD"
+            },
+            {
+                author: "DEEP PURPLE",
+                song: "SMOKE ON THE WATER"
+            },
+            {
+                author: "JIMI HENDRIX",
+                song: "ALL ALONG THE WATCHTOWER"
+            },
+            {
+                author: "AC/DC",
+                song: "BACK IN BLACK"
+            },
+            {
+                author: "QUEEN",
+                song: "WE WILL ROCK YOU"
+            },
+            {
+                author: "METALLICA",
+                song: "ENTER SANDMAN"
+            }
+        ];
+
+        const ol = document.createElement('ol');
+
+        playList.forEach(function (list) {
+            const li = document.createElement('li')
+            const strong = document.createElement('strong')
+
+            strong.textContent = " - ";
+
+            li.appendChild(document.createTextNode(list.author));
+            li.appendChild(strong);
+            li.appendChild(document.createTextNode(list.song));
+            ol.appendChild(li);
+        });
+        document.querySelector("body").appendChild(ol);
+    </script>
+</body>
+
+</html>

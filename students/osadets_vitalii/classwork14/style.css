@@ -1,0 +1,28 @@
+.menu {
+  text-align: center;
+  padding: 0px;
+  margin: 0px;
+  font-size: 0px;
+}
+.menu > li {
+  display: inline-block;
+  width: 100px;
+  background-color: grey;
+  border: solid 2px black;
+  padding: 25px;
+  margin: 0px;
+}
+a {
+  text-decoration: none;
+}
+.menu > li > a {
+  display: block;
+  color: blue;
+  font-size: 20px;
+}
+.menu > li:hover {
+  background-color: yellow;
+}
+ul.menu li {
+  border: 1px solid black;
+}
