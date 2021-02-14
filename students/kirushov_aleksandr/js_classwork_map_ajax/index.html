@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MAP</title>
+        <style>
+            #map {
+                height: 100vh;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="map"></div>
+        <script>
+            let map;
+
+            function myAjax(url, options) {
+                if (options) {
+                    return fetch(url).then(response => {
+                        if (response.ok) {
+                            return response.json();
+                        }
+                    });
+                } else {
+                    return fetch(url, options).then(response => {
+                        if (response.ok) {
+                            return response.json();
+                        }
+                    });
+                }
+            }
+
+            function initMap() {
+                const cords = {
+                    lat: 11.745567774845163,
+                    lng: -30.218393531075755
+                };
+                map = new google.maps.Map(document.getElementById('map'), {
+                    center: cords,
+                    zoom: 2,
+                });
+
+                let marker = [];
+                let contentString = [];
+                let infowindow = [];
+                myAjax('https://jsonplaceholder.typicode.com/users').then(data => {
+                    console.log(data, +data[0].address.geo.lng);
+                    let newMark = [];
+                    for (let i = 0; i < data.length; i++) {
+
+                        marker.push(new google.maps.Marker({
+                            position: {
+                                lat: +data[i].address.geo.lat,
+                                lng: +data[i].address.geo.lng,
+                            },
+                            map: map,
+                            title: data[i].id + '. ' + data[i].username,
+                            icon: './images/id' + (data[i].id) + '.png',
+                        }));
+
+                        contentString.push('<div id="content">' +
+                            '<div id="siteNotice">' +
+                            "</div>" +
+                            '<h1 id="firstHeading" class="firstHeading">' + data[i].username + '</h1>' +
+                            '<div id="bodyContent">' +
+                            '<p><b>Name: </b>' + data[i].name + '</p>' +
+                            '<p><b>Number: </b>' + data[i].phone + '</p>' +
+                            '<p>Email: <a href=mailto:' + data[i].email + '>' + data[i].email + '</a>' +
+                            "</div>" +
+                            "</div>");
+
+                        infowindow.push(new google.maps.InfoWindow({
+                            content: contentString[i],
+                        }));
+
+                        marker[i].addListener("click", () => {
+
+                            infowindow[i].open(map, marker[i]);
+
+                        });
+                    }
+                }).catch(error => {
+                    console.log(error);
+                });
+                console.log(contentString);
+                console.log(marker);
+            };
+        </script>
+        <script defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIrn05IemTe8wCfU2Eevsr8ikGrHhecz8&callback=initMap">
+        </script>
+    </body>
+</html>
