@@ -1,0 +1,25 @@
+.my-carousel {
+    .carousel-item {
+        img {
+            opacity: 0;
+            transition: opacity .5s ease-in-out;
+        }
+    }
+
+    .carousel-item.active {
+        img {
+            opacity: 1;
+        }
+    }
+}
+
+.my-slider {
+    &__item {
+        padding: 10px 15px;
+    }
+
+    img {
+        max-width: 100%;
+        width: 100%;
+    }
+}

@@ -1,0 +1,20 @@
+@import '../../node_modules/slick-carousel/slick/slick.scss';
+@import '../../node_modules/slick-carousel/slick/slick-theme.scss';
+
+body {
+    background-color: #ddd;
+}
+
+.s {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .slide {
+        padding: 10px;
+        box-sizing: border-box;
+
+        >div {
+            border: 1px solid black;
+        }
+    }
+}
