@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play list</title>
+</head>
+
+<body>
+    <div id="wrapper">
+
+    </div>
+
+
+    <script>
+        console.log('TASK 1 - Создать страницу, которая выводит нумерованный список песен')
+        var playList = [
+
+            {
+                author: "LED ZEPPELIN",
+                song: "STAIRWAY TO HEAVEN"
+            },
+
+            {
+                author: "QUEEN",
+                song: "BOHEMIAN RHAPSODY"
+            },
+
+            {
+                author: "LYNYRD SKYNYRD",
+                song: "FREE BIRD"
+            },
+
+            {
+                author: "DEEP PURPLE",
+                song: "SMOKE ON THE WATER"
+            },
+
+            {
+                author: "JIMI HENDRIX",
+                song: "ALL ALONG THE WATCHTOWER"
+            },
+
+            {
+                author: "AC/DC",
+                song: "BACK IN BLACK"
+            },
+
+            {
+                author: "QUEEN",
+                song: "WE WILL ROCK YOU"
+            },
+
+            {
+                author: "METALLICA",
+                song: "ENTER SANDMAN"
+            }
+
+        ];
+
+            const wrapper = document.getElementById('wrapper');
+            const ol = document.createElement('ol');
+            playList.forEach(function(item){
+                const li = document.createElement('li');
+                const strongAuthor = document.createElement('strong');
+                const strongSong = strongAuthor.cloneNode()
+
+                strongAuthor.textContent = 'Author: ';
+                strongSong.textContent = ' Song: ';
+                li.appendChild(strongAuthor);
+                li.append(item.author);
+                li.appendChild(strongSong);
+                li.append(item.song);
+
+                ol.append(li);
+            })
+            wrapper.append(ol);
+    </script>
+</body>
+
+</html>

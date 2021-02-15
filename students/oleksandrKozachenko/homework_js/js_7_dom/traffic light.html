@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic light</title>
+    <style>
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .lightBlock {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            border: 2px solid gray;
+            box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+        }
+
+        .light {
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            border: 1px solid gray;
+            margin: 10px;
+        }
+
+        .toggleBtn {
+            margin-top: 20px;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .orange {
+            background-color: orange;
+        }
+
+        .green {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="lightBlock">
+            <div class="light lightRed red"></div>
+            <div class="light lightOrange"></div>
+            <div class="light lightGreen"></div>
+        </div>
+        <button class="toggleBtn">Toggle</button>
+    </div>
+   
+
+    <script>
+        console.log('TASK 3 - Создать HTML-страницу со светофором и кнопкой, которая переключает светофор на следующий цвет.')
+        const toggleBtn = document.querySelector('.toggleBtn');
+        const lightRed = document.querySelector('.lightRed');
+        const lightOrange = document.querySelector('.lightOrange');
+        const lightGreen = document.querySelector('.lightGreen');
+
+        toggleBtn.addEventListener('click', toggleLight);
+
+        function toggleLight(){
+            if(lightRed.classList.contains('red')) {
+                lightRed.classList.remove('red');
+                lightOrange.classList.add('orange');
+            } else if (lightOrange.classList.contains('orange')){
+                lightOrange.classList.remove('orange');
+                lightGreen.classList.add('green');
+            } else {
+                lightGreen.classList.remove('green');
+                lightRed.classList.add('red');
+            } 
+        };
+
+    </script>
+</body>
+
+</html>

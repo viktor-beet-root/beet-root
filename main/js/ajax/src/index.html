@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax</title>
+</head>
+
+<body>
+    <script>
+        // const d = [{
+        //     g: "dfsd"
+        // }];
+
+        // const a = JSON.parse(JSON.stringify(d));
+
+        // a[0].ss = 'sss';
+        // a.push({
+        //     d: 'sdf'
+        // })
+
+        // console.log(d, a);
+
+        // const xhr = new XMLHttpRequest();
+
+        // xhr.onreadystatechange = () => {
+        //     //UNSENT = 0; исходное состояние
+        //     //OPENED = 1; вызван метод open
+        //     //HEADERS_RECEIVED = 2; получены заголовки ответа
+        //     //LOADING = 3; ответ в процессе передачи (данные частично получены)
+        //     //DONE = 4; запрос завершён
+        //     console.log(xhr.readyState, xhr.status);
+        //     if (xhr.readyState === 4 && xhr.status < 400) {
+        //         console.log(xhr.response);
+        //     } else {
+        //         console.log(xhr.response, xhr.status);
+        //     }
+        // }
+
+        // xhr.responseType = 'json';
+
+        // xhr.onload = () => {
+        //     if (xhr.status < 400) {
+        //         console.log(xhr.response);
+        //     } else {
+        //         console.log(xhr.response, xhr.status);
+        //     }
+        // }
+
+        // xhr.onerror = () => {
+        //     console.error(xhr.response, xhr.status)
+        // }
+
+        // xhr.onprogress = (e) => {
+        //     if (e.lengthComputable) {
+        //         console.log(`Получено ${e.loaded} из ${e.total} байт`);
+        //     } else {
+        //         console.log(`Получено ${e.loaded} байт`);
+        //     }
+        // }
+
+        // xhr.open('GET', 'https://jsonplaceholder.typicode.com/users');
+
+        // xhr.send();
+
+        // function myAjax(method, url, callback, body) {
+        //     const xhr = new XMLHttpRequest();
+        //     xhr.responseType = 'json';
+
+        //     xhr.onload = () => {
+        //         if (xhr.status < 400) {
+        //             if (typeof callback === 'function') {
+        //                 callback(xhr.response);
+        //             } else {
+        //                 console.log(xhr.response);
+        //             }
+        //         } else {
+        //             console.log(xhr.response, xhr.status);
+        //         }
+        //     }
+
+        //     xhr.onerror = () => {
+        //         console.error(xhr.response, xhr.status)
+        //     }
+        //     xhr.open(method, url);
+
+        //     if (method === 'GET') {
+        //         xhr.send();
+        //     } else if (method === 'POST') {
+        //         xhr.setRequestHeader('Content-type', 'application/json')
+        //         xhr.send(JSON.stringify(body));
+        //     }
+        // }
+
+        const myData = {
+            user: 'Viktor',
+            email: 'test@gmail.com'
+        }
+
+        //myAjax('POST', 'https://jsonplaceholder.typicode.com/users', renderHTML, myData);
+
+        function myAjax(url, options) {
+            if (!options) {
+                return fetch(url).then((response) => {
+                    if (response.ok) {
+                        return response.json();
+                    }
+                });
+            } else {
+                return fetch(url, options).then((response) => {
+                    if (response.ok) {
+                        return response.json();
+                    }
+                });
+            }
+        }
+
+        // myAjax('https://jsonplaceholder.typicode.com/users')
+        //     .then((data) => {
+        //         renderHTML(data)
+        //     }).catch(error => {
+        //         console.error(error);
+        //     });
+
+        myAjax('https://jsonplaceholder.typicode.com/users', {
+            method: 'POST',
+            body: JSON.stringify(myData),
+            headers: {
+                'Content-type': 'application/json'
+            }
+        })
+            .then((data) => {
+                renderHTML(data)
+            }).catch(error => {
+                console.error(error);
+            });
+
+        function renderHTML(data) {
+            console.log('render', data);
+        }
+
+
+    </script>
+</body>
+
+</html>

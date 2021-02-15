@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS_HW07_DOM_CLOCK</title>
+        <style>
+            .clock {
+                text-align: center;
+                font-size: 30px;
+                background-color: gray;
+                width: 140px;
+                margin: 0 auto;
+            }
+
+            .colon {
+                color: orange;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="clock">
+            <span class="hour"></span>
+            <span class="colon">:</span>
+            <span class="min"></span>
+            <span class="colon">:</span>
+            <span class="sec"></span>
+        </div>
+
+        <script>
+            let sec = document.querySelector(".sec");
+            const colon = [...document.querySelectorAll('.colon')];
+            let min = document.querySelector(".min");
+            let hour = document.querySelector(".hour");
+
+            function transform(param) {
+                if (param < 10) param = "0" + param;
+                return param;
+            };
+
+            function flickerСolon(param) {
+                colon.forEach(function (item) {
+                    item.style.visibility = (param % 2 === 0) ? 'visible' : 'hidden';
+                })
+            };
+
+            function changeColorSeconds(param) {
+                sec.style.color = (param % 2 === 0) ? "#ff009d" : "#9dff00";
+            };
+
+            function changeColorMinuts(param) {
+                min.style.color = (param % 2 === 0) ? "green" : "yellow";
+            };
+
+            function changeColorHour(param) {
+                hour.style.color = (param % 2 === 0) ? "red" : "#1100ff";
+            };
+
+            function changeTime() {
+                const timeNow = new Date();
+
+                let seconds = timeNow.getSeconds();
+                sec.innerHTML = transform(seconds);
+                changeColorSeconds(seconds);
+
+                flickerСolon(seconds);
+
+                let minuts = timeNow.getMinutes();
+                min.textContent = transform(minuts);
+                changeColorMinuts(minuts);
+
+                let hours = timeNow.getHours();
+                hour.textContent = transform(hours);
+                changeColorHour(hours);
+            };
+
+            setInterval(changeTime, 1000);
+        </script>
+
+    </body>
+</html>
