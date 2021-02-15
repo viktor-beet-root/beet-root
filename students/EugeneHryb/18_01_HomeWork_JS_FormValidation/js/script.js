@@ -9,32 +9,36 @@
         event.preventDefault();
 
         let submit = true;
-        let parents;
-        let spanError = '';
 
         for (let i = 0; i < this.length; i++) {
 
             if (this[i].dataset.required) {
-                parents = this[i].closest('div');
 
                 if (submit && inputIsValid(this[i])) {
                     submit = false;
                 }
 
-                if (parents.querySelector('.error-mesage') === null && inputIsValid(this[i])) {
-                    parents.classList.add('error')
-                    spanError = `<br> <span class = "error-mesage"> ${this[i].dataset.errorMesage} </span>`
-                    parents.insertAdjacentHTML('beforeend', spanError);
-                } else if (!inputIsValid(this[i]) && parents.querySelector('.error-mesage') !== null) {
-                    parents.classList.remove('error')
-                    spanError = parents.querySelector('.error-mesage');
-                    spanError.parentNode.removeChild(spanError);
-                }
+                markElement(this[i]);
             }
         }
 
         if (submit) {
-            this.submit()
+            this.submit();
+        }
+    }
+
+    function markElement(element) {
+        const parents = element.closest('div');
+        let spanError = '';
+
+        if (parents.querySelector('.error-mesage') === null && inputIsValid(element)) {
+            parents.classList.add('error');
+            spanError = `<br> <span class = "error-mesage"> ${element.dataset.errorMesage} </span>`;
+            parents.insertAdjacentHTML('beforeend', spanError);
+        } else if (!inputIsValid(element) && parents.querySelector('.error-mesage') !== null) {
+            parents.classList.remove('error');
+            spanError = parents.querySelector('.error-mesage');
+            spanError.parentNode.removeChild(spanError);
         }
     }
 
@@ -62,7 +66,7 @@
 
             if (formSection[i].dataset.required) {
                 parents = formSection[i].closest('div');
-                parents.classList.add('required')
+                parents.classList.add('required');
             }
         }
     }
