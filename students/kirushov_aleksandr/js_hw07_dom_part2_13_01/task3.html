@@ -26,31 +26,21 @@
             const btnNext = document.querySelector('.trafficLights button');
 
             btnNext.addEventListener('click', function trafficLights() {
+
                 if (red.style.backgroundColor === 'red') {
-                    onYellow();
+                    enableСolor('yellow');
                 } else if (yellow.style.backgroundColor === 'yellow') {
-                    onGreen();
+                    enableСolor('green');
                 } else {
-                    onRed();
+                    enableСolor('red');
                 }
+
             });
 
-            function onRed() {
-                red.style.backgroundColor = 'red';
-                yellow.style.backgroundColor = 'grey';
-                green.style.backgroundColor = 'grey';
-            };
-
-            function onYellow() {
-                red.style.backgroundColor = 'grey';
-                yellow.style.backgroundColor = 'yellow';
-                green.style.backgroundColor = 'grey';
-            };
-
-            function onGreen() {
-                red.style.backgroundColor = 'grey';
-                yellow.style.backgroundColor = 'grey';
-                green.style.backgroundColor = 'green';
+            function enableСolor(coloring) {
+                red.style.backgroundColor = coloring === 'red' ? 'red' : 'grey';
+                yellow.style.backgroundColor = coloring === 'yellow' ? 'yellow' : 'grey';
+                green.style.backgroundColor = coloring === 'green' ? 'green' : 'grey';
             };
         </script>
     </body>
