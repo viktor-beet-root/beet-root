@@ -97,7 +97,7 @@ gulp.task("js:build", function () {
                     min: ".min.js",
                 },
                 exclude: ["lib"],
-                ignoreFiles: [".combo.js", "-min.js", "lib.js"],
+                ignoreFiles: [".combo.js", "-min.js", "lib.js", ".min.js", "jquery-3.5.1.min.js"],
             })
         )
         .pipe(gulp.dest(path.build.js))
