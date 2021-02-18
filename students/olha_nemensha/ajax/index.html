@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        #map {
+            height: 100%;
+        }
+        
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map">
+    </div>
+    <script>
+        let map = [];
+        let marker = [];
+        let contentString = "";
+        let infowindow = [];
+
+        function myAjax(method, url, callback, body) {
+            const xhr = new XMLHttpRequest();
+            xhr.responseType = 'json';
+            xhr.onload = () => {
+                if (xhr.status < 400) {
+                    if (typeof callback === "function") {
+                        callback(xhr.response);
+                    } else {
+                        console.log(xhr.response);
+                        a = xhr.response;
+                    }
+                } else {
+                    console.log(xhr.response, xhr.status);
+                }
+            };
+            xhr.onerror = () => {
+                console.log(xhr.response, xhr.status)
+            }
+            xhr.open(method, url);
+            if (method === 'GET') {
+                xhr.send();
+            } else if (method === 'POST') {
+                xhr.setRequestHeader('Content-type', 'application/json');
+                xhr.send(JSON.stringify(body));
+            }
+        }
+
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: {
+                    lat: -37.31,
+                    lng: 81.14
+                },
+                zoom: 2
+            })
+            myAjax('GET', 'https://jsonplaceholder.typicode.com/users', dataNew);
+
+            function dataNew(data) {
+                console.log(data);
+                data.forEach(function(item, index) {
+                    contentString = `
+                        <div id="content">
+                        <div id="siteNotice">
+                        <img src="./images/${index}.png" alt="">
+                        </div>
+                        <h1>${item.name}</h1>
+                        <div id="bodyContent">
+                        <p>${item.email}</p>
+                        <p>${item.phone}</p>
+                        </div>
+                        </div>`;
+                    infowindow[index] = new google.maps.InfoWindow({
+                        content: contentString,
+                    });
+                    marker[index] = new google.maps.Marker({
+                        position: {
+                            lat: +item.address.geo.lat,
+                            lng: +item.address.geo.lng
+                        },
+                        map: map,
+                        title: item.name
+                    });
+                    marker[index].addListener("click", () => {
+                        infowindow[index].open(map, marker[index]);
+                    });
+                });
+            }
+        }
+    </script>
+
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjka2O88200INf-EB-4nX_sWg8JNKgQMQ&callback=initMap">
+    </script>
+</body>
+
+</html>
+© 2021 GitHub, Inc.
