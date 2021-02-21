@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS_HW08_EVENTS_task2</title>
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <!-- 2. Создать HTML-страницу с большой таблицей. При клике по заголовку колонки, необходимо отсортировать данные по
+        этой колонке. Учтите, что числовые значения должны сортироваться как числа, а не как строки. -->
+        <table class="table">
+            <caption>Збір урожаю культур зернових і зернобобових на 01 грудня 2020 року</caption>
+            <thead>
+                <tr>
+                    <th class="th1">Населений пункт</th>
+                    <th class="th2">Площа зібрана, тис.га</th>
+                    <th class="th3">Обсяг виробництва, тис.ц</th>
+                    <th class="th4">Урожайність, ц з 1 га зібраної площі</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="td1">Запорізька</td>
+                    <td class="td2">983.4</td>
+                    <td class="td3">29962.5</td>
+                    <td class="td4">30.5</td>
+                </tr>
+                <tr>
+                    <td class="td1">Житомирська</td>
+                    <td class="td2">467.6</td>
+                    <td class="td3">22864.9</td>
+                    <td class="td4">48.9</td>
+                </tr>
+                <tr>
+                    <td class="td1">Дніпропетровська</td>
+                    <td class="td2">1093.4</td>
+                    <td class="td3">35732.6</td>
+                    <td class="td4">32.7</td>
+                </tr>
+                <tr>
+                    <td class="td1">Волинська</td>
+                    <td class="td2">298.5</td>
+                    <td class="td3">13347.1</td>
+                    <td class="td4">44.8</td>
+                </tr>
+                <tr>
+                    <td class="td1">Донецька</td>
+                    <td class="td2">568.6</td>
+                    <td class="td3">20143.5</td>
+                    <td class="td4">35.4</td>
+                </tr>
+                <tr>
+                    <td class="td1">Винницька</td>
+                    <td class="td2">856.5</td>
+                    <td class="td3">40675.3</td>
+                    <td class="td4">47.5</td>
+                </tr>
+            </tbody>
+        </table>
+        <script>
+            const columnTitle = [...document.querySelectorAll('th[class^="th"]')];
+            const table = document.querySelector('.table');
+
+            columnTitle.forEach(function (item, index) {
+                item.addEventListener("click", function (e) {
+                    const indexOf = columnTitle.indexOf(e.target);
+                    const tableRows = [...table.rows];
+                    tableRows.splice(0, 1);
+                    tableRows.sort(function (a, b) {
+                        const rowA = a.cells[indexOf].innerHTML.toLowerCase();
+                        const rowB = b.cells[indexOf].innerHTML.toLowerCase();
+
+                        if (indexOf === 0) {
+                            return rowA > rowB ? 1 : -1;
+                        } else {
+                            return rowA - rowB;
+                        };
+
+                    });
+                    table.tBodies[0].append(...tableRows);
+                });
+            });
+        </script>
+    </body>
+</html>

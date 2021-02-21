@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS_HW08_EVENTS_task1</title>
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <!-- 1. Создать HTML-страницу для отображения/редактирования текста. При открытии страницы текст отображается с помощью
+        тега div. При нажатии Ctrl + E, вместо div появляется textarea с тем же текстом, который теперь можно
+        редактировать. При нажатии Ctrl + , вместо textarea появляется div с уже измененным текстом. Не забудьте
+        выключить поведение по умолчанию для этих сочетаний клавиш. -->
+
+        <div class="text">Lorem ipsum dolor sit.</div>
+        <form class="form hidden" action="">
+            <textarea class="changeDiv" name="changeDiv" value="" cols="30" rows="10"></textarea>
+        </form>
+        <p>Нажми Ctrl+E, чтоб отредактировать текст.</p>
+        <p>Нажми Ctrl+, чтоб сохранить текст.</p>
+        <script>
+            document.body.addEventListener("keydown", pressingKey);
+
+            function pressingKey(e) {
+
+                if ((e.code === "KeyE" || e.code === "NumpadAdd") && e.ctrlKey) {
+                    e.preventDefault();
+                    let div = document.querySelector('.text');
+                    let form = document.querySelector('.form');
+
+                    if (e.code === "KeyE") {
+
+                        if (!div.classList.contains('hidden')) {
+                            form.classList.remove('hidden');
+                            form.firstElementChild.innerHTML = div.textContent;
+                            div.classList.add('hidden');
+                        }
+                    } else {
+                        if (!form.classList.contains('hidden')) {
+                            div.classList.remove('hidden');
+                            div.innerHTML = form.firstElementChild.value;
+                            form.classList.add('hidden');
+                        }
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>
