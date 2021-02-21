@@ -1,0 +1,182 @@
+*,
+.html,
+.body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0 auto;
+    font-family: $mainFont;
+    font-size: $defaultSize;
+}
+
+.main {
+    width: 100%;
+    background-image: url("../images/bg.jpg"), url("../images/bg2.png");
+    background-blend-mode: color-burn;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.tabs {
+    width: 600px;
+    min-height: 540px;
+    background-color: #212534;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &__content {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+
+    &__caption {
+        display: flex;
+        list-style-type: none;
+        justify-content: space-around;
+        background-color: #2b3040;
+    }
+
+    &__list {
+        padding: 60px 40px 35px;
+        text-align: center;
+        color: #b7bacd;
+        text-transform: uppercase;
+        position: relative;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &-buy::before,
+        &-rating::before,
+        &-info::before {
+            content: "";
+            position: absolute;
+            height: 24px;
+            width: 24px;
+            top: 30px;
+            left: 45%;
+        }
+
+        &-info::before {
+            background: url("../images/info.svg") no-repeat;
+        }
+
+        &-rating::before {
+            background: url("../images/rating.svg") no-repeat;
+        }
+
+        &-buy::before {
+            background: url("../images/buy.svg") no-repeat;
+        }
+
+        &.active {
+            border-bottom: 2px solid $textColot;
+            color: #ffffff;
+        }
+    }
+
+    &__content {
+        padding: 65px 40px;
+        box-sizing: border-box;
+
+        &-game {
+            display: flex;
+            justify-content: space-between;
+        }
+        &-buy,
+        &-rating {
+            color: $textColot;
+            font-size: 30px;
+            text-align: center;
+        }
+    }
+}
+
+.game {
+    &__pic-poster {
+        margin-bottom: 20px;
+    }
+
+    &__description {
+        max-width: 315px;
+    }
+
+    &__name {
+        margin-bottom: 35px;
+
+        &-tag {
+            font-size: 32px;
+            color: $textColot;
+        }
+
+        &-date {
+            font-size: 14px;
+            color: #fdfdfd;
+        }
+    }
+
+    &__text {
+        color: #b7bacd;
+        font-size: 14px;
+        margin-bottom: 55px;
+        line-height: 22px;
+    }
+
+    &__rating {
+        font-size: 20px;
+        color: #aaadbb;
+
+        &-elipse {
+            position: absolute;
+            top: 155px;
+            right: 25px;
+        }
+    }
+
+    &__price-discount {
+        color: #fedc3f;
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+
+    &__price-final {
+        color: $textColot;
+        font-size: 32px;
+    }
+
+    &__buy {
+        background-color: $buttonColor;
+        border-radius: 2px;
+        padding: 22px 35px;
+
+        &_btn {
+            text-transform: uppercase;
+            color: $textColot;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 20px;
+            text-decoration: none;
+        }
+    }
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buy__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
