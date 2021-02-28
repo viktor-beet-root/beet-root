@@ -3,17 +3,18 @@ console.log('Задание 1. Создать объект, описывающи
 const car = {
     producer: 'Dodge',
     model: 'Challenger',
-    'year of Produce': 1970,
-    'avarage Speed': 100
+    year: 1970,
+    avarageSpeed: 100
 }
 
-//Создать следующие функции для работы с этим объектом: 
+//Создать следующие функции для работы с этим объектом:
 //Функция для вывода на экран информации об автомобиле;
 
 function getInformation() {
-    for (let key in car) {
-        console.log(key + " : " + car[key]);
-    }
+    console.log("Producer is " + car.producer);
+    console.log("Model of car - " + car.model);
+    console.log("Year of Producer - " + car.year);
+    console.log("avarage Speed - " + car.avarageSpeed);
 }
 getInformation();
 
@@ -22,7 +23,7 @@ getInformation();
 
 function calcTime(distance) {
     if (distance === undefined || isNaN(distance) || distance === 0) return "Некоректные данные";
-    let time = distance / car['avarage Speed'];
+    let time = distance / car.avarageSpeed;
     if (time > 4) time = time + Math.floor(time / 4);
     let resultTime = "Время необходимое для преодолония переданого расстояния: " + time + ' ч.';
     return resultTime;
@@ -43,10 +44,6 @@ const secondFraction = {
     denominator: 2
 }
 
-const resultFractoin = {
-    numerator: '',
-    denominator: ''
-}
 
 //Функция сложения 2-х объектов-дробей
 
@@ -58,9 +55,9 @@ function validFraction(fraction) {
 
 function fractionTotal() {
     if (validFraction(firstFraction) || validFraction(firstFraction)) return "Error";
-    resultFractoin.numerator = firstFraction.numerator * secondFraction.denominator + secondFraction.numerator * firstFraction.denominator;
-    resultFractoin.denominator = firstFraction.denominator * secondFraction.denominator;
-    return fractionReduction();
+    const numerator = firstFraction.numerator * secondFraction.denominator + secondFraction.numerator * firstFraction.denominator;
+    const denominator = firstFraction.denominator * secondFraction.denominator;
+    return fractionReduction(numerator, denominator);
 }
 
 console.log(fractionTotal());
@@ -68,9 +65,9 @@ console.log(fractionTotal());
 //Функция вычитания 2-х объектов-дробей;
 function fractionSubtraction() {
     if (validFraction(firstFraction) || validFraction(firstFraction)) return "Error";
-    resultFractoin.numerator = firstFraction.numerator * secondFraction.denominator - secondFraction.numerator * firstFraction.denominator;
-    resultFractoin.denominator = firstFraction.denominator * secondFraction.denominator;
-    return fractionReduction();
+    const numerator = firstFraction.numerator * secondFraction.denominator - secondFraction.numerator * firstFraction.denominator;
+    const denominator = firstFraction.denominator * secondFraction.denominator;
+    return fractionReduction(numerator, denominator);
 }
 
 console.log(fractionSubtraction());
@@ -78,33 +75,36 @@ console.log(fractionSubtraction());
 //Функция умножения 2-х объектов-дробей;
 function fractionMultiplication() {
     if (validFraction(firstFraction) || validFraction(firstFraction)) return "Error";
-    resultFractoin.numerator = firstFraction.numerator * secondFraction.numerator;
-    resultFractoin.denominator = firstFraction.denominator * secondFraction.denominator;
-    return fractionReduction();
+    const numerator = firstFraction.numerator * secondFraction.numerator;
+    const denominator = firstFraction.denominator * secondFraction.denominator;
+    return fractionReduction(numerator, denominator);
 }
 console.log(fractionMultiplication());
 
 //Функция деления 2-х объектов-дробей;
 function fractionDivision() {
     if (validFraction(firstFraction) || validFraction(firstFraction)) return "Error";
-    resultFractoin.numerator = firstFraction.numerator * secondFraction.denominator;
-    resultFractoin.denominator = firstFraction.denominator * secondFraction.numerator;
-    return fractionReduction();
+    const numerator = firstFraction.numerator * secondFraction.denominator;
+    const denominator = firstFraction.denominator * secondFraction.numerator;
+    return fractionReduction(numerator, denominator);
 }
 console.log(fractionDivision());
 //Функция сокращения объекта-дроби.
 
-function fractionReduction() {
-    resultFractoin.numerator = resultFractoin.numerator / maxValue();
-    resultFractoin.denominator = resultFractoin.denominator / maxValue();
-    return resultFractoin;
+function fractionReduction(numerator, denominator) {
+    numerator = numerator / maxValue(numerator, denominator);
+    denominator = denominator / maxValue(numerator, denominator);
+    return ({
+        num: numerator,
+        dom: denominator
+    });
 }
 
-function maxValue() {
-    let min = (resultFractoin.numerator < resultFractoin.denominator) ? resultFractoin.numerator : resultFractoin.denominator;
+function maxValue(numerator, denominator) {
+    let min = (numerator < denominator) ? numerator : denominator;
     let max = 1;
     while (min > 0) {
-        if (!(resultFractoin.numerator % min) && !(resultFractoin.denominator % min)) {
+        if (!(numerator % min) && !(denominator % min)) {
             max = min;
             break;
         }
