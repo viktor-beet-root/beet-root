@@ -1,0 +1,35 @@
+a {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+}
+
+a img {
+    display: block;
+}
+
+a::after {
+    content: '';
+    display: block;
+    background-color: white;
+    height: 30px;
+    bottom: -1px;
+    left: 26px;
+    position: absolute;
+    width: 100%;
+    transform: skewX(-61deg);
+}
+
+a::before {
+    content: '';
+    display: block;
+    width: 54px;
+    height: 54px;
+    background-image: url('angle.svg');
+    background-size: 54px 54px;
+    background-position: center;
+    bottom: 28px;
+    right: 0;
+    position: absolute;
+    z-index: 1;
+}
